@@ -1,0 +1,141 @@
+name: Container Build and Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allow manual triggering
+
+env:
+  REGISTRY: ghcr.io
+  # GHCR image paths must be lowercase; github.repository is
+  # Feralfantasies/OPR-combat-calculator, so the lowercased form is pinned here.
+  IMAGE_NAME: feralfantasies/opr-combat-calculator
+
+permissions:
+  contents: write
+  packages: write
+  id-token: write
+
+jobs:
+  create-tag:
+    name: Create Semantic Version Tag
+    runs-on: ubuntu-latest
+    outputs:
+      new_tag: ${{ steps.tag.outputs.new_tag }}
+      changelog: ${{ steps.tag.outputs.changelog }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Bump version and push tag
+        id: tag
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: patch
+          release_branches: main
+          tag_prefix: v
+
+  build-and-push:
+    name: Build and Push Container
+    runs-on: ubuntu-latest
+    needs: create-tag
+    if: needs.create-tag.outputs.new_tag
+    steps:
+      # The musl release build compiles the full cargo dependency tree.
+      # Free the ~30 GB of pre-loaded SDKs the GH-hosted image ships with so
+      # buildx has room for the cargo target dir + intermediate layers.
+      - name: Maximize Build Space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=${{ needs.create-tag.outputs.new_tag }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Containerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          annotations: ${{ steps.meta.outputs.annotations }}
+          # Two-tier cache: GHA cache is fast for in-month rebuilds, registry
+          # buildcache survives GHA cache eviction (10 GB / 7-day) so the
+          # heavy cargo deps don't recompile from cold for every release.
+          cache-from: |
+            type=gha
+            type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache
+          cache-to: |
+            type=gha,mode=max
+            type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache,mode=max
+          platforms: linux/amd64
+          build-args: |
+            BUILDKIT_INLINE_CACHE=1
+
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: [create-tag, build-and-push]
+    if: needs.create-tag.outputs.new_tag
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.create-tag.outputs.new_tag }}
+          name: Release ${{ needs.create-tag.outputs.new_tag }}
+          body: |
+            ## 🚀 What's Changed
+            ${{ needs.create-tag.outputs.changelog }}
+
+            ## 📦 Container Image
+            - `${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.create-tag.outputs.new_tag }}`
+            - `${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest`
+
+            ## 🛠️ Usage
+            The image is self-contained (static binary + static UI) and needs
+            no configuration; it listens on port 3000 by default.
+            ```bash
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            docker run -p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            ```
+            Optionally override the listener with `BIND_ADDR` (e.g.
+            `-e BIND_ADDR=0.0.0.0:8080 -p 8080:8080`).
+          draft: false
+          prerelease: false
