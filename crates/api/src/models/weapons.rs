@@ -2,7 +2,7 @@ use crate::models::rules::SpecialRule;
 
 /// A weapon in OPR Grimdark Future.
 /// Range is None for melee weapons, Some(x) for ranged weapons.
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 pub struct Weapon {
     pub name: String,
     /// How many models in the unit have this weapon
@@ -17,6 +17,7 @@ pub struct Weapon {
 
 impl Weapon {
     /// Create a new melee weapon
+    #[must_use]
     pub fn melee(name: &str, quantity: u8, attacks: u8) -> Self {
         Self {
             name: name.to_string(),
@@ -28,6 +29,7 @@ impl Weapon {
     }
 
     /// Create a new ranged weapon
+    #[must_use]
     pub fn ranged(name: &str, quantity: u8, attacks: u8, range: u8) -> Self {
         Self {
             name: name.to_string(),
@@ -39,30 +41,34 @@ impl Weapon {
     }
 
     /// Add a special rule to this weapon (builder pattern)
+    #[must_use]
     pub fn with_rule(mut self, rule: SpecialRule) -> Self {
         self.special_rules.push(rule);
         self
     }
 
     /// Check if this weapon is a melee weapon
-    pub fn is_melee(&self) -> bool {
+    #[must_use]
+    pub const fn is_melee(&self) -> bool {
         self.range.is_none()
     }
 
     /// Check if this weapon is a ranged weapon
-    pub fn is_ranged(&self) -> bool {
+    #[must_use]
+    pub const fn is_ranged(&self) -> bool {
         self.range.is_some()
     }
 
     /// Get the total number of attacks from this weapon
     /// (attacks per model * number of models with the weapon)
     #[must_use]
-    pub fn total_attacks(&self) -> u8 {
+    pub const fn total_attacks(&self) -> u8 {
         self.attacks.saturating_mul(self.quantity)
     }
 
     /// Get the AP value from this weapon's special rules, if any
+    #[must_use]
     pub fn get_ap(&self) -> Option<u8> {
-        self.special_rules.iter().find_map(|r| r.ap_value())
+        self.special_rules.iter().find_map(SpecialRule::ap_value)
     }
 }

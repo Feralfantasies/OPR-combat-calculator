@@ -1,0 +1,158 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+# Cancel in-progress runs on the same branch when a new push arrives.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  # ── 1. Format ──────────────────────────────────────────────────────────────
+  fmt:
+    name: Format
+    runs-on: firethorn
+    timeout-minutes: 10
+    steps:
+      # rustfmt is a pure Rust binary — no C toolchain needed.
+
+      - uses: actions/checkout@v6
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+
+      - name: cargo fmt --check
+        run: cargo fmt --all -- --check
+
+  # ── 2. Clippy ─────────────────────────────────────────────────────────────
+  clippy:
+    name: Clippy
+    runs-on: firethorn
+    timeout-minutes: 30
+    steps:
+      - name: Install system dependencies
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y build-essential pkg-config && break
+            echo "apt-get attempt $i failed; retrying in 10 s..."
+            sleep 10
+          done
+
+      - uses: actions/checkout@v6
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - name: cargo clippy — deny all warnings
+        run: |
+          (while true; do echo "[watchdog]"; sleep 60; done) &
+          WATCHDOG_PID=$!
+          cargo clippy --workspace --all-targets -- -D warnings
+          kill $WATCHDOG_PID 2>/dev/null
+
+  # ── 3. Build ──────────────────────────────────────────────────────────────
+  build:
+    name: Build
+    runs-on: firethorn
+    timeout-minutes: 30
+    steps:
+      - name: Install system dependencies
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y build-essential pkg-config musl-tools && break
+            echo "apt-get attempt $i failed; retrying in 10 s..."
+            sleep 10
+          done
+
+      - uses: actions/checkout@v6
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-unknown-linux-musl
+
+      - name: cargo build — workspace (warnings as errors)
+        run: |
+          (while true; do echo "[watchdog]"; sleep 60; done) &
+          WATCHDOG_PID=$!
+          RUSTFLAGS="-D warnings" cargo build --workspace
+          kill $WATCHDOG_PID 2>/dev/null
+
+      - name: cargo build — musl static target
+        run: |
+          (while true; do echo "[watchdog]"; sleep 60; done) &
+          WATCHDOG_PID=$!
+          RUSTFLAGS="-D warnings" cargo build --target x86_64-unknown-linux-musl -p opr-frontend
+          kill $WATCHDOG_PID 2>/dev/null
+
+  # ── 4. Rust tests ─────────────────────────────────────────────────────────
+  rust-tests:
+    name: Rust Tests
+    runs-on: firethorn
+    timeout-minutes: 30
+    needs: [fmt, clippy]
+
+    steps:
+      - name: Install system dependencies
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y build-essential pkg-config && break
+            echo "apt-get attempt $i failed; retrying in 10 s..."
+            sleep 10
+          done
+
+      - uses: actions/checkout@v6
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: cargo test
+        run: |
+          (while true; do echo "[watchdog]"; sleep 60; done) &
+          WATCHDOG_PID=$!
+          cargo test --workspace
+          kill $WATCHDOG_PID 2>/dev/null
+
+  # ── 5. Container build ────────────────────────────────────────────────────
+  container:
+    name: Container Build
+    runs-on: firethorn
+    timeout-minutes: 60
+    needs: [build, rust-tests]
+    if: github.ref == 'refs/heads/main' || github.base_ref == 'main'
+
+    steps:
+      - name: Install system dependencies
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y docker.io && break
+            echo "apt-get attempt $i failed; retrying in 10 s..."
+            sleep 10
+          done
+
+      - uses: actions/checkout@v6
+
+      - name: Build scratch container
+        run: DOCKER_BUILDKIT=0 docker build -f Containerfile -t opr-damage-calculator:ci .
+
+      - name: Smoke test — binary and static assets exist in image
+        run: |
+          # Verify /opr-frontend and the static UI are present by extracting
+          # them. Running the binary directly inside the scratch image is not
+          # possible (no shell), so we check existence instead.
+          docker create --name opr-smoke opr-damage-calculator:ci
+          docker cp opr-smoke:/opr-frontend /tmp/opr-frontend-smoke
+          docker cp opr-smoke:/static/index.html /tmp/index-smoke.html
+          docker rm opr-smoke
+          test -f /tmp/opr-frontend-smoke
+          test -s /tmp/index-smoke.html
+          echo "Binary and static assets are present in the container image"

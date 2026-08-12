@@ -1,0 +1,16 @@
+[package]
+name = "opr-api"
+description = "OPR Grimdark Future combat simulation core (unofficial fan project)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "opr_api"
+
+[dependencies]
+rand.workspace = true
+serde.workspace = true
+
+[lints]
+workspace = true

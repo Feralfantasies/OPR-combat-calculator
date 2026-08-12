@@ -1,0 +1,14 @@
+# Build artefacts and VCS metadata must not enter the container build
+# context — the Containerfile rebuilds everything from source.
+target/
+.git/
+.gitignore
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Local container tooling state
+.dockerignore

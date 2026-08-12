@@ -14,13 +14,13 @@ pub struct DieRoll {
 impl DieRoll {
     /// Check if the raw (unmodified) roll is a 6
     #[must_use]
-    pub fn is_unmodified_six(&self) -> bool {
+    pub const fn is_unmodified_six(&self) -> bool {
         self.raw == 6
     }
 
     /// Check if the raw (unmodified) roll is a 1
     #[must_use]
-    pub fn is_unmodified_one(&self) -> bool {
+    pub const fn is_unmodified_one(&self) -> bool {
         self.raw == 1
     }
 }
@@ -79,22 +79,37 @@ mod tests {
 
     #[test]
     fn test_always_succeed_on_six() {
-        let roll = DieRoll { raw: 6, modified: 0 }; // even with -6
+        let roll = DieRoll {
+            raw: 6,
+            modified: 0,
+        }; // even with -6
         assert_eq!(count_successes(&[roll], 6), 1);
     }
 
     #[test]
     fn test_always_fail_on_one() {
-        let roll = DieRoll { raw: 1, modified: 10 }; // even with +10
+        let roll = DieRoll {
+            raw: 1,
+            modified: 10,
+        }; // even with +10
         assert_eq!(count_successes(&[roll], 1), 0);
     }
 
     #[test]
     fn test_success_threshold() {
         let rolls = vec![
-            DieRoll { raw: 3, modified: 3 },
-            DieRoll { raw: 4, modified: 4 },
-            DieRoll { raw: 5, modified: 5 },
+            DieRoll {
+                raw: 3,
+                modified: 3,
+            },
+            DieRoll {
+                raw: 4,
+                modified: 4,
+            },
+            DieRoll {
+                raw: 5,
+                modified: 5,
+            },
         ];
         assert_eq!(count_successes(&rolls, 4), 2);
     }

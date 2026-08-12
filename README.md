@@ -1,43 +1,37 @@
-# OPR Damage Calculator
+# OPR Combat Calculator
 
-A damage calculator for [One Page Rules](https://onepagerules.com)' **Grimdark Future**, written in Rust. Put two units in — attacker and defender — pick a ranged or melee attack, and the calculator resolves the combat sequence including special rules like AP, Blast, Deadly, Tough, and Regeneration.
+A damage calculator for [One Page Rules](https://onepagerules.com)' **Grimdark Future**, written in Rust. Configure an attacker and a defender in the web UI, choose ranged or melee, hit **Run Simulation**, and get aggregated combat results over thousands of dice rolls.
 
 ## Disclaimer
 
 This is an unofficial fan project. It is **not affiliated with, endorsed by, or sponsored by OPR Games** in any way. Grimdark Future and all associated names, units, and rules are the intellectual property of OPR Games (www.onepagerules.com). This tool is made by a fan, for the community, to help players quickly work out combat outcomes. Please support the official release by downloading the free rules from the OPR website.
 
-## Features
-
-- Unit and weapon modelling with Quality, Defense, Tough, and points
-- Full special rules system (enum-based, parameterized rules like `AP(1)`, `Blast(3)`)
-- Combat context: ranged vs melee charge, distance, cover, fatigue
-- Dice simulation with OPR rules (unmodified 6 always hits, unmodified 1 always fails)
-- Alien Hives army list included (35 base unit profiles)
-
-## Project Structure
+## Architecture — Modular Monolith
 
 ```
-src/
-├── main.rs              # Entry point + demo
-├── models/
-│   ├── rules.rs         # SpecialRule enum (core + Alien Hives rules)
-│   ├── unit.rs          # Unit struct with builder pattern
-│   └── weapons.rs       # Weapon struct (melee / ranged)
-├── combat/
-│   ├── calculator.rs    # Combat resolution pipeline (8 phases)
-│   ├── context.rs       # CombatContext (attack type, distance, cover, etc.)
-│   └── dice.rs          # Dice rolling utilities
-└── armies/
-    └── alien_hives.rs   # Alien Hives unit profiles
+├── Cargo.toml            # workspace + shared strict clippy lints
+├── crates/
+│   ├── api/              # library crate: simulation core
+│   │   ├── src/
+│   │   │   ├── models/   # Unit, Weapon, SpecialRule (serde)
+│   │   │   ├── combat/   # 8-phase calculator, dice, context
+│   │   │   └── armies/   # faction rosters (Alien Hives, 35 units)
+│   │   └── tests/        # integration tests
+│   └── frontend/         # binary crate: axum web app
+│       ├── static/       # index.html, app.js, style.css (vanilla JS)
+│       └── src/main.rs   # /api/armies, /api/armies/{id}/units, /api/simulate
+└── docs/                 # OKF v0.2 knowledge bundle (rules, architecture, computation)
 ```
 
-## Usage
+The frontend depends only on the public surface of `opr-api`; the crate boundary is enforced at compile time. See `docs/` for the full knowledge bundle, including the sanctioned damage simulation definition (`docs/computations/damage-simulation.md`).
+
+## Running
 
 ```bash
-cargo run
+cargo run -p opr-frontend
 ```
 
-This loads the Alien Hives roster, prints all units, and runs a demo combat (Shooter Grunts vs Hive Warriors, both ranged and melee).
+Then open http://127.0.0.1:3000 — pick attacker/defender units, set attack type/distance/cover/iterations (default 1000, max 100000), and click **Run Simulation**.
 
 ## Tests
 
@@ -45,6 +39,15 @@ This loads the Alien Hives roster, prints all units, and runs a demo combat (Sho
 cargo test
 ```
 
+## Features
+
+- Unit/weapon modelling: Quality, Defense, Tough, points, builder pattern
+- Special rules as a parameterized enum (`AP(1)`, `Blast(3)`, `Tough(12)`, …)
+- Combat phases: AP, Blast, Deadly, Tough, Regeneration (+ Bane/Rending/Unstoppable skip), Reliable, Furious/Relentless/Surge extra hits, cover, fatigue
+- Monte Carlo simulation with mean/min/max aggregation over N iterations
+- **Loadout customization**: pick-one rule upgrades, weapon swaps ("Replace Shredder Cannon" → 9 ranged/melee options), and optional add-ons per army book; rendered as dropdowns/checkboxes in the UI. Hive Lord fully populated; other units incrementally
+- Alien Hives roster (35 units)
+
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+MIT — see [LICENSE](LICENSE). OPR game rules and unit data remain the property of OPR Games.

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPR Combat Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>OPR Combat Calculator</h1>
+    <p class="subtitle">Unofficial fan tool for Grimdark Future — not affiliated with OPR Games</p>
+  </header>
+
+  <main>
+    <section class="panels">
+      <div class="panel" id="attacker-panel">
+        <h2>Attacker</h2>
+        <label>Army
+          <select data-role="army"></select>
+        </label>
+        <label>Unit
+          <select data-role="unit"></select>
+        </label>
+        <div class="unit-card" data-role="card"></div>
+        <div class="upgrades" data-role="upgrades"></div>
+      </div>
+
+      <div class="panel" id="defender-panel">
+        <h2>Defender</h2>
+        <label>Army
+          <select data-role="army"></select>
+        </label>
+        <label>Unit
+          <select data-role="unit"></select>
+        </label>
+        <div class="unit-card" data-role="card"></div>
+        <div class="upgrades" data-role="upgrades"></div>
+      </div>
+    </section>
+
+    <section class="options">
+      <label>Attack type
+        <select id="attack-type">
+          <option value="ranged">Ranged</option>
+          <option value="melee_charge">Melee (charge)</option>
+        </select>
+      </label>
+      <label>Distance (")
+        <input type="number" id="distance" value="12" min="0" max="120" />
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="cover" /> Defender in cover
+      </label>
+      <label>Iterations
+        <input type="number" id="iterations" value="1000" min="1" max="100000" />
+      </label>
+      <button id="run">Run Simulation</button>
+    </section>
+
+    <section id="results" class="results hidden">
+      <h2>Results</h2>
+      <p id="summary"></p>
+      <table>
+        <thead>
+          <tr><th>Weapon</th><th>Avg hits</th><th>Avg blocked</th><th>Avg net wounds</th></tr>
+        </thead>
+        <tbody id="weapon-rows"></tbody>
+      </table>
+      <p id="error" class="error"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

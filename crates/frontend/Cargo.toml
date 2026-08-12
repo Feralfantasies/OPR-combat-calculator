@@ -1,0 +1,21 @@
+[package]
+name = "opr-frontend"
+description = "Axum web frontend for the OPR combat calculator (unofficial fan project)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "opr-frontend"
+path = "src/main.rs"
+
+[dependencies]
+opr-api = { path = "../api" }
+axum.workspace = true
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tower-http.workspace = true
+
+[lints]
+workspace = true

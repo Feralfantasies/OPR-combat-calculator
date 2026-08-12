@@ -5,6 +5,7 @@
 
 use crate::models::rules::SpecialRule;
 use crate::models::unit::Unit;
+use crate::models::upgrades::{UpgradeGroup, UpgradeOption};
 use crate::models::weapons::Weapon;
 
 /// Build the full Alien Hives base roster.
@@ -54,6 +55,7 @@ pub fn alien_hives() -> Vec<Unit> {
 // ---------------------------------------------------------------------------
 
 /// Hive Lord [1] - 360pts | Q3+ D2+ Tough(12)
+#[allow(clippy::too_many_lines)] // declarative roster data, not logic
 fn hive_lord() -> Unit {
     Unit::new("Hive Lord", 1, 3, 2)
         .with_points(360)
@@ -65,6 +67,172 @@ fn hive_lord() -> Unit {
         .with_weapon(Weapon::ranged("Shredder Cannon", 1, 4, 18).with_rule(SpecialRule::Rending))
         .with_weapon(Weapon::melee("Heavy Razor Claws", 2, 3).with_rule(SpecialRule::AP(1)))
         .with_weapon(Weapon::melee("Stomp", 1, 4).with_rule(SpecialRule::AP(1)))
+        .with_upgrades(UpgradeGroup::pick_one(
+            "Upgrade with one",
+            vec![
+                UpgradeOption::rule(
+                    "Combat Bio-Engineer",
+                    "Furious",
+                    5,
+                    vec![SpecialRule::Furious],
+                ),
+                UpgradeOption::rule(
+                    "Bio-Tech Master",
+                    "Increased Shooting Range",
+                    5,
+                    vec![SpecialRule::IncreasedShootingRange],
+                ),
+                UpgradeOption::rule(
+                    "Brood Leader",
+                    "Rapid Charge",
+                    20,
+                    vec![SpecialRule::RapidCharge],
+                ),
+                UpgradeOption::rule(
+                    "Hive Protector",
+                    "Regeneration",
+                    45,
+                    vec![SpecialRule::Regeneration],
+                ),
+                UpgradeOption::rule(
+                    "Psychic Synapses",
+                    "Caster(3)",
+                    60,
+                    vec![SpecialRule::Caster(3)],
+                ),
+            ],
+        ))
+        .with_upgrades(UpgradeGroup::replace_one(
+            "Replace any Heavy Razor Claw",
+            "Heavy Razor Claws",
+            vec![
+                UpgradeOption::replace(
+                    "Smashing Club",
+                    "A1, AP(2), Blast(3)",
+                    0,
+                    Weapon::melee("Smashing Club", 1, 1)
+                        .with_rule(SpecialRule::AP(2))
+                        .with_rule(SpecialRule::Blast(3)),
+                ),
+                UpgradeOption::replace(
+                    "Piercing Spike",
+                    "A1, AP(2), Deadly(3)",
+                    5,
+                    Weapon::melee("Piercing Spike", 1, 1)
+                        .with_rule(SpecialRule::AP(2))
+                        .with_rule(SpecialRule::Deadly(3)),
+                ),
+                UpgradeOption::replace(
+                    "Slashing Blade",
+                    "A3, AP(1), Rending",
+                    5,
+                    Weapon::melee("Slashing Blade", 1, 3)
+                        .with_rule(SpecialRule::AP(1))
+                        .with_rule(SpecialRule::Rending),
+                ),
+                UpgradeOption::replace(
+                    "Razor Whip",
+                    "A3, Bane, Precise",
+                    5,
+                    Weapon::melee("Razor Whip", 1, 3)
+                        .with_rule(SpecialRule::Bane)
+                        .with_rule(SpecialRule::Precise),
+                ),
+                UpgradeOption::replace(
+                    "Serrated Blade",
+                    "A3, AP(4)",
+                    20,
+                    Weapon::melee("Serrated Blade", 1, 3).with_rule(SpecialRule::AP(4)),
+                ),
+            ],
+        ))
+        .with_upgrades(UpgradeGroup::replace_all(
+            "Replace Shredder Cannon",
+            "Shredder Cannon",
+            vec![
+                UpgradeOption::replace(
+                    "2x Heavy Razor Claws",
+                    "A3, AP(1)",
+                    5,
+                    Weapon::melee("Heavy Razor Claws", 2, 3).with_rule(SpecialRule::AP(1)),
+                ),
+                UpgradeOption::replace(
+                    "Spitter Cannon",
+                    "24\", A2, Blast(3)",
+                    5,
+                    Weapon::ranged("Spitter Cannon", 1, 2, 24).with_rule(SpecialRule::Blast(3)),
+                ),
+                UpgradeOption::replace(
+                    "Barb Cannon",
+                    "36\", A1, AP(2), Blast(3)",
+                    15,
+                    Weapon::ranged("Barb Cannon", 1, 1, 36)
+                        .with_rule(SpecialRule::AP(2))
+                        .with_rule(SpecialRule::Blast(3)),
+                ),
+                UpgradeOption::replace(
+                    "Heavy Smashing Club",
+                    "A2, AP(2), Blast(3), Reliable",
+                    20,
+                    Weapon::melee("Heavy Smashing Club", 1, 2)
+                        .with_rule(SpecialRule::AP(2))
+                        .with_rule(SpecialRule::Blast(3))
+                        .with_rule(SpecialRule::Reliable),
+                ),
+                UpgradeOption::replace(
+                    "Heavy Piercing Spike",
+                    "A2, AP(2), Deadly(3), Reliable",
+                    30,
+                    Weapon::melee("Heavy Piercing Spike", 1, 2)
+                        .with_rule(SpecialRule::AP(2))
+                        .with_rule(SpecialRule::Deadly(3))
+                        .with_rule(SpecialRule::Reliable),
+                ),
+                UpgradeOption::replace(
+                    "Heavy Ravager Cannon",
+                    "18\", A6, AP(1), Destructive",
+                    40,
+                    Weapon::ranged("Heavy Ravager Cannon", 1, 6, 18)
+                        .with_rule(SpecialRule::AP(1))
+                        .with_rule(SpecialRule::Destructive),
+                ),
+                UpgradeOption::replace(
+                    "Heavy Slashing Blade",
+                    "A6, AP(1), Reliable, Rending",
+                    40,
+                    Weapon::melee("Heavy Slashing Blade", 1, 6)
+                        .with_rule(SpecialRule::AP(1))
+                        .with_rule(SpecialRule::Reliable)
+                        .with_rule(SpecialRule::Rending),
+                ),
+                UpgradeOption::replace(
+                    "Acid Cannon",
+                    "36\", A1, AP(2), Deadly(6), Unstoppable",
+                    50,
+                    Weapon::ranged("Acid Cannon", 1, 1, 36)
+                        .with_rule(SpecialRule::AP(2))
+                        .with_rule(SpecialRule::Deadly(6))
+                        .with_rule(SpecialRule::Unstoppable),
+                ),
+                UpgradeOption::replace(
+                    "Heavy Serrated Blade",
+                    "A6, AP(4), Reliable",
+                    75,
+                    Weapon::melee("Heavy Serrated Blade", 1, 6)
+                        .with_rule(SpecialRule::AP(4))
+                        .with_rule(SpecialRule::Reliable),
+                ),
+            ],
+        ))
+        .with_upgrades(UpgradeGroup::multiple(
+            "Upgrade with",
+            vec![UpgradeOption::rule(
+                "Wings",
+                "Ambush, Flying",
+                90,
+                vec![SpecialRule::Ambush, SpecialRule::Flying],
+            )],
+        ))
 }
 
 /// Prime Warrior [1] - 80pts | Q4+ D4+ Tough(6)
