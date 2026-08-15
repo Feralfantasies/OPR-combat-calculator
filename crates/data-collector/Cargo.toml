@@ -1,0 +1,22 @@
+[package]
+name = "data-collector"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+tokio = { workspace = true }
+reqwest = { workspace = true }
+scraper = { workspace = true }
+clap = { workspace = true }
+thiserror = { workspace = true }
+chromiumoxide = { version = "0.5", features = [
+  "tokio-runtime",
+], default-features = false }
+futures = "0.3"

@@ -27,6 +27,8 @@ calculator for One Page Rules' Grimdark Future.
 * [API Module](architecture/api.md) - The core simulation library crate: models, combat engine, army data.
 * [Frontend Module](architecture/frontend.md) - The axum web application: UI behaviour and JSON API surface.
 
+* [Data Collector Module](architecture/data-collector.md) - The data scraping pipeline: fetch, parse, and YAML generation.
+
 # Computations
 
 * [Damage Simulation](computations/damage-simulation.md) - The sanctioned damage simulation: inputs, iteration bounds, and aggregation method.

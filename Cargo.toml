@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/api", "crates/frontend"]
+members = ["crates/api", "crates/data-collector", "crates/frontend"]
 
 [workspace.package]
 version = "0.1.0"
@@ -11,9 +11,17 @@ license = "MIT"
 rand = "0.9"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+serde_yaml = "0.9"
 axum = "0.8"
 tokio = { version = "1", features = ["full"] }
 tower-http = { version = "0.6", features = ["fs"] }
+reqwest = { version = "0.12", default-features = false, features = [
+  "rustls-tls",
+  "http2",
+] }
+scraper = "0.22"
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"
 
 [workspace.lints.clippy]
 # UM, ACTUALLY
