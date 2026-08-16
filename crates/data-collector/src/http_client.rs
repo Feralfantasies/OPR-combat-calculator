@@ -100,8 +100,6 @@ impl HttpClient {
         Ok(content)
     }
 
-
-
     /// Fetch multiple URLs with rate limiting
     ///
     /// # Errors

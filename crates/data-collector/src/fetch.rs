@@ -206,8 +206,6 @@ impl<'a> Fetcher<'a> {
 
         armies
     }
-
-
 }
 
 /// Extract URL from an HTML line containing an href attribute
