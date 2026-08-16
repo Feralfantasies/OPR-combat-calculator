@@ -1,0 +1,984 @@
+v3.5.3:
+  name: Goblin Reclaimers
+  id: k5T0f2XIfpmPO28h
+  units:
+  - name: Death Walker Champ
+    size: 1
+    quality: 4+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Rapid Rocket Launcher
+      range: 18"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    - name: Heavy Claw
+      range: null
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Hero
+    - Mischievous
+    cost: 155
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Master Annoyer
+        rules: Mischievous Boost Aura
+        cost_modifier: +20pts
+      - name: Scrap Protector
+        rules: Melee Evasion Aura
+        cost_modifier: +30pts
+      - name: Junk Technician
+        rules: Quick Shot Aura
+        cost_modifier: +35pts
+      - name: Weirdo
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Grand Strategist
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Rapid Rocket Launcher
+      upgrades:
+      - name: Rapid Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: Free
+      - name: Rapid Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +25pts
+      - name: Heavy Bubble Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +30pts
+      - name: Heavy Chucker Cannon
+        rules: 24", A8, Rending
+        cost_modifier: +55pts
+    - category: Replace Heavy Claw
+      upgrades:
+      - name: Heavy Saw
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +5pts
+  - name: Killer Tank Champ
+    size: 1
+    quality: 4+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Rapid Rocket Launcher
+      range: 18"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    - name: Crew
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Hero
+    - Mischievous
+    cost: 140
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Master Annoyer
+        rules: Mischievous Boost Aura
+        cost_modifier: +20pts
+      - name: Scrap Protector
+        rules: Melee Evasion Aura
+        cost_modifier: +30pts
+      - name: Junk Technician
+        rules: Quick Shot Aura
+        cost_modifier: +35pts
+      - name: Weirdo
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Grand Strategist
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Rapid Rocket Launcher
+      upgrades:
+      - name: Rapid Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: Free
+      - name: Rapid Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +25pts
+      - name: Heavy Bubble Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +30pts
+      - name: Heavy Chucker Cannon
+        rules: 24", A8, Rending
+        cost_modifier: +55pts
+    - category: Upgrade with
+      upgrades:
+      - name: Self-Destruction Payload
+        rules: Deathstrike(6)
+        cost_modifier: +10pts
+  - name: Boss Champ
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Boss Pistol
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Hero
+    - Mischievous
+    cost: 35
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Master Annoyer
+        rules: Mischievous Boost Aura
+        cost_modifier: +20pts
+      - name: Scrap Protector
+        rules: Melee Evasion Aura
+        cost_modifier: +30pts
+      - name: Junk Technician
+        rules: Quick Shot Aura
+        cost_modifier: +35pts
+      - name: Weirdo
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Grand Strategist
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Boss Pistol and CCW
+      upgrades:
+      - name: Dual Killer Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+    - category: Replace Boss Pistol
+      upgrades:
+      - name: Chucker Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Boss Carbine
+        rules: 18", A2
+        cost_modifier: +5pts
+      - name: Bubble Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Smasher Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Boss Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +10pts
+      - name: Bolt-Smasher Pistol
+        rules: 9", A1, Deadly(3), Tear
+        cost_modifier: +10pts
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +5pts
+      - name: Chucker-Mod
+        rules: 18", A2, Limited, Rending
+        cost_modifier: +10pts
+      - name: Bubble-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Bolt-Smasher-Mod
+        rules: 18", A1, Deadly(3), Limited, Tear
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Killer Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Killer Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Killer Saw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Killer Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Trekker Bike
+        rules: Agile, Scout
+        cost_modifier: +10pts
+      - name: Speeder Bike
+        rules: Fast, Vanguard
+        cost_modifier: +15pts
+      - name: Commando Leader
+        rules: Scout, Strider
+        cost_modifier: +15pts
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +15pts
+      - name: Combat Bug
+        rules: Rending Claws (A2, Rending), Bounding, Regeneration, Strider, Tough(3)
+        cost_modifier: +85pts
+  - name: Champ
+    size: 1
+    quality: 5+
+    defense: 6+
+    tough: 3
+    weapons:
+    - name: Boss Pistol
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Hero
+    - Mischievous
+    cost: 20
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Expert Tactician
+        rules: Precision Fighter Aura
+        cost_modifier: +20pts
+      - name: Master Annoyer
+        rules: Mischievous Boost Aura
+        cost_modifier: +20pts
+      - name: Junk Technician
+        rules: Quick Shot Aura
+        cost_modifier: +35pts
+      - name: Weirdo
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Grand Strategist
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Boss Pistol and CCW
+      upgrades:
+      - name: Dual Killer Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+    - category: Replace Boss Pistol
+      upgrades:
+      - name: Bubble Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Chucker Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Boss Carbine
+        rules: 18", A2
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Smasher Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Boss Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +5pts
+      - name: Bolt-Smasher Pistol
+        rules: 9", A1, Deadly(3), Tear
+        cost_modifier: +5pts
+    - category: Replace CCW
+      upgrades:
+      - name: Killer Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Killer Saw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Killer Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Killer Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Trekker Bike
+        rules: Agile, Scout
+        cost_modifier: +10pts
+      - name: Speeder Bike
+        rules: Fast, Vanguard
+        cost_modifier: +10pts
+      - name: Commando Leader
+        rules: Scout, Strider
+        cost_modifier: +10pts
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +10pts
+      - name: Combat Bug
+        rules: Rending Claws (A2, Rending), Armor(5), Bounding, Regeneration, Strider, Tough(3)
+        cost_modifier: +75pts
+  - name: Shooter Mob
+    size: 10
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Scrap Guns
+      range: 18"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Mischievous
+    cost: 95
+    upgrade_categories:
+    - category: Replace up to two Scrap Guns
+      upgrades:
+      - name: Bubble Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Chucker Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +15pts
+      - name: Smasher Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +20pts
+      - name: Bolt-Smasher Rifle
+        rules: 18", A1, Deadly(3), Tear
+        cost_modifier: +20pts
+  - name: Storm Mob
+    size: 10
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Mischievous
+    cost: 110
+    upgrade_categories:
+    - category: Replace up to two Pistols
+      upgrades:
+      - name: Chucker Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Bubble Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Smasher Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Bolt-Smasher Pistol
+        rules: 9", A1, Deadly(3), Tear
+        cost_modifier: +10pts
+    - category: Replace up to two Pistols and CCWS
+      upgrades:
+      - name: Pistol, Killer Hammer
+        rules: 12", A1, A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Pistol, Killer Saw
+        rules: 12", A1, A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Pistol, Killer Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Pistol, Killer Fist
+        rules: 12", A1, A2, AP(4)
+        cost_modifier: +10pts
+      - name: Dual Killer Claws
+        rules: A4, Rending
+        cost_modifier: +15pts
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +35pts
+  - name: Freaks
+    size: 10
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Rending Claws
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Rending
+    special_rules:
+    - Mischievous
+    - Unpredictable Fighter
+    cost: 170
+    upgrade_categories: []
+  - name: Commandos
+    size: 5
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Scrap Guns
+      range: 18"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Mischievous
+    - Scout
+    - Strider
+    cost: 65
+    upgrade_categories:
+    - category: Replace all Scrap Guns and CCWS
+      upgrades:
+      - name: Pistol, CCW
+        rules: 12", A1, A2
+        cost_modifier: +5pts
+      - name: Shotgun, CCW
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +20pts
+    - category: Replace one Scrap Gun
+      upgrades:
+      - name: Bubble Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Chucker Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +15pts
+      - name: Smasher Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +20pts
+      - name: Bolt-Smasher Rifle
+        rules: 18", A1, Deadly(3), Tear
+        cost_modifier: +20pts
+    - category: Replace up to three Scrap Guns
+      upgrades:
+      - name: Scrap Sniper
+        rules: 24", A1, AP(1), Reliable, Takedown
+        cost_modifier: +30pts
+      - name: Camo Cloaks
+        rules: Stealth
+        cost_modifier: +15pts
+  - name: Boss Mob
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Boss Pistols
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Mischievous
+    cost: 110
+    upgrade_categories:
+    - category: Replace any Boss Pistol
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Boss Carbine
+        rules: 18", A2
+        cost_modifier: +5pts
+    - category: Replace one Boss Pistol
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Chucker Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +15pts
+      - name: Bubble Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Smasher Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Bolt-Smasher Rifle
+        rules: 18", A1, Deadly(3), Tear
+        cost_modifier: +30pts
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +5pts
+      - name: Chucker-Mod
+        rules: 18", A2, Limited, Rending
+        cost_modifier: +10pts
+      - name: Bubble-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Bolt-Smasher-Mod
+        rules: 18", A1, Deadly(3), Limited, Tear
+        cost_modifier: +10pts
+    - category: Replace one CCW
+      upgrades:
+      - name: Killer Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Killer Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Killer Saw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Killer Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Scout Bikers
+    size: 5
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Agile
+    - Mischievous
+    - Scout
+    cost: 70
+    upgrade_categories:
+    - category: Replace one Pistol
+      upgrades:
+      - name: Chucker Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Bubble Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Smasher Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Bolt-Smasher Pistol
+        rules: 9", A1, Deadly(3), Tear
+        cost_modifier: +10pts
+    - category: Replace one Pistol and CCW
+      upgrades:
+      - name: Pistol, Killer Hammer
+        rules: 12", A1, A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Pistol, Killer Saw
+        rules: 12", A1, A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Pistol, Killer Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Pistol, Killer Fist
+        rules: 12", A1, A2, AP(4)
+        cost_modifier: +10pts
+    - category: Replace all Trekker Tires
+      upgrades:
+      - name: Speeder Tires
+        rules: Fast, Vanguard
+        cost_modifier: +5pts
+  - name: Looters
+    size: 3
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Heavy Machineguns
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Mischievous
+    - Relentless
+    cost: 120
+    upgrade_categories:
+    - category: Replace any Heavy Machinegun
+      upgrades:
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: Free
+      - name: Heavy Smasher Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Heavy Bolt-Smasher Rifle
+        rules: 24", A1, Deadly(3), Tear
+        cost_modifier: +5pts
+      - name: Bubble Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +20pts
+      - name: Chucker Cannon
+        rules: 24", A4, Rending
+        cost_modifier: +25pts
+  - name: Bug Riders
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Scrap Guns
+      range: 18"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: Rending Claws
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Rending
+    special_rules:
+    - Bounding
+    - Mischievous
+    - Regeneration
+    - Strider
+    cost: 160
+    upgrade_categories:
+    - category: Replace any Scrap Guns
+      upgrades:
+      - name: Bubble Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Chucker Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +15pts
+      - name: Smasher Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +20pts
+      - name: Bolt-Smasher Rifle
+        rules: 18", A1, Deadly(3), Tear
+        cost_modifier: +20pts
+  - name: Killer Tanks
+    size: 3
+    quality: 5+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Rocket Launchers
+      range: 18"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    - name: Crews
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Mischievous
+    cost: 155
+    upgrade_categories:
+    - category: Replace any Rocket Launcher
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Chucker Cannon
+        rules: 24", A4, Rending
+        cost_modifier: +25pts
+      - name: Bubble Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +25pts
+  - name: Death Walkers
+    size: 3
+    quality: 5+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Rocket Launchers
+      range: 18"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    - name: Mini-Claws
+      range: null
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Mischievous
+    cost: 170
+    upgrade_categories:
+    - category: Replace any Rocket Launcher
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Chucker Cannon
+        rules: 24", A4, Rending
+        cost_modifier: +25pts
+      - name: Bubble Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +25pts
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +25pts
+    - category: Replace any Mini-Claw
+      upgrades:
+      - name: Mini-Saw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+  - name: Big Bug
+    size: 1
+    quality: 5+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Rocket Launchers
+      range: 18"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Bounding
+    - Fear(1)
+    - Mischievous
+    - Regeneration
+    - Strider
+    cost: 140
+    upgrade_categories:
+    - category: Upgrade with any
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +20pts
+      - name: Targeted Frenzy
+        rules: Unpredictable Shooter Mark
+        cost_modifier: +40pts
+    - category: Replace any Rocket Launcher
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Chucker Cannon
+        rules: 24", A4, Rending
+        cost_modifier: +25pts
+      - name: Bubble Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +25pts
+  - name: Super Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Heavy Lobber Mortar
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(6)
+      - Indirect
+    - name: Sponson-Flamers
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(6)
+    - Mischievous
+    cost: 360
+    upgrade_categories:
+    - category: Replace Heavy Lobber Mortar
+      upgrades:
+      - name: Heavy Tractor Beam
+        rules: 36", A4, AP(2), Unstoppable
+        cost_modifier: +30pts
+      - name: Heavy Smasher Cannon
+        rules: 24", A1, AP(4), Deadly(6)
+        cost_modifier: +30pts
+      - name: Heavy Bubble Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +40pts
+      - name: Heavy Bolt-Smasher Cannon
+        rules: 30", A2, Deadly(3), Tear
+        cost_modifier: +55pts
+      - name: Heavy Chucker Cannon
+        rules: 24", A8, Rending
+        cost_modifier: +60pts
+    - category: Replace Sponson-Flamer
+      upgrades:
+      - name: Sponson-MGs
+        rules: 30", A6, AP(1)
+        cost_modifier: +45pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Pintle-Gun
+        rules: 30", A1, AP(2)
+        cost_modifier: +20pts
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +20pts
+      - name: Self-Destruction Payload
+        rules: Deathstrike(12)
+        cost_modifier: +20pts
+      - name: Cargo Hold
+        rules: Transport(11)
+        cost_modifier: +35pts
+      - name: Targeted Frenzy
+        rules: Unpredictable Shooter Mark
+        cost_modifier: +40pts
+  - name: Mega Walker
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Bubble Cannon
+      range: 30"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Blast(3)
+    - name: Heavy Machinegun
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    - name: Lobber Mortar
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Indirect
+    - name: Great Saw
+      range: null
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Mischievous
+    cost: 405
+    upgrade_categories: []
+  - name: Artillery Gun
+    size: 1
+    quality: 5+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Heavy Lobber Mortar
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(6)
+      - Indirect
+    - name: Crew
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Artillery
+    - Mischievous
+    cost: 90
+    upgrade_categories:
+    - category: Replace Heavy Lobber Mortar
+      upgrades:
+      - name: Heavy Tractor Beam
+        rules: 36", A4, AP(2), Unstoppable
+        cost_modifier: +25pts
+      - name: Heavy Smasher Cannon
+        rules: 24", A1, AP(4), Deadly(6)
+        cost_modifier: +25pts
+      - name: Heavy Bubble Mortar
+        rules: 24", A1, AP(4), Blast(6), Indirect
+        cost_modifier: +45pts
+      - name: Heavy Bolt-Smasher Cannon
+        rules: 30", A2, Deadly(3), Tear
+        cost_modifier: +45pts
+      - name: Boosted Chucker Cannon
+        rules: 24", A6, Indirect, Rending
+        cost_modifier: +50pts
+    - category: Upgrade with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +15pts
