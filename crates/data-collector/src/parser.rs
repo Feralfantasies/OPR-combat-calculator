@@ -109,8 +109,7 @@ pub async fn parse_preview_page(cache: &Cache, preview_url: &str) -> Result<Army
         Some(content) => content,
         None => {
             return Err(CollectorError::ParseError(format!(
-                "Preview page not found in cache: {}",
-                preview_url
+                "Preview page not found in cache: {preview_url}"
             )));
         }
     };

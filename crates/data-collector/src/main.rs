@@ -104,7 +104,7 @@ async fn run_fetch_phase(cli: &Cli) -> Result<()> {
 }
 
 /// Find and add subfaction armies from cached preview pages
-fn add_subfactions_from_cache(
+async fn add_subfactions_from_cache(
     armies: &mut Vec<Army>,
     cache: &Cache,
     subfaction_names: &[&str],
@@ -190,7 +190,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
         "Titan Lords War Disciples",
     ];
 
-    add_subfactions_from_cache(&mut armies, &cache, &subfaction_names, cli.verbose > 0)?;
+    add_subfactions_from_cache(&mut armies, &cache, &subfaction_names, cli.verbose > 0).await?;
     println!("Total armies to parse: {}", armies.len());
 
     // Parse and generate YAML for each army
