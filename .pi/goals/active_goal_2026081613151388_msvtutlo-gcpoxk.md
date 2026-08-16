@@ -5,14 +5,14 @@
   "status": "active",
   "autoContinue": true,
   "usage": {
-    "tokensUsed": 21698,
-    "activeSeconds": 439
+    "tokensUsed": 28896,
+    "activeSeconds": 740
   },
   "sisyphus": false,
   "createdAt": "2026-08-16T13:15:13.884Z",
-  "updatedAt": "2026-08-16T13:23:01.963Z",
+  "updatedAt": "2026-08-16T13:28:09.847Z",
   "activePath": ".pi/goals/active_goal_2026081613151388_msvtutlo-gcpoxk.md",
-  "revision": 9,
+  "revision": 14,
   "taskList": {
     "tasks": [
       {
@@ -78,7 +78,8 @@
       {
         "id": "subfaction-count",
         "title": "Fix subfaction count to track only actually-pushed entries",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:25:47.297Z"
       },
       {
         "id": "doc-corrections",
@@ -139,8 +140,8 @@ If blocked: stop and ask the user
 - Status: running
 - Auto-continue: on
 - Sisyphus mode: no
-- Time spent: 7m19s
-- Tokens used: 22K (21,698) tokens
+- Time spent: 12m20s
+- Tokens used: 29K (28,896) tokens
 ## Tasks
 
 <!-- blockCompletion: true -->
@@ -154,7 +155,7 @@ If blocked: stop and ask the user
 - [x] msrv-compat: MSRV compatibility: Duration::from_secs(60) instead of from_mins(1)
 - [x] parser-correctness: Parser correctness: attacks parsing, weapon count, unit rows, header reset, dead code
 - [x] cli-cleanup: CLI cleanup: remove unnecessary allow attrs, filesystem-safe slug generation
-- [ ] subfaction-count: Fix subfaction count to track only actually-pushed entries
+- [x] subfaction-count: Fix subfaction count to track only actually-pushed entries
 - [x] doc-corrections: Documentation corrections: fix code block language, align snippets with implementation
 - [x] verify-push: Verify and push: clippy, build, parse, verify YAML, commit and push to PR #1
 

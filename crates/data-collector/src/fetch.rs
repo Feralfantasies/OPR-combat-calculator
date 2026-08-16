@@ -115,7 +115,7 @@ impl<'a> Fetcher<'a> {
             ];
 
             // Add known subfactions to the army list (avoiding duplicates)
-            let mut added_count = 0;
+            let mut added_count: usize = 0;
             for (name, url) in known_subfactions {
                 if !army_urls.iter().any(|(n, _)| n == &name) {
                     army_urls.push((name, url));
