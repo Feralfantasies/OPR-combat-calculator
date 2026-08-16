@@ -134,8 +134,10 @@ async fn add_subfactions_from_cache(
                     if filename.contains("preview") {
                         // Extract army ID from filename
                         if let Some(army_id) = extract_army_id_from_filename(&filename) {
+                            // Construct preview URL
+                            let preview_url = format!("https://army-forge.onepagerules.com/armyInfo/{army_id}/2/preview");
                             // Try to parse this page
-                            if let Ok(parsed_army) = parse_preview_page(cache, &army_id).await
+                            if let Ok(parsed_army) = parse_preview_page(cache, &preview_url).await
                                 && parsed_army.name == *subfaction_name
                             {
                                 armies.push(parsed_army);
@@ -201,8 +203,10 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
         if cli.verbose > 0 {
             println!("\nParsing units for {}...", army.name);
         }
-        
-        match parse_preview_page(&cache, &army.id).await {
+
+        // Construct preview URL
+        let preview_url = format!("https://army-forge.onepagerules.com/armyInfo/{}/2/preview", army.id);
+        match parse_preview_page(&cache, &preview_url).await {
             Ok(parsed_army) => {
                 if cli.verbose > 0 {
                     println!(
