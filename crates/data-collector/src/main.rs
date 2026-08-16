@@ -103,6 +103,56 @@ async fn run_fetch_phase(cli: &Cli) -> Result<()> {
     Ok(())
 }
 
+/// Find and add subfaction armies from cached preview pages
+fn add_subfactions_from_cache(
+    armies: &mut Vec<Army>,
+    cache: &Cache,
+    subfaction_names: &[&str],
+    verbose: bool,
+) -> Result<()> {
+    for subfaction_name in subfaction_names {
+        // Check if we already have this army
+        if !armies.iter().any(|a| a.name == *subfaction_name) {
+            // Try to find the cached preview page
+            let cache_dir = cache.cache_dir();
+            let preview_files =
+                std::fs::read_dir(cache_dir).map_err(error::CollectorError::IoError)?;
+
+            for entry in preview_files {
+                let entry = entry.map_err(error::CollectorError::IoError)?;
+                let path = entry.path();
+
+                if path.extension().is_some_and(|e| e == "html") {
+                    let filename = path
+                        .file_name()
+                        .ok_or_else(|| {
+                            error::CollectorError::ParseError("Invalid filename".to_string())
+                        })?
+                        .to_string_lossy();
+
+                    // Check if this is a preview page
+                    if filename.contains("preview") {
+                        // Extract army ID from filename
+                        if let Some(army_id) = extract_army_id_from_filename(&filename) {
+                            // Try to parse this page
+                            if let Ok(parsed_army) = parse_preview_page(cache, &army_id)
+                                && parsed_army.name == *subfaction_name
+                            {
+                                armies.push(parsed_army);
+                                if verbose {
+                                    println!("  ✓ Found subfaction: {subfaction_name}");
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    Ok(())
+}
+
 /// Execute the parse phase: parse cached data and generate YAML files
 async fn run_parse_phase(cli: &Cli) -> Result<()> {
     // Initialize cache
@@ -139,47 +189,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
         "Titan Lords War Disciples",
     ];
 
-    for subfaction_name in subfaction_names {
-        // Check if we already have this army
-        if !armies.iter().any(|a| a.name == *subfaction_name) {
-            // Try to find the cached preview page
-            let cache_dir = cache.cache_dir();
-            let preview_files =
-                std::fs::read_dir(cache_dir).map_err(error::CollectorError::IoError)?;
-
-            for entry in preview_files {
-                let entry = entry.map_err(error::CollectorError::IoError)?;
-                let path = entry.path();
-
-                if path.extension().is_some_and(|e| e == "html") {
-                    let filename = path
-                        .file_name()
-                        .ok_or_else(|| {
-                            error::CollectorError::ParseError("Invalid filename".to_string())
-                        })?
-                        .to_string_lossy();
-
-                    // Check if this is a preview page
-                    if filename.contains("preview") {
-                        // Extract army ID from filename
-                        if let Some(army_id) = extract_army_id_from_filename(&filename) {
-                            // Try to parse this page
-                            if let Ok(parsed_army) = parse_preview_page(&cache, &army_id)
-                                && parsed_army.name == *subfaction_name
-                            {
-                                armies.push(parsed_army);
-                                if cli.verbose > 0 {
-                                    println!("  ✓ Found subfaction: {subfaction_name}");
-                                }
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+    add_subfactions_from_cache(&mut armies, &cache, &subfaction_names, cli.verbose > 0)?;
     println!("Total armies to parse: {}", armies.len());
 
     // Parse and generate YAML for each army

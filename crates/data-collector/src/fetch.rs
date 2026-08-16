@@ -119,7 +119,7 @@ impl<'a> Fetcher<'a> {
             for (name, url) in known_subfactions {
                 if !army_urls.iter().any(|(n, _)| n == &name) {
                     army_urls.push((name, url));
-                    added_count += 1;
+                    added_count = added_count.saturating_add(1);
                 }
             }
 

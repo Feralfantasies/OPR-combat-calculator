@@ -5,25 +5,27 @@
   "status": "active",
   "autoContinue": true,
   "usage": {
-    "tokensUsed": 12761,
-    "activeSeconds": 224
+    "tokensUsed": 21698,
+    "activeSeconds": 439
   },
   "sisyphus": false,
   "createdAt": "2026-08-16T13:15:13.884Z",
-  "updatedAt": "2026-08-16T13:19:04.229Z",
+  "updatedAt": "2026-08-16T13:23:01.963Z",
   "activePath": ".pi/goals/active_goal_2026081613151388_msvtutlo-gcpoxk.md",
-  "revision": 6,
+  "revision": 9,
   "taskList": {
     "tasks": [
       {
         "id": "cache-filename",
         "title": "Cache filename safety: append URL hash, update parser lookup",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:21:29.558Z"
       },
       {
         "id": "wormhole-placeholder",
         "title": "Remove Wormhole Daemons placeholder and unused fetch call",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:21:38.854Z"
       },
       {
         "id": "dead-code-fetch",
@@ -34,37 +36,44 @@
       {
         "id": "unused-deps",
         "title": "Remove unused dependencies: chromiumoxide, futures, scraper",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:21:44.109Z"
       },
       {
         "id": "atomic-metadata",
         "title": "Atomic metadata writes: temp file then rename",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:21:43.357Z"
       },
       {
         "id": "http-status",
         "title": "HTTP status checking: call error_for_status before reading body",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:21:55.494Z"
       },
       {
         "id": "remove-fetch-direct",
         "title": "Remove unreachable fetch_direct path from http_client.rs",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:22:17.034Z"
       },
       {
         "id": "msrv-compat",
         "title": "MSRV compatibility: Duration::from_secs(60) instead of from_mins(1)",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:21:59.626Z"
       },
       {
         "id": "parser-correctness",
         "title": "Parser correctness: attacks parsing, weapon count, unit rows, header reset, dead code",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:22:08.396Z"
       },
       {
         "id": "cli-cleanup",
         "title": "CLI cleanup: remove unnecessary allow attrs, filesystem-safe slug generation",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:22:21.138Z"
       },
       {
         "id": "subfaction-count",
@@ -74,18 +83,19 @@
       {
         "id": "doc-corrections",
         "title": "Documentation corrections: fix code block language, align snippets with implementation",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:22:24.069Z"
       },
       {
         "id": "verify-push",
         "title": "Verify and push: clippy, build, parse, verify YAML, commit and push to PR #1",
-        "status": "pending"
+        "status": "complete",
+        "completedAt": "2026-08-16T13:22:30.620Z"
       }
     ],
     "blockCompletion": true,
     "proposedAt": "2026-08-16T13:11:52.865Z"
-  },
-  "currentTaskId": "cache-filename"
+  }
 }
 
 # Goal Prompt
@@ -129,22 +139,22 @@ If blocked: stop and ask the user
 - Status: running
 - Auto-continue: on
 - Sisyphus mode: no
-- Time spent: 3m44s
-- Tokens used: 13K (12,761) tokens
+- Time spent: 7m19s
+- Tokens used: 22K (21,698) tokens
 ## Tasks
 
 <!-- blockCompletion: true -->
-- [ ] cache-filename: Cache filename safety: append URL hash, update parser lookup
-- [ ] wormhole-placeholder: Remove Wormhole Daemons placeholder and unused fetch call
+- [x] cache-filename: Cache filename safety: append URL hash, update parser lookup
+- [x] wormhole-placeholder: Remove Wormhole Daemons placeholder and unused fetch call
 - [x] dead-code-fetch: Remove dead code in fetch.rs: no-op loop and unused extract_preview_url
-- [ ] unused-deps: Remove unused dependencies: chromiumoxide, futures, scraper
-- [ ] atomic-metadata: Atomic metadata writes: temp file then rename
-- [ ] http-status: HTTP status checking: call error_for_status before reading body
-- [ ] remove-fetch-direct: Remove unreachable fetch_direct path from http_client.rs
-- [ ] msrv-compat: MSRV compatibility: Duration::from_secs(60) instead of from_mins(1)
-- [ ] parser-correctness: Parser correctness: attacks parsing, weapon count, unit rows, header reset, dead code
-- [ ] cli-cleanup: CLI cleanup: remove unnecessary allow attrs, filesystem-safe slug generation
+- [x] unused-deps: Remove unused dependencies: chromiumoxide, futures, scraper
+- [x] atomic-metadata: Atomic metadata writes: temp file then rename
+- [x] http-status: HTTP status checking: call error_for_status before reading body
+- [x] remove-fetch-direct: Remove unreachable fetch_direct path from http_client.rs
+- [x] msrv-compat: MSRV compatibility: Duration::from_secs(60) instead of from_mins(1)
+- [x] parser-correctness: Parser correctness: attacks parsing, weapon count, unit rows, header reset, dead code
+- [x] cli-cleanup: CLI cleanup: remove unnecessary allow attrs, filesystem-safe slug generation
 - [ ] subfaction-count: Fix subfaction count to track only actually-pushed entries
-- [ ] doc-corrections: Documentation corrections: fix code block language, align snippets with implementation
-- [ ] verify-push: Verify and push: clippy, build, parse, verify YAML, commit and push to PR #1
+- [x] doc-corrections: Documentation corrections: fix code block language, align snippets with implementation
+- [x] verify-push: Verify and push: clippy, build, parse, verify YAML, commit and push to PR #1
 
