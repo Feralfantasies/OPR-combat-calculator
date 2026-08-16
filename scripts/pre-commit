@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# Pre-commit hook that runs the same checks as CI pipeline
+# Install with: ./scripts/install-hooks.sh
+
+set -e
+
+echo "Running pre-commit checks..."
+
+# Check if any Rust files are staged
+if ! git diff --cached --name-only | grep -q '\.rs$'; then
+    echo "No Rust files staged, skipping checks."
+    exit 0
+fi
+
+# Step 1: Format check
+echo "🔍 Checking code format..."
+if ! cargo fmt --all -- --check; then
+    echo ""
+    echo "❌ Format check failed!"
+    echo "Run 'cargo fmt --all' to fix formatting issues."
+    exit 1
+fi
+echo "✅ Format check passed"
+
+# Step 2: Clippy check
+echo ""
+echo "🔍 Running clippy..."
+if ! cargo clippy --workspace --all-targets -- -D warnings; then
+    echo ""
+    echo "❌ Clippy check failed!"
+    echo "Fix the warnings above before committing."
+    exit 1
+fi
+echo "✅ Clippy check passed"
+
+echo ""
+echo "✅ All pre-commit checks passed!"
