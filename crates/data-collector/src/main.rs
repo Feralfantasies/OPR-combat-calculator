@@ -182,6 +182,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
         "Lust Disciples",
         "Plague Disciples",
         "War Disciples",
+        "Elven Jesters",
         "Titan Lords",
         "Titan Lords Change Disciples",
         "Titan Lords Lust Disciples",
