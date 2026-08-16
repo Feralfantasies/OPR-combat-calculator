@@ -27,7 +27,9 @@ impl HttpClient {
     /// Returns an error if the client cannot be built
     pub fn new(delay_ms: u64, verbose: bool) -> Result<Self> {
         let client = Client::builder()
-            .timeout(Duration::from_mins(1)) // Longer timeout for Jina Reader
+            #[allow(clippy::duration_suboptimal_units)]
+        #[allow(clippy::duration_suboptimal_units)]
+            .timeout(Duration::from_secs(60)) // Longer timeout for Jina Reader
             .user_agent("OPR-Data-Collector/0.1.0")
             .build()?;
 
