@@ -2,708 +2,708 @@ v3.5.2:
   name: Titan Lords Change Disciples
   id: m0JXdcVTyo-WFrMF
   units:
-  - name: Change Vassal Micro-Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 9
-    weapons:
-    - name: Heavy Hammer
-      range: null
-      attacks: A1
-      ap: AP(1)
+    - name: Change Vassal Micro-Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 9
+      weapons:
+        - name: Heavy Hammer
+          range: null
+          attacks: A1
+          ap: AP(1)
+          special_rules:
+            - Blast(3)
+        - name: Stomp
+          range: null
+          attacks: A3
+          ap: AP(1)
+          special_rules: []
       special_rules:
-      - Blast(3)
-    - name: Stomp
-      range: null
-      attacks: A3
-      ap: AP(1)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(1)
-    - Fortified
-    cost: 215
-    upgrade_categories:
-    - category: Replace Titan Shield
-      upgrades:
-      - name: Heavy Hammer
-        rules: A1, AP(1), Blast(3)
-        cost_modifier: +5pts
-    - category: Replace any Heavy Hammer
-      upgrades:
-      - name: Heavy Lance
-        rules: A3, Thrust
-        cost_modifier: +5pts
-      - name: Heavy Chainsaw
-        rules: A1, AP(2), Deadly(3)
-        cost_modifier: +5pts
-      - name: Heavy Fist
-        rules: A2, AP(4)
-        cost_modifier: +10pts
-      - name: Heavy Sword
-        rules: A3, AP(1), Rending
-        cost_modifier: +10pts
-      - name: Heavy Flail
-        rules: A3, Reliable, Rending
-        cost_modifier: +15pts
-      - name: Heavy Claw
-        rules: A3, AP(1), Reliable
-        cost_modifier: +15pts
-    - category: Replace one Heavy Hammer
-      upgrades:
-      - name: Fusion Blaster
-        rules: 24", A1, AP(4), Deadly(6)
-        cost_modifier: +85pts
-      - name: Gatling Cannon
-        rules: 30", A6, AP(1), Rending
-        cost_modifier: +110pts
-      - name: Hell Autocannon
-        rules: 36", A6, AP(2)
-        cost_modifier: +130pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Psychic Lord
-        rules: Caster(1)
-        cost_modifier: +20pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +30pts
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Vanguard Config
-        rules: Scout, Strider
-        cost_modifier: +55pts
-  - name: Change Errant Mini-Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 12
-    weapons:
-    - name: Heavy Hammer
-      range: null
-      attacks: A2
-      ap: AP(1)
+        - Changebound
+        - Fear(1)
+        - Fortified
+      cost: 215
+      upgrade_categories:
+        - category: Replace Titan Shield
+          upgrades:
+            - name: Heavy Hammer
+              rules: A1, AP(1), Blast(3)
+              cost_modifier: +5pts
+        - category: Replace any Heavy Hammer
+          upgrades:
+            - name: Heavy Lance
+              rules: A3, Thrust
+              cost_modifier: +5pts
+            - name: Heavy Chainsaw
+              rules: A1, AP(2), Deadly(3)
+              cost_modifier: +5pts
+            - name: Heavy Fist
+              rules: A2, AP(4)
+              cost_modifier: +10pts
+            - name: Heavy Sword
+              rules: A3, AP(1), Rending
+              cost_modifier: +10pts
+            - name: Heavy Flail
+              rules: A3, Reliable, Rending
+              cost_modifier: +15pts
+            - name: Heavy Claw
+              rules: A3, AP(1), Reliable
+              cost_modifier: +15pts
+        - category: Replace one Heavy Hammer
+          upgrades:
+            - name: Fusion Blaster
+              rules: 24", A1, AP(4), Deadly(6)
+              cost_modifier: +85pts
+            - name: Gatling Cannon
+              rules: 30", A6, AP(1), Rending
+              cost_modifier: +110pts
+            - name: Hell Autocannon
+              rules: 36", A6, AP(2)
+              cost_modifier: +130pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Psychic Lord
+              rules: Caster(1)
+              cost_modifier: +20pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +30pts
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Vanguard Config
+              rules: Scout, Strider
+              cost_modifier: +55pts
+    - name: Change Errant Mini-Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 12
+      weapons:
+        - name: Heavy Hammer
+          range: null
+          attacks: A2
+          ap: AP(1)
+          special_rules:
+            - Blast(3)
+        - name: Stomp
+          range: null
+          attacks: A4
+          ap: AP(1)
+          special_rules: []
       special_rules:
-      - Blast(3)
-    - name: Stomp
-      range: null
-      attacks: A4
-      ap: AP(1)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(2)
-    - Fortified
-    - Furious
-    cost: 315
-    upgrade_categories:
-    - category: Replace any Heavy Hammer
-      upgrades:
-      - name: Heavy Chainsaw
-        rules: A2, AP(2), Deadly(3)
-        cost_modifier: +15pts
-      - name: Heavy Lance
-        rules: A6, Thrust
-        cost_modifier: +15pts
-      - name: Heavy Fist
-        rules: A4, AP(4)
-        cost_modifier: +20pts
-      - name: Heavy Sword
-        rules: A6, AP(1), Rending
-        cost_modifier: +25pts
-      - name: Heavy Flail
-        rules: A6, Reliable, Rending
-        cost_modifier: +30pts
-      - name: Heavy Claw
-        rules: A6, AP(1), Reliable
-        cost_modifier: +35pts
-    - category: Replace Titan Shield
-      upgrades:
-      - name: Heavy Hammer
-        rules: A2, AP(1), Blast(3)
-        cost_modifier: +20pts
-    - category: Upgrade with one
-      upgrades:
-      - name: Top-Fuser
-        rules: 12", A1, AP(4), Deadly(3)
-        cost_modifier: +35pts
-      - name: Top-Launcher
-        rules: 36", A1, Blast(3), Indirect
-        cost_modifier: +45pts
-      - name: Top-Machinegun
-        rules: 30", A3, AP(1)
-        cost_modifier: +50pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Psychic Lord
-        rules: Caster(2)
-        cost_modifier: +45pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +45pts
-      - name: Assault Config
-        rules: Fast, Strider
-        cost_modifier: +70pts
-  - name: Change Pilgrim Mini-Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 12
-    weapons:
-    - name: Fusion Blaster
-      range: 24"
-      attacks: A1
-      ap: AP(4)
+        - Changebound
+        - Fear(2)
+        - Fortified
+        - Furious
+      cost: 315
+      upgrade_categories:
+        - category: Replace any Heavy Hammer
+          upgrades:
+            - name: Heavy Chainsaw
+              rules: A2, AP(2), Deadly(3)
+              cost_modifier: +15pts
+            - name: Heavy Lance
+              rules: A6, Thrust
+              cost_modifier: +15pts
+            - name: Heavy Fist
+              rules: A4, AP(4)
+              cost_modifier: +20pts
+            - name: Heavy Sword
+              rules: A6, AP(1), Rending
+              cost_modifier: +25pts
+            - name: Heavy Flail
+              rules: A6, Reliable, Rending
+              cost_modifier: +30pts
+            - name: Heavy Claw
+              rules: A6, AP(1), Reliable
+              cost_modifier: +35pts
+        - category: Replace Titan Shield
+          upgrades:
+            - name: Heavy Hammer
+              rules: A2, AP(1), Blast(3)
+              cost_modifier: +20pts
+        - category: Upgrade with one
+          upgrades:
+            - name: Top-Fuser
+              rules: 12", A1, AP(4), Deadly(3)
+              cost_modifier: +35pts
+            - name: Top-Launcher
+              rules: 36", A1, Blast(3), Indirect
+              cost_modifier: +45pts
+            - name: Top-Machinegun
+              rules: 30", A3, AP(1)
+              cost_modifier: +50pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Psychic Lord
+              rules: Caster(2)
+              cost_modifier: +45pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +45pts
+            - name: Assault Config
+              rules: Fast, Strider
+              cost_modifier: +70pts
+    - name: Change Pilgrim Mini-Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 12
+      weapons:
+        - name: Fusion Blaster
+          range: 24"
+          attacks: A1
+          ap: AP(4)
+          special_rules:
+            - Deadly(6)
+        - name: Stomp
+          range: null
+          attacks: A4
+          ap: AP(1)
+          special_rules: []
       special_rules:
-      - Deadly(6)
-    - name: Stomp
-      range: null
-      attacks: A4
-      ap: AP(1)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(2)
-    - Fortified
-    cost: 380
-    upgrade_categories:
-    - category: Replace any Heavy Hammer
-      upgrades:
-      - name: Heavy Chainsaw
-        rules: A2, AP(2), Deadly(3)
-        cost_modifier: +15pts
-      - name: Heavy Lance
-        rules: A6, Thrust
-        cost_modifier: +15pts
-      - name: Heavy Fist
-        rules: A4, AP(4)
-        cost_modifier: +20pts
-      - name: Heavy Sword
-        rules: A6, AP(1), Rending
-        cost_modifier: +25pts
-      - name: Heavy Flail
-        rules: A6, Reliable, Rending
-        cost_modifier: +30pts
-      - name: Heavy Claw
-        rules: A6, AP(1), Reliable
-        cost_modifier: +35pts
-    - category: Replace Titan Shield
-      upgrades:
-      - name: Heavy Hammer
-        rules: A2, AP(1), Blast(3)
-        cost_modifier: +15pts
-    - category: Replace any Fusion Blaster
-      upgrades:
-      - name: Gatling Cannon
-        rules: 30", A6, AP(1), Rending
-        cost_modifier: +30pts
-      - name: Hell Autocannon
-        rules: 36", A6, AP(2)
-        cost_modifier: +45pts
-    - category: Upgrade with one
-      upgrades:
-      - name: Top-Fuser
-        rules: 12", A1, AP(4), Deadly(3)
-        cost_modifier: +35pts
-      - name: Top-Launcher
-        rules: 36", A1, Blast(3), Indirect
-        cost_modifier: +45pts
-      - name: Top-Machinegun
-        rules: 30", A3, AP(1)
-        cost_modifier: +50pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Psychic Lord
-        rules: Caster(2)
-        cost_modifier: +45pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +45pts
-      - name: Assault Config
-        rules: Fast, Strider
-        cost_modifier: +70pts
-  - name: Change Yeoman Mini-Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 12
-    weapons:
-    - name: Fusion Blasters
-      range: 24"
-      attacks: A1
-      ap: AP(4)
+        - Changebound
+        - Fear(2)
+        - Fortified
+      cost: 380
+      upgrade_categories:
+        - category: Replace any Heavy Hammer
+          upgrades:
+            - name: Heavy Chainsaw
+              rules: A2, AP(2), Deadly(3)
+              cost_modifier: +15pts
+            - name: Heavy Lance
+              rules: A6, Thrust
+              cost_modifier: +15pts
+            - name: Heavy Fist
+              rules: A4, AP(4)
+              cost_modifier: +20pts
+            - name: Heavy Sword
+              rules: A6, AP(1), Rending
+              cost_modifier: +25pts
+            - name: Heavy Flail
+              rules: A6, Reliable, Rending
+              cost_modifier: +30pts
+            - name: Heavy Claw
+              rules: A6, AP(1), Reliable
+              cost_modifier: +35pts
+        - category: Replace Titan Shield
+          upgrades:
+            - name: Heavy Hammer
+              rules: A2, AP(1), Blast(3)
+              cost_modifier: +15pts
+        - category: Replace any Fusion Blaster
+          upgrades:
+            - name: Gatling Cannon
+              rules: 30", A6, AP(1), Rending
+              cost_modifier: +30pts
+            - name: Hell Autocannon
+              rules: 36", A6, AP(2)
+              cost_modifier: +45pts
+        - category: Upgrade with one
+          upgrades:
+            - name: Top-Fuser
+              rules: 12", A1, AP(4), Deadly(3)
+              cost_modifier: +35pts
+            - name: Top-Launcher
+              rules: 36", A1, Blast(3), Indirect
+              cost_modifier: +45pts
+            - name: Top-Machinegun
+              rules: 30", A3, AP(1)
+              cost_modifier: +50pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Psychic Lord
+              rules: Caster(2)
+              cost_modifier: +45pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +45pts
+            - name: Assault Config
+              rules: Fast, Strider
+              cost_modifier: +70pts
+    - name: Change Yeoman Mini-Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 12
+      weapons:
+        - name: Fusion Blasters
+          range: 24"
+          attacks: A1
+          ap: AP(4)
+          special_rules:
+            - Deadly(6)
+        - name: Stomp
+          range: null
+          attacks: A4
+          ap: AP(1)
+          special_rules: []
       special_rules:
-      - Deadly(6)
-    - name: Stomp
-      range: null
-      attacks: A4
-      ap: AP(1)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(2)
-    - Relentless
-    cost: 475
-    upgrade_categories:
-    - category: Replace any Fusion Blaster
-      upgrades:
-      - name: Gatling Cannon
-        rules: 30", A6, AP(1), Rending
-        cost_modifier: +35pts
-      - name: Hell Autocannon
-        rules: 36", A6, AP(2)
-        cost_modifier: +45pts
-    - category: Upgrade with one
-      upgrades:
-      - name: Top-Fuser
-        rules: 12", A1, AP(4), Deadly(3)
-        cost_modifier: +35pts
-      - name: Top-Launcher
-        rules: 36", A1, Blast(3), Indirect
-        cost_modifier: +45pts
-      - name: Top-Machinegun
-        rules: 30", A3, AP(1)
-        cost_modifier: +55pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Psychic Lord
-        rules: Caster(2)
-        cost_modifier: +45pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +45pts
-      - name: Assault Config
-        rules: Fast, Strider
-        cost_modifier: +70pts
-  - name: Change Paladin Light Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 18
-    weapons:
-    - name: Hull-Fuser
-      range: 12"
-      attacks: A1
-      ap: AP(4)
+        - Changebound
+        - Fear(2)
+        - Relentless
+      cost: 475
+      upgrade_categories:
+        - category: Replace any Fusion Blaster
+          upgrades:
+            - name: Gatling Cannon
+              rules: 30", A6, AP(1), Rending
+              cost_modifier: +35pts
+            - name: Hell Autocannon
+              rules: 36", A6, AP(2)
+              cost_modifier: +45pts
+        - category: Upgrade with one
+          upgrades:
+            - name: Top-Fuser
+              rules: 12", A1, AP(4), Deadly(3)
+              cost_modifier: +35pts
+            - name: Top-Launcher
+              rules: 36", A1, Blast(3), Indirect
+              cost_modifier: +45pts
+            - name: Top-Machinegun
+              rules: 30", A3, AP(1)
+              cost_modifier: +55pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Psychic Lord
+              rules: Caster(2)
+              cost_modifier: +45pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +45pts
+            - name: Assault Config
+              rules: Fast, Strider
+              cost_modifier: +70pts
+    - name: Change Paladin Light Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 18
+      weapons:
+        - name: Hull-Fuser
+          range: 12"
+          attacks: A1
+          ap: AP(4)
+          special_rules:
+            - Deadly(3)
+        - name: Heavy Hammer
+          range: null
+          attacks: A2
+          ap: AP(1)
+          special_rules:
+            - Blast(3)
+        - name: Stomp
+          range: null
+          attacks: A6
+          ap: AP(2)
+          special_rules: []
       special_rules:
-      - Deadly(3)
-    - name: Heavy Hammer
-      range: null
-      attacks: A2
-      ap: AP(1)
+        - Changebound
+        - Fear(3)
+        - Fortified
+      cost: 520
+      upgrade_categories:
+        - category: Replace Titan Shield
+          upgrades:
+            - name: Heavy Hammer
+              rules: A2, AP(1), Blast(3)
+              cost_modifier: +5pts
+        - category: Replace any Heavy Hammer
+          upgrades:
+            - name: Heavy Lance
+              rules: A6, Thrust
+              cost_modifier: +15pts
+            - name: Heavy Chainsaw
+              rules: A2, AP(2), Deadly(3)
+              cost_modifier: +15pts
+            - name: Heavy Fist
+              rules: A4, AP(4)
+              cost_modifier: +20pts
+            - name: Heavy Sword
+              rules: A6, AP(1), Rending
+              cost_modifier: +25pts
+            - name: Heavy Flail
+              rules: A6, Reliable, Rending
+              cost_modifier: +30pts
+            - name: Heavy Claw
+              rules: A6, AP(1), Reliable
+              cost_modifier: +35pts
+        - category: Replace one Heavy Hammer
+          upgrades:
+            - name: Frag-Blaster
+              rules: 12", A16, AP(1), Rending
+              cost_modifier: +120pts
+            - name: Fusion Blaster
+              rules: 24", A2, AP(4), Deadly(6)
+              cost_modifier: +165pts
+            - name: Gatling Cannon
+              rules: 30", A12, AP(1), Rending
+              cost_modifier: +225pts
+            - name: Hell Autocannon
+              rules: 36", A12, AP(2)
+              cost_modifier: +255pts
+        - category: Replace Hull-Fuser
+          upgrades:
+            - name: Hull-Machinegun
+              rules: 30", A3, AP(1)
+              cost_modifier: +15pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Psychic Lord
+              rules: Caster(3)
+              cost_modifier: +70pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +70pts
+            - name: Vanguard Config
+              rules: Scout, Strider
+              cost_modifier: +110pts
+    - name: Change Questor Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 24
+      weapons:
+        - name: Hull-Fuser
+          range: 12"
+          attacks: A1
+          ap: AP(4)
+          special_rules:
+            - Deadly(3)
+        - name: Stomp
+          range: null
+          attacks: A8
+          ap: AP(2)
+          special_rules: []
+        - name: Titan Hammer
+          range: null
+          attacks: A4
+          ap: AP(1)
+          special_rules:
+            - Blast(3)
       special_rules:
-      - Blast(3)
-    - name: Stomp
-      range: null
-      attacks: A6
-      ap: AP(2)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(3)
-    - Fortified
-    cost: 520
-    upgrade_categories:
-    - category: Replace Titan Shield
-      upgrades:
-      - name: Heavy Hammer
-        rules: A2, AP(1), Blast(3)
-        cost_modifier: +5pts
-    - category: Replace any Heavy Hammer
-      upgrades:
-      - name: Heavy Lance
-        rules: A6, Thrust
-        cost_modifier: +15pts
-      - name: Heavy Chainsaw
-        rules: A2, AP(2), Deadly(3)
-        cost_modifier: +15pts
-      - name: Heavy Fist
-        rules: A4, AP(4)
-        cost_modifier: +20pts
-      - name: Heavy Sword
-        rules: A6, AP(1), Rending
-        cost_modifier: +25pts
-      - name: Heavy Flail
-        rules: A6, Reliable, Rending
-        cost_modifier: +30pts
-      - name: Heavy Claw
-        rules: A6, AP(1), Reliable
-        cost_modifier: +35pts
-    - category: Replace one Heavy Hammer
-      upgrades:
-      - name: Frag-Blaster
-        rules: 12", A16, AP(1), Rending
-        cost_modifier: +120pts
-      - name: Fusion Blaster
-        rules: 24", A2, AP(4), Deadly(6)
-        cost_modifier: +165pts
-      - name: Gatling Cannon
-        rules: 30", A12, AP(1), Rending
-        cost_modifier: +225pts
-      - name: Hell Autocannon
-        rules: 36", A12, AP(2)
-        cost_modifier: +255pts
-    - category: Replace Hull-Fuser
-      upgrades:
-      - name: Hull-Machinegun
-        rules: 30", A3, AP(1)
-        cost_modifier: +15pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Psychic Lord
-        rules: Caster(3)
-        cost_modifier: +70pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +70pts
-      - name: Vanguard Config
-        rules: Scout, Strider
-        cost_modifier: +110pts
-  - name: Change Questor Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 24
-    weapons:
-    - name: Hull-Fuser
-      range: 12"
-      attacks: A1
-      ap: AP(4)
+        - Changebound
+        - Fear(4)
+        - Fortified
+        - Furious
+      cost: 745
+      upgrade_categories:
+        - category: Replace any Titan Hammer
+          upgrades:
+            - name: Titan Chainsaw
+              rules: A4, AP(2), Deadly(3)
+              cost_modifier: +30pts
+            - name: Titan Lance
+              rules: A12, Thrust
+              cost_modifier: +30pts
+            - name: Titan Sword
+              rules: A12, AP(1), Rending
+              cost_modifier: +55pts
+            - name: Titan Fist
+              rules: A9, AP(4)
+              cost_modifier: +55pts
+            - name: Titan Flail
+              rules: A12, Reliable, Rending
+              cost_modifier: +60pts
+            - name: Titan Claw
+              rules: A12, AP(1), Reliable
+              cost_modifier: +65pts
+        - category: Replace Titan Shield
+          upgrades:
+            - name: Titan Hammer
+              rules: A4, AP(1), Blast(3)
+              cost_modifier: +30pts
+        - category: Replace any Hull-Fuser
+          upgrades:
+            - name: Hull-Machinegun
+              rules: 30", A3, AP(1)
+              cost_modifier: +15pts
+        - category: Upgrade with one
+          upgrades:
+            - name: Top-Rocket
+              rules: 36", A1, Blast(3), Indirect
+              cost_modifier: +45pts
+            - name: Top-Missile
+              rules: 36", A1, AP(2), Deadly(3)
+              cost_modifier: +60pts
+            - name: Top-Anti-Air
+              rules: 36", A3, AP(1), Unstoppable
+              cost_modifier: +60pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Exploration Config
+              rules: Strider
+              cost_modifier: +60pts
+            - name: Psychic Lord
+              rules: Caster(4)
+              cost_modifier: +95pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +100pts
+    - name: Change Knight Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 24
+      weapons:
+        - name: Titan Fusion Cannon
+          range: 24"
+          attacks: A2
+          ap: AP(4)
+          special_rules:
+            - Deadly(6)
+        - name: Hull-Fuser
+          range: 12"
+          attacks: A1
+          ap: AP(4)
+          special_rules:
+            - Deadly(3)
+        - name: Stomp
+          range: null
+          attacks: A8
+          ap: AP(2)
+          special_rules: []
       special_rules:
-      - Deadly(3)
-    - name: Stomp
-      range: null
-      attacks: A8
-      ap: AP(2)
-      special_rules: []
-    - name: Titan Hammer
-      range: null
-      attacks: A4
-      ap: AP(1)
+        - Changebound
+        - Fear(4)
+        - Fortified
+      cost: 870
+      upgrade_categories:
+        - category: Replace any Titan Hammer
+          upgrades:
+            - name: Titan Chainsaw
+              rules: A4, AP(2), Deadly(3)
+              cost_modifier: +30pts
+            - name: Titan Lance
+              rules: A12, Thrust
+              cost_modifier: +30pts
+            - name: Titan Sword
+              rules: A12, AP(1), Rending
+              cost_modifier: +45pts
+            - name: Titan Fist
+              rules: A9, AP(4)
+              cost_modifier: +55pts
+            - name: Titan Flail
+              rules: A12, Reliable, Rending
+              cost_modifier: +55pts
+            - name: Titan Claw
+              rules: A12, AP(1), Reliable
+              cost_modifier: +65pts
+        - category: Replace Titan Shield
+          upgrades:
+            - name: Titan Hammer
+              rules: A4, AP(1), Blast(3)
+              cost_modifier: +30pts
+        - category: Replace any Titan Fusion Cannon
+          upgrades:
+            - name: Heavy Machinegun, Titan Battle Cannon
+              rules: 30", A3, AP(1), 30", A3, AP(2), Blast(3)
+              cost_modifier: +5pts
+            - name: Titan Laser Cannon
+              rules: 36", A3, AP(3), Deadly(3)
+              cost_modifier: +20pts
+            - name: Titan Plasma Cannon
+              rules: 30", A3, AP(4), Blast(3)
+              cost_modifier: +25pts
+            - name: Titan Gatling Cannon, Heavy Flamer
+              rules: 30", A9, AP(1), Rending, 12", A1, AP(1), Blast(3), Reliable
+              cost_modifier: +20pts
+            - name: Titan Pulse Laser
+              rules: 30", A9, AP(3)
+              cost_modifier: +35pts
+        - category: Replace any Hull-Fuser
+          upgrades:
+            - name: Hull-Machinegun
+              rules: 30", A3, AP(1)
+              cost_modifier: +15pts
+        - category: Upgrade with one
+          upgrades:
+            - name: Top-Rocket
+              rules: 36", A1, Blast(3), Indirect
+              cost_modifier: +45pts
+            - name: Top-Missile
+              rules: 36", A1, AP(2), Deadly(3)
+              cost_modifier: +60pts
+            - name: Top-Anti-Air
+              rules: 36", A3, AP(1), Unstoppable
+              cost_modifier: +60pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Exploration Config
+              rules: Strider
+              cost_modifier: +60pts
+            - name: Psychic Lord
+              rules: Caster(4)
+              cost_modifier: +95pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +100pts
+    - name: Change Duke Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 24
+      weapons:
+        - name: Titan Fusion Cannons
+          range: 24"
+          attacks: A2
+          ap: AP(4)
+          special_rules:
+            - Deadly(6)
+        - name: Hull-Fuser
+          range: 12"
+          attacks: A1
+          ap: AP(4)
+          special_rules:
+            - Deadly(3)
+        - name: Stomp
+          range: null
+          attacks: A8
+          ap: AP(2)
+          special_rules: []
       special_rules:
-      - Blast(3)
-    special_rules:
-    - Changebound
-    - Fear(4)
-    - Fortified
-    - Furious
-    cost: 745
-    upgrade_categories:
-    - category: Replace any Titan Hammer
-      upgrades:
-      - name: Titan Chainsaw
-        rules: A4, AP(2), Deadly(3)
-        cost_modifier: +30pts
-      - name: Titan Lance
-        rules: A12, Thrust
-        cost_modifier: +30pts
-      - name: Titan Sword
-        rules: A12, AP(1), Rending
-        cost_modifier: +55pts
-      - name: Titan Fist
-        rules: A9, AP(4)
-        cost_modifier: +55pts
-      - name: Titan Flail
-        rules: A12, Reliable, Rending
-        cost_modifier: +60pts
-      - name: Titan Claw
-        rules: A12, AP(1), Reliable
-        cost_modifier: +65pts
-    - category: Replace Titan Shield
-      upgrades:
-      - name: Titan Hammer
-        rules: A4, AP(1), Blast(3)
-        cost_modifier: +30pts
-    - category: Replace any Hull-Fuser
-      upgrades:
-      - name: Hull-Machinegun
-        rules: 30", A3, AP(1)
-        cost_modifier: +15pts
-    - category: Upgrade with one
-      upgrades:
-      - name: Top-Rocket
-        rules: 36", A1, Blast(3), Indirect
-        cost_modifier: +45pts
-      - name: Top-Missile
-        rules: 36", A1, AP(2), Deadly(3)
-        cost_modifier: +60pts
-      - name: Top-Anti-Air
-        rules: 36", A3, AP(1), Unstoppable
-        cost_modifier: +60pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Exploration Config
-        rules: Strider
-        cost_modifier: +60pts
-      - name: Psychic Lord
-        rules: Caster(4)
-        cost_modifier: +95pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +100pts
-  - name: Change Knight Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 24
-    weapons:
-    - name: Titan Fusion Cannon
-      range: 24"
-      attacks: A2
-      ap: AP(4)
+        - Changebound
+        - Fear(4)
+        - Relentless
+      cost: 1060
+      upgrade_categories:
+        - category: Replace any Titan Fusion Cannon
+          upgrades:
+            - name: Heavy Machinegun, Titan Battle Cannon
+              rules: 30", A3, AP(1), 30", A3, AP(2), Blast(3)
+              cost_modifier: +5pts
+            - name: Titan Laser Cannon
+              rules: 36", A3, AP(3), Deadly(3)
+              cost_modifier: +20pts
+            - name: Titan Plasma Cannon
+              rules: 30", A3, AP(4), Blast(3)
+              cost_modifier: +25pts
+            - name: Titan Gatling Cannon, Heavy Flamer
+              rules: 30", A9, AP(1), Rending, 12", A1, AP(1), Blast(3), Reliable
+              cost_modifier: +30pts
+            - name: Titan Pulse Laser
+              rules: 30", A9, AP(3)
+              cost_modifier: +35pts
+        - category: Replace any Hull-Fuser
+          upgrades:
+            - name: Hull-Machinegun
+              rules: 30", A3, AP(1)
+              cost_modifier: +20pts
+        - category: Upgrade with one
+          upgrades:
+            - name: Top-Rocket
+              rules: 36", A1, Blast(3), Indirect
+              cost_modifier: +45pts
+            - name: Top-Missile
+              rules: 36", A1, AP(2), Deadly(3)
+              cost_modifier: +65pts
+            - name: Top-Anti-Air
+              rules: 36", A3, AP(1), Unstoppable
+              cost_modifier: +65pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Exploration Config
+              rules: Strider
+              cost_modifier: +60pts
+            - name: Psychic Lord
+              rules: Caster(4)
+              cost_modifier: +95pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +100pts
+    - name: Change King Heavy Titan
+      size: 1
+      quality: 3+
+      defense: 2+
+      tough: 30
+      weapons:
+        - name: Twin Shoulder-Cannon
+          range: 24"
+          attacks: A2
+          ap: AP(1)
+          special_rules:
+            - Blast(3)
+        - name: Titan Harpoon Cannons
+          range: 18"
+          attacks: A1
+          ap: AP(4)
+          special_rules:
+            - Deadly(9)
+        - name: Twin Hull-Fuser
+          range: 12"
+          attacks: A2
+          ap: AP(4)
+          special_rules:
+            - Deadly(3)
+        - name: Stomp
+          range: null
+          attacks: A10
+          ap: AP(3)
+          special_rules: []
       special_rules:
-      - Deadly(6)
-    - name: Hull-Fuser
-      range: 12"
-      attacks: A1
-      ap: AP(4)
-      special_rules:
-      - Deadly(3)
-    - name: Stomp
-      range: null
-      attacks: A8
-      ap: AP(2)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(4)
-    - Fortified
-    cost: 870
-    upgrade_categories:
-    - category: Replace any Titan Hammer
-      upgrades:
-      - name: Titan Chainsaw
-        rules: A4, AP(2), Deadly(3)
-        cost_modifier: +30pts
-      - name: Titan Lance
-        rules: A12, Thrust
-        cost_modifier: +30pts
-      - name: Titan Sword
-        rules: A12, AP(1), Rending
-        cost_modifier: +45pts
-      - name: Titan Fist
-        rules: A9, AP(4)
-        cost_modifier: +55pts
-      - name: Titan Flail
-        rules: A12, Reliable, Rending
-        cost_modifier: +55pts
-      - name: Titan Claw
-        rules: A12, AP(1), Reliable
-        cost_modifier: +65pts
-    - category: Replace Titan Shield
-      upgrades:
-      - name: Titan Hammer
-        rules: A4, AP(1), Blast(3)
-        cost_modifier: +30pts
-    - category: Replace any Titan Fusion Cannon
-      upgrades:
-      - name: Heavy Machinegun, Titan Battle Cannon
-        rules: 30", A3, AP(1), 30", A3, AP(2), Blast(3)
-        cost_modifier: +5pts
-      - name: Titan Laser Cannon
-        rules: 36", A3, AP(3), Deadly(3)
-        cost_modifier: +20pts
-      - name: Titan Plasma Cannon
-        rules: 30", A3, AP(4), Blast(3)
-        cost_modifier: +25pts
-      - name: Titan Gatling Cannon, Heavy Flamer
-        rules: 30", A9, AP(1), Rending, 12", A1, AP(1), Blast(3), Reliable
-        cost_modifier: +20pts
-      - name: Titan Pulse Laser
-        rules: 30", A9, AP(3)
-        cost_modifier: +35pts
-    - category: Replace any Hull-Fuser
-      upgrades:
-      - name: Hull-Machinegun
-        rules: 30", A3, AP(1)
-        cost_modifier: +15pts
-    - category: Upgrade with one
-      upgrades:
-      - name: Top-Rocket
-        rules: 36", A1, Blast(3), Indirect
-        cost_modifier: +45pts
-      - name: Top-Missile
-        rules: 36", A1, AP(2), Deadly(3)
-        cost_modifier: +60pts
-      - name: Top-Anti-Air
-        rules: 36", A3, AP(1), Unstoppable
-        cost_modifier: +60pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Exploration Config
-        rules: Strider
-        cost_modifier: +60pts
-      - name: Psychic Lord
-        rules: Caster(4)
-        cost_modifier: +95pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +100pts
-  - name: Change Duke Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 24
-    weapons:
-    - name: Titan Fusion Cannons
-      range: 24"
-      attacks: A2
-      ap: AP(4)
-      special_rules:
-      - Deadly(6)
-    - name: Hull-Fuser
-      range: 12"
-      attacks: A1
-      ap: AP(4)
-      special_rules:
-      - Deadly(3)
-    - name: Stomp
-      range: null
-      attacks: A8
-      ap: AP(2)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(4)
-    - Relentless
-    cost: 1060
-    upgrade_categories:
-    - category: Replace any Titan Fusion Cannon
-      upgrades:
-      - name: Heavy Machinegun, Titan Battle Cannon
-        rules: 30", A3, AP(1), 30", A3, AP(2), Blast(3)
-        cost_modifier: +5pts
-      - name: Titan Laser Cannon
-        rules: 36", A3, AP(3), Deadly(3)
-        cost_modifier: +20pts
-      - name: Titan Plasma Cannon
-        rules: 30", A3, AP(4), Blast(3)
-        cost_modifier: +25pts
-      - name: Titan Gatling Cannon, Heavy Flamer
-        rules: 30", A9, AP(1), Rending, 12", A1, AP(1), Blast(3), Reliable
-        cost_modifier: +30pts
-      - name: Titan Pulse Laser
-        rules: 30", A9, AP(3)
-        cost_modifier: +35pts
-    - category: Replace any Hull-Fuser
-      upgrades:
-      - name: Hull-Machinegun
-        rules: 30", A3, AP(1)
-        cost_modifier: +20pts
-    - category: Upgrade with one
-      upgrades:
-      - name: Top-Rocket
-        rules: 36", A1, Blast(3), Indirect
-        cost_modifier: +45pts
-      - name: Top-Missile
-        rules: 36", A1, AP(2), Deadly(3)
-        cost_modifier: +65pts
-      - name: Top-Anti-Air
-        rules: 36", A3, AP(1), Unstoppable
-        cost_modifier: +65pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Exploration Config
-        rules: Strider
-        cost_modifier: +60pts
-      - name: Psychic Lord
-        rules: Caster(4)
-        cost_modifier: +95pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +100pts
-  - name: Change King Heavy Titan
-    size: 1
-    quality: 3+
-    defense: 2+
-    tough: 30
-    weapons:
-    - name: Twin Shoulder-Cannon
-      range: 24"
-      attacks: A2
-      ap: AP(1)
-      special_rules:
-      - Blast(3)
-    - name: Titan Harpoon Cannons
-      range: 18"
-      attacks: A1
-      ap: AP(4)
-      special_rules:
-      - Deadly(9)
-    - name: Twin Hull-Fuser
-      range: 12"
-      attacks: A2
-      ap: AP(4)
-      special_rules:
-      - Deadly(3)
-    - name: Stomp
-      range: null
-      attacks: A10
-      ap: AP(3)
-      special_rules: []
-    special_rules:
-    - Changebound
-    - Fear(4)
-    cost: 1155
-    upgrade_categories:
-    - category: Replace any Titan Harpoon Cannon
-      upgrades:
-      - name: Titan Triple Flamer
-        rules: 18", A3, AP(1), Blast(3), Reliable
-        cost_modifier: +10pts
-      - name: Titan Volcano Cannon
-        rules: 30", A3, AP(3), Deadly(3)
-        cost_modifier: +85pts
-      - name: Plasma Battle Cannon
-        rules: 30", A3, AP(4), Blast(3)
-        cost_modifier: +115pts
-    - category: Replace any Twin Shoulder-Cannons
-      upgrades:
-      - name: Twin Shoulder-Missile
-        rules: 24", A2, AP(3), Deadly(3)
-        cost_modifier: +45pts
-    - category: Upgrade with one
-      upgrades:
-      - name: Top-Cannon
-        rules: 24", A2, AP(1), Blast(3)
-        cost_modifier: +70pts
-      - name: Top-Missile
-        rules: 24", A2, AP(3), Deadly(3)
-        cost_modifier: +115pts
-    - category: Upgrade with any
-      upgrades:
-      - name: Titan Core
-        rules: Delayed Action
-        cost_modifier: +35pts
-      - name: Exploration Config
-        rules: Strider
-        cost_modifier: +75pts
-      - name: Psychic Lord
-        rules: Caster(5)
-        cost_modifier: +115pts
-      - name: Energy Field
-        rules: Regeneration
-        cost_modifier: +135pts
+        - Changebound
+        - Fear(4)
+      cost: 1155
+      upgrade_categories:
+        - category: Replace any Titan Harpoon Cannon
+          upgrades:
+            - name: Titan Triple Flamer
+              rules: 18", A3, AP(1), Blast(3), Reliable
+              cost_modifier: +10pts
+            - name: Titan Volcano Cannon
+              rules: 30", A3, AP(3), Deadly(3)
+              cost_modifier: +85pts
+            - name: Plasma Battle Cannon
+              rules: 30", A3, AP(4), Blast(3)
+              cost_modifier: +115pts
+        - category: Replace any Twin Shoulder-Cannons
+          upgrades:
+            - name: Twin Shoulder-Missile
+              rules: 24", A2, AP(3), Deadly(3)
+              cost_modifier: +45pts
+        - category: Upgrade with one
+          upgrades:
+            - name: Top-Cannon
+              rules: 24", A2, AP(1), Blast(3)
+              cost_modifier: +70pts
+            - name: Top-Missile
+              rules: 24", A2, AP(3), Deadly(3)
+              cost_modifier: +115pts
+        - category: Upgrade with any
+          upgrades:
+            - name: Titan Core
+              rules: Delayed Action
+              cost_modifier: +35pts
+            - name: Exploration Config
+              rules: Strider
+              cost_modifier: +75pts
+            - name: Psychic Lord
+              rules: Caster(5)
+              cost_modifier: +115pts
+            - name: Energy Field
+              rules: Regeneration
+              cost_modifier: +135pts

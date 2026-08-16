@@ -2,17 +2,16 @@
   "version": 3,
   "id": "msvtutlo-gcpoxk",
   "objective": "Resolve all CodeRabbit review comments on PR #1, committing fixes to the existing `feature/data-collector` branch.\n\nSuccess criteria:\n- All 2 inline CodeRabbit comments resolved (cache filename collisions, Wormhole Daemons placeholder)\n- All actionable nitpick comments resolved (dead code removal, unused deps, atomic writes, etc.)\n- Parser correctness fixes applied (attacks parsing, unit row parsing, weapon count detection)\n- Documentation snippets corrected to match implementation\n- `cargo clippy --all-targets --all-features -p data-collector` still passes with zero warnings\n- `cargo build -p data-collector` succeeds\n- All 40 YAML files still generate correctly after changes\n- Changes pushed to `feature/data-collector` branch (same PR #1)\n\nBoundaries:\n- In scope: All CodeRabbit inline and nitpick comments on PR #1\n- Out of scope: Progress-tolerant error handling refactor (CodeRabbit says \"can be deferred to a follow-up\")\n- Out of scope: Preview page caching performance refactor (heavy lift - follow-up)\n- Out of scope: serde_yaml migration (CodeRabbit says \"plan a migration\" - future work)\n- Out of scope: Enum variant renaming (optional cosmetic change)\n\nConstraints:\n- Must push to existing `feature/data-collector` branch (same PR #1)\n- Must maintain zero clippy warnings\n- Must not break the existing 40 YAML file generation\n- Keep changes minimal and targeted per CodeRabbit's guidance\n\nVerification contract:\n1. `cargo clippy --all-targets --all-features -p data-collector` — zero warnings\n2. `cargo build -p data-collector` — succeeds\n3. `cargo run -p data-collector -- parse --cache-dir data/cache` — 40 armies generated\n4. Verify no `attacks: AP` entries in YAML output\n5. All files pushed to PR #1\n\nIf blocked: stop and ask the user",
-  "status": "active",
+  "status": "complete",
   "autoContinue": true,
   "usage": {
     "tokensUsed": 48385,
-    "activeSeconds": 3315
+    "activeSeconds": 3362
   },
   "sisyphus": false,
   "createdAt": "2026-08-16T13:15:13.884Z",
-  "updatedAt": "2026-08-16T14:11:45.801Z",
-  "activePath": ".pi/goals/active_goal_2026081613151388_msvtutlo-gcpoxk.md",
-  "revision": 33,
+  "updatedAt": "2026-08-16T14:17:47.582Z",
+  "revision": 37,
   "taskList": {
     "tasks": [
       {
@@ -96,7 +95,9 @@
     ],
     "blockCompletion": true,
     "proposedAt": "2026-08-16T13:11:52.865Z"
-  }
+  },
+  "stopReason": "agent",
+  "archivedPath": ".pi/goals/archived/goal_2026081614174755_msvtutlo-gcpoxk.md"
 }
 
 # Goal Prompt
@@ -137,10 +138,10 @@ If blocked: stop and ask the user
 
 ## Progress
 
-- Status: running
+- Status: complete
 - Auto-continue: on
 - Sisyphus mode: no
-- Time spent: 55m15s
+- Time spent: 56m02s
 - Tokens used: 48K (48,385) tokens
 ## Tasks
 
