@@ -104,7 +104,7 @@ async fn run_fetch_phase(cli: &Cli) -> Result<()> {
 }
 
 /// Find and add subfaction armies from cached preview pages
-fn add_subfactions_from_cache(
+async fn add_subfactions_from_cache(
     armies: &mut Vec<Army>,
     cache: &Cache,
     subfaction_names: &[&str],
@@ -134,8 +134,12 @@ fn add_subfactions_from_cache(
                     if filename.contains("preview") {
                         // Extract army ID from filename
                         if let Some(army_id) = extract_army_id_from_filename(&filename) {
+                            // Construct preview URL
+                            let preview_url = format!(
+                                "https://army-forge.onepagerules.com/armyInfo/{army_id}/2/preview"
+                            );
                             // Try to parse this page
-                            if let Ok(parsed_army) = parse_preview_page(cache, &army_id)
+                            if let Ok(parsed_army) = parse_preview_page(cache, &preview_url).await
                                 && parsed_army.name == *subfaction_name
                             {
                                 armies.push(parsed_army);
@@ -160,7 +164,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
     let cache = Cache::new(cache_path).await?;
 
     // Parse army list
-    let mut armies = parse_army_list(&cache)?;
+    let mut armies = parse_army_list(&cache).await?;
     println!("\nParsed {} armies from army list", armies.len());
 
     // Also parse subfaction pages that were fetched
@@ -190,7 +194,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
         "Titan Lords War Disciples",
     ];
 
-    add_subfactions_from_cache(&mut armies, &cache, &subfaction_names, cli.verbose > 0)?;
+    add_subfactions_from_cache(&mut armies, &cache, &subfaction_names, cli.verbose > 0).await?;
     println!("Total armies to parse: {}", armies.len());
 
     // Parse and generate YAML for each army
@@ -202,7 +206,12 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
             println!("\nParsing units for {}...", army.name);
         }
 
-        match parse_preview_page(&cache, &army.id) {
+        // Construct preview URL
+        let preview_url = format!(
+            "https://army-forge.onepagerules.com/armyInfo/{}/2/preview",
+            army.id
+        );
+        match parse_preview_page(&cache, &preview_url).await {
             Ok(parsed_army) => {
                 if cli.verbose > 0 {
                     println!(
