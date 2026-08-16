@@ -24,7 +24,7 @@ This is an unofficial fan project. It is **not affiliated with, endorsed by, or 
 │       ├── src/
 │       │   ├── main.rs           # CLI with fetch/parse subcommands
 │       │   ├── fetch.rs          # Jina Reader API integration
-│       │   ├── parse.rs          # HTML parsing & YAML generation
+│       │   ├── parser.rs         # HTML parsing & YAML generation
 │       │   ├── cache.rs          # local HTML caching with metadata
 │       │   ├── http_client.rs    # rate-limited HTTP client
 │       │   └── error.rs          # error types
