@@ -726,11 +726,23 @@ fn parse_markdown_link(line: &str) -> Option<(String, String)> {
 /// Extract army ID from URL
 /// URL pattern: <https://army-forge.onepagerules.com/army-info/grimdark-future/{id}?armyName={name>}
 fn extract_army_id_from_url(url: &str) -> Option<String> {
-    let path_start = url.find("/army-info/grimdark-future/")?;
-    let rest = url.get(path_start.checked_add(27)?..)?;
-    let id_end = rest.find('?')?;
-    let army_id = rest.get(..id_end)?;
-    Some(army_id.to_string())
+    // Try army info URL pattern first: /army-info/grimdark-future/{id}?armyName=...
+    if let Some(path_start) = url.find("/army-info/grimdark-future/") {
+        let rest = url.get(path_start.checked_add(27)?..)?;
+        let id_end = rest.find('?')?;
+        let army_id = rest.get(..id_end)?;
+        return Some(army_id.to_string());
+    }
+    
+    // Try preview URL pattern: /armyInfo/{id}/2/preview
+    if let Some(path_start) = url.find("/armyInfo/") {
+        let rest = url.get(path_start.checked_add(10)?..)?;
+        let id_end = rest.find('/')?;
+        let army_id = rest.get(..id_end)?;
+        return Some(army_id.to_string());
+    }
+    
+    None
 }
 
 /// Parse subfaction dropdown options from cached HTML
