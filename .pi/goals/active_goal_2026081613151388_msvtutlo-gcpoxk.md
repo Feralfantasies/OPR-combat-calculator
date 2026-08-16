@@ -5,14 +5,14 @@
   "status": "active",
   "autoContinue": true,
   "usage": {
-    "tokensUsed": 28896,
-    "activeSeconds": 1215
+    "tokensUsed": 31561,
+    "activeSeconds": 1703
   },
   "sisyphus": false,
   "createdAt": "2026-08-16T13:15:13.884Z",
-  "updatedAt": "2026-08-16T13:36:11.554Z",
+  "updatedAt": "2026-08-16T13:44:20.260Z",
   "activePath": ".pi/goals/active_goal_2026081613151388_msvtutlo-gcpoxk.md",
-  "revision": 17,
+  "revision": 20,
   "taskList": {
     "tasks": [
       {
@@ -140,8 +140,8 @@ If blocked: stop and ask the user
 - Status: running
 - Auto-continue: on
 - Sisyphus mode: no
-- Time spent: 20m15s
-- Tokens used: 29K (28,896) tokens
+- Time spent: 28m23s
+- Tokens used: 32K (31,561) tokens
 ## Tasks
 
 <!-- blockCompletion: true -->
