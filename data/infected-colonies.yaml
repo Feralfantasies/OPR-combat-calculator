@@ -1,0 +1,683 @@
+v3.5.3:
+  name: Infected Colonies
+  id: dnthspt7c0klhmt8
+  units:
+  - name: Monstrous Tyrant
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Monstrous Claws
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Rending
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(1)
+    - Hero
+    - Infected
+    cost: 155
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Chitinous Strain
+        rules: Fortified Aura
+        cost_modifier: +10pts
+      - name: Frenzy Virus
+        rules: Fast Aura
+        cost_modifier: +30pts
+      - name: Terror Genus
+        rules: Thrust in Melee Aura
+        cost_modifier: +30pts
+      - name: Spore Carrier
+        rules: Infected Boost Aura
+        cost_modifier: +45pts
+      - name: Enlarged Brain
+        rules: Caster(3)
+        cost_modifier: +75pts
+    - category: Replace Monstrous Claws
+      upgrades:
+      - name: Monstrous Stinger
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Monstrous Fists
+        rules: A4, AP(4)
+        cost_modifier: +15pts
+  - name: Great Hunter
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Barbed Claw
+      range: null
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    special_rules:
+    - Ambush
+    - Hero
+    - Infected
+    - Strider
+    cost: 75
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Chitinous Strain
+        rules: Fortified Aura
+        cost_modifier: +10pts
+      - name: Frenzy Virus
+        rules: Fast Aura
+        cost_modifier: +30pts
+      - name: Terror Genus
+        rules: Thrust in Melee Aura
+        cost_modifier: +30pts
+      - name: Colony Leader
+        rules: No Retreat Aura
+        cost_modifier: +35pts
+      - name: Spore Carrier
+        rules: Infected Boost Aura
+        cost_modifier: +45pts
+    - category: Replace Barbed Claw
+      upgrades:
+      - name: Toxic Claw
+        rules: A4, Bane
+        cost_modifier: +5pts
+      - name: Great Sharp Claw
+        rules: A4, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Hardened Claw
+        rules: A4, AP(4)
+        cost_modifier: +30pts
+  - name: Infected Leader
+    size: 1
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Leader Pistol
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Hero
+    - Infected
+    cost: 30
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Chitinous Strain
+        rules: Fortified Aura
+        cost_modifier: +10pts
+      - name: Terror Genus
+        rules: Thrust in Melee Aura
+        cost_modifier: +30pts
+      - name: Colony Leader
+        rules: No Retreat Aura
+        cost_modifier: +35pts
+      - name: Rapid Mutator
+        rules: Unpredictable Shooter Aura
+        cost_modifier: +40pts
+      - name: Spore Carrier
+        rules: Infected Boost Aura
+        cost_modifier: +45pts
+      - name: Enlarged Brain
+        rules: Caster(2)
+        cost_modifier: +50pts
+    - category: Replace Leader Pistol
+      upgrades:
+      - name: Leader Carbine
+        rules: 18", A3
+        cost_modifier: +5pts
+      - name: Leader Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +10pts
+      - name: Leader Shred Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +10pts
+      - name: Leader Sniper Carbine
+        rules: 18", A2, AP(1), Reliable, Takedown
+        cost_modifier: +40pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade with
+      upgrades:
+      - name: Evolving Strain
+        rules: Precision Growth
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Runners Leader
+        rules: Fearless, Strider
+        cost_modifier: +10pts
+      - name: Zombies Leader
+        rules: Fearless, Regeneration, Slow
+        cost_modifier: +15pts
+  - name: Infected Runners
+    size: 10
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Claws
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Infected
+    - Strider
+    cost: 125
+    upgrade_categories: []
+  - name: Infected Zombies
+    size: 10
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Claws
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Infected
+    - Regeneration
+    - Slow
+    cost: 130
+    upgrade_categories: []
+  - name: Infected Soldiers
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Carbines
+      range: 18"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Infected
+    cost: 170
+    upgrade_categories:
+    - category: Replace up to two Carbines
+      upgrades:
+      - name: Grenade Launcher
+        rules: 24", A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Spore Shooter
+        rules: 18", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +20pts
+    - category: Replace one Carbine and CCW
+      upgrades:
+      - name: Sgt. Pistol, Energy Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Weapon Teams
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Heavy Machineguns
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    - name: Crews
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Infected
+    cost: 150
+    upgrade_categories:
+    - category: Replace any Heavy Machinegun
+      upgrades:
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: Spore Mortar
+        rules: 30", A1, AP(1), Blast(3), Indirect, Lacerate
+        cost_modifier: +5pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +10pts
+      - name: Autocannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +10pts
+  - name: Infected Gunners
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Grenade Launchers
+      range: 24"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(3)
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Infected
+    - Relentless
+    cost: 80
+    upgrade_categories:
+    - category: Replace any Grenade Launcher
+      upgrades:
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Spore Shooter
+        rules: 18", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +5pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +15pts
+  - name: Hunters
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Toxic Claws
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Bane
+    special_rules:
+    - Ambush
+    - Infected
+    - Strider
+    cost: 150
+    upgrade_categories:
+    - category: Replace any Toxic Claws
+      upgrades:
+      - name: Sharp Claw
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Hardened Claw
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Replace one Toxic Claw
+      upgrades:
+      - name: Barbed Claw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+  - name: Boomers
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Putrid Fists
+      range: null
+      attacks: A4
+      ap: null
+      special_rules:
+      - Bane
+    special_rules:
+    - Deathstrike(3)
+    - Infected
+    cost: 160
+    upgrade_categories: []
+  - name: Leech Swarms
+    size: 3
+    quality: 5+
+    defense: 6+
+    tough: 3
+    weapons:
+    - name: Swarm Attacks
+      range: null
+      attacks: A3
+      ap: null
+      special_rules:
+      - Bane
+    special_rules:
+    - Infected
+    - Strider
+    cost: 80
+    upgrade_categories: []
+  - name: Crazed Ravens
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Beak Attacks
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Flying
+    - Infected
+    cost: 90
+    upgrade_categories: []
+  - name: Rabid Dogs
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Vicious Jaws
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Rending
+    special_rules:
+    - Fast
+    - Infected
+    cost: 115
+    upgrade_categories:
+    - category: Replace all Rabid Hounds
+      upgrades:
+      - name: Frenzied Advance
+        rules: Scout
+        cost_modifier: +5pts
+  - name: Infected Vultures
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Sharp Talons
+      range: null
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Flying
+    - Infected
+    cost: 180
+    upgrade_categories:
+    - category: Replace any Sharp Talon
+      upgrades:
+      - name: Piercing Beak
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Swoop Attack
+        rules: Impact(1)
+        cost_modifier: +15pts
+  - name: Corrupted Beasts
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Dual Sharp Claws
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Rending
+    special_rules:
+    - Infected
+    cost: 230
+    upgrade_categories:
+    - category: Replace any Dual Sharp Claw
+      upgrades:
+      - name: Dual Smashing Fists
+        rules: A4, AP(4)
+        cost_modifier: +15pts
+    - category: Replace one Dual Sharp Claw
+      upgrades:
+      - name: Heavy Dual Serrated Claws
+        rules: A2, AP(1), Blast(3)
+        cost_modifier: Free
+      - name: Dual Piercing Stingers
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +10pts
+  - name: Great Beast
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Heavy Claws
+      range: null
+      attacks: A6
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Fear(1)
+    - Infected
+    cost: 140
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Contamination Cloud
+        rules: Precision Debuff
+        cost_modifier: +45pts
+  - name: Attack Buggy
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Spore Shooter
+      range: 18"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Lacerate
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Infected
+    cost: 165
+    upgrade_categories:
+    - category: Replace Heavy Spore Shooter
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +25pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +60pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +60pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Cargo Extension
+        rules: Transport(11)
+        cost_modifier: +35pts
+      - name: Contamination Cloud
+        rules: Precision Debuff
+        cost_modifier: +45pts
+  - name: Combat Walker
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Super-Heavy Fusion Rifle
+      range: 18"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Deadly(6)
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(1)
+    - Infected
+    cost: 165
+    upgrade_categories:
+    - category: Replace Super-Heavy Fusion Rifle
+      upgrades:
+      - name: Heavy Flamer, Walker Chainsaw
+        rules: 12", A1, AP(1), Blast(3), Reliable, A6, AP(1)
+        cost_modifier: +10pts
+      - name: Twin Plasma Cannon
+        rules: 30", A2, AP(4), Blast(3)
+        cost_modifier: +55pts
+      - name: Twin Laser Machinegun
+        rules: 30", A6, AP(3)
+        cost_modifier: +60pts
+  - name: Battle Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Battle Cannon
+      range: 30"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Blast(3)
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Impact(6)
+    - Infected
+    cost: 395
+    upgrade_categories:
+    - category: Replace Battle Cannon
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +30pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +30pts
+      - name: Heavy Spore Mortar
+        rules: 30", A3, AP(1), Blast(3), Indirect, Lacerate
+        cost_modifier: +70pts
+  - name: Abomination
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Heavy Claws
+      range: null
+      attacks: A8
+      ap: AP(3)
+      special_rules: []
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(2)
+    - Infected
+    cost: 340
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Contamination Cloud
+        rules: Precision Debuff
+        cost_modifier: +45pts
+  - name: Light Dropship
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    - name: Minigun
+      range: 24"
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Aircraft
+    - Infected
+    - Transport(11)
+    cost: 340
+    upgrade_categories:
+    - category: Replace Twin Heavy Machinegun
+      upgrades:
+      - name: Twin Missile Launcher
+        rules: 30", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +30pts

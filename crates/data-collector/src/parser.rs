@@ -109,31 +109,32 @@ pub fn parse_preview_page(cache: &Cache, army_id: &str) -> Result<Army> {
     let preview_path = cache_dir.join(format!(
         "army-forge.onepagerules.com_armyInfo_{army_id}_2_preview.html"
     ));
-    
+
     if !preview_path.exists() {
         return Err(CollectorError::ParseError(format!(
             "Preview page not found in cache: {}",
             preview_path.display()
         )));
     }
-    
+
     let html = std::fs::read_to_string(&preview_path)?;
     let version = extract_version_from_preview(&html);
     let units = extract_units_from_table(&html)?;
-    
+
     // Extract army name from the line "GF - Army Name vX.Y.Z" or "# Army Name"
-    let army_name = html.lines()
+    let army_name = html
+        .lines()
         .find(|line| line.starts_with("GF - "))
-        .and_then(|line| line.get(5..))  // Skip "GF - "
-        .and_then(|rest| rest.rfind(" v").and_then(|pos| rest.get(..pos)))  // Get everything before " v"
+        .and_then(|line| line.get(5..)) // Skip "GF - "
+        .and_then(|rest| rest.rfind(" v").and_then(|pos| rest.get(..pos))) // Get everything before " v"
         .or_else(|| {
             // Fallback: look for "# Army Name" format
             html.lines()
                 .find(|line| line.starts_with("# ") && !line.contains("v3."))
-                .and_then(|line| line.get(2..))  // Skip "# "
+                .and_then(|line| line.get(2..)) // Skip "# "
         })
         .unwrap_or("Unknown Army");
-    
+
     let army = Army {
         name: army_name.to_string(),
         id: army_id.to_string(),
@@ -143,7 +144,7 @@ pub fn parse_preview_page(cache: &Cache, army_id: &str) -> Result<Army> {
         has_subfactions: false,
         units,
     };
-    
+
     Ok(army)
 }
 
@@ -154,7 +155,8 @@ fn extract_version_from_preview(html: &str) -> Option<String> {
         if let Some(version_start) = line.find(" v") {
             let rest = line.get(version_start.checked_add(1)?..)?;
             // Extract version string (vX.Y.Z format)
-            let version_end = rest.find(' ')
+            let version_end = rest
+                .find(' ')
                 .or_else(|| rest.find('\n'))
                 .unwrap_or(rest.len());
             let version = rest.get(..version_end)?;
@@ -168,24 +170,22 @@ fn extract_version_from_preview(html: &str) -> Option<String> {
 
 /// Extract units from the markdown table in preview page HTML
 fn extract_units_from_table(html: &str) -> Result<Vec<Unit>> {
-    let _units: Vec<Unit> = Vec::new();
-    
     // First pass: extract basic unit data from the summary table
     let mut in_table = false;
     let mut basic_units: Vec<Unit> = Vec::new();
-    
+
     for line in html.lines() {
         // Check if this is the table header
         if line.contains("| Name [Size] |") && line.contains("| Qua |") {
             in_table = true;
             continue;
         }
-        
+
         // Skip separator row
         if in_table && line.starts_with("| ---") {
             continue;
         }
-        
+
         // Parse table rows
         if in_table && line.starts_with('|') {
             if let Some(unit) = parse_unit_row(line)? {
@@ -196,24 +196,25 @@ fn extract_units_from_table(html: &str) -> Result<Vec<Unit>> {
             break;
         }
     }
-    
+
     // Second pass: extract detailed unit data including upgrades
     let mut current_unit_index = None;
     let mut upgrade_categories: Vec<UpgradeCategory> = Vec::new();
-    
+
     for line in html.lines() {
         let line = line.trim();
-        
+
         // Check if this is a unit detail header: **Unit Name [Size]**- Costpts
         if line.starts_with("**") && line.contains("**-") {
             // Save previous unit's upgrades if we had one
             if let Some(idx) = current_unit_index
-                && let Some(unit) = basic_units.get_mut(idx) {
-                    let unit: &mut Unit = unit;
-                    let categories: Vec<UpgradeCategory> = std::mem::take(&mut upgrade_categories);
-                    unit.upgrade_categories = categories;
-                }
-            
+                && let Some(unit) = basic_units.get_mut(idx)
+            {
+                let unit: &mut Unit = unit;
+                let categories: Vec<UpgradeCategory> = std::mem::take(&mut upgrade_categories);
+                unit.upgrade_categories = categories;
+            }
+
             // Find which unit this is
             if let Some(unit_name) = extract_unit_name_from_header(line) {
                 current_unit_index = basic_units.iter().position(|u| u.name == unit_name);
@@ -221,35 +222,33 @@ fn extract_units_from_table(html: &str) -> Result<Vec<Unit>> {
             }
             continue;
         }
-        
+
         // Check if this is an upgrade category header
         if current_unit_index.is_some() && is_upgrade_category(line) {
-            // Save previous category if we had one
-            if !upgrade_categories.is_empty() {
-                // The last category is already in the vec, just update it
-            }
-            
             upgrade_categories.push(UpgradeCategory {
                 category: line.to_string(),
                 upgrades: Vec::new(),
             });
             continue;
         }
-        
+
         // Check if this is an upgrade option
-        if current_unit_index.is_some() && !upgrade_categories.is_empty()
+        if current_unit_index.is_some()
+            && !upgrade_categories.is_empty()
             && let Some(upgrade) = parse_upgrade_option(line)
-                && let Some(last_category) = upgrade_categories.last_mut() {
-                    last_category.upgrades.push(upgrade);
-                }
+            && let Some(last_category) = upgrade_categories.last_mut()
+        {
+            last_category.upgrades.push(upgrade);
+        }
     }
-    
+
     // Save the last unit's upgrades
     if let Some(idx) = current_unit_index
-        && let Some(unit) = basic_units.get_mut(idx) {
-            unit.upgrade_categories = upgrade_categories;
-        }
-    
+        && let Some(unit) = basic_units.get_mut(idx)
+    {
+        unit.upgrade_categories = upgrade_categories;
+    }
+
     Ok(basic_units)
 }
 
@@ -259,7 +258,7 @@ fn extract_unit_name_from_header(line: &str) -> Option<String> {
     let rest = line.get(start.checked_add(2)?..)?;
     let end = rest.find("**")?;
     let name_with_size = rest.get(..end)?;
-    
+
     // Remove size if present: "Hive Lord [1]" -> "Hive Lord"
     if let Some(bracket) = name_with_size.rfind('[') {
         Some(name_with_size.get(..bracket)?.trim().to_string())
@@ -275,7 +274,7 @@ fn is_upgrade_category(line: &str) -> bool {
     if line.is_empty() || line.starts_with('|') || line.starts_with("**") {
         return false;
     }
-    
+
     let keywords = ["Upgrade with", "Replace", "Add"];
     keywords.iter().any(|k| line.contains(k))
 }
@@ -295,15 +294,15 @@ fn parse_upgrade_option(line: &str) -> Option<Upgrade> {
     } else {
         return None;
     };
-    
+
     // Handle multiple weapons: "Weapon1 (rules1), Weapon2 (rules2)"
     let mut all_names = Vec::new();
     let mut all_rules = Vec::new();
-    
+
     // Split by ", " to separate weapons, but be careful about commas inside parentheses
     let mut current_weapon = String::new();
     let mut paren_depth: i32 = 0;
-    
+
     for ch in main_part.chars() {
         if ch == '(' {
             paren_depth = paren_depth.saturating_add(1);
@@ -321,24 +320,24 @@ fn parse_upgrade_option(line: &str) -> Option<Upgrade> {
             current_weapon.push(ch);
         }
     }
-    
+
     // Don't forget the last weapon
     if !current_weapon.trim().is_empty() {
         parse_single_weapon(&current_weapon, &mut all_names, &mut all_rules);
     }
-    
+
     let name = if all_names.is_empty() {
         main_part.trim().to_string()
     } else {
         all_names.join(", ")
     };
-    
+
     let rules_str = if all_rules.is_empty() {
         None
     } else {
         Some(all_rules.join(", "))
     };
-    
+
     Some(Upgrade {
         name,
         rules: rules_str,
@@ -350,8 +349,10 @@ fn parse_single_weapon(weapon_str: &str, names: &mut Vec<String>, rules: &mut Ve
     let weapon_str = weapon_str.trim();
     if let Some(paren_start) = weapon_str.find('(') {
         let name = weapon_str.get(..paren_start).unwrap_or("").trim();
-        let rest = weapon_str.get(paren_start.saturating_add(1)..).unwrap_or("");
-        
+        let rest = weapon_str
+            .get(paren_start.saturating_add(1)..)
+            .unwrap_or("");
+
         // Find the matching closing parenthesis
         let mut depth: i32 = 1;
         let mut paren_end = None;
@@ -366,7 +367,7 @@ fn parse_single_weapon(weapon_str: &str, names: &mut Vec<String>, rules: &mut Ve
                 }
             }
         }
-        
+
         if let Some(end) = paren_end {
             let rules_str = rest.get(..end).unwrap_or("");
             if !name.is_empty() {
@@ -395,46 +396,48 @@ fn parse_unit_row(line: &str) -> Result<Option<Unit>> {
         .map(str::trim)
         .filter(|s| !s.is_empty())
         .collect();
-    
+
     // Expect 6 columns: Name [Size], Qua, Def, Equipment, Special Rules, Cost
     if cells.len() < 6 {
         return Ok(None);
     }
-    
+
     // Parse name and size from "Name [Size]"
-    let name_size = cells.first().ok_or_else(|| {
-        CollectorError::ParseError("Missing name column".to_string())
-    })?;
+    let name_size = cells
+        .first()
+        .ok_or_else(|| CollectorError::ParseError("Missing name column".to_string()))?;
     let (name, size) = parse_name_and_size(name_size)?;
-    
+
     // Parse quality
-    let quality = cells.get(1).ok_or_else(|| {
-        CollectorError::ParseError("Missing quality column".to_string())
-    })?.to_string();
-    
+    let quality = cells
+        .get(1)
+        .ok_or_else(|| CollectorError::ParseError("Missing quality column".to_string()))?
+        .to_string();
+
     // Parse defense
-    let defense = cells.get(2).ok_or_else(|| {
-        CollectorError::ParseError("Missing defense column".to_string())
-    })?.to_string();
-    
+    let defense = cells
+        .get(2)
+        .ok_or_else(|| CollectorError::ParseError("Missing defense column".to_string()))?
+        .to_string();
+
     // Parse equipment
-    let equipment_str = cells.get(3).ok_or_else(|| {
-        CollectorError::ParseError("Missing equipment column".to_string())
-    })?;
+    let equipment_str = cells
+        .get(3)
+        .ok_or_else(|| CollectorError::ParseError("Missing equipment column".to_string()))?;
     let weapons = parse_equipment(equipment_str)?;
-    
+
     // Parse special rules
-    let rules_str = cells.get(4).ok_or_else(|| {
-        CollectorError::ParseError("Missing special rules column".to_string())
-    })?;
+    let rules_str = cells
+        .get(4)
+        .ok_or_else(|| CollectorError::ParseError("Missing special rules column".to_string()))?;
     let (special_rules, tough) = parse_special_rules_with_tough(rules_str);
-    
+
     // Parse cost
-    let cost_str = cells.get(5).ok_or_else(|| {
-        CollectorError::ParseError("Missing cost column".to_string())
-    })?;
+    let cost_str = cells
+        .get(5)
+        .ok_or_else(|| CollectorError::ParseError("Missing cost column".to_string()))?;
     let cost = parse_cost(cost_str)?;
-    
+
     Ok(Some(Unit {
         name,
         size,
@@ -452,28 +455,36 @@ fn parse_unit_row(line: &str) -> Result<Option<Unit>> {
 fn parse_name_and_size(text: &str) -> Result<(String, u32)> {
     // Find the last [ to get size
     if let Some(bracket_start) = text.rfind('[') {
-        let name = text.get(..bracket_start).ok_or_else(|| {
-            CollectorError::ParseError("Failed to parse name".to_string())
-        })?.trim().to_string();
-        
-        let rest = text.get(bracket_start.checked_add(1).ok_or_else(|| {
-            CollectorError::ParseError("Failed to parse size".to_string())
-        })?..).ok_or_else(|| {
-            CollectorError::ParseError("Failed to extract size substring".to_string())
-        })?;
-        
+        let name = text
+            .get(..bracket_start)
+            .ok_or_else(|| CollectorError::ParseError("Failed to parse name".to_string()))?
+            .trim()
+            .to_string();
+
+        let rest = text
+            .get(
+                bracket_start.checked_add(1).ok_or_else(|| {
+                    CollectorError::ParseError("Failed to parse size".to_string())
+                })?..,
+            )
+            .ok_or_else(|| {
+                CollectorError::ParseError("Failed to extract size substring".to_string())
+            })?;
+
         if let Some(bracket_end) = rest.find(']') {
-            let size_str = rest.get(..bracket_end).ok_or_else(|| {
-                CollectorError::ParseError("Failed to extract size".to_string())
-            })?;
-            
-            let size = size_str.parse::<u32>().map_err(|_| {
-                CollectorError::ParseError(format!("Invalid size: {size_str}"))
-            })?;
-            
+            let size_str = rest
+                .get(..bracket_end)
+                .ok_or_else(|| CollectorError::ParseError("Failed to extract size".to_string()))?;
+
+            let size = size_str
+                .parse::<u32>()
+                .map_err(|_| CollectorError::ParseError(format!("Invalid size: {size_str}")))?;
+
             Ok((name, size))
         } else {
-            Err(CollectorError::ParseError("Missing closing bracket".to_string()))
+            Err(CollectorError::ParseError(
+                "Missing closing bracket".to_string(),
+            ))
         }
     } else {
         // No size specified, default to 1
@@ -484,19 +495,20 @@ fn parse_name_and_size(text: &str) -> Result<(String, u32)> {
 /// Parse equipment string into list of weapons
 fn parse_equipment(text: &str) -> Result<Vec<Weapon>> {
     let mut weapons = Vec::new();
-    
+
     // Equipment format: "Nx Weapon Name (stats) Nx Another Weapon (stats)"
     // Split by looking for patterns like "1x ", "2x ", etc.
     let mut current = String::new();
-    
+
     for word in text.split_whitespace() {
         // Check if this looks like a count (e.g., "1x", "2x", "10x")
         if word.ends_with('x') && word.get(..word.len().saturating_sub(1)).is_some() {
             // If we have accumulated text, parse it as a weapon
             if !current.is_empty()
-                && let Some(weapon) = parse_weapon(&current)? {
-                    weapons.push(weapon);
-                }
+                && let Some(weapon) = parse_weapon(&current)?
+            {
+                weapons.push(weapon);
+            }
             current = word.to_string();
         } else {
             if !current.is_empty() {
@@ -505,13 +517,14 @@ fn parse_equipment(text: &str) -> Result<Vec<Weapon>> {
             current.push_str(word);
         }
     }
-    
+
     // Parse the last weapon
     if !current.is_empty()
-        && let Some(weapon) = parse_weapon(&current)? {
-            weapons.push(weapon);
-        }
-    
+        && let Some(weapon) = parse_weapon(&current)?
+    {
+        weapons.push(weapon);
+    }
+
     Ok(weapons)
 }
 
@@ -523,11 +536,15 @@ fn parse_weapon(text: &str) -> Result<Option<Weapon>> {
             CollectorError::ParseError("Failed to parse weapon count".to_string())
         })?;
         if count_str.chars().all(|c| c.is_ascii_digit()) {
-            let rest = text.get(x_pos.checked_add(1).ok_or_else(|| {
-                CollectorError::ParseError("Failed to parse weapon".to_string())
-            })?..).ok_or_else(|| {
-                CollectorError::ParseError("Failed to extract weapon substring".to_string())
-            })?;
+            let rest = text
+                .get(
+                    x_pos.checked_add(1).ok_or_else(|| {
+                        CollectorError::ParseError("Failed to parse weapon".to_string())
+                    })?..,
+                )
+                .ok_or_else(|| {
+                    CollectorError::ParseError("Failed to extract weapon substring".to_string())
+                })?;
             (count_str.to_string(), rest.trim())
         } else {
             ("1".to_string(), text)
@@ -535,32 +552,38 @@ fn parse_weapon(text: &str) -> Result<Option<Weapon>> {
     } else {
         ("1".to_string(), text)
     };
-    
+
     // Find stats in parentheses
     if let Some(paren_start) = rest.find('(') {
-        let name = rest.get(..paren_start).ok_or_else(|| {
-            CollectorError::ParseError("Failed to parse weapon name".to_string())
-        })?.trim().to_string();
-        
-        let stats_part = rest.get(paren_start.checked_add(1).ok_or_else(|| {
-            CollectorError::ParseError("Failed to parse weapon stats".to_string())
-        })?..).ok_or_else(|| {
-            CollectorError::ParseError("Failed to extract weapon stats substring".to_string())
-        })?;
-        
+        let name = rest
+            .get(..paren_start)
+            .ok_or_else(|| CollectorError::ParseError("Failed to parse weapon name".to_string()))?
+            .trim()
+            .to_string();
+
+        let stats_part = rest
+            .get(
+                paren_start.checked_add(1).ok_or_else(|| {
+                    CollectorError::ParseError("Failed to parse weapon stats".to_string())
+                })?..,
+            )
+            .ok_or_else(|| {
+                CollectorError::ParseError("Failed to extract weapon stats substring".to_string())
+            })?;
+
         if let Some(paren_end) = stats_part.rfind(')') {
             let stats = stats_part.get(..paren_end).ok_or_else(|| {
                 CollectorError::ParseError("Failed to extract weapon stats".to_string())
             })?;
-            
+
             // Parse stats: range, attacks, AP, special rules
             let stat_parts: Vec<&str> = stats.split(',').map(str::trim).collect();
-            
+
             let mut range = None;
             let mut attacks = String::new();
             let mut ap = None;
             let mut special_rules = Vec::new();
-            
+
             for stat in stat_parts {
                 if stat.contains('"') {
                     // Range like "18\""
@@ -576,12 +599,12 @@ fn parse_weapon(text: &str) -> Result<Option<Weapon>> {
                     special_rules.push(stat.to_string());
                 }
             }
-            
+
             // Default attacks if not specified
             if attacks.is_empty() {
                 attacks = format!("A{count}");
             }
-            
+
             return Ok(Some(Weapon {
                 name,
                 range,
@@ -591,7 +614,7 @@ fn parse_weapon(text: &str) -> Result<Option<Weapon>> {
             }));
         }
     }
-    
+
     // No stats, just weapon name
     Ok(Some(Weapon {
         name: rest.trim().to_string(),
@@ -606,33 +629,34 @@ fn parse_weapon(text: &str) -> Result<Option<Weapon>> {
 fn parse_special_rules_with_tough(text: &str) -> (Vec<String>, Option<u32>) {
     let mut special_rules = Vec::new();
     let mut tough = None;
-    
+
     for rule in text.split(',') {
         let rule = rule.trim();
         if rule.is_empty() {
             continue;
         }
-        
+
         // Check if this is a Tough rule
         if rule.starts_with("Tough(") && rule.ends_with(')') {
             if let Some(tough_value) = rule.get(6..rule.len().saturating_sub(1))
-                && let Ok(tough_val) = tough_value.parse::<u32>() {
-                    tough = Some(tough_val);
-                }
+                && let Ok(tough_val) = tough_value.parse::<u32>()
+            {
+                tough = Some(tough_val);
+            }
         } else {
             special_rules.push(rule.to_string());
         }
     }
-    
+
     (special_rules, tough)
 }
 
 /// Parse cost from string like "360pts"
 fn parse_cost(text: &str) -> Result<u32> {
     let cost_str = text.trim().trim_end_matches("pts");
-    cost_str.parse::<u32>().map_err(|_| {
-        CollectorError::ParseError(format!("Invalid cost: {cost_str}"))
-    })
+    cost_str
+        .parse::<u32>()
+        .map_err(|_| CollectorError::ParseError(format!("Invalid cost: {cost_str}")))
 }
 
 /// Parse the army list from cached HTML
@@ -642,17 +666,18 @@ fn parse_cost(text: &str) -> Result<u32> {
 /// Returns an error if the cached file cannot be read or parsed
 pub fn parse_army_list(cache: &Cache) -> Result<Vec<Army>> {
     let cache_dir = cache.cache_dir();
-    let army_list_path = cache_dir.join("army-forge.onepagerules.com_army-books_grimdark-future.html");
-    
+    let army_list_path =
+        cache_dir.join("army-forge.onepagerules.com_army-books_grimdark-future.html");
+
     if !army_list_path.exists() {
         return Err(CollectorError::ParseError(
             "Army list cache file not found. Run fetch phase first.".to_string(),
         ));
     }
-    
+
     let html = std::fs::read_to_string(&army_list_path)?;
     let armies = extract_armies_from_html(&html);
-    
+
     println!("Parsed {} armies from cache", armies.len());
     Ok(armies)
 }
@@ -660,45 +685,29 @@ pub fn parse_army_list(cache: &Cache) -> Result<Vec<Army>> {
 /// Extract army data from HTML content
 fn extract_armies_from_html(html: &str) -> Vec<Army> {
     let mut armies = Vec::new();
-    
-    // Known subfaction parents (appear as plain text without links)
-    let subfaction_parents = [
-        "Battle Brothers",
-        "Prime Brothers",
-        "Havoc Brothers",
-        "Titan Lords",
-        "Wormhole Daemons",
-    ];
-    
+
     // Parse markdown links: [Name](URL)
     for line in html.lines() {
-        if line.starts_with('[') && line.contains("](https://army-forge.onepagerules.com/army-info/")
+        if line.starts_with('[')
+            && line.contains("](https://army-forge.onepagerules.com/army-info/")
             && let Some((name, url)) = parse_markdown_link(line)
-                && let Some(id) = extract_army_id_from_url(&url) {
-                    let preview_url = format!(
-                        "https://army-forge.onepagerules.com/armyInfo/{id}/2/preview"
-                    );
-                    
-                    armies.push(Army {
-                        name,
-                        id,
-                        version: None,
-                        info_url: url,
-                        preview_url,
-                        has_subfactions: false,
-                        units: Vec::new(),
-                    });
-                }
-    }
-    
-    // Mark subfaction parents
-    for parent in &subfaction_parents {
-        if html.contains(parent) {
-            // These are dropdown parents, not individual armies
-            // They would need special handling to fetch dropdown options
+            && let Some(id) = extract_army_id_from_url(&url)
+        {
+            let preview_url =
+                format!("https://army-forge.onepagerules.com/armyInfo/{id}/2/preview");
+
+            armies.push(Army {
+                name,
+                id,
+                version: None,
+                info_url: url,
+                preview_url,
+                has_subfactions: false,
+                units: Vec::new(),
+            });
         }
     }
-    
+
     armies
 }
 
@@ -737,5 +746,3 @@ pub fn parse_subfactions(_cache: &Cache, _parent_name: &str) -> Vec<Subfaction> 
     println!("Warning: Subfaction parsing not yet implemented");
     Vec::new()
 }
-
-

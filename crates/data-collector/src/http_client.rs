@@ -17,8 +17,6 @@ pub struct HttpClient {
     delay_ms: u64,
     /// Whether to print verbose output
     verbose: bool,
-    /// Whether to use Jina Reader for JavaScript rendering
-    use_jina: bool,
 }
 
 impl HttpClient {
@@ -37,7 +35,6 @@ impl HttpClient {
             client,
             delay_ms,
             verbose,
-            use_jina: true, // Default to using Jina Reader for SPA sites
         })
     }
 
@@ -50,31 +47,21 @@ impl HttpClient {
     /// # Errors
     ///
     /// Returns an error if the HTTP request fails or cache operations fail
-    pub async fn fetch(
-        &self,
-        url: &str,
-        cache: &mut Cache,
-        force_refresh: bool,
-    ) -> Result<String> {
+    pub async fn fetch(&self, url: &str, cache: &mut Cache, force_refresh: bool) -> Result<String> {
         // Check cache first (unless force refresh)
-        if !force_refresh
-            && let Some(cached) = cache.get(url).await? {
-                if self.verbose {
-                    println!("  [cached] {url}");
-                }
-                return Ok(cached);
+        if !force_refresh && let Some(cached) = cache.get(url).await? {
+            if self.verbose {
+                println!("  [cached] {url}");
             }
+            return Ok(cached);
+        }
 
-        // Fetch from network
+        // Fetch from network using Jina Reader (required for SPA sites)
         if self.verbose {
             println!("  [fetching] {url}");
         }
 
-        let html = if self.use_jina {
-            self.fetch_with_jina(url).await?
-        } else {
-            self.fetch_direct(url).await?
-        };
+        let html = self.fetch_with_jina(url).await?;
 
         // Store in cache
         cache.store(url, &html).await?;
@@ -106,21 +93,13 @@ impl HttpClient {
             .header("X-With-Links-Summary", "true")
             .header("X-With-Images-Summary", "true")
             .send()
-            .await?;
+            .await?
+            .error_for_status()?;
         let content = response.text().await?;
         Ok(content)
     }
 
-    /// Fetch a URL directly without Jina Reader
-    ///
-    /// # Errors
-    ///
-    /// Returns an error if the HTTP request fails
-    async fn fetch_direct(&self, url: &str) -> Result<String> {
-        let response = self.client.get(url).send().await?;
-        let html = response.text().await?;
-        Ok(html)
-    }
+
 
     /// Fetch multiple URLs with rate limiting
     ///

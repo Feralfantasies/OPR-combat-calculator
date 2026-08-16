@@ -1,0 +1,871 @@
+v3.5.3:
+  name: Machine Cults
+  id: 7el7k3hgy5pb9o9i
+  units:
+  - name: High Cyborg-Priest
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Revolver
+      range: 12"
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    - name: Axe-Halberd
+      range: null
+      attacks: A6
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Hero
+    - Machine-Fog
+    - Strider
+    cost: 155
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Machine-Preserver
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Preacher
+        rules: Unpredictable Fighter Aura
+        cost_modifier: +30pts
+      - name: Engineer
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Canticle Chanter
+        rules: Machine-Fog Boost Aura
+        cost_modifier: +40pts
+      - name: Psy-Hacker
+        rules: Caster(2)
+        cost_modifier: +50pts
+      - name: Deacon
+        rules: Rending when Shooting Aura
+        cost_modifier: +65pts
+      - name: Master Psy-Hacker
+        rules: Caster(3)
+        cost_modifier: +80pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Macro Pistol
+        rules: 12", A3
+        cost_modifier: +10pts
+      - name: P-Repeater
+        rules: 18", A2, Lacerate
+        cost_modifier: +15pts
+      - name: Supersonic Cannon
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +25pts
+      - name: Eradicator
+        rules: 24", A1, AP(1), Blast(3)
+        cost_modifier: +25pts
+      - name: Rail Gun
+        rules: 18", A1, AP(3), Deadly(3)
+        cost_modifier: +35pts
+      - name: V-Blaster
+        rules: 24", A3, Rending
+        cost_modifier: +35pts
+    - category: Upgrade with
+      upgrades:
+      - name: Cult Assault
+        rules: Versatile Attack
+        cost_modifier: +15pts
+  - name: Sect Leader
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Leader F-Blaster
+      range: 9"
+      attacks: A3
+      ap: null
+      special_rules: []
+    - name: Leader Taser Sword
+      range: null
+      attacks: A3
+      ap: null
+      special_rules:
+      - Surge
+    special_rules:
+    - Hero
+    - Machine-Fog
+    - Strider
+    cost: 70
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Machine-Preserver
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Preacher
+        rules: Unpredictable Fighter Aura
+        cost_modifier: +30pts
+      - name: Machine-Modifier
+        rules: Teleport Aura
+        cost_modifier: +50pts
+      - name: Psy-Hacker
+        rules: Caster(2)
+        cost_modifier: +50pts
+      - name: Deacon
+        rules: Rending when Shooting Aura
+        cost_modifier: +65pts
+    - category: Replace Leader F-Blaster and Leader Taser Sword
+      upgrades:
+      - name: Leader Dual S-Blades
+        rules: A4, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Leader S-Razor & Claw
+        rules: A4, AP(2)
+        cost_modifier: +10pts
+      - name: Leader Burst Carbine, Energy Sword
+        rules: 18", A3, A3, AP(1), Rending
+        cost_modifier: +25pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Stalker
+        rules: Fast, Furious
+        cost_modifier: +10pts
+      - name: Infiltrator
+        rules: Grounded Stealth, Scout
+        cost_modifier: +20pts
+  - name: Cult Leader
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Leader R-Pistol
+      range: 9"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Shred
+    - name: Tech-Sword
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Hero
+    - Machine-Fog
+    - Strider
+    cost: 55
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Machine-Preserver
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Engineer
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Canticle Chanter
+        rules: Machine-Fog Boost Aura
+        cost_modifier: +40pts
+      - name: Machine-Modifier
+        rules: Teleport Aura
+        cost_modifier: +50pts
+      - name: Psy-Hacker
+        rules: Caster(2)
+        cost_modifier: +50pts
+      - name: Deacon
+        rules: Rending when Shooting Aura
+        cost_modifier: +65pts
+    - category: Replace Leader R-Pistol
+      upgrades:
+      - name: Leader P-Pistol
+        rules: 9", A3, Lacerate
+        cost_modifier: +5pts
+      - name: Leader Revolver
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Leader Arc Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Leader R-Fusil
+        rules: 18", A2, Shred
+        cost_modifier: +5pts
+      - name: Leader G-Rifle
+        rules: 30", A2, AP(1)
+        cost_modifier: +15pts
+      - name: Leader Uranium Rifle
+        rules: 30", A2, AP(1), Reliable, Shred, Takedown
+        cost_modifier: +60pts
+      - name: Leader R-Jezzail
+        rules: 30", A4, Reliable, Shred, Takedown
+        cost_modifier: +85pts
+    - category: Replace Tech-Sword
+      upgrades:
+      - name: Taser Sword
+        rules: A2, Surge
+        cost_modifier: +5pts
+      - name: R-Sword
+        rules: A2, AP(1), Shred
+        cost_modifier: +5pts
+      - name: Arc Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Axe-Halberd
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Shock Priests Leader
+        rules: Furious, Melee Slayer, Regeneration
+        cost_modifier: +15pts
+      - name: Stalker Wings
+        rules: Ambush, Crossing Attack(1), Flying
+        cost_modifier: +20pts
+      - name: Sentinel Stilts
+        rules: Bounding, Stealth
+        cost_modifier: +20pts
+      - name: Cyborg Horse
+        rules: Fast, Tough(3)
+        cost_modifier: +55pts
+      - name: Raider Horse
+        rules: Scout, Tough(3)
+        cost_modifier: +55pts
+    - category: Upgrade with
+      upgrades:
+      - name: Cult Assault
+        rules: Versatile Attack
+        cost_modifier: +5pts
+  - name: Cult Rangers
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: R-Fusils
+      range: 18"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Shred
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Machine-Fog
+    - Strider
+    cost: 110
+    upgrade_categories:
+    - category: Replace all R-Fusils
+      upgrades:
+      - name: G-Rifle
+        rules: 30", A1, AP(1)
+        cost_modifier: +25pts
+    - category: Replace one R-Fusil
+      upgrades:
+      - name: Arc Gun
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Plasma Carbine
+        rules: 18", A2, AP(4)
+        cost_modifier: +25pts
+      - name: Uranium Rifle
+        rules: 30", A1, AP(1), Reliable, Shred, Takedown
+        cost_modifier: +25pts
+    - category: Replace one R-Fusil and CCW
+      upgrades:
+      - name: R-Pistol, Taser Sword
+        rules: 9", A1, Shred, A2, Surge
+        cost_modifier: +5pts
+    - category: Replace R-Pistol
+      upgrades:
+      - name: P-Pistol
+        rules: 9", A2, Lacerate
+        cost_modifier: +5pts
+      - name: Revolver
+        rules: 12", A1, AP(1)
+        cost_modifier: +5pts
+      - name: Arc Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: G-Rifle
+        rules: 30", A1, AP(1)
+        cost_modifier: +10pts
+    - category: Replace Taser Sword
+      upgrades:
+      - name: R-Sword
+        rules: A2, AP(1), Shred
+        cost_modifier: +5pts
+      - name: Arc Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Axe-Halberd
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Shock Priests
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Shock Staffs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Rending
+    special_rules:
+    - Furious
+    - Machine-Fog
+    - Melee Slayer
+    - Regeneration
+    cost: 135
+    upgrade_categories:
+    - category: Replace all Shock Staffs
+      upgrades:
+      - name: Gauntlet Shocks, Taser Gauntlet
+        rules: 12", A2, Surge, A2, Surge
+        cost_modifier: +15pts
+  - name: Sect Stalkers
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Dual S-Blades
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+    special_rules:
+    - Fast
+    - Furious
+    - Machine-Fog
+    - Strider
+    cost: 180
+    upgrade_categories:
+    - category: Replace all Dual S-Blades
+      upgrades:
+      - name: S-Razor & Claw
+        rules: A2, AP(2)
+        cost_modifier: Free
+      - name: Metal Spike
+        rules: A1, AP(1), Deadly(3), Limited
+        cost_modifier: +5pts
+  - name: Sect Infiltrators
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: F-Blasters
+      range: 9"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: Taser Swords
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Surge
+    special_rules:
+    - Grounded Stealth
+    - Machine-Fog
+    - Scout
+    - Strider
+    cost: 180
+    upgrade_categories:
+    - category: Replace all F-Blasters and Taser Swords
+      upgrades:
+      - name: Burst Carbine, Energy Sword
+        rules: 18", A2, A2, AP(1), Rending
+        cost_modifier: +80pts
+  - name: Sky Stalkers
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: F-Carbines
+      range: 18"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Flying
+    - Machine-Fog
+    cost: 185
+    upgrade_categories:
+    - category: Replace all F-Carbines
+      upgrades:
+      - name: P-Thrower
+        rules: 12", A2, Reliable, Lacerate
+        cost_modifier: +10pts
+    - category: Replace one F-Carbine and CCW
+      upgrades:
+      - name: F-Blaster, Taser Sword
+        rules: 9", A2, A2, Surge
+        cost_modifier: Free
+      - name: Sky-Grenadier
+        rules: Crossing Attack(1)
+        cost_modifier: +20pts
+  - name: Raider Cavalry
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Twin P-Pistols
+      range: 9"
+      attacks: A4
+      ap: null
+      special_rules:
+      - Lacerate
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Machine-Fog
+    - Strider
+    cost: 185
+    upgrade_categories:
+    - category: Replace any Twin P-Pistol
+      upgrades:
+      - name: G-Carbine
+        rules: 18", A2, AP(1)
+        cost_modifier: +5pts
+    - category: Replace one G-Carbine
+      upgrades:
+      - name: Twin P-Blaster
+        rules: 18", A4, Lacerate
+        cost_modifier: +10pts
+    - category: Replace one G-Carbine and CCW
+      upgrades:
+      - name: Revolver, Raider Sabre
+        rules: 12", A1, AP(1), A3, AP(1)
+        cost_modifier: +5pts
+      - name: P-Pistol, Energy Sword
+        rules: 9", A2, Lacerate, A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: P-Breath
+        rules: 6", A2, Limited, Lacerate
+        cost_modifier: +5pts
+    - category: Replace all Cyborg Hooves
+      upgrades:
+      - name: Raider Hooves
+        rules: Scout
+        cost_modifier: +5pts
+  - name: Cult Gunners
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Eraser Beams
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+    - name: Strikes
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Machine-Fog
+    - Relentless
+    - Strider
+    cost: 145
+    upgrade_categories:
+    - category: Replace any Eraser Beam
+      upgrades:
+      - name: Neutron Laser
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +25pts
+      - name: Light P-Pistol
+        rules: 9", A1, Lacerate
+        cost_modifier: +10pts
+      - name: Light Arc Pistol
+        rules: 9", A1, Rending
+        cost_modifier: +15pts
+  - name: Destroyer Cyborgs
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: G-Cannons
+      range: 24"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Blast(3)
+    - name: Cyborg Claws
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Machine-Fog
+    cost: 230
+    upgrade_categories:
+    - category: Replace any G-Cannon
+      upgrades:
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +20pts
+    - category: Replace one G-Cannon
+      upgrades:
+      - name: Plasma Cannon, P-Blaster
+        rules: 30", A1, AP(4), Blast(3), 18", A2, Lacerate
+        cost_modifier: +35pts
+      - name: Plasma Cannon, Flamer
+        rules: 30", A1, AP(4), Blast(3), 12", A1, Blast(3), Reliable
+        cost_modifier: +40pts
+  - name: Breacher Cyborgs
+    size: 3
+    quality: 4+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Contortion Cannons
+      range: 24"
+      attacks: A1
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+    - name: Cyborg Claws
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Machine-Fog
+    cost: 270
+    upgrade_categories:
+    - category: Replace any Contortion Cannon
+      upgrades:
+      - name: Heavy Arc Gun
+        rules: 36", A3, Rending
+        cost_modifier: +5pts
+    - category: Replace all Cyborg Claws
+      upgrades:
+      - name: Arc Claw
+        rules: A3, AP(1), Rending
+        cost_modifier: +35pts
+  - name: Landing Craft
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin P-Machinegun
+      range: 30"
+      attacks: A4
+      ap: null
+      special_rules:
+      - Lacerate
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Machine-Fog
+    - Strider
+    - Transport(11)
+    cost: 210
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Twin P-Machinegun
+        rules: 30", A4, Lacerate
+        cost_modifier: +40pts
+  - name: Dragoon Walker
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: Taser Lance
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Surge
+      - Thrust
+    special_rules:
+    - Fast
+    - Fear(1)
+    - Machine-Fog
+    - Strider
+    cost: 175
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Power Hacker
+        rules: Piercing Debuff
+        cost_modifier: +65pts
+    - category: Replace Taser Lance
+      upgrades:
+      - name: R-Jezzail
+        rules: 30", A3, Reliable, Shred, Takedown
+        cost_modifier: +35pts
+    - category: Upgrade with
+      upgrades:
+      - name: P-Repeater
+        rules: 18", A2, Lacerate
+        cost_modifier: +15pts
+  - name: Combat Robot
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Dual Energy Fists
+      range: null
+      attacks: A4
+      ap: AP(4)
+      special_rules: []
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(1)
+    - Fearless
+    - Machine-Fog
+    cost: 195
+    upgrade_categories:
+    - category: Replace Dual Energy Fist and Heavy Flamer
+      upgrades:
+      - name: Twin P-Cannon
+        rules: 24", A8, Lacerate
+        cost_modifier: +5pts
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: P-Cannon
+        rules: 24", A4, Lacerate
+        cost_modifier: +10pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Robot Smith
+        rules: Regeneration
+        cost_modifier: +20pts
+      - name: Power Hacker
+        rules: Piercing Debuff
+        cost_modifier: +65pts
+  - name: Iron Walker
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Laser Cannon
+      range: 36"
+      attacks: A2
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Fear(1)
+    - Machine-Fog
+    - Strider
+    cost: 250
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Power Hacker
+        rules: Piercing Debuff
+        cost_modifier: +65pts
+    - category: Replace Twin Laser Cannon
+      upgrades:
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: Free
+  - name: Attack Craft
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Energy Cannon
+      range: 30"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Indirect
+    - name: Triple P-Machinegun
+      range: 30"
+      attacks: A6
+      ap: null
+      special_rules:
+      - Lacerate
+    special_rules:
+    - Fast
+    - Impact(6)
+    - Machine-Fog
+    - Strider
+    cost: 405
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Cult Assault
+        rules: Versatile Attack
+        cost_modifier: +40pts
+    - category: Replace Energy Cannon
+      upgrades:
+      - name: Iron Cannon
+        rules: 36", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +40pts
+    - category: Upgrade with
+      upgrades:
+      - name: Disruption Missile
+        rules: 24", A3, AP(1)
+        cost_modifier: +35pts
+  - name: Crawler Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Heavy Eraser Beam
+      range: 36"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+    - name: Twin P-Machinegun
+      range: 30"
+      attacks: A4
+      ap: null
+      special_rules:
+      - Lacerate
+    - name: Crushing Legs
+      range: null
+      attacks: A2
+      ap: AP(2)
+      special_rules: []
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Machine-Fog
+    - Strider
+    cost: 365
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Cult Assault
+        rules: Versatile Attack
+        cost_modifier: +40pts
+    - category: Replace Heavy Eraser Beam
+      upgrades:
+      - name: Twin P-Cannon
+        rules: 24", A8, Lacerate
+        cost_modifier: +5pts
+      - name: Heavy Neutron Laser, P-Machinegun
+        rules: 36", A2, AP(3), Deadly(3), 30", A2, Lacerate
+        cost_modifier: +60pts
+      - name: Icarus AA-System
+        rules: 36", A6, AP(3), Unstoppable
+        cost_modifier: +75pts
+    - category: Upgrade with
+      upgrades:
+      - name: Repair Arm
+        rules: Regeneration
+        cost_modifier: +45pts
+  - name: Arch Fighter
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin P-Machinegun
+      range: 30"
+      attacks: A4
+      ap: null
+      special_rules:
+      - Lacerate
+    - name: Bomb Rack
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Strafing
+    special_rules:
+    - Aircraft
+    - Machine-Fog
+    cost: 260
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Assault Module
+        rules: Transport(11)
+        cost_modifier: +70pts
+  - name: Arch Gunship
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: P-Machinegun
+      range: 30"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Lacerate
+    - name: Rear Laser Cannon
+      range: 24"
+      attacks: A2
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+    - name: Twin P-Blaster
+      range: 18"
+      attacks: A4
+      ap: null
+      special_rules:
+      - Lacerate
+    special_rules:
+    - Aircraft
+    - Machine-Fog
+    cost: 285
+    upgrade_categories: []

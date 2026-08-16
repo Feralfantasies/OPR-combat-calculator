@@ -14,7 +14,7 @@ use clap::{Parser, Subcommand};
 use error::Result;
 use fetch::Fetcher;
 use http_client::HttpClient;
-use parser::{parse_army_list, parse_preview_page, Army};
+use parser::{Army, parse_army_list, parse_preview_page};
 use std::path::{Path, PathBuf};
 
 /// Command-line interface for the OPR data collector
@@ -112,58 +112,78 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
     // Parse army list
     let mut armies = parse_army_list(&cache)?;
     println!("\nParsed {} armies from army list", armies.len());
-    
+
     // Also parse subfaction pages that were fetched
     let subfaction_names = [
-        "Battle Brothers", "Blood Brothers", "Dark Brothers", "Knight Brothers", "Watch Brothers", "Wolf Brothers",
-        "Prime Brothers", "Blood Prime Brothers", "Dark Prime Brothers", "Knight Prime Brothers", "Watch Prime Brothers", "Wolf Prime Brothers",
-        "Havoc Brothers", "Change Disciples", "Lust Disciples", "Plague Disciples", "War Disciples",
-        "Titan Lords", "Titan Lords Change Disciples", "Titan Lords Lust Disciples", "Titan Lords Plague Disciples", "Titan Lords War Disciples",
+        "Battle Brothers",
+        "Blood Brothers",
+        "Dark Brothers",
+        "Knight Brothers",
+        "Watch Brothers",
+        "Wolf Brothers",
+        "Prime Brothers",
+        "Blood Prime Brothers",
+        "Dark Prime Brothers",
+        "Knight Prime Brothers",
+        "Watch Prime Brothers",
+        "Wolf Prime Brothers",
+        "Havoc Brothers",
+        "Change Disciples",
+        "Lust Disciples",
+        "Plague Disciples",
+        "War Disciples",
+        "Titan Lords",
+        "Titan Lords Change Disciples",
+        "Titan Lords Lust Disciples",
+        "Titan Lords Plague Disciples",
+        "Titan Lords War Disciples",
     ];
-    
+
     for subfaction_name in subfaction_names {
         // Check if we already have this army
         if !armies.iter().any(|a| a.name == *subfaction_name) {
             // Try to find the cached preview page
             let cache_dir = cache.cache_dir();
-            let preview_files = std::fs::read_dir(cache_dir)
-                .map_err(error::CollectorError::IoError)?;
-            
+            let preview_files =
+                std::fs::read_dir(cache_dir).map_err(error::CollectorError::IoError)?;
+
             for entry in preview_files {
                 let entry = entry.map_err(error::CollectorError::IoError)?;
                 let path = entry.path();
-                
+
                 if path.extension().is_some_and(|e| e == "html") {
-                    let filename = path.file_name()
-                        .ok_or_else(|| error::CollectorError::ParseError("Invalid filename".to_string()))?
+                    let filename = path
+                        .file_name()
+                        .ok_or_else(|| {
+                            error::CollectorError::ParseError("Invalid filename".to_string())
+                        })?
                         .to_string_lossy();
-                    
+
                     // Check if this is a preview page
                     if filename.contains("preview") {
                         // Extract army ID from filename
                         if let Some(army_id) = extract_army_id_from_filename(&filename) {
                             // Try to parse this page
                             if let Ok(parsed_army) = parse_preview_page(&cache, &army_id)
-                                && parsed_army.name == *subfaction_name {
-                                    armies.push(parsed_army);
-                                    if cli.verbose > 0 {
-                                        println!("  ✓ Found subfaction: {subfaction_name}");
-                                    }
-                                    break;
+                                && parsed_army.name == *subfaction_name
+                            {
+                                armies.push(parsed_army);
+                                if cli.verbose > 0 {
+                                    println!("  ✓ Found subfaction: {subfaction_name}");
                                 }
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
     }
-    
+
     println!("Total armies to parse: {}", armies.len());
 
     // Parse and generate YAML for each army
-    #[allow(clippy::arithmetic_side_effects)]
     let mut success_count: usize = 0;
-    #[allow(clippy::arithmetic_side_effects)]
     let mut error_count: usize = 0;
 
     for army in &armies {
@@ -219,41 +239,40 @@ fn extract_army_id_from_filename(filename: &str) -> Option<String> {
     // The {id} can contain underscores, so we need to find the boundaries
     let army_info_prefix = "armyInfo_";
     let preview_suffix = "_2_preview";
-    
+
     // Find where "armyInfo_" starts
     let prefix_pos = filename.find(army_info_prefix)?;
     let id_start = prefix_pos.saturating_add(army_info_prefix.len());
-    
+
     // Find where "_2_preview" starts (after the ID)
     let suffix_pos = filename.get(id_start..)?.find(preview_suffix)?;
     let id_end = id_start.saturating_add(suffix_pos);
-    
+
     // Extract the ID
-    filename.get(id_start..id_end).map(std::string::ToString::to_string)
+    filename
+        .get(id_start..id_end)
+        .map(std::string::ToString::to_string)
 }
 
 /// Generate YAML file for an army
 fn generate_yaml_file(army: &Army, output_dir: &str) -> Result<PathBuf> {
-    use std::fs;
     use std::collections::BTreeMap;
-    
+    use std::fs;
+
     // Convert army name to kebab-case filename
-    let filename = army.name
-        .to_lowercase()
-        .replace(' ', "-")
-        .replace('\'', "");
+    let filename = army.name.to_lowercase().replace(' ', "-").replace('\'', "");
     let filepath = PathBuf::from(output_dir).join(format!("{filename}.yaml"));
-    
+
     // Create output directory if it doesn't exist
     fs::create_dir_all(output_dir)?;
-    
+
     // Create versioned YAML structure using a wrapper map
     let version = army.version.as_deref().unwrap_or("unknown");
     let mut versioned_data = BTreeMap::new();
     versioned_data.insert(version.to_string(), army);
     let content = serde_yaml::to_string(&versioned_data)?;
-    
+
     fs::write(&filepath, content)?;
-    
+
     Ok(filepath)
 }

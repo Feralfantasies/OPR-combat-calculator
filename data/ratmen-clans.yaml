@@ -1,0 +1,1085 @@
+v3.5.3:
+  name: Ratmen Clans
+  id: hk70l4d471plza00
+  units:
+  - name: Rat Ogre Handler
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Great Electro-Hammer
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+    special_rules:
+    - Fearless
+    - Furious
+    - Hero
+    - Scurry
+    cost: 95
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Raid Master
+        rules: Scurry Boost Aura
+        cost_modifier: +25pts
+      - name: Technician
+        rules: Melee Evasion Aura
+        cost_modifier: +30pts
+      - name: Agitator
+        rules: Piercing Assault Aura
+        cost_modifier: +35pts
+      - name: Director
+        rules: Precision Shooter Aura
+        cost_modifier: +35pts
+    - category: Replace Great Electro-Hammer
+      upgrades:
+      - name: Great Electro-Flail
+        rules: A2, AP(1), Blast(3), Surge
+        cost_modifier: +5pts
+      - name: Great Electro-Spear
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Dual Great Electro-Swords
+        rules: A8, AP(1), Rending
+        cost_modifier: +40pts
+      - name: Great Burst Carbine, Bash, Combat Shield
+        rules: 18", A6, AP(1), A2, Shielded
+        cost_modifier: +40pts
+      - name: Great Fist-Gun, Great Electro-Sword
+        rules: 12", A6, AP(1), A4, AP(1), Rending
+        cost_modifier: +40pts
+      - name: Dual Great Electro-Fists
+        rules: A8, AP(4)
+        cost_modifier: +60pts
+    - category: Replace Great Fist-Gun
+      upgrades:
+      - name: Great Fist-Flamer
+        rules: 12", A2, Blast(3), Reliable
+        cost_modifier: +5pts
+    - category: Replace Great Electro-Sword
+      upgrades:
+      - name: Great Electro-Fist
+        rules: A4, AP(4)
+        cost_modifier: +10pts
+  - name: Elite Handler
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Elite Heavy Pistol
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Hero
+    - Scurry
+    cost: 50
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Spy-Assassin Hitman
+        rules: Takedown Strike
+        cost_modifier: +15pts
+      - name: Icon Bearer
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: Raid Master
+        rules: Scurry Boost Aura
+        cost_modifier: +25pts
+      - name: Agitator
+        rules: Piercing Assault Aura
+        cost_modifier: +35pts
+      - name: Intelligence Officer
+        rules: Ambush Aura
+        cost_modifier: +35pts
+      - name: Director
+        rules: Precision Shooter Aura
+        cost_modifier: +35pts
+      - name: Psy-Hacker
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Psy-Hacker
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Replace Elite Heavy Pistol
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: Free
+      - name: Elite Shred Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Rocket Pistol
+        rules: 9", A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Elite Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +5pts
+      - name: Elite Plas-Burst Pistol
+        rules: 12", A3, Hazardous
+        cost_modifier: +10pts
+      - name: Elite Heavy Carbine
+        rules: 18", A3, AP(1)
+        cost_modifier: +15pts
+    - category: Replace CCW
+      upgrades:
+      - name: Electro-Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Electro-Flail
+        rules: A2, AP(1), Surge
+        cost_modifier: +10pts
+      - name: Electro-Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Electro-Whip
+        rules: A2, AP(1), Bane
+        cost_modifier: +10pts
+      - name: Electro-Lance
+        rules: A2, AP(1), Thrust
+        cost_modifier: +10pts
+      - name: Electro-Spear
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Electro-Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Mecha-Raptor
+        rules: Fast, Ravage(1), Strider
+        cost_modifier: +15pts
+      - name: Master Infiltrator
+        rules: Scout, Stealth, Strider
+        cost_modifier: +20pts
+  - name: Clan Handler
+    size: 1
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Master Pistol
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Hero
+    - Scurry
+    cost: 30
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Icon Bearer
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: Spy-Assassin Sniper
+        rules: Takedown Shot
+        cost_modifier: +20pts
+      - name: Raid Master
+        rules: Scurry Boost Aura
+        cost_modifier: +25pts
+      - name: Technician
+        rules: Melee Evasion Aura
+        cost_modifier: +30pts
+      - name: Intelligence Officer
+        rules: Ambush Aura
+        cost_modifier: +35pts
+      - name: Director
+        rules: Precision Shooter Aura
+        cost_modifier: +35pts
+      - name: Psy-Hacker
+        rules: Caster(2)
+        cost_modifier: +45pts
+    - category: Replace Master Pistol
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Burst Pistol
+        rules: 12", A2, Hazardous
+        cost_modifier: +5pts
+      - name: Rocket Pistol
+        rules: 9", A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Elite Carbine
+        rules: 18", A3
+        cost_modifier: +5pts
+      - name: Elite Sniper Carbine
+        rules: 18", A2, AP(1), Reliable, Takedown
+        cost_modifier: +35pts
+      - name: Elite Plas-Burst Sniper Carbine
+        rules: 18", A2, Reliable, Hazardous, Takedown
+        cost_modifier: +45pts
+    - category: Replace CCW
+      upgrades:
+      - name: Electro-Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Electro-Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Electro-Whip
+        rules: A2, AP(1), Bane
+        cost_modifier: +5pts
+      - name: Electro-Flail
+        rules: A2, AP(1), Surge
+        cost_modifier: +5pts
+      - name: Electro-Lance
+        rules: A2, AP(1), Thrust
+        cost_modifier: +5pts
+      - name: Electro-Spear
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Electro-Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Mecha-Raptor
+        rules: Fast, Ravage(1), Strider
+        cost_modifier: +10pts
+      - name: Master Infiltrator
+        rules: Scout, Stealth, Strider
+        cost_modifier: +15pts
+  - name: Stalkers
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Electro-Flails
+      range: null
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Surge
+    special_rules:
+    - Furious
+    - Scurry
+    cost: 105
+    upgrade_categories:
+    - category: Replace all Electro-Flails
+      upgrades:
+      - name: Dual CCWs
+        rules: A2
+        cost_modifier: +5pts
+      - name: Electro-Whip
+        rules: A1, AP(1), Bane
+        cost_modifier: +5pts
+    - category: Replace up to two Electro-Flails
+      upgrades:
+      - name: Electro-Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Electro-Spear
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Electro-Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Electro-Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Operators
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Scurry
+    cost: 125
+    upgrade_categories:
+    - category: Replace all Pistols and CCWS
+      upgrades:
+      - name: Carbine, CCW
+        rules: 18", A2, A1
+        cost_modifier: +25pts
+    - category: Replace up to two Pistols and CCWS
+      upgrades:
+      - name: Shotgun, CCW
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +5pts
+      - name: Shred Rifle, CCW
+        rules: 18", A2, Rending, A1
+        cost_modifier: +10pts
+      - name: Plas-Burst Rifle, CCW
+        rules: 24", A2, Hazardous, A1
+        cost_modifier: +15pts
+      - name: Flamer, CCW
+        rules: 12", A1, Blast(3), Reliable, A1
+        cost_modifier: +15pts
+      - name: Rocket Launcher, CCW
+        rules: 18", A1, AP(2), Deadly(3), A1
+        cost_modifier: +15pts
+      - name: Heavy Machinegun, CCW
+        rules: 30", A3, AP(1), A1
+        cost_modifier: +20pts
+    - category: Replace one Pistol and CCW
+      upgrades:
+      - name: Sgt. Pistol, Electro-Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Burst Pistol
+        rules: 12", A2, Hazardous
+        cost_modifier: +5pts
+    - category: Replace Electro-Sword
+      upgrades:
+      - name: Electro-Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Saboteurs
+    size: 5
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Electro-Bombs
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Indirect
+      - Bane
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Quick Readjustment
+    - Scurry
+    cost: 75
+    upgrade_categories:
+    - category: Replace all Electro-Bombs
+      upgrades:
+      - name: Sling-Bombs
+        rules: 12", A2, AP(1), Indirect
+        cost_modifier: +10pts
+      - name: Plas-Bombs
+        rules: 12", A2, Indirect, Hazardous
+        cost_modifier: +20pts
+  - name: Infiltrators
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Scout
+    - Scurry
+    - Stealth
+    - Strider
+    cost: 125
+    upgrade_categories:
+    - category: Replace all Pistols and CCWS
+      upgrades:
+      - name: Shotgun, CCW
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +20pts
+      - name: Carbine, CCW
+        rules: 18", A2, A1
+        cost_modifier: +20pts
+      - name: Smoke Grenades
+        rules: Evasive Aura
+        cost_modifier: +40pts
+  - name: Elite Operators
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Scurry
+    cost: 110
+    upgrade_categories:
+    - category: Replace all Heavy Pistols and CCWS
+      upgrades:
+      - name: Shotgun, CCW
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +10pts
+      - name: Heavy Carbine, CCW
+        rules: 18", A2, AP(1), A1
+        cost_modifier: +35pts
+    - category: Replace one Heavy Pistol and CCW
+      upgrades:
+      - name: Shred Rifle, CCW
+        rules: 18", A2, Rending, A1
+        cost_modifier: +10pts
+      - name: Flamer, CCW
+        rules: 12", A1, Blast(3), Reliable, A1
+        cost_modifier: +10pts
+      - name: Plas-Burst Rifle, CCW
+        rules: 24", A2, Hazardous, A1
+        cost_modifier: +20pts
+      - name: Rocket Launcher, CCW
+        rules: 18", A1, AP(2), Deadly(3), A1
+        cost_modifier: +20pts
+      - name: Heavy Machinegun, CCW
+        rules: 30", A3, AP(1), A1
+        cost_modifier: +30pts
+    - category: Replace one Heavy Pistol and CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Electro-Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Burst Pistol
+        rules: 12", A2, Hazardous
+        cost_modifier: +10pts
+    - category: Replace Electro-Sword
+      upgrades:
+      - name: Electro-Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Sharpshooters
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Sniper Carbines
+      range: 18"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Reliable
+      - Takedown
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Scout
+    - Scurry
+    - Stealth
+    - Strider
+    cost: 100
+    upgrade_categories:
+    - category: Replace all Sniper Carbines
+      upgrades:
+      - name: Plas-Burst Sniper Carbine
+        rules: 18", A1, Reliable, Hazardous, Takedown
+        cost_modifier: +15pts
+  - name: Weapon Experts
+    size: 3
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Heavy Flamers
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Relentless
+    - Scurry
+    cost: 160
+    upgrade_categories:
+    - category: Replace any Heavy Flamer
+      upgrades:
+      - name: Rocket Launcher
+        rules: 18", A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Plas-Burst Cannon
+        rules: 30", A1, Blast(3), Hazardous
+        cost_modifier: +15pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +15pts
+      - name: Shred Cannon
+        rules: 24", A4, Rending
+        cost_modifier: +30pts
+  - name: Mecha-Raptor Riders
+    size: 5
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Ravage(1)
+    - Scurry
+    - Strider
+    cost: 95
+    upgrade_categories:
+    - category: Replace all Pistols and CCWS
+      upgrades:
+      - name: Shotgun, CCW
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +10pts
+      - name: Electro-Lance
+        rules: A2, AP(1), Thrust
+        cost_modifier: +25pts
+    - category: Replace one CCW
+      upgrades:
+      - name: Electro-Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Electro-Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Electro-Whip
+        rules: A2, AP(1), Bane
+        cost_modifier: +5pts
+      - name: Electro-Spear
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Electro-Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Rat Ogre Bodyguards
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Heavy Electro-Hammers
+      range: null
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+    special_rules:
+    - Fearless
+    - Furious
+    - Scurry
+    cost: 140
+    upgrade_categories:
+    - category: Replace all Heavy Electro-Hammers
+      upgrades:
+      - name: Heavy Electro-Flail
+        rules: A1, AP(1), Blast(3), Surge
+        cost_modifier: +5pts
+      - name: Electro-Spear
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +20pts
+      - name: Heavy Burst Carbine, Bash, Combat Shield
+        rules: 18", A3, AP(1), A1, Shielded
+        cost_modifier: +60pts
+  - name: Rat Ogre Agents
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Dual Electro-Swords
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Rending
+    special_rules:
+    - Furious
+    - Scurry
+    cost: 185
+    upgrade_categories:
+    - category: Replace all Dual Electro-Swords
+      upgrades:
+      - name: Fist-Gun, Electro-Sword
+        rules: 12", A3, AP(1), A2, AP(1), Rending
+        cost_modifier: Free
+      - name: Dual Electro-Fists
+        rules: A4, AP(4)
+        cost_modifier: +25pts
+    - category: Replace any Fist-Gun
+      upgrades:
+      - name: Fist-Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+    - category: Replace any Electro-Sword
+      upgrades:
+      - name: Electro-Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Mine-Drones
+    size: 5
+    quality: 6+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Bashes
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - No Retreat
+    - Self-Destruct(2)
+    - Slow
+    cost: 60
+    upgrade_categories: []
+  - name: Rat Swarms
+    size: 3
+    quality: 5+
+    defense: 6+
+    tough: 3
+    weapons:
+    - name: Swarm Attacks
+      range: null
+      attacks: A4
+      ap: null
+      special_rules: []
+    special_rules:
+    - Scurry
+    - Strider
+    cost: 80
+    upgrade_categories: []
+  - name: Giant Rats
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Claws
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Scurry
+    - Strider
+    cost: 105
+    upgrade_categories: []
+  - name: Mecha-Ogre
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Claws
+      range: null
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(1)
+    - Fearless
+    - Furious
+    - Scurry
+    cost: 160
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Weak Spot Triangulator
+        rules: Defense Debuff
+        cost_modifier: +35pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Combat Scythes
+        rules: Ravage(3)
+        cost_modifier: +10pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +25pts
+      - name: Mine-Drone Launcher
+        rules: Spawn(Mine-Drones [5])
+        cost_modifier: +65pts
+  - name: Light Mecha-Walker
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Rocket Launcher
+      range: 18"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(1)
+    - Scurry
+    cost: 160
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Weak Spot Triangulator
+        rules: Defense Debuff
+        cost_modifier: +35pts
+    - category: Replace Twin Rocket Launcher
+      upgrades:
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: Free
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts
+      - name: Twin Plas-Burst Cannon
+        rules: 30", A2, Blast(3), Hazardous
+        cost_modifier: +25pts
+      - name: Twin Shred Cannon
+        rules: 24", A8, Rending
+        cost_modifier: +45pts
+  - name: Burrower Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Impact(3)
+    - Scurry
+    - Transport(11)
+    cost: 285
+    upgrade_categories:
+    - category: Replace Twin Heavy Machinegun
+      upgrades:
+      - name: Heavy Burrower
+        rules: A8, AP(4)
+        cost_modifier: +5pts
+      - name: Twin AA-Cannon
+        rules: 30", A6, AP(1), Unstoppable
+        cost_modifier: +10pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +55pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +75pts
+  - name: Combat Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Heavy Plas-Burst Cannon
+      range: 30"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Hazardous
+    - name: Twin Heavy Flamer
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Fast
+    - Impact(6)
+    - Scurry
+    cost: 380
+    upgrade_categories:
+    - category: Replace Heavy Plas-Burst Cannon
+      upgrades:
+      - name: Battle Cannon
+        rules: 30", A2, AP(2), Blast(3)
+        cost_modifier: Free
+      - name: Heavy Mortar Gun
+        rules: 30", A2, AP(1), Blast(3), Indirect
+        cost_modifier: +5pts
+      - name: Twin AA-Cannon
+        rules: 30", A6, AP(1), Unstoppable
+        cost_modifier: +5pts
+    - category: Replace Twin Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts
+  - name: Great Mecha-Beast
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Twin Heavy Flamer
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Heavy Claws
+      range: null
+      attacks: A12
+      ap: AP(1)
+      special_rules: []
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Scurry
+    cost: 380
+    upgrade_categories:
+    - category: Replace Heavy Claw
+      upgrades:
+      - name: Twin Shred Cannon
+        rules: 24", A8, Rending
+        cost_modifier: +30pts
+      - name: Heavy Claws, Spawn
+        rules: A6, AP(1), Mine-Drones [5]
+        cost_modifier: +35pts
+      - name: Heavy Rocket Array
+        rules: 24", A3, AP(2), Deadly(3)
+        cost_modifier: +40pts
+      - name: Triple Flamer Cannon
+        rules: 18", A3, AP(1), Blast(3), Reliable
+        cost_modifier: +55pts
+    - category: Replace Twin Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts
+  - name: Artillery Gun
+    size: 1
+    quality: 4+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Mine-Drone Gun
+      range: 24"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(6)
+      - Indirect
+      - Shred
+    - name: Crew
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Artillery
+    cost: 95
+    upgrade_categories:
+    - category: Replace Mine-Drone Gun
+      upgrades:
+      - name: Mortar Gun
+        rules: 24", A2, Blast(3), Indirect
+        cost_modifier: +5pts
+      - name: Heavy Plas-Burst Cannon
+        rules: 30", A2, Blast(3), Hazardous
+        cost_modifier: +40pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +40pts
+      - name: Twin AA-Cannon
+        rules: 30", A6, AP(1), Unstoppable
+        cost_modifier: +50pts
+      - name: Twin Hail-Cannon
+        rules: 24", A6, AP(1), Indirect
+        cost_modifier: +50pts
+      - name: Twin Shred Cannon
+        rules: 24", A8, Rending
+        cost_modifier: +55pts
+      - name: Twin Rocket Launcher Array
+        rules: 24", A2, AP(2), Deadly(3), Indirect
+        cost_modifier: +60pts
+  - name: Titan Mecha-Beast
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Rapid Heavy Flamer
+      range: 12"
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Stomp
+      range: null
+      attacks: A6
+      ap: AP(2)
+      special_rules: []
+    - name: Titan Heavy Claws
+      range: null
+      attacks: A18
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Fear(3)
+    - Fearless
+    - Scurry
+    cost: 660
+    upgrade_categories:
+    - category: Replace Titan Heavy Claws
+      upgrades:
+      - name: Heavy Claws, Mine-Drone Carrier
+        rules: A9, AP(2), Spawn(Mine-Drones [5])
+        cost_modifier: +5pts
+      - name: Twin Heavy Rocket Array
+        rules: 24", A4, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Quad Flamer Cannon
+        rules: 18", A4, AP(1), Blast(3), Reliable
+        cost_modifier: +30pts
+      - name: Twin Heavy Shred Cannon
+        rules: 24", A12, AP(1), Rending
+        cost_modifier: +55pts
+    - category: Replace Rapid Heavy Flamer
+      upgrades:
+      - name: Rapid Heavy Machinegun
+        rules: 30", A12, AP(1)
+        cost_modifier: +45pts
+    - category: Upgrade with
+      upgrades:
+      - name: Mine-Drone Launcher
+        rules: Spawn(Mine-Drones [5])
+        cost_modifier: +65pts
+  - name: Mecha-Walker Titan
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 24
+    weapons:
+    - name: Titan Heavy Rocket Arrays
+      range: 24"
+      attacks: A3
+      ap: AP(2)
+      special_rules:
+      - Deadly(6)
+    - name: Twin Heavy Flamer
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Stomp
+      range: null
+      attacks: A8
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Fear(4)
+    - Fearless
+    - Scurry
+    cost: 810
+    upgrade_categories:
+    - category: Replace Titan Heavy Rocket Array
+      upgrades:
+      - name: Titan Flamer Cannons
+        rules: 18", A3, AP(1), Blast(6), Reliable
+        cost_modifier: +10pts
+      - name: Titan Heavy Machineguns
+        rules: 30", A18, AP(1)
+        cost_modifier: +65pts
+      - name: Titan Heavy Plas-Burst Cannons
+        rules: 30", A6, Blast(3), Hazardous
+        cost_modifier: +70pts
+      - name: Twin AA-Cannon
+        rules: 30", A18, AP(1), Unstoppable
+        cost_modifier: +90pts
+      - name: Titan Heavy Shred Cannons
+        rules: 24", A18, AP(1), Rending
+        cost_modifier: +115pts
+      - name: Heavy Mortar
+        rules: 36", A6, AP(1), Blast(3), Indirect
+        cost_modifier: +120pts
+    - category: Replace Twin Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts

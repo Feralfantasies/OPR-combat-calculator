@@ -1,0 +1,1351 @@
+v3.5.3:
+  name: Dwarf Guilds
+  id: fk1mkbp8apvltu0z
+  units:
+  - name: Powersuit Champion
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Shock Hammer
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+    special_rules:
+    - Fortified
+    - Hero
+    - Infiltrate
+    - Slow
+    - Sturdy
+    cost: 125
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Guild Lord
+        rules: Sturdy Boost Aura
+        cost_modifier: +10pts
+      - name: Foreman
+        rules: Swift Aura
+        cost_modifier: +15pts
+      - name: Runesmith
+        rules: Stealth Aura
+        cost_modifier: +30pts
+      - name: Forge Master
+        rules: Increased Shooting Range Aura
+        cost_modifier: +35pts
+      - name: Rune Master
+        rules: Caster(2)
+        cost_modifier: +45pts
+    - category: Replace Combat Shield
+      upgrades:
+      - name: Champion H-Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Champion Iron Pistol
+        rules: 9", A4, AP(1)
+        cost_modifier: +15pts
+      - name: Champion Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Rapid Storm Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +80pts
+    - category: Replace Shock Hammer
+      upgrades:
+      - name: Plasma Sword
+        rules: A4, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Plasma Axe
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +25pts
+      - name: Shock Gauntlet
+        rules: A4, AP(4)
+        cost_modifier: +30pts
+    - category: Upgrade with
+      upgrades:
+      - name: Exo-GL
+        rules: 18", A1, Blast(3), Limited
+        cost_modifier: +5pts
+  - name: Dwarf Champion
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fortified
+    - Hero
+    - Slow
+    - Sturdy
+    cost: 45
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Artillerist
+        rules: Re-Position Artillery
+        cost_modifier: +10pts
+      - name: Guild Lord
+        rules: Sturdy Boost Aura
+        cost_modifier: +10pts
+      - name: Foreman
+        rules: Swift Aura
+        cost_modifier: +15pts
+      - name: Rage Lord
+        rules: Unpredictable Fighter Aura
+        cost_modifier: +30pts
+      - name: Forge Master
+        rules: Increased Shooting Range Aura
+        cost_modifier: +35pts
+      - name: Engineer
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Rune Master
+        rules: Caster(2)
+        cost_modifier: +45pts
+    - category: Replace Combat Shield and CCW
+      upgrades:
+      - name: Champion Twin Glove-Pistols, Bash
+        rules: 12", A4, A1
+        cost_modifier: +10pts
+      - name: Great Heat Hammer
+        rules: A1, AP(2), Blast(3), Shred
+        cost_modifier: +15pts
+    - category: Replace Combat Shield
+      upgrades:
+      - name: Champion Pistol
+        rules: 12", A2
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Champion H-Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +10pts
+      - name: Champion Iron Shotgun
+        rules: 6", A4, AP(2)
+        cost_modifier: +15pts
+      - name: Champion Rifle
+        rules: 24", A2
+        cost_modifier: +15pts
+      - name: Champion Iron Pistol
+        rules: 9", A4, AP(1)
+        cost_modifier: +20pts
+      - name: Champion Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +20pts
+      - name: Champion Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +20pts
+      - name: Champion Iron Blaster
+        rules: 18", A3, AP(1)
+        cost_modifier: +30pts
+    - category: Replace CCW
+      upgrades:
+      - name: Shock Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Plasma Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Plasma Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Shock Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+      - name: Heat Spear
+        rules: A3, Counter, Shred
+        cost_modifier: +20pts
+      - name: Heavy Spear
+        rules: A3, AP(1), Counter
+        cost_modifier: +25pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Guild Bounty
+        rules: Precision Frenzy
+        cost_modifier: +5pts
+      - name: Elite
+        rules: Fearless, Fortified
+        cost_modifier: +5pts
+      - name: Mining Gear
+        rules: Infiltrate
+        cost_modifier: +15pts
+      - name: Jetpack
+        rules: Ambush, Flying, Swift
+        cost_modifier: +25pts
+      - name: Combat Bike
+        rules: Auto-Gun (24", A2, AP(1)), Fast, Swift, Tough(3)
+        cost_modifier: +100pts
+      - name: Pioneer Bike
+        rules: Auto-Gun (24", A2, AP(1)), Scout, Swift, Tough(3)
+        cost_modifier: +100pts
+  - name: Berserker Veteran
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Heavy Great Axe
+      range: null
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+    special_rules:
+    - Fearless
+    - Furious
+    - Hero
+    - Melee Slayer
+    - Slow
+    - Sturdy
+    cost: 45
+    upgrade_categories:
+    - category: Upgrade with any
+      upgrades:
+      - name: Guild Bounty
+        rules: Precision Frenzy
+        cost_modifier: +5pts
+      - name: Cyber-Augments
+        rules: Regeneration
+        cost_modifier: +10pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Guild Lord
+        rules: Sturdy Boost Aura
+        cost_modifier: +10pts
+      - name: Foreman
+        rules: Swift Aura
+        cost_modifier: +15pts
+      - name: Rage Lord
+        rules: Unpredictable Fighter Aura
+        cost_modifier: +30pts
+      - name: Runesmith
+        rules: Stealth Aura
+        cost_modifier: +30pts
+    - category: Replace Heavy Great Axe
+      upgrades:
+      - name: Great Heat Hammer
+        rules: A1, AP(2), Blast(3), Shred
+        cost_modifier: +5pts
+      - name: Dual Heavy Berserker Axes
+        rules: A4, AP(1)
+        cost_modifier: +5pts
+      - name: Dual Heavy Heat Axes
+        rules: A4, AP(1), Shred
+        cost_modifier: +15pts
+  - name: Guardians
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: Bashes
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fortified
+    - Slow
+    - Sturdy
+    cost: 70
+    upgrade_categories:
+    - category: Replace all Pistols and Bashes
+      upgrades:
+      - name: CCW
+        rules: A2
+        cost_modifier: Free
+      - name: Heat Spear
+        rules: A1, Counter, Shred
+        cost_modifier: +5pts
+      - name: Heavy Spear
+        rules: A1, AP(1), Counter
+        cost_modifier: +10pts
+  - name: Dwarf Warriors
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Rifles
+      range: 24"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Slow
+    - Sturdy
+    cost: 80
+    upgrade_categories:
+    - category: Replace all Rifles
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +20pts
+      - name: Iron Blaster
+        rules: 18", A2, AP(1)
+        cost_modifier: +45pts
+    - category: Replace one Rifle
+      upgrades:
+      - name: Auto H-Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +30pts
+      - name: Rail M-Rifle
+        rules: 24", A1, AP(2), Deadly(3), Shred
+        cost_modifier: +35pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +35pts
+      - name: Spectrum Scanner
+        rules: Ignores Cover when Shooting Aura
+        cost_modifier: +10pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace one Rifle and CCW
+      upgrades:
+      - name: Sgt. Pistol, Plasma Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: H-Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Iron Pistol
+        rules: 9", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Plasma Sword
+      upgrades:
+      - name: Shock Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Berserkers
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Great Axes
+      range: null
+      attacks: A1
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Furious
+    - Melee Slayer
+    - Slow
+    - Sturdy
+    cost: 75
+    upgrade_categories:
+    - category: Replace all Great Axes
+      upgrades:
+      - name: Heavy Heat Axe
+        rules: A1, AP(1), Shred
+        cost_modifier: +5pts
+      - name: Dual Berserker Axes
+        rules: A2
+        cost_modifier: +10pts
+    - category: Replace one Great Axe
+      upgrades:
+      - name: Assault Grenade Launcher, CCW
+        rules: 18", A1, Blast(3), A2
+        cost_modifier: +15pts
+      - name: Cyber-Augments
+        rules: Regeneration
+        cost_modifier: +10pts
+  - name: Iron Veterans
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Iron Shotguns
+      range: 6"
+      attacks: A2
+      ap: AP(2)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Slow
+    - Sturdy
+    cost: 110
+    upgrade_categories:
+    - category: Replace all Iron Shotguns
+      upgrades:
+      - name: Iron Blaster
+        rules: 18", A2, AP(1)
+        cost_modifier: +65pts
+    - category: Replace one Iron Shotgun
+      upgrades:
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +40pts
+      - name: C-Beamer
+        rules: 24", A3, AP(1), Surge
+        cost_modifier: +40pts
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +65pts
+      - name: Spectrum Scanner
+        rules: Ignores Cover when Shooting Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace one Iron Shotgun and CCW
+      upgrades:
+      - name: Sgt. Iron Pistol, Plasma Sword
+        rules: 9", A2, AP(1), A2, AP(1), Rending
+        cost_modifier: +15pts
+    - category: Replace Sgt. Iron Pistol
+      upgrades:
+      - name: H-Pistol
+        rules: 9", A2, Rending
+        cost_modifier: Free
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Plasma Sword
+      upgrades:
+      - name: Shock Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Miners
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Iron Pistols
+      range: 9"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Infiltrate
+    - Slow
+    - Sturdy
+    cost: 120
+    upgrade_categories:
+    - category: Replace any Iron Pistol
+      upgrades:
+      - name: Iron Shotgun
+        rules: 6", A2, AP(2)
+        cost_modifier: Free
+    - category: Replace one Iron Pistol
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Drill M-Platform
+        rules: 18", A1, AP(2), Deadly(3), Shred
+        cost_modifier: +25pts
+    - category: Replace one Iron Pistol and CCW
+      upgrades:
+      - name: Drill A-Platform
+        rules: A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+    - category: Replace one Iron Pistol and CCW
+      upgrades:
+      - name: Sgt. Iron Pistol, Plasma Sword
+        rules: 9", A2, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Iron Pistol
+      upgrades:
+      - name: H-Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Plasma Sword
+      upgrades:
+      - name: Shock Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Jetpack Warriors
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Flying
+    - Sturdy
+    cost: 115
+    upgrade_categories:
+    - category: Replace all Pistols and CCWS
+      upgrades:
+      - name: Twin Glove-Pistols, Bash
+        rules: 12", A2, A1
+        cost_modifier: Free
+    - category: Replace up to two Pistols
+      upgrades:
+      - name: Iron Pistol
+        rules: 9", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Iron Shotgun
+        rules: 6", A2, AP(2)
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace one Pistol
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+    - category: Replace up to two CCWS
+      upgrades:
+      - name: Plasma Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Shock Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Replace one CCW
+      upgrades:
+      - name: Shock Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Plasma Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+  - name: Elites
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heat Hammers
+      range: null
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Shred
+    special_rules:
+    - Fearless
+    - Fortified
+    - Slow
+    - Sturdy
+    cost: 110
+    upgrade_categories:
+    - category: Replace any Heat Hammer
+      upgrades:
+      - name: Heat Axe
+        rules: A2, Shred
+        cost_modifier: +5pts
+    - category: Replace one Heat Hammer
+      upgrades:
+      - name: Great Heat Hammer
+        rules: A1, AP(2), Blast(3), Shred
+        cost_modifier: +15pts
+  - name: Sniper Team
+    size: 3
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Sniper Rifles
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Reliable
+      - Takedown
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Scout
+    - Slow
+    - Stealth
+    - Sturdy
+    cost: 135
+    upgrade_categories: []
+  - name: Thunder Support
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Mortars
+      range: 30"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Indirect
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Slow
+    - Sturdy
+    cost: 170
+    upgrade_categories:
+    - category: Replace any Mortar
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+      - name: C-Beamer
+        rules: 24", A3, AP(1), Surge
+        cost_modifier: +10pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +15pts
+      - name: Gravity H-Cannon
+        rules: 24", A4, Rending
+        cost_modifier: +20pts
+      - name: Autocannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +25pts
+      - name: Spectrum Scanner
+        rules: Ignores Cover when Shooting Aura
+        cost_modifier: Free
+  - name: Powersuit Guard
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Shock Hammers
+      range: null
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(3)
+    special_rules:
+    - Fortified
+    - Infiltrate
+    - Slow
+    - Sturdy
+    cost: 185
+    upgrade_categories:
+    - category: Replace all Combat Shields
+      upgrades:
+      - name: Iron Pistol
+        rules: 9", A2, AP(1)
+        cost_modifier: +20pts
+    - category: Replace any Iron Pistol
+      upgrades:
+      - name: H-Pistol
+        rules: 9", A2, Rending
+        cost_modifier: Free
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +35pts
+    - category: Replace one Iron Pistol
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +40pts
+      - name: Rail M-Rifle
+        rules: 24", A1, AP(2), Deadly(3), Shred
+        cost_modifier: +45pts
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +65pts
+    - category: Replace any Shock Hammer
+      upgrades:
+      - name: Plasma Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Plasma Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Shock Gauntlet
+        rules: A3, AP(4)
+        cost_modifier: +30pts
+      - name: Exo-GL
+        rules: 18", A1, Blast(3), Limited
+        cost_modifier: +20pts
+  - name: Mine-Bot Guard
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Light Iron Cannons
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Slow
+    - Sturdy
+    cost: 230
+    upgrade_categories:
+    - category: Replace all Light Iron Cannons and CCWS
+      upgrades:
+      - name: Heavy Burst Pistol, Plasma Sword
+        rules: 12", A3, AP(1), A3, AP(1), Rending
+        cost_modifier: +30pts
+      - name: Heavy Burst Pistol, Shock Gauntlet
+        rules: 12", A3, AP(1), A3, AP(4)
+        cost_modifier: +65pts
+  - name: Dwarf Bikers
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Auto-Guns
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: Iron Pistols
+      range: 9"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Sturdy
+    cost: 210
+    upgrade_categories:
+    - category: Replace any Iron Pistol
+      upgrades:
+      - name: Iron Shotgun
+        rules: 6", A2, AP(2)
+        cost_modifier: Free
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+    - category: Replace all Lead Foots
+      upgrades:
+      - name: Pioneer
+        rules: Scout
+        cost_modifier: +5pts
+  - name: Dwarf Trike
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Auto-Gun
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Iron Pistol
+      range: 9"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Sturdy
+    cost: 135
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Deceleration Rune
+        rules: Speed Debuff
+        cost_modifier: +15pts
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+      - name: C-Beamer
+        rules: 24", A3, AP(1), Surge
+        cost_modifier: +10pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +15pts
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +20pts
+    - category: Replace Lead Foot
+      upgrades:
+      - name: Pioneer
+        rules: Scout
+        cost_modifier: +5pts
+    - category: Upgrade with
+      upgrades:
+      - name: Spectrum Scanner
+        rules: Ignores Cover when Shooting
+        cost_modifier: +5pts
+  - name: APC
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Machinegun
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    - name: Twin Heavy Rifle
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Sturdy
+    - Transport(11)
+    cost: 210
+    upgrade_categories:
+    - category: Replace any Heavy Machinegun
+      upgrades:
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +5pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: H-Beam Cannon
+        rules: 18", A3, AP(4), Surge
+        cost_modifier: +15pts
+      - name: Sagittarius Missiles
+        rules: 36", A2, AP(4), Unstoppable
+        cost_modifier: +15pts
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +20pts
+  - name: Attack Vehicle
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Heavy Fusion Rifle
+      range: 18"
+      attacks: A2
+      ap: AP(4)
+      special_rules:
+      - Deadly(3)
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Strider
+    - Sturdy
+    cost: 200
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Deceleration Rune
+        rules: Speed Debuff
+        cost_modifier: +15pts
+    - category: Replace Twin Heavy Fusion Rifle
+      upgrades:
+      - name: Rail M-Cannon
+        rules: 36", A1, AP(2), Deadly(6), Shred
+        cost_modifier: +5pts
+      - name: Quad Attack Machinegun
+        rules: 30", A8, AP(1)
+        cost_modifier: +25pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +35pts
+  - name: Battle Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Twin Heavy Fusion Rifle
+      range: 18"
+      attacks: A2
+      ap: AP(4)
+      special_rules:
+      - Deadly(3)
+    - name: Twin Heavy Flamer
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Fast
+    - Impact(6)
+    - Sturdy
+    cost: 370
+    upgrade_categories:
+    - category: Replace Twin Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts
+    - category: Replace any Twin Heavy Fusion Rifle
+      upgrades:
+      - name: Anti-Tank Cannon
+        rules: 30", A1, AP(3), Deadly(6)
+        cost_modifier: Free
+      - name: Battle Cannon
+        rules: 30", A2, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Flame Cannon
+        rules: 18", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Quad Attack Machinegun
+        rules: 30", A8, AP(1)
+        cost_modifier: +25pts
+      - name: Twin AA-Cannon
+        rules: 30", A6, AP(3), Unstoppable
+        cost_modifier: +50pts
+  - name: Assault Drill
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Tunneling Drill
+      range: null
+      attacks: A6
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Impact(6)
+    - Sturdy
+    - Transport(11)
+    cost: 365
+    upgrade_categories:
+    - category: Replace any Heavy Flamer
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+  - name: Land Train
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Twin Light AA-Guns
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Unstoppable
+    - name: Twin Heavy Rifle
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Impact(6)
+    - Sturdy
+    cost: 430
+    upgrade_categories:
+    - category: Replace any Twin Light AA-Gun
+      upgrades:
+      - name: Twin Light Fusion AA-Gun
+        rules: 24", A2, AP(4), Deadly(3), Unstoppable
+        cost_modifier: +20pts
+    - category: Replace any Heavy Machinegun
+      upgrades:
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +5pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: H-Beam Cannon
+        rules: 18", A3, AP(4), Surge
+        cost_modifier: +15pts
+      - name: Sagittarius Missiles
+        rules: 36", A2, AP(4), Unstoppable
+        cost_modifier: +15pts
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +20pts
+    - category: Replace any Twin Heavy Fusion Rifle
+      upgrades:
+      - name: Anti-Tank Cannon
+        rules: 30", A1, AP(3), Deadly(6)
+        cost_modifier: Free
+      - name: Battle Cannon
+        rules: 30", A2, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Flame Cannon
+        rules: 18", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Quad Attack Machinegun
+        rules: 30", A8, AP(1)
+        cost_modifier: +25pts
+      - name: Twin AA-Cannon
+        rules: 30", A6, AP(3), Unstoppable
+        cost_modifier: +50pts
+    - category: Upgrade with up to two
+      upgrades:
+      - name: Transport Carriage
+        rules: Tough(6), Transport(11)
+        cost_modifier: +160pts
+      - name: Transport Carriage
+        rules: Heavy Machinegun (30", A3, AP(1)), Tough(6), Transport(6)
+        cost_modifier: +180pts
+      - name: Weapon Carriage
+        rules: Twin Heavy Fusion Rifle (18", A2, AP(4), Deadly(3)), Tough(6)
+        cost_modifier: +200pts
+      - name: Weapon Carriage
+        rules: Twin Fusion AA-Gun (24", A2, AP(4), Deadly(3), Unstoppable), Tough(6)
+        cost_modifier: +230pts
+  - name: Dwarf Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Shock Hammers
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(2)
+    - Sturdy
+    cost: 280
+    upgrade_categories:
+    - category: Replace any Shock Hammer
+      upgrades:
+      - name: Plasma Sword
+        rules: A4, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Light Walker Fist
+        rules: A4, AP(2)
+        cost_modifier: +15pts
+      - name: Plasma Axe
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +25pts
+      - name: Shock Gauntlet
+        rules: A4, AP(4)
+        cost_modifier: +30pts
+      - name: Twin Heavy Fusion Rifle
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +80pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +80pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +120pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +20pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +35pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+  - name: Artillery Gun
+    size: 1
+    quality: 4+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Drill-Bomb Launcher
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Indirect
+    - name: Crew
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Artillery
+    - Sturdy
+    cost: 130
+    upgrade_categories:
+    - category: Replace Drill-Bomb Launcher
+      upgrades:
+      - name: Twin Heavy Hail-Gun
+        rules: 24", A6, AP(1), Indirect
+        cost_modifier: +20pts
+      - name: Twin Heavy AA-Gun
+        rules: 30", A6, AP(1), Unstoppable
+        cost_modifier: +20pts
+      - name: Twin Fusion AA-Gun
+        rules: 24", A2, AP(4), Deadly(3), Unstoppable
+        cost_modifier: +45pts
+  - name: Fortress Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Heavy C-Beamer
+      range: 30"
+      attacks: A4
+      ap: AP(2)
+      special_rules:
+      - Surge
+    - name: Minigun
+      range: 24"
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    - name: Twin Heavy Rifles
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Impact(9)
+    - Sturdy
+    - Transport(16)
+    cost: 640
+    upgrade_categories:
+    - category: Replace Heavy C-Beamer
+      upgrades:
+      - name: Rail M-Cannon
+        rules: 36", A1, AP(2), Deadly(6), Shred
+        cost_modifier: +5pts
+      - name: Iron Cannon
+        rules: 24", A3, AP(1), Blast(3)
+        cost_modifier: +10pts
+    - category: Replace any Twin Heavy Rifle
+      upgrades:
+      - name: Light C-Beamer
+        rules: 24", A2, AP(1), Surge
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Swarm Mortar
+        rules: 24", A3, Indirect
+        cost_modifier: +30pts
+      - name: Rocket Mortar
+        rules: 24", A1, AP(1), Blast(3), Indirect
+        cost_modifier: +35pts
+      - name: Drill Mortar
+        rules: 24", A1, AP(2), Deadly(3), Indirect
+        cost_modifier: +45pts
+  - name: Mining Titan
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Dual Grabbing Claws
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(6)
+    - name: Piercing M-Drill
+      range: null
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+      - Shred
+    - name: Stomp
+      range: null
+      attacks: A6
+      ap: AP(2)
+      special_rules: []
+    - name: Tunneling Drill
+      range: null
+      attacks: A6
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Fear(3)
+    - Fearless
+    - Sturdy
+    cost: 605
+    upgrade_categories: []
+  - name: Combat Excavator
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 24
+    weapons:
+    - name: Heavy Machinegun
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    - name: Twin Light AA-Gun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Unstoppable
+    - name: Twin Heavy Fusion Rifle
+      range: 18"
+      attacks: A2
+      ap: AP(4)
+      special_rules:
+      - Deadly(3)
+    - name: Heavy Excavator
+      range: null
+      attacks: A12
+      ap: AP(4)
+      special_rules: []
+    - name: Tunneling Drill
+      range: null
+      attacks: A6
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Impact(12)
+    - Sturdy
+    cost: 930
+    upgrade_categories:
+    - category: Replace any Heavy Machinegun
+      upgrades:
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +5pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: H-Beam Cannon
+        rules: 18", A3, AP(4), Surge
+        cost_modifier: +15pts
+      - name: Sagittarius Missiles
+        rules: 36", A2, AP(4), Unstoppable
+        cost_modifier: +15pts
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +20pts
+    - category: Replace any Twin Light AA-Gun
+      upgrades:
+      - name: Twin Light Fusion AA-Gun
+        rules: 24", A2, AP(4), Deadly(3), Unstoppable
+        cost_modifier: +20pts
+    - category: Replace any Twin Heavy Fusion Rifle
+      upgrades:
+      - name: Anti-Tank Cannon
+        rules: 30", A1, AP(3), Deadly(6)
+        cost_modifier: Free
+      - name: Battle Cannon
+        rules: 30", A2, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Flame Cannon
+        rules: 18", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Quad Attack Machinegun
+        rules: 30", A8, AP(1)
+        cost_modifier: +25pts
+      - name: Twin AA-Cannon
+        rules: 30", A6, AP(3), Unstoppable
+        cost_modifier: +50pts

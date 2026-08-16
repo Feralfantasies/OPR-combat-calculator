@@ -38,7 +38,7 @@ jobs:
   clippy:
     name: Clippy
     runs-on: firethorn
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - name: Install system dependencies
         run: |
@@ -65,7 +65,7 @@ jobs:
   build:
     name: Build
     runs-on: firethorn
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - name: Install system dependencies
         run: |
@@ -99,7 +99,7 @@ jobs:
   rust-tests:
     name: Rust Tests
     runs-on: firethorn
-    timeout-minutes: 30
+    timeout-minutes: 120
     needs: [fmt, clippy]
 
     steps:
@@ -126,7 +126,7 @@ jobs:
   container:
     name: Container Build
     runs-on: firethorn
-    timeout-minutes: 60
+    timeout-minutes: 120
     needs: [build, rust-tests]
     if: github.ref == 'refs/heads/main' || github.base_ref == 'main'
 

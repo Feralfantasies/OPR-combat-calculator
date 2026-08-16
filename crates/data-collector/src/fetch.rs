@@ -50,8 +50,14 @@ impl<'a> Fetcher<'a> {
 
         // Step 1: Fetch the main army list page
         println!("Step 1: Fetching army list page...");
-        let army_list_html = self.client.fetch(ARMY_BOOKS_URL, self.cache, self.force_refresh).await?;
-        println!("  ✓ Fetched army list page ({} bytes)", army_list_html.len());
+        let army_list_html = self
+            .client
+            .fetch(ARMY_BOOKS_URL, self.cache, self.force_refresh)
+            .await?;
+        println!(
+            "  ✓ Fetched army list page ({} bytes)",
+            army_list_html.len()
+        );
         println!();
 
         // Step 2: Extract army URLs from the army list page
@@ -68,14 +74,14 @@ impl<'a> Fetcher<'a> {
             "Titan Lords",
             "Wormhole Daemons",
         ];
-        
+
         let has_subfactions = subfaction_parents.iter().any(|parent| {
             army_list_html.contains(parent) && !army_urls.iter().any(|(name, _)| name == parent)
         });
-        
+
         if has_subfactions {
             println!("Step 2b: Adding known subfaction URLs...");
-            
+
             // Known subfaction URLs based on observed HTML structure
             // These are the subfactions that appear in dropdown menus
             let known_subfactions = vec![
@@ -105,21 +111,21 @@ impl<'a> Fetcher<'a> {
                 ("Titan Lords Lust Disciples".to_string(), "https://army-forge.onepagerules.com/army-info/grimdark-future/YYIAF_LCwgJiyXYa?armyName=Titan+Lords+Lust+Disciples".to_string()),
                 ("Titan Lords Plague Disciples".to_string(), "https://army-forge.onepagerules.com/army-info/grimdark-future/bf20fNmJEyUS-PIX?armyName=Titan+Lords+Plague+Disciples".to_string()),
                 ("Titan Lords War Disciples".to_string(), "https://army-forge.onepagerules.com/army-info/grimdark-future/iV_3U33NE1_ZTXBB?armyName=Titan+Lords+War+Disciples".to_string()),
-                // Wormhole Daemons subfactions (placeholder - need to discover actual IDs)
-                ("Wormhole Daemons".to_string(), "https://army-forge.onepagerules.com/army-info/grimdark-future/wormhole-daemons-id?armyName=Wormhole+Daemons".to_string()),
+
             ];
-            
+
             // Add known subfactions to the army list (avoiding duplicates)
-            let subfaction_count = known_subfactions.len();
+            let mut added_count = 0;
             for (name, url) in known_subfactions {
                 if !army_urls.iter().any(|(n, _)| n == &name) {
                     army_urls.push((name, url));
+                    added_count += 1;
                 }
             }
-            
-            println!("  ✓ Added {subfaction_count} known subfaction URLs");
+
+            println!("  ✓ Added {added_count} known subfaction URLs");
         }
-        
+
         println!("  Total armies to fetch: {}", army_urls.len());
         println!();
 
@@ -130,14 +136,15 @@ impl<'a> Fetcher<'a> {
             if self.verbose {
                 println!("  Fetching: {army_name}");
             }
-            let _army_html = self.client.fetch(army_url, self.cache, self.force_refresh).await?;
-            
+            let _army_html = self
+                .client
+                .fetch(army_url, self.cache, self.force_refresh)
+                .await?;
+
             // Extract army ID from URL and construct preview URL directly
             // URL pattern: https://army-forge.onepagerules.com/army-info/grimdark-future/{id}?armyName={name}
             if let Some(army_id) = extract_army_id_from_url(army_url) {
-                let preview_url = format!(
-                    "{ARMY_FORGE_BASE}/armyInfo/{army_id}/2/preview"
-                );
+                let preview_url = format!("{ARMY_FORGE_BASE}/armyInfo/{army_id}/2/preview");
                 preview_urls.push((army_name.clone(), preview_url));
             } else if self.verbose {
                 println!("  Warning: Could not extract army ID from URL for {army_name}");
@@ -152,14 +159,17 @@ impl<'a> Fetcher<'a> {
             if self.verbose {
                 println!("  Fetching preview: {army_name}");
             }
-            let _preview_html = self.client.fetch(preview_url, self.cache, self.force_refresh).await?;
+            let _preview_html = self
+                .client
+                .fetch(preview_url, self.cache, self.force_refresh)
+                .await?;
         }
         println!("  ✓ Fetched {} preview pages", preview_urls.len());
         println!();
 
         println!("Fetch phase complete!");
         println!("All data cached in: {}", self.cache.cache_dir().display());
-        
+
         Ok(())
     }
 
@@ -174,76 +184,30 @@ impl<'a> Fetcher<'a> {
             if line.contains("/army-info/grimdark-future/") {
                 // Extract URL and army name
                 if let Some(url) = extract_url_from_line(line)
-                    && let Some(name) = extract_army_name_from_url(&url) {
-                        let full_url = format!("{ARMY_FORGE_BASE}{url}");
-                        armies.push((name, full_url));
-                    }
+                    && let Some(name) = extract_army_name_from_url(&url)
+                {
+                    let full_url = format!("{ARMY_FORGE_BASE}{url}");
+                    armies.push((name, full_url));
+                }
             }
         }
 
         if armies.is_empty() {
             // Try alternative parsing for markdown format from Jina Reader
             for line in html.lines() {
-                if line.starts_with('[') && line.contains("](https://army-forge.onepagerules.com/army-info/")
-                    && let Some((name, url)) = parse_markdown_link(line) {
-                        armies.push((name, url));
-                    }
-            }
-        }
-
-        // Handle subfactions - these appear as plain text without links
-        // Battle Brothers, Prime Brothers, Havoc Brothers, Titan Lords, Wormhole Daemons
-        let subfaction_names = [
-            "Battle Brothers",
-            "Prime Brothers", 
-            "Havoc Brothers",
-            "Titan Lords",
-            "Wormhole Daemons",
-        ];
-        
-        for subfaction in subfaction_names {
-            // Check if this subfaction appears in the HTML but not in our army list
-            if html.contains(subfaction) && !armies.iter().any(|(name, _)| name == subfaction) {
-                // Subfactions need to be fetched from dropdown - for now, skip them
-                // TODO: Implement dropdown fetching for subfactions
+                if line.starts_with('[')
+                    && line.contains("](https://army-forge.onepagerules.com/army-info/")
+                    && let Some((name, url)) = parse_markdown_link(line)
+                {
+                    armies.push((name, url));
+                }
             }
         }
 
         armies
     }
 
-    /// Extract preview URL from an army info page
-    /// 
-    /// Note: We construct preview URLs directly using the pattern:
-    /// <https://army-forge.onepagerules.com/armyInfo/{army-id}/2/preview>
-    #[allow(dead_code)]
-    fn extract_preview_url(html: &str) -> Option<String> {
-        // Look for the army ID in the page content or URL
-        // The army ID appears in URLs like: /army-info/grimdark-future/{id}?armyName={name}
-        // We need to extract it from the source URL or page metadata
-        
-        // For now, we'll extract it from the page content by looking for the army ID pattern
-        // Army IDs are base36 strings like: w7qor7b2kuifcyvk
-        
-        // Try to find army ID in page content
-        for line in html.lines() {
-            if let Some(id_start) = line.find("/armyInfo/") {
-                let rest = line.get(id_start.checked_add(10)?..)?;
-                if let Some(id_end) = rest.find('/') {
-                    let army_id = rest.get(..id_end)?;
-                    if army_id.len() > 10 {
-                        // Construct preview URL directly
-                        let preview_url = format!(
-                            "{ARMY_FORGE_BASE}/armyInfo/{army_id}/2/preview"
-                        );
-                        return Some(preview_url);
-                    }
-                }
-            }
-        }
-        
-        None
-    }
+
 }
 
 /// Extract URL from an HTML line containing an href attribute
@@ -308,10 +272,10 @@ fn extract_army_id_from_url(url: &str) -> Option<String> {
     // Find the army-info path segment
     let path_start = url.find("/army-info/grimdark-future/")?;
     let rest = url.get(path_start.checked_add(27)?..)?;
-    
+
     // The ID ends at the query string
     let id_end = rest.find('?')?;
     let army_id = rest.get(..id_end)?;
-    
+
     Some(army_id.to_string())
 }

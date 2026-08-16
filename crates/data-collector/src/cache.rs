@@ -136,20 +136,30 @@ impl Cache {
 
     /// Convert a URL to a safe filename
     fn url_to_filename(url: &str) -> String {
+        use std::collections::hash_map::DefaultHasher;
+        use std::hash::{Hash, Hasher};
+
         // Remove protocol and replace unsafe characters
         let safe = url
             .trim_start_matches("https://")
             .trim_start_matches("http://")
             .replace(['/', '?', '=', '&', '+'], "_");
 
-        format!("{safe}.html")
+        // Append hash to ensure uniqueness when different URLs produce the same safe string
+        let mut hasher = DefaultHasher::new();
+        url.hash(&mut hasher);
+        let hash = hasher.finish();
+
+        format!("{safe}_{hash:016x}.html")
     }
 
-    /// Save metadata to disk
+    /// Save metadata to disk atomically
     async fn save_metadata(&self) -> Result<()> {
         let metadata_path = self.cache_dir.join("metadata.json");
+        let temp_path = self.cache_dir.join("metadata.json.tmp");
         let contents = serde_json::to_string_pretty(&self.metadata)?;
-        fs::write(&metadata_path, contents).await?;
+        fs::write(&temp_path, contents).await?;
+        fs::rename(&temp_path, &metadata_path).await?;
         Ok(())
     }
 

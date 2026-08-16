@@ -182,7 +182,7 @@ if stat.starts_with("AP") {
 
 **Problem**: Upgrades that replace multiple weapons with nested parentheses were being parsed incorrectly. Example:
 
-```
+```text
 Replace Shredder Cannon with:
   - Heavy Razor Claws (A3, AP(1)), CCW (A4)
 ```
