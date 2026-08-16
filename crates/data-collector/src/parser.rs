@@ -104,20 +104,17 @@ pub struct Unit {
 /// # Errors
 ///
 /// Returns an error if the cached file cannot be read or parsed
-pub fn parse_preview_page(cache: &Cache, army_id: &str) -> Result<Army> {
-    let cache_dir = cache.cache_dir();
-    let preview_path = cache_dir.join(format!(
-        "army-forge.onepagerules.com_armyInfo_{army_id}_2_preview.html"
-    ));
+pub async fn parse_preview_page(cache: &Cache, preview_url: &str) -> Result<Army> {
+    let html = match cache.get(preview_url).await? {
+        Some(content) => content,
+        None => {
+            return Err(CollectorError::ParseError(format!(
+                "Preview page not found in cache: {}",
+                preview_url
+            )));
+        }
+    };
 
-    if !preview_path.exists() {
-        return Err(CollectorError::ParseError(format!(
-            "Preview page not found in cache: {}",
-            preview_path.display()
-        )));
-    }
-
-    let html = std::fs::read_to_string(&preview_path)?;
     let version = extract_version_from_preview(&html);
     let units = extract_units_from_table(&html)?;
 
@@ -135,12 +132,15 @@ pub fn parse_preview_page(cache: &Cache, army_id: &str) -> Result<Army> {
         })
         .unwrap_or("Unknown Army");
 
+    // Extract army ID from URL
+    let army_id = extract_army_id_from_url(preview_url).unwrap_or_else(|| "unknown".to_string());
+
     let army = Army {
         name: army_name.to_string(),
-        id: army_id.to_string(),
+        id: army_id,
         version,
         info_url: String::new(),
-        preview_url: String::new(),
+        preview_url: preview_url.to_string(),
         has_subfactions: false,
         units,
     };
@@ -664,20 +664,19 @@ fn parse_cost(text: &str) -> Result<u32> {
 /// # Errors
 ///
 /// Returns an error if the cached file cannot be read or parsed
-pub fn parse_army_list(cache: &Cache) -> Result<Vec<Army>> {
-    let cache_dir = cache.cache_dir();
-    let army_list_path =
-        cache_dir.join("army-forge.onepagerules.com_army-books_grimdark-future.html");
-
-    if !army_list_path.exists() {
+pub async fn parse_army_list(cache: &Cache) -> Result<Vec<Army>> {
+    const ARMY_BOOKS_URL: &str = "https://army-forge.onepagerules.com/army-books/grimdark-future";
+    
+    let html = cache.get(ARMY_BOOKS_URL).await?;
+    if html.is_none() {
         return Err(CollectorError::ParseError(
             "Army list cache file not found. Run fetch phase first.".to_string(),
         ));
     }
-
-    let html = std::fs::read_to_string(&army_list_path)?;
+    
+    let html = html.unwrap();
     let armies = extract_armies_from_html(&html);
-
+    
     println!("Parsed {} armies from cache", armies.len());
     Ok(armies)
 }

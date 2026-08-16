@@ -135,7 +135,7 @@ fn add_subfactions_from_cache(
                         // Extract army ID from filename
                         if let Some(army_id) = extract_army_id_from_filename(&filename) {
                             // Try to parse this page
-                            if let Ok(parsed_army) = parse_preview_page(cache, &army_id)
+                            if let Ok(parsed_army) = parse_preview_page(cache, &army_id).await
                                 && parsed_army.name == *subfaction_name
                             {
                                 armies.push(parsed_army);
@@ -160,7 +160,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
     let cache = Cache::new(cache_path).await?;
 
     // Parse army list
-    let mut armies = parse_army_list(&cache)?;
+    let mut armies = parse_army_list(&cache).await?;
     println!("\nParsed {} armies from army list", armies.len());
 
     // Also parse subfaction pages that were fetched
@@ -196,13 +196,13 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
     // Parse and generate YAML for each army
     let mut success_count: usize = 0;
     let mut error_count: usize = 0;
-
+    
     for army in &armies {
         if cli.verbose > 0 {
             println!("\nParsing units for {}...", army.name);
         }
-
-        match parse_preview_page(&cache, &army.id) {
+        
+        match parse_preview_page(&cache, &army.id).await {
             Ok(parsed_army) => {
                 if cli.verbose > 0 {
                     println!(
@@ -212,7 +212,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
                         parsed_army.version
                     );
                 }
-
+                
                 // Generate YAML file
                 match generate_yaml_file(&parsed_army, &cli.output_dir) {
                     Ok(path) => {
