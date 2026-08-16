@@ -105,13 +105,10 @@ pub struct Unit {
 ///
 /// Returns an error if the cached file cannot be read or parsed
 pub async fn parse_preview_page(cache: &Cache, preview_url: &str) -> Result<Army> {
-    let html = match cache.get(preview_url).await? {
-        Some(content) => content,
-        None => {
-            return Err(CollectorError::ParseError(format!(
-                "Preview page not found in cache: {preview_url}"
-            )));
-        }
+    let Some(html) = cache.get(preview_url).await? else {
+        return Err(CollectorError::ParseError(format!(
+            "Preview page not found in cache: {preview_url}"
+        )));
     };
 
     let version = extract_version_from_preview(&html);
@@ -665,17 +662,17 @@ fn parse_cost(text: &str) -> Result<u32> {
 /// Returns an error if the cached file cannot be read or parsed
 pub async fn parse_army_list(cache: &Cache) -> Result<Vec<Army>> {
     const ARMY_BOOKS_URL: &str = "https://army-forge.onepagerules.com/army-books/grimdark-future";
-    
-    let html = cache.get(ARMY_BOOKS_URL).await?;
-    if html.is_none() {
-        return Err(CollectorError::ParseError(
-            "Army list cache file not found. Run fetch phase first.".to_string(),
-        ));
-    }
-    
-    let html = html.unwrap();
+
+    let html = match cache.get(ARMY_BOOKS_URL).await? {
+        Some(content) => content,
+        None => {
+            return Err(CollectorError::ParseError(
+                "Army list cache file not found. Run fetch phase first.".to_string(),
+            ));
+        }
+    };
     let armies = extract_armies_from_html(&html);
-    
+
     println!("Parsed {} armies from cache", armies.len());
     Ok(armies)
 }
@@ -733,7 +730,7 @@ fn extract_army_id_from_url(url: &str) -> Option<String> {
         let army_id = rest.get(..id_end)?;
         return Some(army_id.to_string());
     }
-    
+
     // Try preview URL pattern: /armyInfo/{id}/2/preview
     if let Some(path_start) = url.find("/armyInfo/") {
         let rest = url.get(path_start.checked_add(10)?..)?;
@@ -741,7 +738,7 @@ fn extract_army_id_from_url(url: &str) -> Option<String> {
         let army_id = rest.get(..id_end)?;
         return Some(army_id.to_string());
     }
-    
+
     None
 }
 

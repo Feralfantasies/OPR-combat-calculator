@@ -135,7 +135,9 @@ async fn add_subfactions_from_cache(
                         // Extract army ID from filename
                         if let Some(army_id) = extract_army_id_from_filename(&filename) {
                             // Construct preview URL
-                            let preview_url = format!("https://army-forge.onepagerules.com/armyInfo/{army_id}/2/preview");
+                            let preview_url = format!(
+                                "https://army-forge.onepagerules.com/armyInfo/{army_id}/2/preview"
+                            );
                             // Try to parse this page
                             if let Ok(parsed_army) = parse_preview_page(cache, &preview_url).await
                                 && parsed_army.name == *subfaction_name
@@ -198,14 +200,17 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
     // Parse and generate YAML for each army
     let mut success_count: usize = 0;
     let mut error_count: usize = 0;
-    
+
     for army in &armies {
         if cli.verbose > 0 {
             println!("\nParsing units for {}...", army.name);
         }
 
         // Construct preview URL
-        let preview_url = format!("https://army-forge.onepagerules.com/armyInfo/{}/2/preview", army.id);
+        let preview_url = format!(
+            "https://army-forge.onepagerules.com/armyInfo/{}/2/preview",
+            army.id
+        );
         match parse_preview_page(&cache, &preview_url).await {
             Ok(parsed_army) => {
                 if cli.verbose > 0 {
@@ -216,7 +221,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
                         parsed_army.version
                     );
                 }
-                
+
                 // Generate YAML file
                 match generate_yaml_file(&parsed_army, &cli.output_dir) {
                     Ok(path) => {
