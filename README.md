@@ -4,7 +4,7 @@ A damage calculator for [One Page Rules](https://onepagerules.com)' **Grimdark F
 
 ## Disclaimer
 
-This is an unofficial fan project. It is **not affiliated with, endorsed by, or sponsored by OPR Games** in any way. Grimdark Future and all associated names, units, and rules are the intellectual property of OPR Games (<www.onepagerules.com>). This tool is made by a fan, for the community, to help players quickly work out combat outcomes. Please support the official release by downloading the free rules from the OPR website.
+This is an unofficial fan project. It is **not affiliated with, endorsed by, or sponsored by OPR Games** in any way. Grimdark Future and all associated names, units, and rules are the intellectual property of OPR Games ([the OPR website](https://onepagerules.com)). This tool is made by a fan, for the community, to help players quickly work out combat outcomes. Please support the official release by downloading the free rules from the OPR website.
 
 ## Architecture — Modular Monolith
 

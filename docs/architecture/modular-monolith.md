@@ -4,7 +4,7 @@ title: Modular Monolith Layout
 description: Decision to structure the project as a Cargo workspace with three crates (api, frontend, data-collector) enforcing module boundaries at compile time.
 tags: [architecture, modular-monolith, cargo-workspace, rust]
 status: stable
-generated: { by: human:acleveland, at: 2026-11-08T22:55:00Z }
+generated: { by: human:acleveland, at: 2026-08-16T22:55:00Z }
 updated: { by: agent, at: 2026-08-16T17:00:00Z, reason: Added data-collector crate to workspace }
 ---
 

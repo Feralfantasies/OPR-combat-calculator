@@ -13,6 +13,18 @@ if ! git diff --cached --name-only | grep -q '\.rs$'; then
     exit 0
 fi
 
+# Check for unstaged Rust changes that could affect validation
+if git diff --name-only | grep -q '\.rs$'; then
+    echo ""
+    echo "❌ ERROR: Unstaged Rust changes detected!"
+    echo "The pre-commit hook validates staged changes only."
+    echo "Please stage all Rust changes before committing, or stash unstaged changes:"
+    echo "  git stash push -m 'temp' -- '*.rs'"
+    echo "  git commit ..."
+    echo "  git stash pop"
+    exit 1
+fi
+
 # Step 1: Format check
 echo "🔍 Checking code format..."
 if ! cargo fmt --all -- --check; then

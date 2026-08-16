@@ -663,13 +663,10 @@ fn parse_cost(text: &str) -> Result<u32> {
 pub async fn parse_army_list(cache: &Cache) -> Result<Vec<Army>> {
     const ARMY_BOOKS_URL: &str = "https://army-forge.onepagerules.com/army-books/grimdark-future";
 
-    let html = match cache.get(ARMY_BOOKS_URL).await? {
-        Some(content) => content,
-        None => {
-            return Err(CollectorError::ParseError(
-                "Army list cache file not found. Run fetch phase first.".to_string(),
-            ));
-        }
+    let Some(html) = cache.get(ARMY_BOOKS_URL).await? else {
+        return Err(CollectorError::ParseError(
+            "Army list cache file not found. Run fetch phase first.".to_string(),
+        ));
     };
     let armies = extract_armies_from_html(&html);
 
