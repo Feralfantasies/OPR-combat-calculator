@@ -65,11 +65,7 @@ pub fn resolve_attack(
 ) -> Result<CombatResult, String> {
     let mut result = CombatResult::default();
 
-    let weapons: Vec<&Weapon> = if context.is_melee() {
-        attacker.melee_weapons()
-    } else {
-        attacker.ranged_weapons()
-    };
+    let weapons: Vec<&Weapon> = select_weapons(attacker, context);
 
     // Phase 1: Impact(X) — extra dice on a charge unless fatigued
     if context.is_melee()
@@ -113,7 +109,7 @@ fn resolve_weapon_attack(
     // TODO: Resolve Impact(X)
 
     // Phase 2: Hit roll setup (modify Quality target)
-    let hit_modifier = compute_hit_modifier(weapon, context);
+    let hit_modifier = compute_hit_modifier(attacker, context);
     let quality_target = effective_quality(weapon, attacker, context);
 
     // Phase 3: Hit roll resolution
@@ -172,25 +168,33 @@ fn resolve_weapon_attack(
     Ok(attack)
 }
 
+/// Weapons the attacker can use in this context.
+///
+/// Versatile Attack lets the unit choose any of its weapons whether
+/// striking in melee or shooting; everyone else is limited to weapons
+/// matching the context type.
+#[must_use]
+fn select_weapons<'a>(attacker: &'a Unit, context: &CombatContext) -> Vec<&'a Weapon> {
+    if attacker.has_rule(&SpecialRule::VersatileAttack) {
+        attacker.weapons.iter().collect()
+    } else if context.is_melee() {
+        attacker.melee_weapons()
+    } else {
+        attacker.ranged_weapons()
+    }
+}
+
 /// Compute the total modifier to apply to hit rolls.
-/// Placeholder: currently only accounts for Indirect (moving penalty).
-const fn compute_hit_modifier(_weapon: &Weapon, context: &CombatContext) -> i32 {
-    let modifier = 0i32;
-
-    // Indirect: -1 to hit when shooting after moving
-    // TODO: Check weapon rules for Indirect when attacker_moved
-
-    // Artillery: +1 to hit vs >9", -2 when shot at from >9" (defender side)
-    // TODO
-
-    // Thrust: +1 to hit when charging (melee)
-    // TODO
-
-    // Stealth (defender): -1 to hit from >9"
-    // TODO: needs attacker reference
-
-    let _ = context;
-    modifier
+///
+/// Battleborn: +1 to hit rolls when attacking in melee.
+fn compute_hit_modifier(attacker: &Unit, context: &CombatContext) -> i32 {
+    // Indirect (shooting after moving), Thrust (charging) and Stealth
+    // (defender at >9") would add further modifiers here.
+    // TODO: Implement those rule modifiers.
+    if context.is_melee() && attacker.has_rule(&SpecialRule::Battleborn) {
+        return 1;
+    }
+    0
 }
 
 /// Determine the effective Quality target for hit rolls.
@@ -272,6 +276,12 @@ fn effective_defense(weapon: &Weapon, defender: &Unit, context: &CombatContext) 
     // needs 1 LESS to block. (AP by contrast subtracts from the rolls,
     // so the target goes UP.)
     if context.is_ranged() && context.defender_in_cover {
+        defense = defense.saturating_sub(1);
+    }
+
+    // Shielded: +1 to the defender's rolls in any context, so the
+    // defender needs 1 LESS to block.
+    if defender.has_rule(&SpecialRule::Shielded) {
         defense = defense.saturating_sub(1);
     }
 
@@ -699,5 +709,128 @@ mod tests {
             let attack = result.attacks.first().expect("one weapon");
             assert_eq!(attack.extra_attacks, 0);
         }
+    }
+
+    // ------------------------------------------------------------------
+    // Battle Brothers rule effects
+    // ------------------------------------------------------------------
+
+    #[test]
+    fn battleborn_grants_melee_hit_bonus_only() {
+        let plain = Unit::new("Soldier", 1, 3, 3);
+        let born = Unit::new("Soldier", 1, 3, 3).with_rule(SpecialRule::Battleborn);
+
+        let melee = CombatContext::melee_charge();
+        assert_eq!(compute_hit_modifier(&plain, &melee), 0);
+        assert_eq!(compute_hit_modifier(&born, &melee), 1);
+
+        // The bonus is melee-only.
+        let ranged = CombatContext::ranged(12);
+        assert_eq!(compute_hit_modifier(&born, &ranged), 0);
+    }
+
+    #[test]
+    fn battleborn_hits_significantly_more_at_high_quality() {
+        // Quality 6 needs natural 6s to hit; Battleborn's +1 turns 5s
+        // into hits too. Over 600 single-attack resolutions the totals
+        // diverge far beyond any flaking: E[plain] = 600/6 = 100,
+        // E[Born] = 600/3 = 200, sigma ~9-12.
+        let resolve_hits = |with_born: bool| -> u32 {
+            let mut unit = Unit::new("Q6", 1, 6, 3).with_weapon(Weapon::melee("Claws", 1, 1));
+            if with_born {
+                unit = unit.with_rule(SpecialRule::Battleborn);
+            }
+            let defender = Unit::new("Target", 5, 3, 4);
+            let mut hits = 0u32;
+            for _ in 0..600 {
+                let result = resolve_attack(&unit, &defender, &CombatContext::melee_charge())
+                    .expect("resolution succeeds");
+                hits += result
+                    .attacks
+                    .first()
+                    .expect("one weapon")
+                    .hits_before_multiplier;
+            }
+            hits
+        };
+
+        let plain = resolve_hits(false);
+        let born = resolve_hits(true);
+        assert!(
+            born > plain,
+            "Battleborn (total {born}) must hit more than plain (total {plain})"
+        );
+        // 6-sigma bands around the expectations 100 / 200.
+        assert!(
+            (40..=160).contains(&plain),
+            "plain Q6 total {plain} far off 100"
+        );
+        assert!(
+            (140..=260).contains(&born),
+            "Battleborn Q6 total {born} far off 200"
+        );
+    }
+
+    #[test]
+    fn versatile_attack_offers_every_weapon_in_any_context() {
+        let plain = Unit::new("Fighter", 1, 3, 3)
+            .with_weapon(Weapon::melee("Claws", 1, 2))
+            .with_weapon(Weapon::ranged("Pistol", 1, 1, 18));
+        let versatile = plain.clone().with_rule(SpecialRule::VersatileAttack);
+
+        let melee = CombatContext::melee_charge();
+        let ranged = CombatContext::ranged(3);
+
+        // Without the rule, contexts only offer weapons of the matching
+        // type (previous behavior).
+        assert_eq!(select_weapons(&plain, &melee).len(), 1);
+        assert_eq!(select_weapons(&plain, &ranged).len(), 1);
+
+        // Versatile Attack unlocks every weapon in every context.
+        assert_eq!(select_weapons(&versatile, &melee).len(), 2);
+        assert_eq!(select_weapons(&versatile, &ranged).len(), 2);
+    }
+
+    #[test]
+    fn versatile_attacker_resolves_melee_with_all_weapons() {
+        let attacker = Unit::new("Fighter", 1, 3, 3)
+            .with_weapon(Weapon::melee("Claws", 1, 2))
+            .with_weapon(Weapon::ranged("Pistol", 1, 1, 18))
+            .with_rule(SpecialRule::VersatileAttack);
+        let defender = Unit::new("Target", 5, 3, 4);
+
+        let result = resolve_attack(&attacker, &defender, &CombatContext::melee_charge())
+            .expect("resolution succeeds");
+        let names: Vec<&str> = result
+            .attacks
+            .iter()
+            .map(|a| a.weapon_name.as_str())
+            .collect();
+        assert!(
+            names.contains(&"Claws") && names.contains(&"Pistol"),
+            "Versatile Attack must resolve every weapon, got {names:?}"
+        );
+    }
+
+    #[test]
+    fn shielded_lowers_defense_target_in_any_context() {
+        let plain = Unit::new("Guard", 1, 3, 3);
+        let shielded = Unit::new("Guard", 1, 3, 3).with_rule(SpecialRule::Shielded);
+
+        let melee_weapon = Weapon::melee("Claws", 1, 2);
+        let melee = CombatContext::melee_charge();
+        assert_eq!(effective_defense(&melee_weapon, &plain, &melee), 3);
+        assert_eq!(effective_defense(&melee_weapon, &shielded, &melee), 2);
+
+        let ranged_weapon = Weapon::ranged("Rifle", 1, 1, 24);
+        let ranged = CombatContext::ranged(12);
+        assert_eq!(effective_defense(&ranged_weapon, &plain, &ranged), 3);
+        assert_eq!(effective_defense(&ranged_weapon, &shielded, &ranged), 2);
+
+        // Stacks with cover but clamps at the 2..=6 roll range.
+        assert_eq!(
+            effective_defense(&ranged_weapon, &shielded, &ranged.with_cover(true)),
+            2
+        );
     }
 }
