@@ -169,8 +169,17 @@ impl UpgradeGroup {
 /// A selection made by the user: one option from one group.
 #[derive(Debug, Clone, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 pub struct UpgradeSelection {
+    /// Group display name, e.g. "Replace Shredder Cannon". Multiple groups
+    /// may share a name (army books repeat categories); disambiguate with
+    /// `index`.
     pub group: String,
+    /// Option display name within the group.
     pub option: String,
+    /// Zero-based position of the group in the unit's `upgrade_groups`
+    /// list. Takes precedence over name matching, so repeated group names
+    /// resolve deterministically.
+    #[serde(default)]
+    pub index: Option<usize>,
 }
 
 /// Apply a set of upgrade selections to a base unit, producing a new unit.
@@ -180,26 +189,30 @@ pub struct UpgradeSelection {
 /// one option is selected from a `PickOne` group, or if a replacement
 /// targets a weapon the unit does not have.
 pub fn apply_upgrades(base: &Unit, selections: &[UpgradeSelection]) -> Result<Unit, String> {
+    // Resolve each selection to a concrete group position up front so
+    // repeated category names are addressed uniquely.
+    let resolved: Vec<(usize, &UpgradeSelection)> = selections
+        .iter()
+        .map(|selection| {
+            let pos = resolve_group(base, selection)?;
+            Ok((pos, selection))
+        })
+        .collect::<Result<Vec<_>, String>>()?;
+
     let mut unit = base.clone();
 
-    for selection in selections {
-        let group = unit
-            .upgrade_groups
-            .iter()
-            .find(|g| g.name == selection.group)
-            .ok_or_else(|| format!("unknown upgrade group: {}", selection.group))?;
+    for &(pos, selection) in &resolved {
+        // The position was validated when building `resolved`, but this is
+        // non-test code, so re-check instead of panicking.
+        let Some(group) = unit.upgrade_groups.get(pos) else {
+            return Err(format!("upgrade group index {pos} out of range"));
+        };
 
-        // Enforce pick-one: count selections from the same group.
+        // Enforce pick-one per resolved group (identity, not display name).
         if group.mode == SelectionMode::PickOne {
-            let count = selections
-                .iter()
-                .filter(|s| s.group == selection.group)
-                .count();
+            let count = resolved.iter().filter(|(p, _)| *p == pos).count();
             if count > 1 {
-                return Err(format!(
-                    "group '{}' allows only one selection",
-                    selection.group
-                ));
+                return Err(format!("group '{}' allows only one selection", group.name));
             }
         }
 
@@ -210,7 +223,7 @@ pub fn apply_upgrades(base: &Unit, selections: &[UpgradeSelection]) -> Result<Un
             .ok_or_else(|| {
                 format!(
                     "unknown option '{}' in group '{}'",
-                    selection.option, selection.group
+                    selection.option, group.name
                 )
             })?;
 
@@ -228,7 +241,7 @@ pub fn apply_upgrades(base: &Unit, selections: &[UpgradeSelection]) -> Result<Un
                     let target = group.target_weapon.as_deref().ok_or_else(|| {
                         format!("replacement option '{}' has no target weapon", option.name)
                     })?;
-                    let pos = unit
+                    let pos_weapon = unit
                         .weapons
                         .iter()
                         .position(|w| w.name == target)
@@ -237,16 +250,16 @@ pub fn apply_upgrades(base: &Unit, selections: &[UpgradeSelection]) -> Result<Un
                     match group.replace_count {
                         ReplaceCount::One => {
                             // Decrement the target's quantity; remove if it hits 0.
-                            let orig_qty = unit.weapons.get(pos).map_or(1, |w| w.quantity);
+                            let orig_qty = unit.weapons.get(pos_weapon).map_or(1, |w| w.quantity);
                             if orig_qty <= 1 {
-                                unit.weapons.remove(pos);
-                            } else if let Some(w) = unit.weapons.get_mut(pos) {
+                                unit.weapons.remove(pos_weapon);
+                            } else if let Some(w) = unit.weapons.get_mut(pos_weapon) {
                                 w.quantity = orig_qty.saturating_sub(1);
                             }
                             unit.weapons.push(new_weapon.clone());
                         }
                         ReplaceCount::All => {
-                            unit.weapons.remove(pos);
+                            unit.weapons.remove(pos_weapon);
                             unit.weapons.push(new_weapon.clone());
                         }
                     }
@@ -259,6 +272,22 @@ pub fn apply_upgrades(base: &Unit, selections: &[UpgradeSelection]) -> Result<Un
     }
 
     Ok(unit)
+}
+
+/// Resolve a selection to the zero-based position of its group in
+/// `unit.upgrade_groups`. An explicit `index` wins; otherwise the first
+/// group whose name matches is used (legacy behavior when names were
+/// unique).
+fn resolve_group(unit: &Unit, selection: &UpgradeSelection) -> Result<usize, String> {
+    match selection.index {
+        Some(idx) if idx < unit.upgrade_groups.len() => Ok(idx),
+        Some(idx) => Err(format!("upgrade group index {idx} out of range")),
+        None => unit
+            .upgrade_groups
+            .iter()
+            .position(|g| g.name == selection.group)
+            .ok_or_else(|| format!("unknown upgrade group: {}", selection.group)),
+    }
 }
 
 #[cfg(test)]
@@ -296,6 +325,7 @@ mod tests {
             &[UpgradeSelection {
                 group: "Replace Shredder Cannon".to_string(),
                 option: "Spitter Cannon".to_string(),
+                index: None,
             }],
         );
         let upgraded = upgraded.expect("upgrade should apply");
@@ -328,6 +358,7 @@ mod tests {
             &[UpgradeSelection {
                 group: "Replace any Heavy Razor Claw".to_string(),
                 option: "Smashing Club".to_string(),
+                index: None,
             }],
         );
         let upgraded = upgraded.expect("upgrade should apply");
@@ -352,10 +383,12 @@ mod tests {
                 UpgradeSelection {
                     group: "Replace Shredder Cannon".to_string(),
                     option: "Spitter Cannon".to_string(),
+                    index: None,
                 },
                 UpgradeSelection {
                     group: "Replace Shredder Cannon".to_string(),
                     option: "Spitter Cannon".to_string(),
+                    index: None,
                 },
             ],
         );
@@ -370,6 +403,73 @@ mod tests {
             &[UpgradeSelection {
                 group: "Nope".to_string(),
                 option: "X".to_string(),
+                index: None,
+            }],
+        );
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn duplicate_group_names_resolve_by_index() {
+        // Two groups share the display name "Upgrade with one" (as the
+        // committed catalogs do); only the index disambiguates.
+        let mut unit = test_unit();
+        unit.upgrade_groups = vec![
+            UpgradeGroup::pick_one(
+                "Upgrade with one",
+                vec![UpgradeOption::rule(
+                    "Bio-Tech Master",
+                    "Reliable",
+                    5,
+                    vec![SpecialRule::Reliable],
+                )],
+            ),
+            UpgradeGroup::pick_one(
+                "Upgrade with one",
+                vec![UpgradeOption::rule(
+                    "Combat Bio-Engineer",
+                    "Furious",
+                    5,
+                    vec![SpecialRule::Furious],
+                )],
+            ),
+        ];
+
+        // Name lookup (index None) resolves the first group.
+        let upgraded = apply_upgrades(
+            &unit,
+            &[UpgradeSelection {
+                group: "Upgrade with one".to_string(),
+                option: "Bio-Tech Master".to_string(),
+                index: None,
+            }],
+        );
+        let upgraded = upgraded.expect("first group resolves by name");
+        assert!(upgraded.has_rule(&SpecialRule::Reliable));
+
+        // Index 1 picks the second group despite the identical name.
+        let upgraded = apply_upgrades(
+            &unit,
+            &[UpgradeSelection {
+                group: "Upgrade with one".to_string(),
+                option: "Combat Bio-Engineer".to_string(),
+                index: Some(1),
+            }],
+        );
+        let upgraded = upgraded.expect("second group resolves by index");
+        assert!(upgraded.has_rule(&SpecialRule::Furious));
+        assert!(!upgraded.has_rule(&SpecialRule::Reliable));
+    }
+
+    #[test]
+    fn out_of_range_index_is_an_error() {
+        let unit = test_unit();
+        let result = apply_upgrades(
+            &unit,
+            &[UpgradeSelection {
+                group: "Replace Shredder Cannon".to_string(),
+                option: "Spitter Cannon".to_string(),
+                index: Some(99),
             }],
         );
         assert!(result.is_err());
