@@ -9,18 +9,11 @@
     clippy::similar_names
 )]
 
-use opr_api::{CombatContext, SpecialRule, Unit, Weapon, load_battle_brothers, resolve_attack};
+use opr_api::{CombatContext, SpecialRule, Unit, Weapon, get_army, resolve_attack};
 
-/// Load Battle Brothers army for testing.
+/// Load the Battle Brothers army from the unified YAML registry.
 fn load_bb_army() -> opr_api::Army {
-    let workspace_root = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .parent()
-        .expect("should have parent")
-        .parent()
-        .expect("should have grandparent")
-        .to_path_buf();
-
-    load_battle_brothers(&workspace_root).expect("Battle Brothers should load successfully")
+    get_army("battle-brothers").expect("Battle Brothers catalog should load")
 }
 
 /// Get a specific unit from Battle Brothers by name.

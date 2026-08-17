@@ -11,18 +11,14 @@
     clippy::similar_names
 )]
 
-use opr_api::{
-    CombatContext, SpecialRule, get_army, get_unit, load_battle_brothers_default, resolve_attack,
-};
+use opr_api::{CombatContext, SpecialRule, get_army, get_unit, resolve_attack};
 
-/// Load Battle Brothers, panicking if the YAML file cannot be loaded.
-///
-/// The goal of this module is to prove that loading works, and the YAML is
-/// committed under `data/armies/`, so a failed load must fail loudly
-/// rather than silently skipping the assertions.
+/// Load Battle Brothers via the unified registry, panicking if the YAML
+/// file cannot be loaded. The goal of this module is to prove that loading
+/// works, and the YAML is committed under `data/armies/`, so a failed load
+/// must fail loudly rather than silently skipping the assertions.
 fn load_battle_brothers_for_tests() -> opr_api::armies::Army {
-    load_battle_brothers_default()
-        .unwrap_or_else(|err| panic!("Battle Brothers YAML file failed to load: {err:?}"))
+    get_army("battle-brothers").unwrap_or_else(|| panic!("Battle Brothers catalog failed to load"))
 }
 
 #[test]

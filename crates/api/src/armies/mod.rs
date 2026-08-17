@@ -1,52 +1,36 @@
 //! Faction army lists.
+//!
+//! Every faction loads from the committed YAML catalogs in
+//! `data/armies/` via the unified loader in [`yaml`]. There are no
+//! hardcoded rosters: the catalogs are the single source of truth.
 
-pub mod alien_hives;
-pub mod battle_brothers;
+mod yaml;
 
 use crate::models::unit::Unit;
+pub use yaml::{all_armies, data_dir, get_army, get_unit, load_all_armies, load_errors};
 
 /// A named army roster.
 #[derive(Debug, Clone, serde::Serialize)]
 pub struct Army {
-    /// Machine-readable key, e.g. `alien_hives`
+    /// Machine-readable key, the YAML file stem, e.g. `alien-hives`
     pub id: String,
     /// Display name, e.g. "Alien Hives"
     pub name: String,
-    /// Version from the YAML file
+    /// Version from the YAML file, e.g. `v3.5.3`
     pub version: Option<String>,
     /// Base roster (default loadouts)
     pub units: Vec<Unit>,
 }
 
-/// All armies known to the calculator.
+/// The Alien Hives roster (compatibility helper).
+///
+/// Backed by the unified YAML loader, so the committed
+/// `data/armies/alien-hives.yaml` catalog is the source of truth. Returns
+/// an empty `Vec` if the catalog fails to load — callers that need the
+/// failure surfaced should inspect [`load_errors`].
 #[must_use]
-pub fn all_armies() -> Vec<Army> {
-    let mut armies = vec![Army {
-        id: "alien_hives".to_string(),
-        name: "Alien Hives".to_string(),
-        version: None,
-        units: alien_hives::alien_hives(),
-    }];
-
-    // Try to load Battle Brothers from YAML
-    if let Ok(bb_army) = battle_brothers::load_battle_brothers_default() {
-        armies.push(bb_army);
-    }
-
-    armies
-}
-
-/// Look up an army by its id. Returns None if unknown.
-#[must_use]
-pub fn get_army(id: &str) -> Option<Army> {
-    all_armies().into_iter().find(|a| a.id == id)
-}
-
-/// Look up a unit within an army by unit name. Returns None if unknown.
-#[must_use]
-pub fn get_unit(army_id: &str, unit_name: &str) -> Option<Unit> {
-    get_army(army_id)?
-        .units
-        .into_iter()
-        .find(|u| u.name == unit_name)
+pub fn alien_hives() -> Vec<Unit> {
+    get_army("alien-hives")
+        .map(|army| army.units)
+        .unwrap_or_default()
 }
