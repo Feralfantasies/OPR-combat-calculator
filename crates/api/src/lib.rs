@@ -10,8 +10,11 @@
 pub mod armies;
 pub mod combat;
 pub mod models;
+pub mod yaml_loader;
 
 pub use armies::alien_hives::alien_hives;
+pub use armies::battle_brothers::{load_battle_brothers, load_battle_brothers_default};
+pub use armies::{Army, get_army, get_unit};
 pub use combat::{AttackResult, AttackType, CombatContext, CombatResult, DieRoll, resolve_attack};
 pub use models::{
     SpecialRule, Unit, UpgradeGroup, UpgradeOption, UpgradeSelection, Weapon, WeaponChange,

@@ -74,7 +74,10 @@ pub enum SpecialRule {
     UnpredictableFighterMark, // Grant Unpredictable Fighter to friendlies
     Unique,                   // Named character (one per army)
 
-    // Alien Hives aura rules
+    // Battle Brothers faction rules
+    Battleborn,                 // +1 to hit rolls when attacking in melee
+    Shielded,                   // +1 to defense rolls
+    VersatileAttack,            // Can use best attack value in melee or shooting
     FuriousAura,                // Model + unit get Furious
     HiveBondBoostAura,          // Model + unit get Hive Bond Boost
     IncreasedShootingRangeAura, // Model + unit get +6" range

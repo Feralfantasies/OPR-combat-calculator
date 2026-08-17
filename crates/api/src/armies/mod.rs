@@ -1,6 +1,7 @@
 //! Faction army lists.
 
 pub mod alien_hives;
+pub mod battle_brothers;
 
 use crate::models::unit::Unit;
 
@@ -11,6 +12,8 @@ pub struct Army {
     pub id: String,
     /// Display name, e.g. "Alien Hives"
     pub name: String,
+    /// Version from the YAML file
+    pub version: Option<String>,
     /// Base roster (default loadouts)
     pub units: Vec<Unit>,
 }
@@ -18,11 +21,19 @@ pub struct Army {
 /// All armies known to the calculator.
 #[must_use]
 pub fn all_armies() -> Vec<Army> {
-    vec![Army {
+    let mut armies = vec![Army {
         id: "alien_hives".to_string(),
         name: "Alien Hives".to_string(),
+        version: None,
         units: alien_hives::alien_hives(),
-    }]
+    }];
+
+    // Try to load Battle Brothers from YAML
+    if let Ok(bb_army) = battle_brothers::load_battle_brothers_default() {
+        armies.push(bb_army);
+    }
+
+    armies
 }
 
 /// Look up an army by its id. Returns None if unknown.
