@@ -1,0 +1,1798 @@
+v3.5.3:
+  name: Wolf Brothers
+  id: yxjboa8oma9bbdck
+  units:
+  - name: Wolf Master Destroyer
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: CCW
+      range: null
+      attacks: A4
+      ap: null
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Fearless
+    - Hero
+    - Shielded
+    - Wolfborn
+    cost: 155
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Guardian
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Preacher
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Lieutenant
+        rules: Rapid Rush Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Wolf Saga-Keeper
+        rules: Counter-Attack Aura
+        cost_modifier: +35pts
+      - name: Archivist
+        rules: Caster(2)
+        cost_modifier: +55pts
+      - name: Master Archivist
+        rules: Caster(3)
+        cost_modifier: +90pts
+    - category: Replace Combat Shield and CCW
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A8, Rending
+        cost_modifier: +20pts
+      - name: Rapid Storm Rifle, CCW
+        rules: 24", A6, AP(1), A4
+        cost_modifier: +70pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A2, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A4, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Chain-Fist
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +30pts
+      - name: Energy Fist
+        rules: A4, AP(4)
+        cost_modifier: +35pts
+  - name: Wolf Veteran Master Brother
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Hero
+    - Shielded
+    - Versatile Attack
+    - Wolfborn
+    cost: 70
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Artillerist
+        rules: Re-Position Artillery
+        cost_modifier: +10pts
+      - name: Preacher
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Lieutenant
+        rules: Rapid Rush Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Wolf Saga-Keeper
+        rules: Counter-Attack Aura
+        cost_modifier: +35pts
+      - name: Engineer
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Archivist
+        rules: Caster(2)
+        cost_modifier: +55pts
+      - name: Commander
+        rules: Re-Deployment
+        cost_modifier: +65pts
+      - name: Master Archivist
+        rules: Caster(3)
+        cost_modifier: +90pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Wolf Mount
+        rules: Heavy Claws (A2, AP(1)), Fast, Strider, Tough(3)
+        cost_modifier: +115pts
+      - name: Combat Bike
+        rules: Twin Heavy Rifle (24", A2, AP(1)), Fast, Tough(3)
+        cost_modifier: +120pts
+    - category: Replace Combat Shield and CCW
+      upgrades:
+      - name: Flamer Pistol, CCW
+        rules: 6", A1, Blast(3), Reliable, A2
+        cost_modifier: +5pts
+      - name: Flamer Pistol, Combat Shield
+        rules: 6", A1, Blast(3), Reliable, Bash (A1), Shielded
+        cost_modifier: +5pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +15pts
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +15pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Master Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +10pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +10pts
+      - name: Master Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +20pts
+      - name: Master Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +30pts
+      - name: Master Storm Rifle
+        rules: 24", A4, AP(1)
+        cost_modifier: +65pts
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +10pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +15pts
+      - name: Gravity-Mod
+        rules: 18", A1, AP(1), Blast(3), Limited, Lacerate
+        cost_modifier: +15pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Chain-Fist
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +20pts
+  - name: Wolf Master Brother
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Flamer Pistol
+      range: 6"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Hero
+    - Wolfborn
+    cost: 65
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Artillerist
+        rules: Re-Position Artillery
+        cost_modifier: +10pts
+      - name: Preacher
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Lieutenant
+        rules: Rapid Rush Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Wolf Saga-Keeper
+        rules: Counter-Attack Aura
+        cost_modifier: +35pts
+      - name: Engineer
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Archivist
+        rules: Caster(2)
+        cost_modifier: +55pts
+      - name: Commander
+        rules: Re-Deployment
+        cost_modifier: +65pts
+      - name: Master Archivist
+        rules: Caster(3)
+        cost_modifier: +90pts
+    - category: Replace Gravity Pistol and CCW
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +5pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +5pts
+      - name: Energy Sword, Combat Shield
+        rules: A2, AP(1), Rending, Shielded
+        cost_modifier: +5pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Master Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +5pts
+      - name: Master Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Master Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +20pts
+      - name: Master Storm Rifle
+        rules: 24", A4, AP(1)
+        cost_modifier: +50pts
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +5pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +10pts
+      - name: Gravity-Mod
+        rules: 18", A1, AP(1), Blast(3), Limited, Lacerate
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Chain-Fist
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Wolf Mount
+        rules: Heavy Claws (A2, AP(1)), Fast, Strider, Tough(3)
+        cost_modifier: +100pts
+      - name: Combat Bike
+        rules: Twin Heavy Rifle (24", A2, AP(1)), Fast, Tough(3)
+        cost_modifier: +100pts
+  - name: Wolf Elite Pathfinder
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Flamer Pistol
+      range: 6"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Hero
+    - Strider
+    - Wolfborn
+    cost: 60
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Guardian
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Preacher
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Commander
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Gravity Pistol
+      upgrades:
+      - name: Master Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +5pts
+      - name: Master Sniper Rifle
+        rules: 30", A2, AP(1), Reliable, Takedown
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Forward Sentry
+        rules: Scout
+        cost_modifier: +10pts
+      - name: Camo Cloak
+        rules: Stealth
+        cost_modifier: +10pts
+      - name: Combat Bike
+        rules: Twin Heavy Rifle (24", A2, AP(1)), Fast, Tough(3)
+        cost_modifier: +80pts
+    - category: Replace Gravity Pistol and CCW
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +5pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +5pts
+      - name: Energy Sword, Combat Shield
+        rules: A2, AP(1), Rending, Shielded
+        cost_modifier: +5pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Master Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +5pts
+      - name: Master Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +10pts
+      - name: Master Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +15pts
+      - name: Master Storm Rifle
+        rules: 24", A4, AP(1)
+        cost_modifier: +35pts
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +5pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +5pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +10pts
+      - name: Gravity-Mod
+        rules: 18", A1, AP(1), Blast(3), Limited, Lacerate
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Chain-Fist
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Wolf Pathfinders
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Strider
+    - Wolfborn
+    cost: 125
+    upgrade_categories:
+    - category: Replace all Heavy Pistols and CCWs
+      upgrades:
+      - name: Heavy Rifle, CCW
+        rules: 24", A1, AP(1), A1
+        cost_modifier: +10pts
+      - name: Shotgun, CCW
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +10pts
+    - category: Replace one Heavy Pistol
+      upgrades:
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Gravity Rifle
+        rules: 18", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +20pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +30pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +35pts
+    - category: Replace up to three Heavy Rifles
+      upgrades:
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +20pts
+      - name: Forward Sentries
+        rules: Scout
+        cost_modifier: +15pts
+      - name: Camo Cloaks
+        rules: Stealth
+        cost_modifier: +15pts
+    - category: Replace one Heavy Pistol and CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Wolf Rookies
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: Heavy CCWs
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Furious
+    - Wolfborn
+    cost: 135
+    upgrade_categories:
+    - category: Replace one Heavy Pistol
+      upgrades:
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Gravity Rifle
+        rules: 18", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +20pts
+    - category: Replace one Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace one Heavy Pistol and Heavy CCW
+      upgrades:
+      - name: Heavy Pistol, Energy Hammer
+        rules: 12", A1, AP(1), A1, Blast(3)
+        cost_modifier: Free
+      - name: Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +5pts
+      - name: Heavy Pistol, Energy Fist
+        rules: 12", A1, AP(1), A2, AP(4)
+        cost_modifier: +10pts
+      - name: Jetpacks
+        rules: Ambush, Flying
+        cost_modifier: +30pts
+    - category: Replace one Heavy Pistol and Heavy CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Wolf Battle Brothers
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Rifles
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Wolfborn
+    cost: 160
+    upgrade_categories:
+    - category: Replace one Heavy Rifle
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Gravity Rifle
+        rules: 18", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +35pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +35pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +40pts
+      - name: Gravity Cannon
+        rules: 24", A1, AP(2), Blast(3), Lacerate
+        cost_modifier: +40pts
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +60pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +60pts
+    - category: Replace one Heavy Rifle and CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +10pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Wolf Veteran Assault Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Shielded
+    - Versatile Attack
+    - Wolfborn
+    cost: 95
+    upgrade_categories:
+    - category: Replace any Heavy Pistol and Combat Shield
+      upgrades:
+      - name: Heavy CCW, Combat Shield
+        rules: A2, AP(1), Shielded
+        cost_modifier: +5pts
+      - name: Heavy Pistol, Heavy CCW
+        rules: 12", A1, AP(1), A2, AP(1)
+        cost_modifier: +10pts
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +20pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +20pts
+    - category: Replace any Heavy Pistol
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +10pts
+    - category: Replace any Heavy CCW
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+      - name: Jetpacks
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+    - category: Replace one Heavy Pistol and Heavy CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +15pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +10pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Wolf Veteran Battle Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Rifles
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Versatile Attack
+    - Wolfborn
+    cost: 120
+    upgrade_categories:
+    - category: Replace any Heavy Rifle
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Gravity Rifle
+        rules: 18", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +20pts
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +45pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +50pts
+      - name: Gravity Cannon
+        rules: 24", A1, AP(2), Blast(3), Lacerate
+        cost_modifier: +50pts
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +70pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +70pts
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +10pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +15pts
+      - name: Gravity-Mod
+        rules: 18", A1, AP(1), Blast(3), Limited, Lacerate
+        cost_modifier: +15pts
+    - category: Replace one Heavy Rifle and CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +10pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Werewolf Brothers
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Wolf Hammers
+      range: null
+      attacks: A1
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Fearless
+    - Regeneration
+    - Shielded
+    - Wolfborn
+    cost: 140
+    upgrade_categories:
+    - category: Replace all Wolf Hammers and Energy Shields
+      upgrades:
+      - name: Heavy Claws
+        rules: A2, AP(1)
+        cost_modifier: +20pts
+    - category: Replace any Heavy Claws
+      upgrades:
+      - name: Dual Wolf Claws
+        rules: A2, Reliable, Rending
+        cost_modifier: +5pts
+      - name: Heavy Wolf Axe
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+      - name: Backpack-GL
+        rules: 24", A1, Blast(3), Limited
+        cost_modifier: +10pts
+  - name: Wolf Support Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Flamers
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fearless
+    - Relentless
+    - Wolfborn
+    cost: 135
+    upgrade_categories:
+    - category: Replace any Heavy Flamer
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +25pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +30pts
+      - name: Gravity Cannon
+        rules: 24", A1, AP(2), Blast(3), Lacerate
+        cost_modifier: +30pts
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +50pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +50pts
+  - name: Wolf Destroyers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: CCWs
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Fearless
+    - Shielded
+    - Wolfborn
+    cost: 240
+    upgrade_categories:
+    - category: Replace all Combat Shields and CCWS
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +15pts
+      - name: Storm Rifle, CCW
+        rules: 24", A3, AP(1), A1
+        cost_modifier: +75pts
+    - category: Replace one Storm Rifle
+      upgrades:
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +15pts
+      - name: Cyclone Missiles, Storm Rifle
+        rules: 24", A1, AP(2), Deadly(3), Unstoppable, 24", A3, AP(1)
+        cost_modifier: +50pts
+    - category: Replace any CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: Free
+      - name: Chain-Fist
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A3, AP(4)
+        cost_modifier: +25pts
+  - name: Hunting Wolves
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Vicious Bites
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Strider
+    - Wolfborn
+    cost: 120
+    upgrade_categories: []
+  - name: Wolf Riders
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    - name: Heavy Claws
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Fearless
+    - Strider
+    - Wolfborn
+    cost: 285
+    upgrade_categories:
+    - category: Replace one Heavy Pistol and CCW
+      upgrades:
+      - name: Heavy Pistol, Energy Hammer
+        rules: 12", A1, AP(1), A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+    - category: Replace all Heavy Pistols
+      upgrades:
+      - name: Combat Shield
+        rules: Shielded
+        cost_modifier: +5pts
+    - category: Replace any Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace any CCW
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Wolf Pathfinder Bikers
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Grenade Launchers
+      range: 24"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(3)
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Fearless
+    - Wolfborn
+    cost: 225
+    upgrade_categories:
+    - category: Replace any Grenade Launcher
+      upgrades:
+      - name: Twin Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +5pts
+    - category: Replace all Heavy Pistols and CCWs
+      upgrades:
+      - name: Heavy Rifle, CCW
+        rules: 24", A1, AP(1), A1
+        cost_modifier: +5pts
+    - category: Replace all High-Speed Tires
+      upgrades:
+      - name: Off-Road Tires
+        rules: Scout, Strider
+        cost_modifier: +20pts
+    - category: Replace one Heavy Pistol and CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Wolf Brother Bikers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Twin Heavy Rifles
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Fearless
+    - Wolfborn
+    cost: 305
+    upgrade_categories:
+    - category: Replace all Heavy Pistols and CCWs
+      upgrades:
+      - name: Heavy Rifle, CCW
+        rules: 24", A1, AP(1), A1
+        cost_modifier: +5pts
+    - category: Replace one Heavy Rifle
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Gravity Rifle
+        rules: 18", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+    - category: Replace one Heavy Pistol and CCW
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Gravity Pistol
+        rules: 9", A1, AP(1), Blast(3), Lacerate
+        cost_modifier: +10pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Wolf Support Bike
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Twin Heavy Rifle
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Heavy Pistol
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Fast
+    - Fearless
+    - Wolfborn
+    cost: 190
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Array
+        rules: Unstoppable Mark
+        cost_modifier: +25pts
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +25pts
+    - category: Replace Heavy Pistol
+      upgrades:
+      - name: Heavy Rifle
+        rules: 24", A1, AP(1)
+        cost_modifier: +5pts
+  - name: Wolf APC
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Storm Rifle
+      range: 24"
+      attacks: A3
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(3)
+    - Transport(11)
+    - Wolfborn
+    cost: 230
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +15pts
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +15pts
+  - name: Wolf Attack APC
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Heavy Flamer
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(3)
+    - Transport(6)
+    - Wolfborn
+    cost: 225
+    upgrade_categories:
+    - category: Replace Twin Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +45pts
+      - name: Twin Minigun
+        rules: 24", A8, AP(1)
+        cost_modifier: +65pts
+      - name: Laser Cannon, Twin Plasma Rifle
+        rules: 36", A1, AP(3), Deadly(3), 24", A2, AP(4)
+        cost_modifier: +70pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +90pts
+    - category: Upgrade with
+      upgrades:
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +15pts
+  - name: Wolf Drop Pod
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Death Launcher
+      range: 18"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Blast(6)
+    special_rules:
+    - Ambush
+    - Fearless
+    - Immobile
+    - Transport(11)
+    cost: 145
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Array
+        rules: Unstoppable Mark
+        cost_modifier: +25pts
+    - category: Replace Death Launcher
+      upgrades:
+      - name: Rapid Storm Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +60pts
+  - name: Wolf Attack Speeder
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Flamers
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Ambush
+    - Fast
+    - Fearless
+    - Impact(3)
+    - Strider
+    - Wolfborn
+    cost: 240
+    upgrade_categories:
+    - category: Replace any Heavy Flamer
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +25pts
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +30pts
+    - category: Replace one Heavy Flamer
+      upgrades:
+      - name: Twin Typhoon Missiles
+        rules: 24", A4, AP(2), Unstoppable
+        cost_modifier: +55pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Open Sides
+        rules: Transport(6)
+        cost_modifier: +20pts
+      - name: Targeting Array
+        rules: Unstoppable Mark
+        cost_modifier: +25pts
+  - name: Wolf Heavy Exo-Suit
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Flamer
+      range: 12"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Stomp
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Fear(1)
+    - Fearless
+    - Wolfborn
+    cost: 175
+    upgrade_categories:
+    - category: Replace Twin Flamer
+      upgrades:
+      - name: Twin Fusion Rifle
+        rules: 12", A2, AP(4), Deadly(3)
+        cost_modifier: +30pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +65pts
+      - name: Twin Light Gravity Cannon
+        rules: 24", A2, AP(2), Blast(3), Lacerate
+        cost_modifier: +70pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +110pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Dual Heavy Fists
+        rules: A2, Blast(3)
+        cost_modifier: +20pts
+      - name: Dual Combat Drills
+        rules: A4, AP(4)
+        cost_modifier: +55pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Chest Missiles
+        rules: 24", A1, AP(2), Unstoppable
+        cost_modifier: +20pts
+      - name: Chest-Rifles
+        rules: 24", A2, AP(1)
+        cost_modifier: +30pts
+  - name: Wolf Battle Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    - name: Twin Storm Cannon
+      range: 30"
+      attacks: A4
+      ap: AP(2)
+      special_rules:
+      - Unstoppable
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(6)
+    - Wolfborn
+    cost: 510
+    upgrade_categories:
+    - category: Replace Twin Storm Cannon
+      upgrades:
+      - name: Spear Missile Launcher
+        rules: 30", A1, AP(3), Deadly(6), Unstoppable
+        cost_modifier: +5pts
+      - name: Demolition Cannon
+        rules: 24", A1, AP(4), Blast(6), Indirect
+        cost_modifier: +30pts
+      - name: Wind Missile Launcher
+        rules: 36", A2, AP(1), Blast(3), Indirect
+        cost_modifier: +30pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +50pts
+      - name: Rapid Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +50pts
+    - category: Replace Twin Heavy Machineguns
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +45pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +15pts
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +30pts
+  - name: Wolf Combat Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    - name: Walker Fists
+      range: null
+      attacks: A4
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Wolfborn
+    cost: 400
+    upgrade_categories:
+    - category: Replace 2x Walker Fist
+      upgrades:
+      - name: Walker Axe, Combat Shield
+        rules: A4, AP(4), Deadly(3), Fortified
+        cost_modifier: +45pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +25pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +35pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+    - category: Replace one Walker Fist
+      upgrades:
+      - name: Walker Claw
+        rules: A4, AP(1), Rending
+        cost_modifier: Free
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +20pts
+      - name: Heavy Rifle Array
+        rules: 24", A6, AP(1)
+        cost_modifier: +35pts
+      - name: Heavy Plasma Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +55pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +45pts
+      - name: Heavy Minigun
+        rules: 24", A6, AP(2)
+        cost_modifier: +60pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +90pts
+    - category: Replace one Walker Fist
+      upgrades:
+      - name: Walker Claw
+        rules: A4, AP(1), Rending
+        cost_modifier: Free
+      - name: Missile Array
+        rules: 30", A4, AP(2), Unstoppable
+        cost_modifier: +40pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +90pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +25pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +35pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+  - name: Wolf Veteran Combat Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    - name: Walker Fists
+      range: null
+      attacks: A4
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Versatile Attack
+    - Wolfborn
+    cost: 435
+    upgrade_categories:
+    - category: Replace 2x Walker Fist
+      upgrades:
+      - name: Walker Axe, Combat Shield
+        rules: A4, AP(4), Deadly(3), Fortified
+        cost_modifier: +50pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +30pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +40pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +60pts
+    - category: Replace one Walker Fist
+      upgrades:
+      - name: Walker Claw
+        rules: A4, AP(1), Rending
+        cost_modifier: Free
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: Free
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +25pts
+      - name: Heavy Rifle Array
+        rules: 24", A6, AP(1)
+        cost_modifier: +50pts
+      - name: Heavy Plasma Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +65pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +65pts
+      - name: Heavy Minigun
+        rules: 24", A6, AP(2)
+        cost_modifier: +80pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +115pts
+    - category: Replace one Walker Fist
+      upgrades:
+      - name: Walker Claw
+        rules: A4, AP(1), Rending
+        cost_modifier: Free
+      - name: Missile Array
+        rules: 30", A4, AP(2), Unstoppable
+        cost_modifier: +50pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +120pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +30pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +40pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +60pts
+  - name: Wolf Artillery Gun
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Heavy Gatling Cannon
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    - name: Crew
+      range: null
+      attacks: A3
+      ap: null
+      special_rules: []
+    special_rules:
+    - Artillery
+    - Fearless
+    - Wolfborn
+    cost: 180
+    upgrade_categories:
+    - category: Replace Heavy Gatling Cannon
+      upgrades:
+      - name: Heavy Flak Cannon
+        rules: 30", A2, AP(3), Deadly(3), Unstoppable
+        cost_modifier: +60pts
+      - name: Heavy Thunder Cannon
+        rules: 30", A2, AP(2), Blast(3), Indirect
+        cost_modifier: +65pts
+      - name: Heavy Crack Cannon
+        rules: 30", A6, AP(1), Indirect, Rending
+        cost_modifier: +100pts
+  - name: Wolf Heavy Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    - name: Quad Flamer Cannon
+      range: 18"
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(9)
+    - Transport(11)
+    - Wolfborn
+    cost: 795
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +15pts
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +45pts
+    - category: Replace Quad Flamer Cannon
+      upgrades:
+      - name: Twin Heavy Rifle Array
+        rules: 24", A12, AP(1)
+        cost_modifier: +15pts
+      - name: Quad Laser Cannon
+        rules: 36", A4, AP(3), Deadly(3)
+        cost_modifier: +130pts
+    - category: Replace Twin Heavy Machinegun
+      upgrades:
+      - name: Twin Minigun
+        rules: 24", A8, AP(1)
+        cost_modifier: +20pts
+  - name: Wolf Light Gunship
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Minigun
+      range: 24"
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    - name: Twin Typhoon Missiles
+      range: 24"
+      attacks: A4
+      ap: AP(2)
+      special_rules:
+      - Unstoppable
+    special_rules:
+    - Aircraft
+    - Fearless
+    - Wolfborn
+    cost: 325
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Laser Talon
+        rules: 24", A2, AP(3)
+        cost_modifier: +50pts
+      - name: Storm Cannon
+        rules: 30", A2, AP(2), Unstoppable
+        cost_modifier: +50pts
+    - category: Replace Twin Typhoon Missiles
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +60pts
+      - name: Twin Hammer Missiles
+        rules: 36", A2, AP(3), Deadly(3), Unstoppable
+        cost_modifier: +65pts
+  - name: Wolf Heavy Gunship
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Storm Missiles
+      range: 36"
+      attacks: A1
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+    - name: Light Heavy Rifle Array
+      range: 24"
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    - name: Twin Minigun
+      range: 24"
+      attacks: A8
+      ap: AP(1)
+      special_rules: []
+    - name: Typhoon Missiles
+      range: 24"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Unstoppable
+    special_rules:
+    - Aircraft
+    - Fearless
+    - Transport(11)
+    - Wolfborn
+    cost: 645
+    upgrade_categories:
+    - category: Replace Twin Minigun
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +20pts
+      - name: Twin Plasma Cannon
+        rules: 30", A2, AP(4), Blast(3)
+        cost_modifier: +25pts
+    - category: Replace Typhoon Missiles
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts

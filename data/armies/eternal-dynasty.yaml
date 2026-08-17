@@ -1,0 +1,860 @@
+v3.5.3:
+  name: Eternal Dynasty
+  id: vux1Y5vvULmaxZ8P
+  units:
+  - name: ONI Captain
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Great Mace
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+    - name: Heavy Bash
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Hero
+    cost: 95
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Captain
+        rules: Clan Warrior Boost Aura
+        cost_modifier: +10pts
+      - name: Spirit-Core Bearer
+        rules: Rapid Charge Aura
+        cost_modifier: +15pts
+      - name: Sentinel
+        rules: Fearless Aura
+        cost_modifier: +20pts
+      - name: Sergeant
+        rules: Piercing Hunter Aura
+        cost_modifier: +40pts
+    - category: Replace Great Mace
+      upgrades:
+      - name: 2x Heavy Flame-Fist
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +30pts
+      - name: Heavy Sword, Combat Shield
+        rules: A4, AP(1), Rending, Shielded
+        cost_modifier: +35pts
+      - name: Great Sword
+        rules: A6, AP(1), Rending
+        cost_modifier: +35pts
+      - name: Heavy Glaive
+        rules: A6, AP(2)
+        cost_modifier: +35pts
+    - category: Replace any Heavy Flame-Fist
+      upgrades:
+      - name: Heavy Gun-Fist
+        rules: 24", A3
+        cost_modifier: +5pts
+      - name: Heavy Shred-Fist
+        rules: 18", A3, Rending
+        cost_modifier: +5pts
+      - name: Heavy Fist
+        rules: A3, AP(4)
+        cost_modifier: +15pts
+      - name: Heavy Rocket-Fist
+        rules: 24", A1, AP(1), Blast(3), Indirect
+        cost_modifier: +20pts
+      - name: Heavy Fusion-Fist
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Heavy Plasma-Fist
+        rules: 24", A3, AP(4)
+        cost_modifier: +55pts
+      - name: Heavy Missile-Fist
+        rules: 30", A3, AP(3), Unstoppable
+        cost_modifier: +55pts
+    - category: Upgrade with
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +45pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Attack Drone
+        rules: Drone Laser Gun (18", A1, Limited, Tear)
+        cost_modifier: +5pts
+      - name: Energy Drone
+        rules: Ignores Cover Aura
+        cost_modifier: +15pts
+  - name: Dynasty Leader
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Dynasty Pistol
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    - name: CCW
+      range: null
+      attacks: A2
+      ap: null
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Hero
+    cost: 50
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Captain
+        rules: Clan Warrior Boost Aura
+        cost_modifier: +10pts
+      - name: Sentinel
+        rules: Fearless Aura
+        cost_modifier: +20pts
+      - name: Warlord
+        rules: Counter-Attack Aura
+        cost_modifier: +35pts
+      - name: Sage
+        rules: Caster(2)
+        cost_modifier: +40pts
+      - name: Sergeant
+        rules: Piercing Hunter Aura
+        cost_modifier: +40pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Attack Drone
+        rules: Drone Laser Gun (18", A1, Limited, Tear)
+        cost_modifier: +5pts
+      - name: Energy Drone
+        rules: Ignores Cover Aura
+        cost_modifier: +15pts
+    - category: Replace Dynasty Pistol and CCW
+      upgrades:
+      - name: 2x Leader Auto-Gun, Martial Arts
+        rules: 12", A2, Rending, A1
+        cost_modifier: +10pts
+      - name: 2x Royal Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +15pts
+      - name: 2x Royal Sickle
+        rules: A2, AP(2)
+        cost_modifier: +15pts
+      - name: Spear-Shock, Spear
+        rules: 18", A3, AP(1), A3, AP(1)
+        cost_modifier: +30pts
+    - category: Replace Dynasty Pistol
+      upgrades:
+      - name: Leader Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +10pts
+      - name: Leader Carbine
+        rules: 18", A3
+        cost_modifier: +10pts
+      - name: Leader Long Rifle
+        rules: 30", A2
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Royal Sickle
+        rules: A2, AP(2)
+        cost_modifier: +10pts
+      - name: Royal Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Hook Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Hover Alert-Drone
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+      - name: Royal Guard Master
+        rules: Regeneration, Versatile Attack
+        cost_modifier: +20pts
+      - name: Ninja Master
+        rules: Ambush, Stealth, Teleport
+        cost_modifier: +35pts
+  - name: Warriors
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Long Rifles
+      range: 30"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    cost: 90
+    upgrade_categories:
+    - category: Replace all Long Rifles
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +15pts
+      - name: Carbine
+        rules: 18", A2
+        cost_modifier: +15pts
+    - category: Replace one Long Rifle
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Shishi Turret
+        rules: Rocket (24", A1, Blast(3), Indirect)
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Shishi Turret
+        rules: Missiles (30", A2, AP(3), Unstoppable)
+        cost_modifier: +35pts
+    - category: Replace one Long Rifle and CCW
+      upgrades:
+      - name: Twin Heavy Pistol, CCW
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +5pts
+      - name: Heavy Pistol, Royal Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Honor-Bound
+        rules: Vengeance
+        cost_modifier: +15pts
+      - name: Attack Drone
+        rules: Drone Laser Gun (18", A1, Limited, Tear)
+        cost_modifier: +5pts
+      - name: Energy Drone
+        rules: Ignores Cover Aura
+        cost_modifier: +10pts
+      - name: Shield Drone
+        rules: Stealth Aura
+        cost_modifier: +25pts
+  - name: Scouts
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Long Rifles
+      range: 30"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: CCWs
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Scout
+    cost: 100
+    upgrade_categories:
+    - category: Replace any Long Rifle
+      upgrades:
+      - name: Carbine
+        rules: 18", A2
+        cost_modifier: +5pts
+    - category: Replace up to three Long Rifles
+      upgrades:
+      - name: Energy Rifle
+        rules: 36", A1, AP(4)
+        cost_modifier: +20pts
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +25pts
+      - name: Dynastic Triangulator
+        rules: Ambush Beacon
+        cost_modifier: +15pts
+      - name: Attack Drone
+        rules: Drone Laser Gun (18", A1, Limited, Tear)
+        cost_modifier: +5pts
+      - name: Energy Drone
+        rules: Ignores Cover Aura
+        cost_modifier: +10pts
+      - name: Shield Drone
+        rules: Stealth Aura
+        cost_modifier: +25pts
+  - name: Ninja
+    size: 5
+    quality: 3+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Auto-Guns
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Rending
+    - name: Swords
+      range: null
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Rending
+    special_rules:
+    - Ambush
+    - Clan Warrior
+    - Stealth
+    - Teleport
+    cost: 170
+    upgrade_categories:
+    - category: Replace any Auto-Gun and Sword
+      upgrades:
+      - name: Auto-Gun, Sickle
+        rules: 12", A1, Rending, A1, AP(2)
+        cost_modifier: +5pts
+      - name: 2x Sword
+        rules: A1, AP(1), Rending
+        cost_modifier: +5pts
+      - name: 2x Sickle
+        rules: A1, AP(2)
+        cost_modifier: +5pts
+      - name: 2x Auto-Gun, Martial Arts
+        rules: 12", A1, Rending, A1
+        cost_modifier: +5pts
+  - name: Royal Guard
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Spear-Shots
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: Spears
+      range: null
+      attacks: A2
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Regeneration
+    - Versatile Attack
+    cost: 180
+    upgrade_categories:
+    - category: Replace one Spear-Shot
+      upgrades:
+      - name: Spear-Flame
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +5pts
+      - name: Spear-Plasma
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +5pts
+      - name: Spear-Fuse
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +5pts
+      - name: Spear-Shred
+        rules: 9", A3, Rending
+        cost_modifier: +15pts
+  - name: Attack Drones
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Laser Guns
+      range: 18"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Tear
+    - name: Tasers
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Strider
+    cost: 120
+    upgrade_categories:
+    - category: Replace one Laser Gun
+      upgrades:
+      - name: Heavy Laser Gun
+        rules: 24", A1, Deadly(3), Tear
+        cost_modifier: +30pts
+  - name: ONIs
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Bashes
+      range: null
+      attacks: A1
+      ap: null
+      special_rules: []
+    - name: Heavy Fists
+      range: null
+      attacks: A1
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    cost: 180
+    upgrade_categories:
+    - category: Replace any Heavy Fist
+      upgrades:
+      - name: Gun-Fist
+        rules: 24", A2
+        cost_modifier: +5pts
+      - name: Shred-Fist
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Plasma-Fist
+        rules: 24", A2, AP(4)
+        cost_modifier: +40pts
+    - category: Replace one Heavy Fist
+      upgrades:
+      - name: Flame-Fist
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Fusion-Fist
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Rocket-Fist
+        rules: 24", A1, Blast(3), Indirect
+        cost_modifier: +20pts
+      - name: Missile-Fist
+        rules: 30", A2, AP(3), Unstoppable
+        cost_modifier: +40pts
+      - name: Sword, Combat Shield
+        rules: A2, AP(1), Rending, Shielded
+        cost_modifier: +5pts
+      - name: Heavy Glaive
+        rules: A3, AP(2)
+        cost_modifier: +5pts
+      - name: Jetpacks
+        rules: Ambush, Flying
+        cost_modifier: +65pts
+  - name: Cyber-Bird Swarms
+    size: 3
+    quality: 5+
+    defense: 6+
+    tough: 3
+    weapons:
+    - name: Swarm Attacks
+      range: null
+      attacks: A3
+      ap: null
+      special_rules:
+      - Rending
+    special_rules:
+    - Clan Warrior
+    - Flying
+    cost: 95
+    upgrade_categories: []
+  - name: Cyber Lizards
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Toxin Claws
+      range: null
+      attacks: A2
+      ap: null
+      special_rules:
+      - Bane
+    special_rules:
+    - Clan Warrior
+    - Strider
+    cost: 85
+    upgrade_categories: []
+  - name: Cyber Beast
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Heavy Fist
+      range: null
+      attacks: A6
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Furious
+    cost: 95
+    upgrade_categories: []
+  - name: Dynasty APC
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Clan Warrior
+    - Fast
+    - Impact(3)
+    - Strider
+    - Transport(11)
+    cost: 180
+    upgrade_categories:
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: Heavy Auto-Gun
+        rules: 18", A4, Rending
+        cost_modifier: +10pts
+      - name: Heavy Laser Gun
+        rules: 24", A1, Deadly(3), Tear
+        cost_modifier: +15pts
+  - name: Dragon Speeder
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Hull Auto-Gun
+      range: 18"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Rending
+    - name: Twin Burst Laser Gun
+      range: 18"
+      attacks: A4
+      ap: null
+      special_rules:
+      - Tear
+    special_rules:
+    - Clan Warrior
+    - Fast
+    - Impact(3)
+    - Strider
+    cost: 190
+    upgrade_categories:
+    - category: Replace Hull Auto-Gun
+      upgrades:
+      - name: Hull Flamer
+        rules: 12", A2, AP(1), Reliable
+        cost_modifier: +5pts
+      - name: Hull Laser Gun
+        rules: 24", A2, Tear
+        cost_modifier: +15pts
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Beam
+        rules: Increased Shooting Range Mark
+        cost_modifier: +35pts
+    - category: Replace Twin Burst Laser Gun
+      upgrades:
+      - name: Twin Heavy Laser Gun
+        rules: 24", A2, Deadly(3), Tear
+        cost_modifier: +35pts
+  - name: Dynasty Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Artillery Gun
+      range: 24"
+      attacks: A4
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Indirect
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    special_rules:
+    - Clan Warrior
+    - Fast
+    - Impact(6)
+    - Strider
+    cost: 375
+    upgrade_categories:
+    - category: Replace Artillery Gun
+      upgrades:
+      - name: Heavy Anti-Tank Cannon
+        rules: 30", A2, AP(3), Deadly(6)
+        cost_modifier: +55pts
+      - name: Heavy Battle Cannon
+        rules: 30", A4, AP(2), Blast(3)
+        cost_modifier: +60pts
+      - name: Heavy Autocannon
+        rules: 36", A9, AP(2)
+        cost_modifier: +70pts
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: Heavy Auto-Gun
+        rules: 18", A4, Rending
+        cost_modifier: +10pts
+      - name: Heavy Laser Gun
+        rules: 24", A1, Deadly(3), Tear
+        cost_modifier: +15pts
+  - name: Ninja Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Heavy Burst Auto-Gun
+      range: 18"
+      attacks: A8
+      ap: null
+      special_rules:
+      - Rending
+    - name: Rope-Sickle
+      range: 12"
+      attacks: A1
+      ap: null
+      special_rules:
+      - Deadly(3)
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Ambush
+    - Clan Warrior
+    - Fear(2)
+    - Stealth
+    cost: 335
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Beam
+        rules: Increased Shooting Range Mark
+        cost_modifier: +35pts
+    - category: Replace Heavy Burst Auto-Gun
+      upgrades:
+      - name: Sword-Laser, Heavy Sword
+        rules: 12", A4, Tear, A6, AP(1), Rending
+        cost_modifier: +15pts
+    - category: Replace Rope-Sickle
+      upgrades:
+      - name: Rope-Blade
+        rules: 12", A4, Rending
+        cost_modifier: +20pts
+      - name: Displacement Pack
+        rules: Teleport
+        cost_modifier: +40pts
+  - name: ONI Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Heavy Flamethrower
+      range: 12"
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Stomp
+      range: null
+      attacks: A4
+      ap: AP(1)
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Fear(2)
+    cost: 330
+    upgrade_categories:
+    - category: Replace Heavy Flamethrower
+      upgrades:
+      - name: Rocket Launcher
+        rules: 24", A4, Blast(3), Indirect
+        cost_modifier: +20pts
+      - name: Heavy Blast Cannon
+        rules: 24", A4, AP(2), Blast(3)
+        cost_modifier: +80pts
+      - name: Heavy Strike Cannon
+        rules: 30", A2, AP(3), Deadly(6)
+        cost_modifier: +95pts
+      - name: Missile Launcher
+        rules: 30", A8, AP(3), Unstoppable
+        cost_modifier: +115pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Attack Drone
+        rules: Laser Gun (18", A1, Tear)
+        cost_modifier: +15pts
+      - name: Shield Drone
+        rules: Stealth
+        cost_modifier: +30pts
+  - name: Samurai Titan
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Heavy Titan Sword
+      range: null
+      attacks: A12
+      ap: AP(2)
+      special_rules:
+      - Rending
+    - name: Stomp
+      range: null
+      attacks: A6
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Fear(3)
+    - Fearless
+    cost: 560
+    upgrade_categories:
+    - category: Replace Heavy Titan Sword
+      upgrades:
+      - name: Titan Heavy Laser Rifle
+        rules: 24", A4, Deadly(3), Tear
+        cost_modifier: +85pts
+      - name: Titan Heavy Plasma Rifle
+        rules: 24", A4, AP(4), Blast(3)
+        cost_modifier: +135pts
+      - name: Titan Heavy Shred Rifle
+        rules: 24", A18, Rending
+        cost_modifier: +135pts
+    - category: Upgrade with
+      upgrades:
+      - name: Force Field
+        rules: Stealth
+        cost_modifier: +45pts
+  - name: Macaque Titan
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Stomp
+      range: null
+      attacks: A6
+      ap: AP(2)
+      special_rules: []
+    - name: Titan Fists
+      range: null
+      attacks: A12
+      ap: AP(4)
+      special_rules: []
+    special_rules:
+    - Bounding
+    - Clan Warrior
+    - Fear(3)
+    - Fearless
+    - Furious
+    - Strider
+    cost: 725
+    upgrade_categories: []
+  - name: Dragon Titan
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Fire Torrent
+      range: 18"
+      attacks: A3
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+    - name: Dragon Strike
+      range: null
+      attacks: A12
+      ap: null
+      special_rules:
+      - Rending
+    - name: Stomp
+      range: null
+      attacks: A6
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Caster(4)
+    - Clan Warrior
+    - Fear(3)
+    - Fearless
+    - Flying
+    - Regeneration
+    cost: 860
+    upgrade_categories: []
+  - name: Artillery Titan
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Guided Missiles
+      range: 30"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(6)
+      - Unstoppable
+    - name: Titan Blast Cannon
+      range: 30"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Blast(6)
+      - Indirect
+    - name: Rocket Pod
+      range: 24"
+      attacks: A2
+      ap: null
+      special_rules:
+      - Blast(3)
+      - Indirect
+    - name: Stomp
+      range: null
+      attacks: A6
+      ap: AP(2)
+      special_rules: []
+    special_rules:
+    - Clan Warrior
+    - Fear(3)
+    - Fearless
+    - Slow
+    cost: 740
+    upgrade_categories:
+    - category: Replace Titan Blast Cannon
+      upgrades:
+      - name: Titan Strike Cannon
+        rules: 36", A2, AP(3), Deadly(6)
+        cost_modifier: +20pts
+    - category: Replace Rocket Pod
+      upgrades:
+      - name: Missile Pod
+        rules: 30", A4, AP(3), Unstoppable
+        cost_modifier: +45pts

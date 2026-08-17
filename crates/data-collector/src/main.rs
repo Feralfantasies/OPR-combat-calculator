@@ -30,8 +30,8 @@ struct Cli {
     #[arg(long, default_value_t = false, global = true)]
     force_refresh: bool,
 
-    /// Output directory for YAML files
-    #[arg(short, long, default_value = "data", global = true)]
+    /// Output directory for YAML files (versioned army data, committed to git)
+    #[arg(short, long, default_value = "data/armies", global = true)]
     output_dir: String,
 
     /// Cache directory for raw HTML files

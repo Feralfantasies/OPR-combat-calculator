@@ -2,14 +2,14 @@
 //!
 //! This module loads Battle Brothers unit data from the YAML file generated
 //! by the data-collector crate. The YAML file is expected to be located at
-//! `data/battle-brothers.yaml` relative to the workspace root.
+//! `data/armies/battle-brothers.yaml` relative to the workspace root.
 
 use crate::armies::Army;
 use crate::yaml_loader::{self, YamlError};
 use std::path::{Path, PathBuf};
 
 /// Default path to the Battle Brothers YAML file relative to workspace root.
-const BATTLE_BROTHERS_YAML_PATH: &str = "data/battle-brothers.yaml";
+const BATTLE_BROTHERS_YAML_PATH: &str = "data/armies/battle-brothers.yaml";
 
 /// Load the Battle Brothers army from the YAML file.
 ///
