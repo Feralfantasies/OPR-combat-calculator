@@ -12,12 +12,11 @@ v3.5.3:
       range: 12"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Axe-Halberd
-      range: null
       attacks: A6
       ap: AP(4)
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Machine-Fog
@@ -81,14 +80,12 @@ v3.5.3:
     - name: Leader F-Blaster
       range: 9"
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     - name: Leader Taser Sword
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Surge
+      count: 1
     special_rules:
     - Hero
     - Machine-Fog
@@ -140,14 +137,12 @@ v3.5.3:
     - name: Leader R-Pistol
       range: 9"
       attacks: A2
-      ap: null
       special_rules:
       - Shred
+      count: 1
     - name: Tech-Sword
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Machine-Fog
@@ -242,14 +237,12 @@ v3.5.3:
     - name: R-Fusils
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Shred
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Machine-Fog
     - Strider
@@ -319,11 +312,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Shock Staffs
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Furious
     - Machine-Fog
@@ -348,11 +340,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Dual S-Blades
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Fast
     - Furious
@@ -379,14 +371,12 @@ v3.5.3:
     - name: F-Blasters
       range: 9"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     - name: Taser Swords
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Surge
+      count: 5
     special_rules:
     - Grounded Stealth
     - Machine-Fog
@@ -408,13 +398,10 @@ v3.5.3:
     - name: F-Carbines
       range: 18"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Flying
@@ -445,14 +432,12 @@ v3.5.3:
     - name: Twin P-Pistols
       range: 9"
       attacks: A4
-      ap: null
       special_rules:
       - Lacerate
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Machine-Fog
@@ -504,11 +489,10 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 3
     - name: Strikes
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Machine-Fog
     - Relentless
@@ -545,11 +529,10 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 3
     - name: Cyborg Claws
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Machine-Fog
     cost: 230
@@ -579,11 +562,10 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 3
     - name: Cyborg Claws
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Machine-Fog
     cost: 270
@@ -607,9 +589,9 @@ v3.5.3:
     - name: Twin P-Machinegun
       range: 30"
       attacks: A4
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     special_rules:
     - Fast
     - Impact(3)
@@ -630,17 +612,16 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Taser Lance
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Surge
       - Thrust
+      count: 1
     special_rules:
     - Fast
     - Fear(1)
@@ -676,16 +657,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Dual Energy Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Fearless
@@ -722,11 +702,11 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fear(1)
@@ -753,16 +733,16 @@ v3.5.3:
     - name: Energy Cannon
       range: 30"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Triple P-Machinegun
       range: 30"
       attacks: A6
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     special_rules:
     - Fast
     - Impact(6)
@@ -797,22 +777,21 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Twin P-Machinegun
       range: 30"
       attacks: A4
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     - name: Crushing Legs
-      range: null
       attacks: A2
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Machine-Fog
     - Strider
@@ -848,16 +827,16 @@ v3.5.3:
     - name: Twin P-Machinegun
       range: 30"
       attacks: A4
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     - name: Bomb Rack
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Blast(3)
       - Strafing
+      count: 1
     special_rules:
     - Aircraft
     - Machine-Fog
@@ -877,21 +856,22 @@ v3.5.3:
     - name: P-Machinegun
       range: 30"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     - name: Rear Laser Cannon
       range: 24"
       attacks: A2
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin P-Blaster
       range: 18"
       attacks: A4
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     special_rules:
     - Aircraft
     - Machine-Fog

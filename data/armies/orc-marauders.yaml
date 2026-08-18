@@ -9,11 +9,10 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Clubs
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 2
     special_rules:
     - Bad Shot
     - Ferocious
@@ -88,13 +87,10 @@ v3.5.3:
     - name: Leader Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Bad Shot
     - Ferocious
@@ -190,11 +186,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Great Saw
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Ferocious
     - Hero
@@ -253,13 +249,10 @@ v3.5.3:
     - name: Leader Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Bad Shot
     - Ferocious
@@ -371,13 +364,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Bad Shot
     - Ferocious
@@ -440,10 +430,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Berserker Claws
-      range: null
       attacks: A1
       ap: AP(4)
-      special_rules: []
+      count: 5
     special_rules:
     - Ferocious
     - Piercing Assault
@@ -478,13 +467,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Bad Shot
     - Ferocious
@@ -542,13 +528,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Bad Shot
     - Ferocious
@@ -613,13 +596,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Bad Shot
@@ -669,15 +649,13 @@ v3.5.3:
     - name: Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Bad Shot
     - Ferocious
@@ -718,11 +696,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Bad Shot
     - Ferocious
@@ -760,8 +737,7 @@ v3.5.3:
     - name: Carbines
       range: 18"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     - name: Heavy Flamer-Mods
       range: 12"
       attacks: A1
@@ -770,12 +746,12 @@ v3.5.3:
       - Blast(3)
       - Limited
       - Reliable
+      count: 3
     - name: Heavy Clubs
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     special_rules:
     - Bad Shot
     - Ferocious
@@ -820,15 +796,13 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Beast Jaws
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Berserker Claws
-      range: null
       attacks: A1
       ap: AP(4)
-      special_rules: []
+      count: 3
     special_rules:
     - Bounding
     - Ferocious
@@ -854,17 +828,14 @@ v3.5.3:
       range: 18"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Bad Shot
     - Fast
@@ -895,17 +866,14 @@ v3.5.3:
       range: 18"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Bad Shot
     - Fast

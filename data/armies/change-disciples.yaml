@@ -12,12 +12,10 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Changebound
@@ -92,15 +90,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Hero
@@ -206,15 +202,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Hero
@@ -319,13 +313,10 @@ v3.5.3:
     - name: Champion Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Hero
@@ -384,14 +375,12 @@ v3.5.3:
     - name: Pistol
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     - name: Hexed Sword
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Shred
+      count: 1
     special_rules:
     - Changebound
     - Hero
@@ -430,13 +419,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Changebound
     cost: 145
@@ -484,10 +470,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Dual CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Changebound
     cost: 150
@@ -515,12 +499,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Changebound
     cost: 155
@@ -602,12 +584,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Changebound
     - Versatile Attack
@@ -710,11 +690,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Changebound
     - Relentless
@@ -758,11 +737,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Energy Claws
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Ambush
     - Changebound
@@ -840,10 +818,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Changebound
     - Unpredictable Fighter
@@ -856,10 +832,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Changebound
     - Fast
@@ -878,10 +853,9 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Changebound
     - Fast
@@ -897,13 +871,10 @@ v3.5.3:
     - name: Burst Pistols
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Changebound
     - Fast
@@ -930,10 +901,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Dual Mutated Claws
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Changebound
@@ -960,7 +930,7 @@ v3.5.3:
       range: 24"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Fast
@@ -1010,6 +980,7 @@ v3.5.3:
       - Deadly(3)
       - Limited
       - Unstoppable
+      count: 1
     - name: Flamer Cannon
       range: 18"
       attacks: A1
@@ -1017,17 +988,18 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Fusion Rifle
       range: 12"
       attacks: A1
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Fear(1)
@@ -1053,7 +1025,7 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Demolition Cannon
       range: 24"
       attacks: A1
@@ -1061,6 +1033,7 @@ v3.5.3:
       special_rules:
       - Blast(6)
       - Indirect
+      count: 1
     special_rules:
     - Changebound
     - Fast
@@ -1115,16 +1088,14 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Brute Hammers
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Fear(2)
@@ -1178,21 +1149,18 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Fiend Claws
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Steel Tails
-      range: null
       attacks: A8
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Fear(2)
@@ -1221,19 +1189,17 @@ v3.5.3:
     - name: Vortex of Mutation
       range: 18"
       attacks: A3
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Barbed Tentacles
-      range: null
       attacks: A8
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Fear(2)
@@ -1253,11 +1219,12 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin Heavy Machinegun
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Fast
@@ -1305,21 +1272,18 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Blast(6)
+      count: 1
     - name: Despoiler Claws
-      range: null
       attacks: A4
       ap: AP(3)
-      special_rules: []
+      count: 1
     - name: Hell Flails
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 2
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Changebound
     - Fear(3)
@@ -1372,6 +1336,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Aircraft
     - Changebound

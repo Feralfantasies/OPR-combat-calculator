@@ -47,13 +47,20 @@ pub struct Weapon {
     /// Weapon name
     pub name: String,
     /// Range (e.g., "18\"") or empty for melee
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub range: Option<String>,
     /// Attacks (e.g., "A4")
     pub attacks: String,
     /// Armor piercing value (e.g., "AP(1)") or empty
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub ap: Option<String>,
     /// Special rules for this weapon
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub special_rules: Vec<String>,
+    /// Explicit wielder count from an `Nx Weapon` source row. Absent when
+    /// the row carries no count marker (the loader then uses the unit size).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub count: Option<u8>,
 }
 
 /// Represents an upgrade option for a unit
@@ -457,6 +464,13 @@ fn parse_fixed_weapon_row(line: &str) -> Option<Weapon> {
     if name.is_empty() || name == "Weapon" {
         return None;
     }
+    // Recover the count marker (e.g. `9x Suit-Bursts` -> `9`) for the `count`
+    // field; absent when the row has no `Nx` prefix.
+    let parsed_count = name_cell
+        .split_once(' ')
+        .and_then(|(head, _tail)| is_count_token(head).then(|| head.strip_suffix('x')))
+        .flatten()
+        .and_then(|digits| digits.parse().ok());
 
     // Cells after the name: RNG, ATK, AP, SPE. Reuse the stats parser on a
     // synthesized `(rng, atk, ap, spe)` string when possible.
@@ -503,6 +517,7 @@ fn parse_fixed_weapon_row(line: &str) -> Option<Weapon> {
         attacks: format!("A{attacks}"),
         ap,
         special_rules,
+        count: parsed_count,
     })
 }
 
@@ -742,9 +757,25 @@ fn is_count_token(token: &str) -> bool {
 
 /// Split an equipment cell into `(count, fragment)` entries. A count token
 /// (`2x`) starts a new entry; all other tokens append to the current entry,
-/// so multi-word weapon names are preserved verbatim.
+/// so multi-word weapon names are preserved verbatim. An un-counted token
+/// that follows a *completed stats group* (`Name (A2)`) starts a new
+/// un-counted entry instead, so `3x CCWs (A2) Shield (Shielded)` yields two
+/// weapons rather than one merged fragment.
 fn split_equipment(text: &str) -> Vec<(Option<u32>, String)> {
     let mut entries: Vec<(Option<u32>, Vec<&str>)> = Vec::new();
+
+    // Whether the current entry's parens are balanced with at least one
+    // group open — i.e. a completed stats group `Name (stats ...)`.
+    // An un-counted token arriving after that starts a new entry.
+    let completed_stats_group = |fragments: &[&str]| {
+        let mut opens = 0i32;
+        let mut closes = 0i32;
+        for fragment in fragments {
+            opens = opens.saturating_add(i32::from(fragment.contains('(')));
+            closes = closes.saturating_add(i32::from(fragment.contains(')')));
+        }
+        opens > 0 && closes >= opens
+    };
 
     for token in text.split_whitespace() {
         if is_count_token(token) {
@@ -752,11 +783,18 @@ fn split_equipment(text: &str) -> Vec<(Option<u32>, String)> {
                 .strip_suffix('x')
                 .and_then(|digits| digits.parse().ok());
             entries.push((count, Vec::new()));
-        } else if entries.is_empty() {
+            continue;
+        }
+        if entries.is_empty() {
             // First token without a count prefix: a single (un-counted) weapon.
             entries.push((None, vec![token]));
         } else if let Some(last) = entries.last_mut() {
-            last.1.push(token);
+            let new_entry = !token.starts_with('(') && completed_stats_group(&last.1);
+            if new_entry {
+                entries.push((None, vec![token]));
+            } else {
+                last.1.push(token);
+            }
         }
     }
 
@@ -830,12 +868,15 @@ fn parse_weapon(count: Option<u32>, text: &str) -> Option<Weapon> {
         (None, fallback, None, Vec::new())
     };
 
+    // An explicit `Nx` prefix becomes the stored wielder count.
+    let explicit_count = count.and_then(|value| u8::try_from(value).ok());
     Some(Weapon {
         name: name.to_string(),
         range,
         attacks: format!("A{attacks}"),
         ap,
         special_rules,
+        count: explicit_count,
     })
 }
 
@@ -894,6 +935,30 @@ pub fn normalize_wolf_brothers_transports(army: &mut Army) {
             .any(|r| r.starts_with("Transport(") || r == "Open Sides");
         if is_transport && !unit.special_rules.iter().any(|r| r == "Wolfborn") {
             unit.special_rules.push("Wolfborn".to_string());
+        }
+    }
+}
+
+/// Normalize upgrade category labels for single-model units.
+///
+/// The source spells out the (redundant) "one model" wording on some
+/// single-model vehicles, e.g. `Upgrade one model with Targeting Array` for
+/// a size-1 Knight APC, while every other size-1 vehicle uses `Upgrade with`.
+/// Rewrite the redundant forms to their size-independent equivalents so the
+/// generated catalogs are consistent (and so `determine_selection_mode`
+/// classifies the categories correctly).
+pub fn normalize_single_model_labels(army: &mut Army) {
+    for unit in &mut army.units {
+        if unit.size != 1 {
+            continue;
+        }
+        for category in &mut unit.upgrade_categories {
+            category.category = match category.category.as_str() {
+                "Upgrade one model with" => "Upgrade with".to_string(),
+                "Upgrade one model with one" => "Upgrade with one".to_string(),
+                "Upgrade any model with" => "Upgrade with any".to_string(),
+                other => other.to_string(),
+            };
         }
     }
 }
@@ -1058,6 +1123,45 @@ mod tests {
         assert_eq!(weapons[0].attacks, "A2");
         let weapons = parse_equipment("3x CCWs (A2)");
         assert_eq!(weapons[0].name, "CCWs");
+    }
+
+    #[test]
+    fn split_equipment_splits_after_completed_stats_group() {
+        // A count-prefixed weapon followed by an un-counted weapon with its
+        // own stats group must yield two entries (was one merged fragment:
+        // `CCWs` with the malformed rule `A2) Shield (Shielded)`).
+        let entries = split_equipment("3x CCWs (A2) Shield (Shielded)");
+        assert_eq!(
+            entries,
+            vec![
+                (Some(3), "CCWs (A2)".to_string()),
+                (None, "Shield (Shielded)".to_string())
+            ]
+        );
+
+        // Multi-word names still stay inside their own entry.
+        let entries = split_equipment(
+            "3x Rapid Flux Carbines (18\", A4, Surge) Heavy Burst Carbine (18\", A2)",
+        );
+        assert_eq!(
+            entries,
+            vec![
+                (Some(3), "Rapid Flux Carbines (18\", A4, Surge)".to_string()),
+                (None, "Heavy Burst Carbine (18\", A2)".to_string())
+            ]
+        );
+
+        // No split when the prior entry has no stats group yet.
+        let entries = split_equipment("3x CCWs");
+        assert_eq!(entries, vec![(Some(3), "CCWs".to_string())]);
+
+        // End-to-end through the weapon parser: two weapons, no leaked stats.
+        let weapons = parse_equipment("3x CCWs (A2) Shield (Shielded)");
+        assert_eq!(weapons.len(), 2);
+        assert_eq!(weapons[0].name, "CCWs");
+        assert_eq!(weapons[0].attacks, "A2");
+        assert_eq!(weapons[1].name, "Shield");
+        assert_eq!(weapons[1].special_rules, vec!["Shielded"]);
     }
 
     #[test]

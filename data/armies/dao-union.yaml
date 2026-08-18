@@ -11,21 +11,20 @@ v3.5.3:
     - name: Suit-Bursts
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Rending
+      count: 2
     - name: Suit-Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 2
     - name: Bash
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Flying
     - Hero
@@ -93,11 +92,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Holy Baton
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Good Shot
     - Hero
@@ -177,12 +175,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Good Shot
     - Targeting Visor
@@ -241,12 +237,10 @@ v3.5.3:
       range: 30"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Good Shot
     - Targeting Visor
@@ -316,12 +310,10 @@ v3.5.3:
       range: 18"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Good Shot
     - Scout
@@ -372,14 +364,12 @@ v3.5.3:
     - name: Rapid Burst Carbines
       range: 18"
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Stealth
@@ -413,14 +403,12 @@ v3.5.3:
     - name: Suit-Bursts
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Rending
+      count: 9
     - name: Bashes
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Flying
     - Targeting Visor
@@ -490,14 +478,12 @@ v3.5.3:
     - name: Twin Pulse-Guns
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 5
     - name: Tasers
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Good Shot
     - Strider
@@ -527,12 +513,10 @@ v3.5.3:
       range: 30"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Tasers
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Good Shot
     - Strider
@@ -556,11 +540,12 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Rending
+      count: 1
     - name: Twin Heavy Pulse-Gun
       range: 18"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Impact(3)
@@ -608,14 +593,14 @@ v3.5.3:
     - name: Burst Carbine
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Twin Heavy Pulse-Gun
       range: 18"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Impact(3)
@@ -661,11 +646,12 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Twin Heavy Pulse-Gun
       range: 18"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Impact(6)
@@ -759,15 +745,14 @@ v3.5.3:
     - name: Quad Frag Pod
       range: 24"
       attacks: A4
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Targeting Visor
@@ -820,17 +805,17 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(6)
+      count: 1
     - name: Twin Burst Carbine
       range: 18"
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Fear(2)
@@ -872,18 +857,17 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(4)
-      special_rules: []
+      count: 1
     - name: Heavy Plasma Swords
-      range: null
       attacks: A8
       ap: AP(1)
       special_rules:
       - Rending
+      count: 2
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Targeting Visor
@@ -923,18 +907,18 @@ v3.5.3:
       range: 24"
       attacks: A8
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Pulse Blaster
       range: 24"
       attacks: A3
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(4)
     - Targeting Visor
@@ -981,12 +965,13 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Twin Burst Carbine
       range: 18"
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 1
     special_rules:
     - Aircraft
     - Targeting Visor
@@ -1017,20 +1002,21 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Missile Pod
       range: 30"
       attacks: A2
-      ap: null
       special_rules:
       - Disintegrate
       - Unstoppable
+      count: 1
     - name: Pulse Bombs
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Blast(3)
       - Strafing
+      count: 1
     special_rules:
     - Aircraft
     - Targeting Visor

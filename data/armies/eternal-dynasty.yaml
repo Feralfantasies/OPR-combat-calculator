@@ -9,16 +9,14 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Great Mace
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Heavy Bash
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Clan Warrior
     - Hero
@@ -98,12 +96,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Clan Warrior
     - Hero
@@ -190,13 +186,10 @@ v3.5.3:
     - name: Long Rifles
       range: 30"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Clan Warrior
     cost: 90
@@ -262,13 +255,10 @@ v3.5.3:
     - name: Long Rifles
       range: 30"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Clan Warrior
     - Scout
@@ -312,15 +302,15 @@ v3.5.3:
     - name: Auto-Guns
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Rending
+      count: 5
     - name: Swords
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Ambush
     - Clan Warrior
@@ -351,13 +341,11 @@ v3.5.3:
     - name: Spear-Shots
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: Spears
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Clan Warrior
     - Regeneration
@@ -392,14 +380,12 @@ v3.5.3:
     - name: Laser Guns
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Tear
+      count: 5
     - name: Tasers
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Clan Warrior
     - Strider
@@ -417,15 +403,12 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Bashes
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: Heavy Fists
-      range: null
       attacks: A1
       ap: AP(4)
-      special_rules: []
+      count: 6
     special_rules:
     - Clan Warrior
     cost: 180
@@ -491,11 +474,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Swarm Attacks
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Clan Warrior
     - Flying
@@ -516,11 +498,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Toxin Claws
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Bane
+      count: 5
     special_rules:
     - Clan Warrior
     - Strider
@@ -541,10 +522,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Fist
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Clan Warrior
     - Furious
@@ -571,6 +551,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Clan Warrior
     - Fast
@@ -596,15 +577,15 @@ v3.5.3:
     - name: Hull Auto-Gun
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Twin Burst Laser Gun
       range: 18"
       attacks: A4
-      ap: null
       special_rules:
       - Tear
+      count: 1
     special_rules:
     - Clan Warrior
     - Fast
@@ -639,10 +620,10 @@ v3.5.3:
     - name: Artillery Gun
       range: 24"
       attacks: A4
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Heavy Flamer
       range: 12"
       attacks: A1
@@ -650,6 +631,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Clan Warrior
     - Fast
@@ -685,20 +667,19 @@ v3.5.3:
     - name: Heavy Burst Auto-Gun
       range: 18"
       attacks: A8
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Rope-Sickle
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Clan Warrior
@@ -737,11 +718,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Clan Warrior
     - Fear(2)
@@ -776,16 +757,15 @@ v3.5.3:
     tough: 18
     weapons:
     - name: Heavy Titan Sword
-      range: null
       attacks: A12
       ap: AP(2)
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Clan Warrior
     - Fear(3)
@@ -815,15 +795,13 @@ v3.5.3:
     tough: 18
     weapons:
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Titan Fists
-      range: null
       attacks: A12
       ap: AP(4)
-      special_rules: []
+      count: 1
     special_rules:
     - Bounding
     - Clan Warrior
@@ -846,17 +824,16 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Dragon Strike
-      range: null
       attacks: A12
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Caster(4)
     - Clan Warrior
@@ -879,6 +856,7 @@ v3.5.3:
       special_rules:
       - Deadly(6)
       - Unstoppable
+      count: 1
     - name: Titan Blast Cannon
       range: 30"
       attacks: A2
@@ -886,18 +864,18 @@ v3.5.3:
       special_rules:
       - Blast(6)
       - Indirect
+      count: 1
     - name: Rocket Pod
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Clan Warrior
     - Fear(3)

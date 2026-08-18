@@ -9,10 +9,8 @@ v3.5.3:
     tough: 6
     weapons:
     - name: CCW
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Hero
@@ -112,10 +110,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Hero
@@ -224,10 +220,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Hero
@@ -328,15 +322,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Furious
@@ -421,15 +413,13 @@ v3.5.3:
     - name: Marksman Carbines
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Rending
       - Takedown
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Knightborn
@@ -452,12 +442,10 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Furious
@@ -496,14 +484,12 @@ v3.5.3:
     - name: Precision Rifles
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Precise
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Knightborn
@@ -578,12 +564,11 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: Heavy CCWs
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Knightborn
@@ -636,14 +621,12 @@ v3.5.3:
     - name: Anti-Gravity Rifles
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Shatter
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -734,7 +717,7 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -806,13 +789,10 @@ v3.5.3:
     - name: HE-Launchers
       range: 30"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Knightborn
@@ -847,12 +827,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(4)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Knightborn
@@ -876,15 +854,13 @@ v3.5.3:
     - name: Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -904,11 +880,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -932,12 +907,10 @@ v3.5.3:
       range: 18"
       attacks: A3
       ap: AP(2)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Fearless
@@ -955,14 +928,12 @@ v3.5.3:
     - name: Grave Precision Rifles
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Precise
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -988,10 +959,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCWs
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Fearless
@@ -1052,13 +1021,10 @@ v3.5.3:
     - name: Twin Assault Blasters
       range: 12"
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Fearless
@@ -1081,13 +1047,13 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Relic Swords
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -1130,11 +1096,10 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -1160,15 +1125,14 @@ v3.5.3:
     - name: Twin Fist-Flamers
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: Dual Energy Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -1194,17 +1158,15 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Heavy Pistols
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Fearless
@@ -1221,12 +1183,11 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Gatling Gun
       range: 18"
       attacks: A6
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -1255,9 +1216,9 @@ v3.5.3:
     - name: Twin Frag-GL
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -1295,9 +1256,9 @@ v3.5.3:
     - name: Death Launcher
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(6)
+      count: 1
     special_rules:
     - Ambush
     - Fearless
@@ -1325,14 +1286,13 @@ v3.5.3:
     - name: Twin Frag-GL
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Twin Light Gatling Gun
       range: 18"
       attacks: A8
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -1377,14 +1337,14 @@ v3.5.3:
     - name: Gatling Gun
       range: 18"
       attacks: A6
-      ap: null
-      special_rules: []
+      count: 1
     - name: Strike Missiles
       range: 18"
       attacks: A1
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Ambush
     - Fast
@@ -1436,7 +1396,7 @@ v3.5.3:
       range: 18"
       attacks: A2
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Incendiary Cannon
       range: 12"
       attacks: A2
@@ -1444,11 +1404,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -1483,20 +1443,19 @@ v3.5.3:
     - name: Chest-GL
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A5
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Walker Claws
-      range: null
       attacks: A6
       ap: AP(1)
       special_rules:
       - Rending
+      count: 2
     special_rules:
     - Fear(3)
     - Fearless
@@ -1568,11 +1527,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Turret Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     - Fearless
@@ -1605,24 +1563,24 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Heavy Anti-Gravity Cannon
       range: 24"
       attacks: A6
-      ap: null
       special_rules:
       - Shatter
+      count: 1
     - name: Heavy Gatling Gun
       range: 18"
       attacks: A8
-      ap: null
-      special_rules: []
+      count: 1
     - name: Proximity Defense Array
       range: 18"
       attacks: A3
       ap: AP(1)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -1660,18 +1618,18 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Heavy Gatling Gun
       range: 18"
       attacks: A8
-      ap: null
-      special_rules: []
+      count: 1
     - name: Proximity Defense Array
       range: 18"
       attacks: A3
       ap: AP(1)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Fast
     - Fearless

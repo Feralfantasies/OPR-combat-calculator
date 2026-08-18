@@ -12,12 +12,10 @@ v3.5.3:
       range: 12"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Scrapper
@@ -86,13 +84,10 @@ v3.5.3:
     - name: Elite Scrap Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Scrapper
@@ -181,13 +176,10 @@ v3.5.3:
     - name: Scrap Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Scrapper
     - Strider
@@ -236,10 +228,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Furious
     - Melee Evasion
@@ -273,12 +263,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Scrapper
     - Strider
@@ -320,13 +308,10 @@ v3.5.3:
     - name: Scrap Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Crossing Attack(1)
@@ -380,16 +365,14 @@ v3.5.3:
     - name: Hunting Rifles
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Reliable
       - Shatter
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Scrapper
     - Strider
@@ -415,10 +398,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fast
     - Scrapper
@@ -450,10 +431,9 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Explosive Spears
-      range: null
       attacks: A2
       ap: AP(2)
-      special_rules: []
+      count: 3
     special_rules:
     - Bounding
     - Impact(2)
@@ -482,12 +462,10 @@ v3.5.3:
       range: 30"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Bounding
     - Fortified
@@ -515,15 +493,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Massive Jaws
-      range: null
       attacks: A6
       ap: AP(4)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Bounding
     - Fear(2)
@@ -563,17 +539,17 @@ v3.5.3:
       special_rules:
       - Blast(6)
       - Indirect
+      count: 1
     - name: Heavy Tusks
-      range: null
       attacks: A6
       ap: AP(1)
       special_rules:
       - Shatter
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -607,22 +583,22 @@ v3.5.3:
       special_rules:
       - Deadly(3)
       - Indirect
+      count: 1
     - name: Pipe Rockets
       range: 24"
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Great Tusks
-      range: null
       attacks: A8
       ap: AP(2)
       special_rules:
       - Shatter
+      count: 1
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(4)
     - Fearless

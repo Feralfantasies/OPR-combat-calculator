@@ -14,11 +14,12 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(6)
+      count: 1
     - name: Pintle-Machinegun
       range: 30"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Heavy Flamer
       range: 12"
       attacks: A2
@@ -26,6 +27,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Hero
@@ -112,12 +114,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Hold the Line
@@ -183,13 +183,10 @@ v3.5.3:
     - name: Master Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Hold the Line
@@ -281,13 +278,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Hold the Line
     cost: 75
@@ -301,13 +295,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Good Shot
@@ -328,13 +319,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Hold the Line
     cost: 115
@@ -420,13 +408,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Hold the Line
     cost: 80
@@ -531,12 +516,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Hold the Line
     - Strider
@@ -613,14 +596,12 @@ v3.5.3:
     - name: Grenade Launchers
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Hold the Line
     - Relentless
@@ -656,11 +637,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Hold the Line
     - Scout
@@ -676,15 +656,13 @@ v3.5.3:
     - name: Mortars
       range: 30"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 3
     - name: Crews
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Hold the Line
     cost: 120
@@ -713,12 +691,11 @@ v3.5.3:
       range: 12"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Heavy CCWs
-      range: null
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Furious
@@ -747,13 +724,11 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: Heavy Lances
-      range: null
       attacks: A1
       ap: AP(2)
-      special_rules: []
+      count: 5
     special_rules:
     - Fast
     - Hold the Line
@@ -802,8 +777,7 @@ v3.5.3:
     - name: Light Gatling Gun
       range: 18"
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Hold the Line
@@ -852,6 +826,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Turret Heavy Flamer
       range: 12"
       attacks: A1
@@ -859,6 +834,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Hold the Line
@@ -913,11 +889,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Hold the Line
@@ -976,8 +952,7 @@ v3.5.3:
     - name: Gatling Gun
       range: 18"
       attacks: A6
-      ap: null
-      special_rules: []
+      count: 1
     - name: Heavy Flamer
       range: 12"
       attacks: A1
@@ -985,6 +960,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Hold the Line
@@ -1044,6 +1020,7 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(6)
+      count: 1
     - name: Twin Heavy Flamer
       range: 12"
       attacks: A2
@@ -1051,6 +1028,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Hold the Line
@@ -1127,17 +1105,18 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Light Gatling Gun
       range: 18"
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     - name: Fusion Array
       range: 12"
       attacks: A2
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Fast
     - Hold the Line
@@ -1173,13 +1152,11 @@ v3.5.3:
     - name: Gatling Gun
       range: 18"
       attacks: A6
-      ap: null
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fortified
@@ -1230,11 +1207,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Hold the Line
@@ -1284,6 +1261,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Heavy Flamer
       range: 12"
       attacks: A1
@@ -1291,6 +1269,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Hold the Line
     - Impact(3)
@@ -1336,16 +1315,14 @@ v3.5.3:
     - name: Light Shard Mortar
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
       - Rending
+      count: 1
     - name: Artillery Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     - Hold the Line
@@ -1374,9 +1351,9 @@ v3.5.3:
     - name: Cluster Missiles Array
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Walker Heavy Flamer
       range: 12"
       attacks: A4
@@ -1384,11 +1361,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1436,11 +1413,12 @@ v3.5.3:
       special_rules:
       - Blast(6)
       - Indirect
+      count: 1
     - name: Twin Heavy Machinegun
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -1507,12 +1485,13 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin Rocket Pod
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Aircraft
     - Transport(11)
@@ -1542,15 +1521,16 @@ v3.5.3:
     - name: Fury Missiles
       range: 36"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Twin Laser Cannon
       range: 36"
       attacks: A2
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Aircraft
     - Transport(6)

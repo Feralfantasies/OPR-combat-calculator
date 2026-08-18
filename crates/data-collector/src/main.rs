@@ -14,7 +14,10 @@ use clap::{Parser, Subcommand};
 use error::Result;
 use fetch::Fetcher;
 use http_client::HttpClient;
-use parser::{Army, normalize_wolf_brothers_transports, parse_army_list, parse_preview_page};
+use parser::{
+    Army, normalize_single_model_labels, normalize_wolf_brothers_transports, parse_army_list,
+    parse_preview_page,
+};
 use std::path::{Path, PathBuf};
 
 /// Command-line interface for the OPR data collector
@@ -214,6 +217,7 @@ async fn run_parse_phase(cli: &Cli) -> Result<()> {
         match parse_preview_page(&cache, &preview_url).await {
             Ok(mut parsed_army) => {
                 normalize_wolf_brothers_transports(&mut parsed_army);
+                normalize_single_model_labels(&mut parsed_army);
                 if cli.verbose > 0 {
                     println!(
                         "✓ Parsed {} units from {} (version: {:?})",

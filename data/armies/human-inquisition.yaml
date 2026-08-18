@@ -12,12 +12,10 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Inquisitorial Agent
@@ -114,13 +112,10 @@ v3.5.3:
     - name: Pistol
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Inquisitorial Agent
@@ -191,12 +186,13 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Bane
+      count: 1
     - name: Toxic Blade
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Bane
+      count: 1
     special_rules:
     - Evasive
     - Hero
@@ -219,11 +215,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 1
     - name: CCW
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Casting Debuff
     - Evasive
@@ -243,12 +238,11 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(4)
-      special_rules: []
+      count: 1
     - name: Executioner Claw
-      range: null
       attacks: A3
       ap: AP(4)
-      special_rules: []
+      count: 1
     special_rules:
     - Brutal Fighter
     - Evasive
@@ -272,11 +266,10 @@ v3.5.3:
       - Deadly(3)
       - Reliable
       - Takedown
+      count: 1
     - name: CCW
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Evasive
     - Hero
@@ -295,13 +288,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Inquisitorial Agent
     cost: 145
@@ -367,10 +357,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fortified
     - Inquisitorial Agent
@@ -431,13 +419,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Furious
     - Inquisitorial Agent
@@ -485,13 +470,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Inquisitorial Agent
@@ -541,13 +523,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Bounding
     - Inquisitorial Agent
@@ -590,11 +569,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Needle Swords
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Bane
+      count: 3
     special_rules:
     - Fortified
     - Inquisitorial Agent
@@ -625,13 +603,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: Claws
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Inquisitorial Agent
     - Unpredictable Shooter
@@ -665,13 +640,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Caster Group
     - Inquisitorial Agent
@@ -705,11 +677,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Shock-Whips
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Surge
+      count: 3
     special_rules:
     - Inquisitorial Agent
     - Scout
@@ -740,15 +711,13 @@ v3.5.3:
     - name: Daemon Ripples
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Indirect
       - Bane
+      count: 3
     - name: Claws
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Inquisitorial Agent
     - Quick Readjustment
@@ -777,11 +746,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Dual Shock-Whips
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Surge
+      count: 3
     special_rules:
     - Evasive
     - Inquisitorial Agent
@@ -829,11 +797,11 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 3
     - name: Cyborg Arms
-      range: null
       attacks: A1
       ap: AP(2)
-      special_rules: []
+      count: 3
     special_rules:
     - Inquisitorial Agent
     - Relentless
@@ -871,6 +839,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 2
     special_rules:
     - Fast
     - Impact(3)
@@ -913,9 +882,9 @@ v3.5.3:
     - name: Acid Cannon
       range: 18"
       attacks: A6
-      ap: null
       special_rules:
       - Bane
+      count: 1
     - name: Heavy Flamer
       range: 12"
       attacks: A1
@@ -923,6 +892,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Impact(3)

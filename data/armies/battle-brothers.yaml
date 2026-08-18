@@ -9,10 +9,8 @@ v3.5.3:
     tough: 6
     weapons:
     - name: CCW
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Battleborn
@@ -70,10 +68,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Battleborn
     - Fearless
@@ -187,15 +183,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Battleborn
     - Fearless
@@ -301,15 +295,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Battleborn
     - Fearless
@@ -416,12 +408,10 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Battleborn
     - Fearless
@@ -494,12 +484,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Battleborn
     - Fearless
@@ -579,12 +567,11 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: Heavy CCWs
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Battleborn
     - Fearless
@@ -667,7 +654,7 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Battleborn
     - Fearless
@@ -752,12 +739,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Battleborn
     - Fearless
@@ -855,11 +840,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Battleborn
     - Fearless
@@ -893,10 +877,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCWs
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Battleborn
@@ -957,19 +939,17 @@ v3.5.3:
     - name: Grenade Launchers
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     - name: Heavy Pistols
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Battleborn
     - Fast
@@ -1019,17 +999,15 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Heavy Pistols
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Battleborn
     - Fast
@@ -1083,7 +1061,7 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Heavy Flamer
       range: 12"
       attacks: A1
@@ -1091,16 +1069,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Heavy Pistol
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Battleborn
     - Fast
@@ -1135,7 +1112,7 @@ v3.5.3:
       range: 24"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Battleborn
     - Fast
@@ -1173,6 +1150,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Battleborn
     - Fast
@@ -1209,9 +1187,9 @@ v3.5.3:
     - name: Death Launcher
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(6)
+      count: 1
     special_rules:
     - Ambush
     - Battleborn
@@ -1243,6 +1221,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 2
     special_rules:
     - Ambush
     - Battleborn
@@ -1285,15 +1264,14 @@ v3.5.3:
     - name: Twin Flamer
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Battleborn
     - Fear(1)
@@ -1340,13 +1318,14 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Storm Cannon
       range: 30"
       attacks: A4
       ap: AP(2)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Battleborn
     - Fast
@@ -1399,15 +1378,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Walker Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 2
     special_rules:
     - Battleborn
     - Fear(2)
@@ -1463,15 +1440,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Walker Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 2
     special_rules:
     - Battleborn
     - Fear(2)
@@ -1531,12 +1506,10 @@ v3.5.3:
       range: 24"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     - Battleborn
@@ -1564,7 +1537,7 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Quad Flamer Cannon
       range: 18"
       attacks: A4
@@ -1572,6 +1545,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Battleborn
     - Fast
@@ -1619,13 +1593,14 @@ v3.5.3:
       range: 24"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Typhoon Missiles
       range: 24"
       attacks: A4
       ap: AP(2)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Aircraft
     - Battleborn
@@ -1663,22 +1638,24 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Light Heavy Rifle Array
       range: 24"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Minigun
       range: 24"
       attacks: A8
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Typhoon Missiles
       range: 24"
       attacks: A2
       ap: AP(2)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Aircraft
     - Battleborn

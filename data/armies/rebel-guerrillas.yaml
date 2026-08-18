@@ -9,10 +9,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Massive Fist
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Furious
     - Guerrilla
@@ -33,7 +32,7 @@ v3.5.3:
       - name: Captain
         rules: Rending in Melee Aura
         cost_modifier: +40pts
-    - category: Upgrade any model with
+    - category: Upgrade with any
       upgrades:
       - name: Claw Gauntlets
         rules: Bane in Melee
@@ -47,13 +46,10 @@ v3.5.3:
     - name: Leader Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Guerrilla
     - Hero
@@ -139,13 +135,10 @@ v3.5.3:
     - name: Carbines
       range: 18"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Guerrilla
     cost: 150
@@ -218,13 +211,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Guerrilla
     cost: 125
@@ -279,13 +269,10 @@ v3.5.3:
     - name: Carbines
       range: 18"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Guerrilla
     - Scout
@@ -319,13 +306,10 @@ v3.5.3:
     - name: Carbines
       range: 18"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Guerrilla
@@ -402,12 +386,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Counter-Attack
@@ -443,11 +425,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambushing Piercing Shot
     - Guerrilla
@@ -460,10 +441,9 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Heavy Fists
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Furious
     - Guerrilla
@@ -483,15 +463,14 @@ v3.5.3:
     - name: Wrist-Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: Wrist-Blades
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Guerrilla
     - Slow
@@ -511,13 +490,10 @@ v3.5.3:
     - name: Burst Pistols
       range: 12"
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Guerrilla
@@ -572,10 +548,10 @@ v3.5.3:
     - name: Twin Flamer
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Guerrilla
@@ -620,12 +596,11 @@ v3.5.3:
       range: 30"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Gatling Gun
       range: 18"
       attacks: A6
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Guerrilla
@@ -669,11 +644,11 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Guerrilla
@@ -713,12 +688,12 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Minigun
       range: 24"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Aircraft
     - Transport(11)

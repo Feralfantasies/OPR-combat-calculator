@@ -9,11 +9,11 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Great Electro-Hammer
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Fearless
     - Furious
@@ -75,12 +75,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Hero
@@ -173,13 +171,10 @@ v3.5.3:
     - name: Master Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Scurry
@@ -272,11 +267,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Electro-Flails
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Surge
+      count: 10
     special_rules:
     - Furious
     - Scurry
@@ -318,13 +313,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Scurry
     cost: 125
@@ -386,15 +378,13 @@ v3.5.3:
     - name: Electro-Bombs
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Indirect
       - Bane
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Quick Readjustment
     - Scurry
@@ -422,13 +412,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Scout
     - Scurry
@@ -459,12 +446,10 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Scurry
@@ -531,11 +516,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Scout
     - Scurry
@@ -561,11 +545,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Relentless
     - Scurry
@@ -594,13 +577,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fast
     - Ravage(1)
@@ -640,11 +620,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Heavy Electro-Hammers
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 3
     special_rules:
     - Fearless
     - Furious
@@ -669,11 +649,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Electro-Swords
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Furious
     - Scurry
@@ -704,10 +684,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Bashes
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - No Retreat
     - Self-Destruct(2)
@@ -721,10 +699,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Swarm Attacks
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Scurry
     - Strider
@@ -745,10 +721,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Claws
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Fast
     - Scurry
@@ -770,15 +744,13 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Fearless
@@ -814,11 +786,11 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Scurry
@@ -853,7 +825,7 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Impact(3)
@@ -886,10 +858,10 @@ v3.5.3:
     - name: Heavy Plas-Burst Cannon
       range: 30"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Hazardous
+      count: 1
     - name: Twin Heavy Flamer
       range: 12"
       attacks: A2
@@ -897,6 +869,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Impact(6)
@@ -932,16 +905,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Heavy Claws
-      range: null
       attacks: A12
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -976,16 +948,14 @@ v3.5.3:
     - name: Mine-Drone Gun
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(6)
       - Indirect
       - Shred
+      count: 1
     - name: Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     cost: 95
@@ -1026,16 +996,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Titan Heavy Claws
-      range: null
       attacks: A18
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1078,6 +1047,7 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Twin Heavy Flamer
       range: 12"
       attacks: A2
@@ -1085,11 +1055,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(4)
     - Fearless

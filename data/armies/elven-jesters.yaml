@@ -11,20 +11,17 @@ v3.5.3:
     - name: Master Fragment Pistol
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Disintegrate
+      count: 1
     - name: Dagger
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 1
     - name: Deathly Touch
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Evasive
     - Furious
@@ -110,14 +107,12 @@ v3.5.3:
     - name: Master Fragment Pistol
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Disintegrate
+      count: 1
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 2
     special_rules:
     - Evasive
     - Furious
@@ -151,14 +146,12 @@ v3.5.3:
     - name: Fragment Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Disintegrate
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Evasive
     - Furious
@@ -174,14 +167,12 @@ v3.5.3:
     - name: Fragment Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Disintegrate
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Evasive
     - Furious
@@ -226,11 +217,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Energy Glaives
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Thrust
+      count: 5
     special_rules:
     - Ambush
     - Evasive
@@ -253,14 +244,12 @@ v3.5.3:
     - name: Exploding Bolas
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Evasive
     - Flying
@@ -283,20 +272,18 @@ v3.5.3:
     - name: Exploding Bolas
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     - name: Fragment Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Disintegrate
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Evasive
     - Fast
@@ -325,15 +312,15 @@ v3.5.3:
     - name: Twin Fragment Pistol
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Disintegrate
+      count: 1
     - name: Energy Glaive
-      range: null
       attacks: A5
       ap: AP(1)
       special_rules:
       - Thrust
+      count: 1
     special_rules:
     - Evasive
     - Fast

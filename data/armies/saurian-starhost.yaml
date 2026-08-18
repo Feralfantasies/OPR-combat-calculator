@@ -11,13 +11,10 @@ v3.5.3:
     - name: Magic Shock
       range: 18"
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     - name: Heavy Pulse
-      range: null
       attacks: A6
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Caster(3)
     - Fear(1)
@@ -70,16 +67,15 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Maces
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Fearless
@@ -131,13 +127,10 @@ v3.5.3:
     - name: Veteran Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Hero
@@ -201,12 +194,10 @@ v3.5.3:
       range: 12"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Primal
@@ -290,7 +281,7 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(4)
-      special_rules: []
+      count: 5
     special_rules:
     - Primal
     - Shielded
@@ -321,13 +312,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Primal
@@ -367,12 +355,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Evasive
     - Good Shot
@@ -398,10 +384,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Hammers
-      range: null
       attacks: A2
       ap: AP(2)
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Primal
@@ -440,11 +425,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Primal
     - Strider
@@ -457,10 +441,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Shock Lances
-      range: null
       attacks: A1
       ap: AP(4)
-      special_rules: []
+      count: 5
     special_rules:
     - Bounding
     - Impact(1)
@@ -483,13 +466,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fast
     - Fearless
@@ -520,15 +500,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Flying
@@ -557,10 +533,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Flying
@@ -589,16 +563,13 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Bashes
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     - name: Bludgeons
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Thrust
+      count: 6
     special_rules:
     - Fearless
     - Primal
@@ -632,11 +603,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Swarm Attacks
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Bane
+      count: 3
     special_rules:
     - Primal
     - Strider
@@ -649,10 +619,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Claws
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Evasive
@@ -669,15 +637,14 @@ v3.5.3:
     - name: Arch Rockets
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Heavy Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Fortified
@@ -711,11 +678,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Heavy Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Primal
@@ -743,16 +710,14 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Horns
-      range: null
       attacks: A6
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -788,21 +753,19 @@ v3.5.3:
     - name: Spit Venom
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Bane
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Toxic Bite
-      range: null
       attacks: A6
-      ap: null
       special_rules:
       - Bane
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -830,16 +793,15 @@ v3.5.3:
       special_rules:
       - Deadly(6)
       - Disintegrate
+      count: 1
     - name: Mace Tail
-      range: null
       attacks: A4
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -867,16 +829,15 @@ v3.5.3:
     tough: 24
     weapons:
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Vicious Jaws
-      range: null
       attacks: A4
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Fear(4)
     - Fearless

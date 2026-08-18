@@ -9,10 +9,8 @@ v3.5.3:
     tough: 6
     weapons:
     - name: CCW
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Fearless
@@ -90,10 +88,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Hero
@@ -221,15 +217,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Hero
@@ -362,12 +356,10 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Knightborn
@@ -443,11 +435,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -522,11 +513,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Knightborn
@@ -556,12 +546,10 @@ v3.5.3:
       range: 24"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Fearless
@@ -629,7 +617,7 @@ v3.5.3:
       range: 24"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -638,7 +626,7 @@ v3.5.3:
     - Transport(11)
     cost: 225
     upgrade_categories:
-    - category: Upgrade one model with
+    - category: Upgrade with
       upgrades:
       - name: Targeting Array
         rules: Unstoppable Mark
@@ -672,6 +660,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -680,7 +669,7 @@ v3.5.3:
     - Transport(6)
     cost: 220
     upgrade_categories:
-    - category: Upgrade one model with
+    - category: Upgrade with
       upgrades:
       - name: Targeting Array
         rules: Unstoppable Mark
@@ -711,15 +700,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Walker Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 2
     special_rules:
     - Fear(2)
     - Fearless
@@ -775,15 +762,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Walker Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 2
     special_rules:
     - Fear(2)
     - Fearless
@@ -843,12 +828,10 @@ v3.5.3:
       range: 24"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     - Fearless
@@ -876,7 +859,7 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Quad Flamer Cannon
       range: 18"
       attacks: A4
@@ -884,6 +867,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -934,16 +918,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 2
     - name: Nemesis Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 2
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Caster(2)
@@ -986,13 +969,14 @@ v3.5.3:
       range: 24"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Typhoon Missiles
       range: 24"
       attacks: A4
       ap: AP(2)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Aircraft
     - Fearless
@@ -1030,22 +1014,24 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Light Heavy Rifle Array
       range: 24"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Minigun
       range: 24"
       attacks: A8
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Typhoon Missiles
       range: 24"
       attacks: A2
       ap: AP(2)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Aircraft
     - Fearless

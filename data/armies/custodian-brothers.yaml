@@ -11,21 +11,19 @@ v3.5.3:
     - name: Flame-Mount
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Custodian Axe
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Fearless
@@ -110,13 +108,12 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Custodian Axe
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Fearless
     - Guardian
@@ -212,13 +209,12 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Custodian Axe
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Fearless
     - Guardian
@@ -310,11 +306,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Energy Sword
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Rending
+      count: 1
     special_rules:
     - Guardian
     - Hero
@@ -369,13 +365,12 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Custodian Axes
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     special_rules:
     - Fearless
     - Guardian
@@ -438,13 +433,12 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Custodian Axes
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     special_rules:
     - Fearless
     - Guardian
@@ -508,12 +502,11 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Heavy CCWs
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Fearless
@@ -568,17 +561,16 @@ v3.5.3:
       range: 18"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Disintegrator-Mods
       range: 18"
       attacks: A2
       ap: AP(3)
-      special_rules: []
+      count: 3
     - name: Heavy CCWs
-      range: null
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Guardian
@@ -607,11 +599,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Energy Swords
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Furious
     - Guardian
@@ -631,13 +623,10 @@ v3.5.3:
     - name: Prosecution Rifles
       range: 24"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Guardian
     - Relentless
@@ -657,15 +646,13 @@ v3.5.3:
     - name: Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Guardian
     - Scout
@@ -686,13 +673,12 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Custodian Axe
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Ambush
     - Fearless
@@ -759,17 +745,16 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Energy Claws
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Fearless
@@ -813,7 +798,7 @@ v3.5.3:
       range: 24"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -848,13 +833,13 @@ v3.5.3:
       range: 24"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Energy Lance
-      range: null
       attacks: A3
       ap: AP(1)
       special_rules:
       - Thrust
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -888,6 +873,7 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -908,11 +894,12 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin Bolt Cannon
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -933,15 +920,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Walker Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 2
     special_rules:
     - Fear(2)
     - Fearless
@@ -976,18 +961,17 @@ v3.5.3:
       range: 12"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Heavy Sword
-      range: null
       attacks: A12
       ap: AP(1)
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -1034,23 +1018,22 @@ v3.5.3:
       range: 24"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Plasmas
       range: 12"
       attacks: A2
       ap: AP(4)
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Walker Fists
-      range: null
       attacks: A4
       ap: AP(4)
-      special_rules: []
+      count: 2
     special_rules:
     - Fear(3)
     - Fearless
@@ -1082,11 +1065,12 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin Heavy Bolt Cannon
       range: 30"
       attacks: A12
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -1112,11 +1096,12 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin Heavy Machinegun
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Fearless

@@ -14,11 +14,11 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Heavy Claw
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Mischievous
@@ -72,11 +72,10 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Crew
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Hero
@@ -128,13 +127,10 @@ v3.5.3:
     - name: Boss Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Mischievous
@@ -239,13 +235,10 @@ v3.5.3:
     - name: Boss Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Mischievous
@@ -341,13 +334,10 @@ v3.5.3:
     - name: Scrap Guns
       range: 18"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Mischievous
     cost: 95
@@ -396,13 +386,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Mischievous
     cost: 110
@@ -463,11 +450,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Rending Claws
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 10
     special_rules:
     - Mischievous
     - Unpredictable Fighter
@@ -492,13 +478,10 @@ v3.5.3:
     - name: Scrap Guns
       range: 18"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Mischievous
     - Scout
@@ -554,13 +537,10 @@ v3.5.3:
     - name: Boss Pistols
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Mischievous
     cost: 110
@@ -635,13 +615,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Agile
     - Mischievous
@@ -704,12 +681,10 @@ v3.5.3:
       range: 30"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Mischievous
     - Relentless
@@ -746,19 +721,15 @@ v3.5.3:
     - name: Scrap Guns
       range: 18"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     - name: Rending Claws
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Bounding
     - Mischievous
@@ -800,11 +771,10 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 3
     - name: Crews
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Mischievous
@@ -846,11 +816,11 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 3
     - name: Mini-Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Mischievous
     cost: 170
@@ -891,11 +861,11 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Bounding
     - Fear(1)
@@ -939,13 +909,14 @@ v3.5.3:
       special_rules:
       - Blast(6)
       - Indirect
+      count: 1
     - name: Sponson-Flamers
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Fearless
@@ -1004,11 +975,12 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Heavy Machinegun
       range: 30"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Lobber Mortar
       range: 24"
       attacks: A1
@@ -1016,12 +988,13 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Great Saw
-      range: null
       attacks: A2
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -1041,11 +1014,10 @@ v3.5.3:
       special_rules:
       - Blast(6)
       - Indirect
+      count: 1
     - name: Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     - Mischievous

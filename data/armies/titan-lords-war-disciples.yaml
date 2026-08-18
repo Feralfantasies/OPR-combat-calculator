@@ -9,16 +9,15 @@ v3.5.2:
     tough: 9
     weapons:
     - name: Heavy Hammer
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Fortified
@@ -82,16 +81,15 @@ v3.5.2:
     tough: 12
     weapons:
     - name: Heavy Hammer
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fortified
@@ -161,11 +159,11 @@ v3.5.2:
       ap: AP(4)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fortified
@@ -242,11 +240,11 @@ v3.5.2:
       ap: AP(4)
       special_rules:
       - Deadly(6)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Relentless
@@ -298,17 +296,17 @@ v3.5.2:
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Heavy Hammer
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fortified
@@ -385,17 +383,17 @@ v3.5.2:
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Titan Hammer
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Fear(4)
     - Fortified
@@ -470,17 +468,18 @@ v3.5.2:
       ap: AP(4)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Hull-Fuser
       range: 12"
       attacks: A1
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(4)
     - Fortified
@@ -571,17 +570,18 @@ v3.5.2:
       ap: AP(4)
       special_rules:
       - Deadly(6)
+      count: 2
     - name: Hull-Fuser
       range: 12"
       attacks: A1
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(4)
     - Relentless
@@ -647,23 +647,25 @@ v3.5.2:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Titan Harpoon Cannons
       range: 18"
       attacks: A1
       ap: AP(4)
       special_rules:
       - Deadly(9)
+      count: 2
     - name: Twin Hull-Fuser
       range: 12"
       attacks: A2
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A10
       ap: AP(3)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(4)
     - Warbound

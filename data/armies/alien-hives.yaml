@@ -11,19 +11,17 @@ v3.5.3:
     - name: Shredder Cannon
       range: 18"
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 2
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -106,10 +104,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 2
     special_rules:
     - Hero
     - Hive Bond
@@ -181,11 +178,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Rending
+      count: 1
     special_rules:
     - Fast
     - Hero
@@ -219,10 +216,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Razor Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Hive Bond
@@ -294,10 +289,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Razor Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Hive Bond
     - Strider
@@ -338,12 +331,10 @@ v3.5.3:
       range: 6"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 10
     - name: Razor Claws
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Hive Bond
     - Strider
@@ -392,11 +383,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Rending Claws
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Rending
+      count: 10
     special_rules:
     - Hive Bond
     - Resistance
@@ -429,12 +419,10 @@ v3.5.3:
       range: 6"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 10
     - name: Razor Claws
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Flying
     - Hive Bond
@@ -488,16 +476,14 @@ v3.5.3:
     - name: Bio-Cannons
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
       - Rending
+      count: 3
     - name: Razor Claws
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Hive Bond
     - Relentless
@@ -527,11 +513,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Fast
     - Hive Bond
@@ -555,11 +541,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Swarm Attacks
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Bane
+      count: 3
     special_rules:
     - Hive Bond
     - Strider
@@ -577,10 +562,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Razor Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 6
     special_rules:
     - Hive Bond
     cost: 115
@@ -641,10 +624,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Razor Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 6
     special_rules:
     - Fast
     - Hive Bond
@@ -684,16 +665,15 @@ v3.5.3:
     - name: Poison Spurts
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Bane
+      count: 3
     - name: Toxin Claws
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Bane
+      count: 3
     special_rules:
     - Hive Bond
     - Regeneration
@@ -716,10 +696,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Razor Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 6
     special_rules:
     - Hive Bond
     - Relentless
@@ -762,10 +740,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Razor Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 6
     special_rules:
     - Hive Bond
     - Scout
@@ -801,14 +777,12 @@ v3.5.3:
     - name: Psy-Blasts
       range: 18"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     - name: Psy-Shocks
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Caster Group
     - Hive Bond
@@ -822,10 +796,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Tendrils
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - No Retreat
     - Self-Destruct(2)
@@ -839,10 +811,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Tendrils
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - No Retreat
     - Self-Destruct(6)
@@ -856,10 +826,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 2
     special_rules:
     - Fear(1)
     - Hive Bond
@@ -902,21 +871,19 @@ v3.5.3:
     - name: Spore Gun
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
       - Shred
+      count: 1
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Hive Bond
@@ -940,11 +907,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Psy-Shock
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Caster(3)
     - Fear(1)
@@ -973,16 +939,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Hive Bond
@@ -1000,10 +965,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Razor Tendrils
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Hive Bond
@@ -1037,15 +1001,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -1100,22 +1062,20 @@ v3.5.3:
     - name: Acid Spurt
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Bane
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Whip Limbs
-      range: null
       attacks: A8
-      ap: null
       special_rules:
       - Bane
       - Precise
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -1144,16 +1104,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Heavy Razor Claws
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Caster(3)
     - Fear(2)
@@ -1182,15 +1141,13 @@ v3.5.3:
     tough: 15
     weapons:
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Stomp
-      range: null
       attacks: A5
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Fear(3)
@@ -1242,19 +1199,17 @@ v3.5.3:
     - name: Bio-Pod
       range: 24"
       attacks: A12
-      ap: null
-      special_rules: []
+      count: 1
     - name: Stinger Launcher
       range: 18"
       attacks: A6
-      ap: null
       special_rules:
       - Destructive
+      count: 1
     - name: Stomp
-      range: null
       attacks: A5
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1286,19 +1241,17 @@ v3.5.3:
     - name: Stinger Launchers
       range: 18"
       attacks: A6
-      ap: null
       special_rules:
       - Destructive
+      count: 3
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A5
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1337,16 +1290,15 @@ v3.5.3:
       special_rules:
       - Deadly(3)
       - Takedown
+      count: 1
     - name: Heavy Razor Claws
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Stomp
-      range: null
       attacks: A5
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1379,16 +1331,15 @@ v3.5.3:
     - name: Shredder Bio-Artillery
       range: 36"
       attacks: A3
-      ap: null
       special_rules:
       - Blast(6)
       - Indirect
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A5
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1413,10 +1364,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Razor Tendrils
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Artillery
@@ -1458,16 +1408,15 @@ v3.5.3:
     tough: 18
     weapons:
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Titanic Heavy Claws
-      range: null
       attacks: A18
       ap: AP(2)
       special_rules:
       - Destructive
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1506,16 +1455,16 @@ v3.5.3:
     - name: Stinger Spitter
       range: 18"
       attacks: A3
-      ap: null
       special_rules:
       - Destructive
+      count: 1
     - name: Caustic Cannon
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Aircraft
     - Fearless

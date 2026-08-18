@@ -12,12 +12,10 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Havocbound
@@ -92,15 +90,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Havocbound
     - Hero
@@ -194,15 +190,13 @@ v3.5.3:
     - name: Flamer Pistol
       range: 6"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Havocbound
     - Hero
@@ -295,13 +289,10 @@ v3.5.3:
     - name: Champion Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Havocbound
     - Hero
@@ -358,16 +349,14 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Daemon Hammers
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Havocbound
@@ -408,13 +397,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Havocbound
     cost: 140
@@ -465,12 +451,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Havocbound
     cost: 160
@@ -542,12 +526,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Havocbound
     - Versatile Attack
@@ -634,11 +616,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Dual Energy Claws
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Ambush
     - Flying
@@ -672,10 +653,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Mutated Claws
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Havocbound
     - Scout
@@ -700,11 +679,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Havocbound
     - Relentless
@@ -740,11 +718,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Energy Claws
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Ambush
     - Havocbound
@@ -806,10 +783,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Havocbound
     - Unpredictable Fighter
@@ -822,10 +797,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Fast
     - Havocbound
@@ -844,10 +818,9 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Havocbound
@@ -864,17 +837,15 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Heavy Pistols
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Havocbound
@@ -918,10 +889,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Dual Mutated Claws
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Havocbound
@@ -948,7 +918,7 @@ v3.5.3:
       range: 24"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Havocbound
@@ -994,7 +964,7 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Demolition Cannon
       range: 24"
       attacks: A1
@@ -1002,6 +972,7 @@ v3.5.3:
       special_rules:
       - Blast(6)
       - Indirect
+      count: 1
     special_rules:
     - Fast
     - Havocbound
@@ -1056,16 +1027,14 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Brute Hammers
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Havocbound
@@ -1119,21 +1088,18 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Fiend Claws
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Steel Tails
-      range: null
       attacks: A8
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Havocbound
@@ -1166,17 +1132,17 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Virus Injector
-      range: null
       attacks: A3
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Fear(2)
     - Havocbound
@@ -1207,20 +1173,18 @@ v3.5.3:
     - name: Twin Pain Cannons
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     - name: Spider Fangs
-      range: null
       attacks: A8
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Havocbound
@@ -1248,11 +1212,12 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin Heavy Machinegun
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Havocbound
@@ -1300,21 +1265,18 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Blast(6)
+      count: 1
     - name: Despoiler Claws
-      range: null
       attacks: A4
       ap: AP(3)
-      special_rules: []
+      count: 1
     - name: Hell Flails
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 2
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Havocbound
@@ -1367,6 +1329,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Aircraft
     - Havocbound

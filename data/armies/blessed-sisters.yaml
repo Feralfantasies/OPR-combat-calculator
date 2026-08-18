@@ -9,16 +9,15 @@ v3.5.3:
     tough: 9
     weapons:
     - name: Great Energy Sword
-      range: null
       attacks: A6
       ap: AP(2)
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Fear(2)
@@ -76,10 +75,8 @@ v3.5.3:
     tough: 6
     weapons:
     - name: CCW
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Devout
@@ -136,10 +133,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Hero
@@ -258,10 +253,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Hero
@@ -380,11 +373,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Shock Whip
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Devout
     - Fearless
@@ -432,10 +424,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Hero
@@ -540,10 +530,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Dual CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Devout
     cost: 85
@@ -585,10 +573,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Chainsaw Swords
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Devout
     - Fearless
@@ -615,12 +602,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Devout
     cost: 110
@@ -690,12 +675,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Devout
     - Scout
@@ -757,13 +740,12 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: Halberds
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Devout
     - Shielded
@@ -824,12 +806,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Devout
@@ -874,13 +854,13 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: Energy Swords
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Ambush
     - Devout
@@ -908,12 +888,10 @@ v3.5.3:
       range: 24"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Devout
     cost: 80
@@ -982,16 +960,14 @@ v3.5.3:
     - name: Blessed Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
       - Disintegrate
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Devout
     - Devout Boost
@@ -1012,10 +988,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCWs
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Devout
@@ -1076,12 +1050,11 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Heavy Chainsaw Swords
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Devout
     - Fast
@@ -1099,17 +1072,15 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Heavy Pistols
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Devout
     - Fast
@@ -1162,7 +1133,7 @@ v3.5.3:
       range: 24"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Fast
@@ -1196,12 +1167,11 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Holy Statue's Flame Strikes
-      range: null
       attacks: A5
-      ap: null
       special_rules:
       - Reliable
       - Disintegrate
+      count: 1
     special_rules:
     - Courage Buff
     - Devout
@@ -1236,16 +1206,15 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Energy Mace
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Fear(1)
@@ -1295,19 +1264,19 @@ v3.5.3:
     - name: Blessed Flamer
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
       - Disintegrate
+      count: 1
     - name: Twin Blessed Flamer
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
       - Disintegrate
+      count: 1
     special_rules:
     - Devout
     - Fast
@@ -1369,14 +1338,15 @@ v3.5.3:
       special_rules:
       - Deadly(3)
       - Unstoppable
+      count: 1
     - name: Blessed Flamer
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
       - Disintegrate
+      count: 1
     special_rules:
     - Devout
     - Fast
@@ -1424,14 +1394,15 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Blessed Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
       - Disintegrate
+      count: 2
     special_rules:
     - Devout
     - Fast
@@ -1483,16 +1454,15 @@ v3.5.3:
     tough: 9
     weapons:
     - name: Heavy Flails
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Fear(2)
@@ -1539,16 +1509,15 @@ v3.5.3:
     tough: 9
     weapons:
     - name: Heavy Flails
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Devout
     - Devout Boost
@@ -1597,23 +1566,21 @@ v3.5.3:
     - name: Blessed Hull-Flamers
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
       - Disintegrate
+      count: 2
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Titan Flails
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Blast(3)
       - Rending
+      count: 2
     special_rules:
     - Devout
     - Fear(4)

@@ -14,12 +14,13 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Harvest Blade
-      range: null
       attacks: A2
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Hero
     - Ravage(4)
@@ -54,14 +55,12 @@ v3.5.3:
     - name: Lord Gauss Pistol
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Destructive
+      count: 1
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 2
     special_rules:
     - Hero
     - Self-Repair
@@ -136,10 +135,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Self-Repair
@@ -226,11 +223,10 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Shred
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Self-Repair
     - Slow
@@ -265,12 +261,10 @@ v3.5.3:
       range: 12"
       attacks: A1
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: Void Blades
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Self-Repair
     - Slow
@@ -299,10 +293,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Metal Claws
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Infiltrate
     - Self-Repair
@@ -323,14 +316,12 @@ v3.5.3:
     - name: Flux Carbines
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Surge
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Self-Repair
     - Slow
@@ -354,11 +345,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Self-Repair
     - Slow
@@ -376,11 +366,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Swarm Attacks
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Self-Repair
     - Strider
@@ -393,11 +382,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Spike Whips
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 3
     special_rules:
     - Fast
     - Self-Repair
@@ -427,11 +416,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Reaper Blades
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Shred
+      count: 3
     special_rules:
     - Self-Repair
     - Strider
@@ -459,11 +448,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Hyper Swords
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Self-Repair
     - Strider
@@ -494,11 +483,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Reaper Blades
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Shred
+      count: 3
     special_rules:
     - Ravage(2)
     - Self-Repair
@@ -524,14 +513,12 @@ v3.5.3:
     - name: Rapid Flux Carbines
       range: 18"
       attacks: A4
-      ap: null
       special_rules:
       - Surge
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Self-Repair
@@ -556,12 +543,10 @@ v3.5.3:
       range: 12"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Ambushing Piercing Shot
     - Relentless
@@ -584,13 +569,12 @@ v3.5.3:
       range: 24"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Spider Fangs
-      range: null
       attacks: A6
-      ap: null
       special_rules:
       - Bane
+      count: 1
     special_rules:
     - Self-Repair
     - Strider
@@ -621,14 +605,13 @@ v3.5.3:
     - name: Heavy Gauss Cannon
       range: 30"
       attacks: A6
-      ap: null
       special_rules:
       - Destructive
+      count: 1
     - name: Heavy CCW
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Self-Repair
     - Strider
@@ -659,9 +642,9 @@ v3.5.3:
     - name: Gauss Rifle Array
       range: 24"
       attacks: A3
-      ap: null
       special_rules:
       - Destructive
+      count: 1
     special_rules:
     - Impact(3)
     - Self-Repair
@@ -687,11 +670,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Self-Repair
@@ -734,12 +717,13 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Gauss Rifle Array
       range: 24"
       attacks: A3
-      ap: null
       special_rules:
       - Destructive
+      count: 1
     special_rules:
     - Impact(3)
     - Self-Repair
@@ -763,16 +747,15 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Crushing Legs
-      range: null
       attacks: A2
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Self-Repair
@@ -802,17 +785,16 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Wraith Strike
-      range: null
       attacks: A8
-      ap: null
       special_rules:
       - Rending
+      count: 1
     special_rules:
     - Caster(3)
     - Fear(2)
@@ -838,6 +820,7 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Unstoppable
+      count: 1
     special_rules:
     - Impact(3)
     - Mobile Artillery
@@ -879,16 +862,15 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Crushing Legs
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Caster(3)
     - Fear(3)
@@ -919,12 +901,14 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Flux Sphere Array
       range: 24"
       attacks: A9
       ap: AP(1)
       special_rules:
       - Surge
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -963,17 +947,16 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Great Wraith Strike
-      range: null
       attacks: A12
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Caster(4)
     - Fear(3)
@@ -1004,12 +987,13 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Surge
+      count: 1
     - name: Close-Range Gauss Array
       range: 12"
       attacks: A6
-      ap: null
       special_rules:
       - Destructive
+      count: 1
     special_rules:
     - Aircraft
     - Self-Repair
@@ -1028,12 +1012,14 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Unstoppable
+      count: 1
     - name: Twin Flux Cannon
       range: 24"
       attacks: A6
       ap: AP(1)
       special_rules:
       - Surge
+      count: 1
     special_rules:
     - Aircraft
     - Self-Repair

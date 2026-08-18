@@ -9,16 +9,15 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Monstrous Claws
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Hero
@@ -57,11 +56,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Barbed Claw
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Ambush
     - Hero
@@ -106,13 +105,10 @@ v3.5.3:
     - name: Leader Pistol
       range: 12"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Infected
@@ -183,10 +179,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Fearless
     - Infected
@@ -205,10 +199,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Claws
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Fearless
     - Infected
@@ -230,13 +222,10 @@ v3.5.3:
     - name: Carbines
       range: 18"
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 10
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 10
     special_rules:
     - Infected
     cost: 170
@@ -289,12 +278,10 @@ v3.5.3:
       range: 30"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Crews
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Infected
     cost: 150
@@ -322,14 +309,12 @@ v3.5.3:
     - name: Grenade Launchers
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Infected
     - Relentless
@@ -359,11 +344,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Toxic Claws
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Bane
+      count: 5
     special_rules:
     - Ambush
     - Infected
@@ -390,11 +374,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Putrid Fists
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Bane
+      count: 3
     special_rules:
     - Deathstrike(3)
     - Infected
@@ -407,11 +390,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Swarm Attacks
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Bane
+      count: 3
     special_rules:
     - Infected
     - Strider
@@ -429,10 +411,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Beak Attacks
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Flying
     - Infected
@@ -450,11 +430,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Vicious Jaws
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Fast
     - Infected
@@ -472,10 +451,9 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Sharp Talons
-      range: null
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 3
     special_rules:
     - Ambush
     - Flying
@@ -499,11 +477,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual Sharp Claws
-      range: null
       attacks: A4
       ap: AP(1)
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Infected
     cost: 230
@@ -528,10 +506,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Infected
@@ -555,6 +532,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Lacerate
+      count: 1
     special_rules:
     - Fast
     - Impact(3)
@@ -592,11 +570,11 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Infected
@@ -625,11 +603,12 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 1
     - name: Twin Heavy Machinegun
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Impact(6)
@@ -654,15 +633,13 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A8
       ap: AP(3)
-      special_rules: []
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Infected
@@ -683,12 +660,12 @@ v3.5.3:
       range: 30"
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Minigun
       range: 24"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Aircraft
     - Infected

@@ -9,11 +9,10 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Shock Hammer
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Fortified
     - Hero
@@ -76,10 +75,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fortified
     - Hero
@@ -197,11 +194,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Heavy Great Axe
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Fearless
     - Furious
@@ -253,13 +250,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: Bashes
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Fortified
     - Slow
@@ -286,13 +280,10 @@ v3.5.3:
     - name: Rifles
       range: 24"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Slow
     - Sturdy
@@ -365,10 +356,9 @@ v3.5.3:
     tough: null
     weapons:
     - name: Great Axes
-      range: null
       attacks: A1
       ap: AP(2)
-      special_rules: []
+      count: 5
     special_rules:
     - Fearless
     - Furious
@@ -410,12 +400,10 @@ v3.5.3:
       range: 6"
       attacks: A2
       ap: AP(2)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Slow
     - Sturdy
@@ -476,12 +464,10 @@ v3.5.3:
       range: 9"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Infiltrate
     - Slow
@@ -541,13 +527,10 @@ v3.5.3:
     - name: Pistols
       range: 12"
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Flying
@@ -603,11 +586,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Heat Hammers
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Shred
+      count: 5
     special_rules:
     - Fearless
     - Fortified
@@ -638,11 +621,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Scout
     - Slow
@@ -667,15 +649,13 @@ v3.5.3:
     - name: Mortars
       range: 30"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Slow
     - Sturdy
@@ -710,11 +690,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Shock Hammers
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
+      count: 3
     special_rules:
     - Fortified
     - Infiltrate
@@ -777,11 +756,10 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(3)
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Slow
@@ -806,17 +784,15 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: Iron Pistols
       range: 9"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Sturdy
@@ -850,7 +826,7 @@ v3.5.3:
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Heavy Flamer
       range: 12"
       attacks: A1
@@ -858,16 +834,15 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Iron Pistol
       range: 9"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: CCW
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Sturdy
@@ -915,12 +890,12 @@ v3.5.3:
       range: 30"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Heavy Rifle
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Impact(3)
@@ -957,6 +932,7 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     special_rules:
     - Fast
     - Impact(3)
@@ -992,6 +968,7 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Twin Heavy Flamer
       range: 12"
       attacks: A2
@@ -999,6 +976,7 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     special_rules:
     - Fast
     - Impact(6)
@@ -1040,11 +1018,11 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 1
     - name: Tunneling Drill
-      range: null
       attacks: A6
       ap: AP(4)
-      special_rules: []
+      count: 1
     special_rules:
     - Ambush
     - Impact(6)
@@ -1069,11 +1047,12 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Unstoppable
+      count: 2
     - name: Twin Heavy Rifle
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fast
     - Impact(6)
@@ -1140,16 +1119,14 @@ v3.5.3:
     tough: 12
     weapons:
     - name: Shock Hammers
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
+      count: 2
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Sturdy
@@ -1202,11 +1179,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     - Sturdy
@@ -1235,16 +1211,17 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Surge
+      count: 1
     - name: Minigun
       range: 24"
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Heavy Rifles
       range: 24"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 4
     special_rules:
     - Fast
     - Impact(9)
@@ -1288,23 +1265,22 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Blast(6)
+      count: 1
     - name: Piercing M-Drill
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(3)
       - Shred
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     - name: Tunneling Drill
-      range: null
       attacks: A6
       ap: AP(4)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(3)
     - Fearless
@@ -1321,29 +1297,29 @@ v3.5.3:
       range: 30"
       attacks: A3
       ap: AP(1)
-      special_rules: []
+      count: 1
     - name: Twin Light AA-Gun
       range: 30"
       attacks: A6
       ap: AP(1)
       special_rules:
       - Unstoppable
+      count: 1
     - name: Twin Heavy Fusion Rifle
       range: 18"
       attacks: A2
       ap: AP(4)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Heavy Excavator
-      range: null
       attacks: A12
       ap: AP(4)
-      special_rules: []
+      count: 1
     - name: Tunneling Drill
-      range: null
       attacks: A6
       ap: AP(4)
-      special_rules: []
+      count: 1
     special_rules:
     - Fearless
     - Impact(12)

@@ -9,10 +9,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Highborn
@@ -122,10 +120,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Hero
     - Highborn
@@ -231,15 +227,15 @@ v3.5.3:
     - name: Shard Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Crack
+      count: 3
     - name: Energy Swords
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Caster Group
     - Highborn
@@ -264,14 +260,12 @@ v3.5.3:
     - name: Shardguns
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Crack
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Highborn
     cost: 100
@@ -302,14 +296,12 @@ v3.5.3:
     - name: Shard Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Crack
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Highborn
     - Scout
@@ -340,11 +332,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Energy Swords
-      range: null
       attacks: A1
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Fearless
     - Highborn
@@ -389,12 +381,10 @@ v3.5.3:
       range: 9"
       attacks: A1
       ap: AP(2)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Flying
@@ -441,15 +431,15 @@ v3.5.3:
     - name: Shard Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Crack
+      count: 5
     - name: Energy Swords
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Agile
     - Highborn
@@ -486,16 +476,15 @@ v3.5.3:
     - name: Shard Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Crack
+      count: 5
     - name: Stinger Blades
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Reliable
       - Bane
+      count: 5
     special_rules:
     - Highborn
     - Scout
@@ -530,12 +519,10 @@ v3.5.3:
       range: 12"
       attacks: A2
       ap: AP(4)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Highborn
@@ -568,11 +555,10 @@ v3.5.3:
       special_rules:
       - Blast(3)
       - Reliable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Highborn
     cost: 120
@@ -600,11 +586,10 @@ v3.5.3:
       special_rules:
       - Reliable
       - Takedown
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Highborn
     - Scout
@@ -629,11 +614,10 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Unstoppable
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Highborn
     - Relentless
@@ -669,11 +653,10 @@ v3.5.3:
       ap: AP(2)
       special_rules:
       - Blast(3)
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fearless
     - Highborn
@@ -692,11 +675,11 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Killing Axes
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(3)
+      count: 3
     special_rules:
     - Fearless
     - Furious
@@ -726,20 +709,18 @@ v3.5.3:
     - name: Mounted Shardguns
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Crack
+      count: 3
     - name: Shard Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Crack
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Highborn
@@ -776,20 +757,18 @@ v3.5.3:
     - name: Mounted Shardguns
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Crack
+      count: 3
     - name: Shard Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Crack
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Highborn
@@ -830,9 +809,9 @@ v3.5.3:
     - name: Mounted Shardguns
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Crack
+      count: 1
     special_rules:
     - Fast
     - Highborn
@@ -882,12 +861,13 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Crack
+      count: 1
     - name: Mounted Shardguns
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Crack
+      count: 1
     special_rules:
     - Fast
     - Highborn
@@ -931,11 +911,11 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Crack
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Highborn
     - Scout
@@ -972,12 +952,13 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Crack
+      count: 2
     - name: Mounted Shardguns
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Crack
+      count: 1
     special_rules:
     - Fast
     - Highborn
@@ -1026,20 +1007,19 @@ v3.5.3:
     - name: Shardguns
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Crack
+      count: 2
     - name: Great Axe
-      range: null
       attacks: A1
       ap: AP(2)
       special_rules:
       - Deadly(6)
+      count: 1
     - name: Stomp
-      range: null
       attacks: A4
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(2)
     - Fearless
@@ -1103,15 +1083,13 @@ v3.5.3:
     - name: Burst Mortar
       range: 30"
       attacks: A2
-      ap: null
       special_rules:
       - Blast(3)
       - Indirect
+      count: 1
     - name: Artillery Crew
-      range: null
       attacks: A3
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Artillery
     cost: 145
@@ -1136,16 +1114,14 @@ v3.5.3:
     tough: 24
     weapons:
     - name: Dual Titan Claws
-      range: null
       attacks: A24
-      ap: null
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A8
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(4)
     - Fearless
@@ -1194,16 +1170,15 @@ v3.5.3:
     tough: 18
     weapons:
     - name: Flame Sword
-      range: null
       attacks: A12
       ap: AP(2)
       special_rules:
       - Rending
+      count: 1
     - name: Stomp
-      range: null
       attacks: A6
       ap: AP(2)
-      special_rules: []
+      count: 1
     special_rules:
     - Caster(4)
     - Fear(3)
@@ -1234,6 +1209,7 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Blast(3)
+      count: 1
     special_rules:
     - Aircraft
     - Caster(2)
@@ -1252,12 +1228,14 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Unstoppable
+      count: 1
     - name: Twin Shatter Cannon
       range: 36"
       attacks: A6
       ap: AP(1)
       special_rules:
       - Rending
+      count: 1
     special_rules:
     - Aircraft
     - Highborn

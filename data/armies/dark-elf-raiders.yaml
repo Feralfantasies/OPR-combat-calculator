@@ -11,14 +11,12 @@ v3.5.3:
     - name: Elite Barb Pistol
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Harassing
     - Hero
@@ -89,14 +87,12 @@ v3.5.3:
     - name: Elite Barb Pistol
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Harassing
     - Hero
@@ -181,14 +177,12 @@ v3.5.3:
     - name: Elite Barb Pistol
       range: 12"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     - name: CCW
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Harassing
     - Hero
@@ -271,10 +265,8 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Dual CCWs
-      range: null
       attacks: A4
-      ap: null
-      special_rules: []
+      count: 1
     special_rules:
     - Harassing
     - Hero
@@ -344,10 +336,8 @@ v3.5.3:
     tough: null
     weapons:
     - name: Dual CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Harassing
     - Regeneration
@@ -403,14 +393,12 @@ v3.5.3:
     - name: Barb Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Lacerate
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Harassing
     - Melee Evasion
@@ -457,14 +445,12 @@ v3.5.3:
     - name: Barb Rifles
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Lacerate
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Harassing
     cost: 95
@@ -516,14 +502,12 @@ v3.5.3:
     - name: Barb Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Lacerate
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Harassing
     - Melee Evasion
@@ -570,14 +554,12 @@ v3.5.3:
     - name: Barb Rifles
       range: 24"
       attacks: A1
-      ap: null
       special_rules:
       - Lacerate
+      count: 3
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Harassing
     cost: 75
@@ -627,11 +609,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Courtesan's Swords
-      range: null
       attacks: A4
-      ap: null
       special_rules:
       - Bane
+      count: 3
     special_rules:
     - Harassing
     - Martial Prowess
@@ -657,14 +638,13 @@ v3.5.3:
     - name: Twin Barb-Pods
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 5
     - name: Glaives
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     special_rules:
     - Agile
     - Harassing
@@ -700,11 +680,11 @@ v3.5.3:
     tough: null
     weapons:
     - name: Energy Swords
-      range: null
       attacks: A2
       ap: AP(1)
       special_rules:
       - Rending
+      count: 5
     special_rules:
     - Harassing
     - Melee Slayer
@@ -719,14 +699,12 @@ v3.5.3:
     - name: Barb Carbines
       range: 18"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 5
     - name: CCWs
-      range: null
       attacks: A1
-      ap: null
-      special_rules: []
+      count: 5
     special_rules:
     - Ambush
     - Flying
@@ -781,13 +759,12 @@ v3.5.3:
       range: 18"
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 5
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Bane
+      count: 5
     special_rules:
     - Harassing
     - Infiltrate
@@ -804,16 +781,15 @@ v3.5.3:
     - name: Acid Guns
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Reliable
       - Bane
+      count: 3
     - name: Scissor Claws
-      range: null
       attacks: A2
       ap: AP(4)
-      special_rules: []
+      count: 3
     special_rules:
     - Harassing
     - Regeneration
@@ -833,20 +809,18 @@ v3.5.3:
     - name: Twin Barb Rifles
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 3
     - name: Barb Pistols
       range: 12"
       attacks: A1
-      ap: null
       special_rules:
       - Lacerate
+      count: 3
     - name: CCWs
-      range: null
       attacks: A2
-      ap: null
-      special_rules: []
+      count: 3
     special_rules:
     - Fast
     - Harassing
@@ -876,11 +850,10 @@ v3.5.3:
     tough: 3
     weapons:
     - name: Swarm Attacks
-      range: null
       attacks: A3
-      ap: null
       special_rules:
       - Rending
+      count: 3
     special_rules:
     - Flying
     - Harassing
@@ -901,11 +874,10 @@ v3.5.3:
     tough: null
     weapons:
     - name: Toxin Claws
-      range: null
       attacks: A2
-      ap: null
       special_rules:
       - Bane
+      count: 5
     special_rules:
     - Fast
     - Harassing
@@ -926,10 +898,9 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Heavy Claws
-      range: null
       attacks: A6
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Furious
     - Harassing
@@ -955,11 +926,11 @@ v3.5.3:
       ap: AP(1)
       special_rules:
       - Bane
+      count: 1
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Fearless
@@ -990,17 +961,15 @@ v3.5.3:
     tough: 6
     weapons:
     - name: Acid Spewers
-      range: null
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Bane
+      count: 2
     - name: Stomp
-      range: null
       attacks: A2
       ap: AP(1)
-      special_rules: []
+      count: 1
     special_rules:
     - Fear(1)
     - Fearless
@@ -1050,15 +1019,15 @@ v3.5.3:
     - name: Barb Cannon
       range: 30"
       attacks: A3
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     - name: Twin Barb Rifle
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     special_rules:
     - Fast
     - Harassing
@@ -1097,9 +1066,9 @@ v3.5.3:
     - name: Twin Barb Rifle
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     special_rules:
     - Fast
     - Harassing
@@ -1142,9 +1111,9 @@ v3.5.3:
     - name: Barb Cannons
       range: 30"
       attacks: A3
-      ap: null
       special_rules:
       - Lacerate
+      count: 3
     special_rules:
     - Fast
     - Harassing
@@ -1183,22 +1152,23 @@ v3.5.3:
     - name: Shatter Missiles
       range: 36"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(6)
+      count: 1
     - name: Void Cannon
       range: 30"
       attacks: A1
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Void Bombs
-      range: null
       attacks: A1
       ap: AP(3)
       special_rules:
       - Deadly(3)
       - Strafing
+      count: 1
     special_rules:
     - Aircraft
     cost: 320
@@ -1220,19 +1190,20 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(3)
+      count: 1
     - name: Toxin Missiles
       range: 36"
       attacks: A1
-      ap: null
       special_rules:
       - Blast(3)
       - Bane
+      count: 1
     - name: Twin Barb Rifle
       range: 24"
       attacks: A2
-      ap: null
       special_rules:
       - Lacerate
+      count: 1
     special_rules:
     - Aircraft
     cost: 280
