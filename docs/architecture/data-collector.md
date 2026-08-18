@@ -12,7 +12,7 @@ The combat simulator needs accurate, up-to-date unit data from all Grimdark Futu
 
 1. **Fetch phase**: Downloads all army pages from Army Forge with rate limiting
 2. **Parse phase**: Extracts structured data from cached HTML and writes YAML files
-3. **Output**: 40+ YAML files (one per army, including subfactions) with complete unit rosters
+3. **Output**: 43 YAML files (one per army, including subfactions) with complete unit rosters
 
 The YAML files are consumed by the `api` crate to populate the combat simulator with real unit stats, weapons, and upgrade options.
 
@@ -112,7 +112,7 @@ cargo run -p data-collector -- -vv
 ### Output
 
 - **Cache**: `data/cache/*.html` (raw HTML from Army Forge)
-- **YAML**: `data/armies/*.yaml` (40+ files, one per army; versioned in git)
+- **YAML**: `data/armies/*.yaml` (43 files, one per army; versioned in git)
 - **Metadata**: `data/cache/metadata.json` (timestamps)
 
 ## Gotchas and Known Issues
@@ -369,7 +369,7 @@ To manually validate the data-collector:
 
    ```bash
    grep -r "Unknown Army" data/armies/*.yaml  # Should return nothing
-   grep -r "units: []" data/armies/*.yaml    # Should return nothing
+   grep -rF 'units: []' data/armies/*.yaml    # Should return nothing
    ```
 
 ## Future Improvements

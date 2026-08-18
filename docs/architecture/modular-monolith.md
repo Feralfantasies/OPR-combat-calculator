@@ -33,9 +33,9 @@ opr-damage-calculator/
 │       │   ├── cache.rs          # local HTML caching with metadata
 │       │   ├── http_client.rs    # rate-limited HTTP client
 │       │   └── error.rs          # error types
-│       └── data/
-│           ├── cache/            # cached HTML from Army Forge (git-ignored)
-│           └── armies/           # 43 generated army data files (committed)
+├── data/                   # generated army data (repo root)
+│   ├── armies/           # 43 generated army YAML catalogs (committed)
+│   └── cache/            # cached HTML from Army Forge (git-ignored)
 └── docs/                   # OKF knowledge bundle (this directory)
 ```
 
