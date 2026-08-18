@@ -866,7 +866,7 @@ v3.5.3:
         let weapon = convert_weapon(&ranged, 3).unwrap();
         assert_eq!(weapon.quantity, 3);
         assert_eq!(weapon.range, Some(24));
-        assert!(weapon.get_ap() == Some(1));
+        assert_eq!(weapon.get_ap(), Some(1));
     }
 
     #[test]
