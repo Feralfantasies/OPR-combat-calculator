@@ -313,7 +313,12 @@ v3.5.3:
     - Good Shot
     - Hold the Line
     cost: 80
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Field Radio
+        rules: Extended Buff Range
+        cost_modifier: +5pts
   - name: Infantry Squad
     size: 10
     quality: 5+
@@ -334,6 +339,17 @@ v3.5.3:
     - Hold the Line
     cost: 115
     upgrade_categories:
+    - category: Upgrade up to two models with one
+      upgrades:
+      - name: Field Radio
+        rules: Extended Buff Range
+        cost_modifier: +5pts
+      - name: Company Standard
+        rules: Hold the Line Boost Aura
+        cost_modifier: +10pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +40pts
     - category: Replace up to two Rifles
       upgrades:
       - name: Plasma Rifle
@@ -357,7 +373,7 @@ v3.5.3:
       - name: Sniper Rifle
         rules: 30", A1, AP(1), Reliable, Takedown
         cost_modifier: +25pts
-    - category: Replace one Rifle and CCW
+    - category: Replace one Rifles and CCWs
       upgrades:
       - name: Weapon Team
         rules: Mortar (30", A1, Blast(3), Indirect), Crew (A2), Tough(3)
@@ -374,7 +390,7 @@ v3.5.3:
       - name: Weapon Team
         rules: Laser Cannon (36", A1, AP(3), Deadly(3)), Crew (A2), Tough(3)
         cost_modifier: +45pts
-    - category: Replace one Rifle and CCW
+    - category: Replace one Rifles and CCWs
       upgrades:
       - name: Sgt. Pistol, Sgt. Hand Weapon
         rules: 12", A1, A2
@@ -415,7 +431,18 @@ v3.5.3:
     - Hold the Line
     cost: 80
     upgrade_categories:
-    - category: Replace any Rifle
+    - category: Upgrade up to two models with one
+      upgrades:
+      - name: Field Radio
+        rules: Extended Buff Range
+        cost_modifier: +5pts
+      - name: Company Standard
+        rules: Hold the Line Boost Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace any Rifles
       upgrades:
       - name: Shotgun
         rules: 12", A2, AP(1)
@@ -431,7 +458,7 @@ v3.5.3:
       - name: Sniper Rifle
         rules: 30", A1, AP(1), Reliable, Takedown
         cost_modifier: +25pts
-    - category: Replace one Rifle
+    - category: Replace one Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -442,7 +469,7 @@ v3.5.3:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace one Rifle and CCW
+    - category: Replace one Rifles and CCWs
       upgrades:
       - name: Weapon Team
         rules: Mortar (30", A1, Blast(3), Indirect), Crew (A2), Tough(3)
@@ -459,6 +486,8 @@ v3.5.3:
       - name: Weapon Team
         rules: Laser Cannon (36", A1, AP(3), Deadly(3)), Crew (A2), Tough(3)
         cost_modifier: +65pts
+    - category: Upgrade all models with one
+      upgrades:
       - name: Heavy Armor
         rules: Armor(4)
         cost_modifier: +5pts
@@ -471,7 +500,7 @@ v3.5.3:
       - name: Demo Charge
         rules: A1, AP(4), Limited
         cost_modifier: +15pts
-    - category: Replace one Rifle and CCW
+    - category: Replace one Rifles and CCWs
       upgrades:
       - name: Sgt. Pistol, Sgt. Hand Weapon
         rules: 12", A1, A2
@@ -513,6 +542,17 @@ v3.5.3:
     - Strider
     cost: 115
     upgrade_categories:
+    - category: Upgrade up to two models with one
+      upgrades:
+      - name: Field Radio
+        rules: Extended Buff Range
+        cost_modifier: +5pts
+      - name: Company Standard
+        rules: Hold the Line Boost Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
     - category: Replace up to two Heavy Rifles
       upgrades:
       - name: Drum Rifle
@@ -524,7 +564,7 @@ v3.5.3:
       - name: Sniper Rifle
         rules: 30", A1, AP(1), Reliable, Takedown
         cost_modifier: +20pts
-    - category: Replace one Heavy Rifle
+    - category: Replace one Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -538,10 +578,12 @@ v3.5.3:
       - name: Storm Machinegun
         rules: 24", A4, AP(1)
         cost_modifier: +35pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Orbital Drop
         rules: Ambush
         cost_modifier: +15pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Sgt. Hand Weapon
         rules: 12", A1, AP(1), A2
@@ -584,7 +626,7 @@ v3.5.3:
     - Relentless
     cost: 65
     upgrade_categories:
-    - category: Replace any Grenade Launcher
+    - category: Replace any Grenade Launchers
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -647,7 +689,7 @@ v3.5.3:
     - Hold the Line
     cost: 120
     upgrade_categories:
-    - category: Replace any Mortar
+    - category: Replace any Mortars
       upgrades:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
@@ -731,7 +773,7 @@ v3.5.3:
       - name: Anti-Tank Lance
         rules: A1, AP(1), Deadly(3), Thrust
         cost_modifier: +10pts
-    - category: Replace one Pistol
+    - category: Replace one Pistols
       upgrades:
       - name: Plasma Rifle
         rules: 24", A1, AP(4)
@@ -1451,7 +1493,7 @@ v3.5.3:
     - category: Upgrade with
       upgrades:
       - name: Transport
-        rules: '21'
+        rules: Transport(21)
         cost_modifier: +70pts
   - name: Light Gunship
     size: 1
@@ -1481,7 +1523,7 @@ v3.5.3:
       - name: Laser Machinegun
         rules: 30", A3, AP(3)
         cost_modifier: +5pts
-    - category: Replace Twin Rocket Pods
+    - category: Replace Twin Rocket Pod
       upgrades:
       - name: Strike Missiles
         rules: 36", A1, AP(3), Deadly(6), Unstoppable

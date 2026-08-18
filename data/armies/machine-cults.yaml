@@ -255,12 +255,17 @@ v3.5.3:
     - Strider
     cost: 110
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Machine-Creed Canticles
+        rules: Versatile Attack
+        cost_modifier: +15pts
     - category: Replace all R-Fusils
       upgrades:
       - name: G-Rifle
         rules: 30", A1, AP(1)
         cost_modifier: +25pts
-    - category: Replace one R-Fusil
+    - category: Replace one R-Fusils
       upgrades:
       - name: Arc Gun
         rules: 18", A2, Rending
@@ -277,7 +282,7 @@ v3.5.3:
       - name: Uranium Rifle
         rules: 30", A1, AP(1), Reliable, Shred, Takedown
         cost_modifier: +25pts
-    - category: Replace one R-Fusil and CCW
+    - category: Replace one R-Fusils and CCWs
       upgrades:
       - name: R-Pistol, Taser Sword
         rules: 9", A1, Shred, A2, Surge
@@ -326,6 +331,11 @@ v3.5.3:
     - Regeneration
     cost: 135
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Machine-Creed Canticles
+        rules: Versatile Attack
+        cost_modifier: +15pts
     - category: Replace all Shock Staffs
       upgrades:
       - name: Gauntlet Shocks, Taser Gauntlet
@@ -355,6 +365,8 @@ v3.5.3:
       - name: S-Razor & Claw
         rules: A2, AP(2)
         cost_modifier: Free
+    - category: Upgrade one model with
+      upgrades:
       - name: Metal Spike
         rules: A1, AP(1), Deadly(3), Limited
         cost_modifier: +5pts
@@ -414,11 +426,13 @@ v3.5.3:
       - name: P-Thrower
         rules: 12", A2, Reliable, Lacerate
         cost_modifier: +10pts
-    - category: Replace one F-Carbine and CCW
+    - category: Replace one F-Carbines and CCWs
       upgrades:
       - name: F-Blaster, Taser Sword
         rules: 9", A2, A2, Surge
         cost_modifier: Free
+    - category: Upgrade all models with
+      upgrades:
       - name: Sky-Grenadier
         rules: Crossing Attack(1)
         cost_modifier: +20pts
@@ -445,7 +459,12 @@ v3.5.3:
     - Strider
     cost: 185
     upgrade_categories:
-    - category: Replace any Twin P-Pistol
+    - category: Upgrade all models with
+      upgrades:
+      - name: Machine-Creed Canticles
+        rules: Versatile Attack
+        cost_modifier: +15pts
+    - category: Replace any Twin P-Pistols
       upgrades:
       - name: G-Carbine
         rules: 18", A2, AP(1)
@@ -455,7 +474,7 @@ v3.5.3:
       - name: Twin P-Blaster
         rules: 18", A4, Lacerate
         cost_modifier: +10pts
-    - category: Replace one G-Carbine and CCW
+    - category: Replace one G-Carbine and CCWs
       upgrades:
       - name: Revolver, Raider Sabre
         rules: 12", A1, AP(1), A3, AP(1)
@@ -463,6 +482,8 @@ v3.5.3:
       - name: P-Pistol, Energy Sword
         rules: 9", A2, Lacerate, A2, AP(1), Rending
         cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
       - name: P-Breath
         rules: 6", A2, Limited, Lacerate
         cost_modifier: +5pts
@@ -494,11 +515,18 @@ v3.5.3:
     - Strider
     cost: 145
     upgrade_categories:
-    - category: Replace any Eraser Beam
+    - category: Upgrade all models with
+      upgrades:
+      - name: Machine-Creed Canticles
+        rules: Versatile Attack
+        cost_modifier: +25pts
+    - category: Replace any Eraser Beams
       upgrades:
       - name: Neutron Laser
         rules: 36", A1, AP(3), Deadly(3)
         cost_modifier: +25pts
+    - category: Upgrade all models with one
+      upgrades:
       - name: Light P-Pistol
         rules: 9", A1, Lacerate
         cost_modifier: +10pts
@@ -526,12 +554,12 @@ v3.5.3:
     - Machine-Fog
     cost: 230
     upgrade_categories:
-    - category: Replace any G-Cannon
+    - category: Replace any G-Cannons
       upgrades:
       - name: Plasma Cannon
         rules: 30", A1, AP(4), Blast(3)
         cost_modifier: +20pts
-    - category: Replace one G-Cannon
+    - category: Replace one G-Cannons
       upgrades:
       - name: Plasma Cannon, P-Blaster
         rules: 30", A1, AP(4), Blast(3), 18", A2, Lacerate
@@ -560,7 +588,7 @@ v3.5.3:
     - Machine-Fog
     cost: 270
     upgrade_categories:
-    - category: Replace any Contortion Cannon
+    - category: Replace any Contortion Cannons
       upgrades:
       - name: Heavy Arc Gun
         rules: 36", A3, Rending
@@ -664,7 +692,7 @@ v3.5.3:
     - Machine-Fog
     cost: 195
     upgrade_categories:
-    - category: Replace Dual Energy Fist and Heavy Flamer
+    - category: Replace Dual Energy Fists and Heavy Flamer
       upgrades:
       - name: Twin P-Cannon
         rules: 24", A8, Lacerate

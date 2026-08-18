@@ -55,6 +55,8 @@ v3.5.3:
       - name: Rapid Storm Rifle, CCW
         rules: 24", A6, AP(1), A4
         cost_modifier: +60pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -156,6 +158,8 @@ v3.5.3:
       - name: Champion Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +65pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +10pts
@@ -267,6 +271,8 @@ v3.5.3:
       - name: Champion Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +50pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -391,7 +397,7 @@ v3.5.3:
     - Hero
     cost: 45
     upgrade_categories:
-    - category: Replace all Hexed Swords
+    - category: Replace all Hexed Sword
       upgrades:
       - name: Dual CCWs
         rules: A4
@@ -435,6 +441,14 @@ v3.5.3:
     - Changebound
     cost: 145
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +25pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +40pts
     - category: Replace all Rifles and CCWS
       upgrades:
       - name: Pistol, CCW
@@ -478,6 +492,14 @@ v3.5.3:
     - Changebound
     cost: 150
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +25pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +40pts
     - category: Replace all Dual CCWs
       upgrades:
       - name: Pistol, Hexed Sword
@@ -503,6 +525,19 @@ v3.5.3:
     - Changebound
     cost: 155
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +15pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +25pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Warlock Apprentice
+        rules: Caster(1)
+        cost_modifier: +20pts
     - category: Replace all Heavy Rifles
       upgrades:
       - name: Hexed Rifle
@@ -513,7 +548,7 @@ v3.5.3:
       - name: Heavy Pistol, Heavy CCW
         rules: 12", A1, AP(1), A2, AP(1)
         cost_modifier: +10pts
-    - category: Replace one Heavy Rifle
+    - category: Replace one Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -542,7 +577,7 @@ v3.5.3:
       - name: Laser Cannon
         rules: 36", A1, AP(3), Deadly(3)
         cost_modifier: +60pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -578,15 +613,25 @@ v3.5.3:
     - Versatile Attack
     cost: 115
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +10pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +15pts
     - category: Replace all Heavy Rifles
       upgrades:
       - name: Hexed Rifle
         rules: 18", A2, Shred
         cost_modifier: +20pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Warlock Apprentice
         rules: Caster(1)
         cost_modifier: +20pts
-    - category: Replace any Heavy Rifle and CCW
+    - category: Replace any Heavy Rifles and CCWs
       upgrades:
       - name: Heavy Pistol, Heavy CCW
         rules: 12", A1, AP(1), A2, AP(1)
@@ -594,7 +639,7 @@ v3.5.3:
       - name: Dual Energy Claws
         rules: A4, Rending
         cost_modifier: +10pts
-    - category: Replace any Heavy Rifle
+    - category: Replace any Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -623,6 +668,8 @@ v3.5.3:
       - name: Autocannon
         rules: 36", A3, AP(2)
         cost_modifier: +75pts
+    - category: Any model may take one Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +10pts
@@ -635,7 +682,7 @@ v3.5.3:
       - name: Fusion-Mod
         rules: 12", A1, AP(4), Deadly(3), Limited
         cost_modifier: +15pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -673,7 +720,12 @@ v3.5.3:
     - Relentless
     cost: 130
     upgrade_categories:
-    - category: Replace any Heavy Flamer
+    - category: Upgrade one model with
+      upgrades:
+      - name: Warlock Apprentice
+        rules: Caster(1)
+        cost_modifier: +20pts
+    - category: Replace any Heavy Flamers
       upgrades:
       - name: Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(3)
@@ -716,7 +768,20 @@ v3.5.3:
     - Changebound
     cost: 235
     upgrade_categories:
-    - category: Replace one Dual Energy Claw
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +55pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Warlock Apprentice
+        rules: Caster(1)
+        cost_modifier: +20pts
+    - category: Replace one Dual Energy Claws
       upgrades:
       - name: Hex-Shot, Hexed Staff
         rules: 12", A4, Shred, A2, Shred
@@ -1010,7 +1075,7 @@ v3.5.3:
       - name: Rapid Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +25pts
-    - category: Replace Twin Heavy Machineguns
+    - category: Replace Twin Heavy Machinegun
       upgrades:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
@@ -1065,12 +1130,12 @@ v3.5.3:
     - Fear(2)
     cost: 305
     upgrade_categories:
-    - category: Replace one Brute Hammer
+    - category: Replace one Brute Hammers
       upgrades:
       - name: Missile Array
         rules: 30", A4, AP(2), Unstoppable
         cost_modifier: +70pts
-    - category: Replace one Brute Hammer
+    - category: Replace one Brute Hammers
       upgrades:
       - name: Super-Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(6)
@@ -1087,7 +1152,7 @@ v3.5.3:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
         cost_modifier: +125pts
-    - category: Replace any Brute Hammer
+    - category: Replace any Brute Hammers
       upgrades:
       - name: Brute Flail
         rules: A4, AP(1), Rending
@@ -1098,6 +1163,8 @@ v3.5.3:
       - name: Brute Fist
         rules: A4, AP(4)
         cost_modifier: +30pts
+    - category: Upgrade any Brute Fist with one
+      upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
         cost_modifier: +25pts
@@ -1132,12 +1199,12 @@ v3.5.3:
     - Regeneration
     cost: 395
     upgrade_categories:
-    - category: Replace Steel Tail
+    - category: Replace Steel Tails
       upgrades:
       - name: Dual Maul Cutters
         rules: A6, AP(3)
         cost_modifier: +10pts
-    - category: Replace Steel Tail and Fiend Claw
+    - category: Replace Steel Tails and Fiend Claws
       upgrades:
       - name: Twin Fiend Autocannon
         rules: 36", A8, AP(2)
@@ -1151,11 +1218,6 @@ v3.5.3:
     defense: 2+
     tough: 12
     weapons:
-    - name: ''
-      range: null
-      attacks: A1
-      ap: null
-      special_rules: []
     - name: Vortex of Mutation
       range: 18"
       attacks: A3
@@ -1269,7 +1331,7 @@ v3.5.3:
       - name: Anti-Tank Cannon
         rules: 30", A1, AP(3), Deadly(6)
         cost_modifier: Free
-    - category: Replace any Hell Flail
+    - category: Replace any Hell Flails
       upgrades:
       - name: Twin Heavy Flamer
         rules: 12", A2, AP(1), Blast(3), Reliable

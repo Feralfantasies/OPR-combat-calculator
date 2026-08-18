@@ -42,7 +42,7 @@ v3.5.3:
       - name: Tactical Master
         rules: Re-Deployment
         cost_modifier: +65pts
-    - category: Replace Sharp Claw
+    - category: Replace Sharp Claws
       upgrades:
       - name: Heavy Claws
         rules: A4, AP(1), Rending
@@ -148,7 +148,7 @@ v3.5.3:
       - name: Tactical Master
         rules: Re-Deployment
         cost_modifier: +65pts
-    - category: Replace Dual Sharp Claw
+    - category: Replace Dual Sharp Claws
       upgrades:
       - name: Sabotage Charges
         rules: A1, AP(1), Blast(3)
@@ -266,6 +266,8 @@ v3.5.3:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
         cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Cult Standard
         rules: Grounded Precision Aura
         cost_modifier: +30pts
@@ -291,7 +293,7 @@ v3.5.3:
     - Fanatic
     cost: 125
     upgrade_categories:
-    - category: Replace any Mortar
+    - category: Replace any Mortars
       upgrades:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
@@ -325,12 +327,12 @@ v3.5.3:
     - Fanatic
     cost: 85
     upgrade_categories:
-    - category: Replace any Rifle
+    - category: Replace any Rifles
       upgrades:
       - name: Shotgun
         rules: 12", A2, AP(1)
         cost_modifier: +5pts
-    - category: Replace one Rifle
+    - category: Replace one Rifles
       upgrades:
       - name: Web Carbine
         rules: 18", A2, Rending
@@ -353,10 +355,12 @@ v3.5.3:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
         cost_modifier: +30pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Cult Standard
         rules: Grounded Precision Aura
         cost_modifier: +15pts
-    - category: Replace one Rifle and CCW
+    - category: Replace one Rifles and CCWs
       upgrades:
       - name: Pistol, CCW
         rules: 12", A1, A2
@@ -364,7 +368,7 @@ v3.5.3:
       - name: Web Pistol, CCW
         rules: 12", A2, Rending, A2
         cost_modifier: +10pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Sharp Claw
         rules: A2, Disintegrate
@@ -396,12 +400,12 @@ v3.5.3:
     - Strider
     cost: 115
     upgrade_categories:
-    - category: Replace one Pistol
+    - category: Replace one Pistols
       upgrades:
       - name: Flamer Pistol
         rules: 6", A1, Blast(3), Reliable
         cost_modifier: +5pts
-    - category: Replace one Pistol and Mutant Claws
+    - category: Replace one Pistols and Mutant Claws
       upgrades:
       - name: Demo-Charges
         rules: A1, AP(2), Blast(3)
@@ -418,10 +422,12 @@ v3.5.3:
       - name: Whip & Blade
         rules: A2, AP(1), Reliable, Rending, Bane
         cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Cult Standard
         rules: Grounded Precision Aura
         cost_modifier: +20pts
-    - category: Replace one Pistol and Mutant Claw
+    - category: Replace one Pistols and Mutant Claws
       upgrades:
       - name: Sgt. Pistol, Sharp Claw
         rules: 12", A1, A2, Disintegrate
@@ -451,7 +457,7 @@ v3.5.3:
     - Regeneration
     cost: 150
     upgrade_categories:
-    - category: Replace one Heavy Pick
+    - category: Replace one Heavy Picks
       upgrades:
       - name: Heavy Hammer
         rules: A1, AP(1), Blast(3)
@@ -485,6 +491,8 @@ v3.5.3:
       - name: Spasmic Glands
         rules: Bounding
         cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Mind Snatcher
         rules: Caster(1)
         cost_modifier: +15pts
@@ -511,6 +519,8 @@ v3.5.3:
       - name: Patient Stalker
         rules: Scout
         cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Mind Snatcher
         rules: Caster(1)
         cost_modifier: +15pts
@@ -535,7 +545,7 @@ v3.5.3:
     - Fast
     cost: 135
     upgrade_categories:
-    - category: Replace any Rifle
+    - category: Replace any Rifles
       upgrades:
       - name: Burst Pistol
         rules: 12", A3
@@ -546,7 +556,7 @@ v3.5.3:
       - name: Grenade Launcher
         rules: 24", A1, Blast(3)
         cost_modifier: +10pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Heavy Hammer
         rules: A1, Blast(3)
@@ -663,12 +673,12 @@ v3.5.3:
     - Transport(11)
     cost: 205
     upgrade_categories:
-    - category: Replace any Heavy Flamer
+    - category: Replace any Heavy Flamers
       upgrades:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
         cost_modifier: +10pts
-    - category: Replace one Heavy Flamer
+    - category: Replace one Heavy Flamers
       upgrades:
       - name: Laser Machinegun
         rules: 30", A3, AP(3)

@@ -253,7 +253,7 @@ v3.5.3:
     - Relentless
     cost: 455
     upgrade_categories:
-    - category: Replace any Fusion Blaster
+    - category: Replace any Fusion Blasters
       upgrades:
       - name: Gatling Cannon
         rules: 30", A6, AP(1), Rending
@@ -588,7 +588,7 @@ v3.5.3:
     - Relentless
     cost: 1030
     upgrade_categories:
-    - category: Replace any Titan Fusion Cannon
+    - category: Replace any Titan Fusion Cannons
       upgrades:
       - name: Heavy Machinegun, Titan Battle Cannon
         rules: 30", A3, AP(1), 30", A3, AP(2), Blast(3)
@@ -669,7 +669,7 @@ v3.5.3:
     - Honor Code
     cost: 1130
     upgrade_categories:
-    - category: Replace any Titan Harpoon Cannon
+    - category: Replace any Titan Harpoon Cannons
       upgrades:
       - name: Titan Triple Flamer
         rules: 18", A3, AP(1), Blast(3), Reliable
@@ -680,7 +680,7 @@ v3.5.3:
       - name: Plasma Battle Cannon
         rules: 30", A3, AP(4), Blast(3)
         cost_modifier: +115pts
-    - category: Replace any Twin Shoulder-Cannons
+    - category: Replace any Twin Shoulder-Cannon
       upgrades:
       - name: Twin Shoulder-Missile
         rules: 24", A2, AP(3), Deadly(3)

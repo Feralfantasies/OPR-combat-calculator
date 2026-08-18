@@ -188,17 +188,22 @@ v3.5.3:
     - Rapid Blink
     cost: 150
     upgrade_categories:
-    - category: Replace any Fragment Pistol
+    - category: Upgrade all models with
+      upgrades:
+      - name: Twisted Illusion
+        rules: Ambush Re-Deployment
+        cost_modifier: +35pts
+    - category: Replace any Fragment Pistols
       upgrades:
       - name: Neuron Pistol
         rules: 12", A2, Bane
         cost_modifier: +5pts
-    - category: Replace one Fragment Pistol
+    - category: Replace one Fragment Pistols
       upgrades:
       - name: Fusion Pistol
         rules: 6", A1, AP(4), Deadly(3)
         cost_modifier: +10pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Deathly Caress
         rules: A2, AP(1), Rending
@@ -206,7 +211,7 @@ v3.5.3:
       - name: Deathly Embrace
         rules: A2, AP(4)
         cost_modifier: +20pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Deathly Touch
         rules: A1, Blast(3)
@@ -233,7 +238,12 @@ v3.5.3:
     - Rapid Blink
     - Regeneration
     cost: 215
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Twisted Illusion
+        rules: Ambush Re-Deployment
+        cost_modifier: +35pts
   - name: Jokers
     size: 3
     quality: 3+
@@ -258,7 +268,12 @@ v3.5.3:
     - Point-Blank Surge
     - Rapid Blink
     cost: 120
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Twisted Illusion
+        rules: Ambush Re-Deployment
+        cost_modifier: +20pts
   - name: Jetbikes
     size: 3
     quality: 3+

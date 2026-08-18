@@ -245,11 +245,13 @@ v3.5.3:
     - Highborn
     cost: 150
     upgrade_categories:
-    - category: Replace any Energy Sword
+    - category: Replace any Energy Swords
       upgrades:
       - name: Energy Spear
         rules: A2, AP(4)
         cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetbike
         rules: Mounted Shardguns (12", A2, Crack), Fast, Strider, Tough(3)
         cost_modifier: +125pts
@@ -274,7 +276,7 @@ v3.5.3:
     - Highborn
     cost: 100
     upgrade_categories:
-    - category: Replace one Shardgun
+    - category: Replace one Shardguns
       upgrades:
       - name: Gun Platform
         rules: Shard Cannon (24", A3, AP(1), Crack)
@@ -313,7 +315,7 @@ v3.5.3:
     - Scout
     cost: 105
     upgrade_categories:
-    - category: Replace one Shard Pistol
+    - category: Replace one Shard Pistols
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -321,11 +323,13 @@ v3.5.3:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Energy Sword
         rules: A2, AP(1), Rending
         cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Hologram Platform
         rules: Stealth Aura
         cost_modifier: +25pts
@@ -357,7 +361,7 @@ v3.5.3:
       - name: Twin Shard Carbine
         rules: 18", A4, Crack
         cost_modifier: +20pts
-    - category: Replace one Energy Sword and Combat Shield
+    - category: Replace one Energy Swords and Combat Shield
       upgrades:
       - name: Shard Pistol, Dire Sword, Sgt. Armor
         rules: 12", A1, Crack, A1, Blast(3), Shielded
@@ -370,6 +374,8 @@ v3.5.3:
       - name: Flicker Shield
         rules: Regeneration Aura
         cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Psy-Marker
         rules: Piercing Spotter
         cost_modifier: +25pts
@@ -400,7 +406,7 @@ v3.5.3:
       - name: Laser Blaster, CCW
         rules: 18", A1, AP(2), A1
         cost_modifier: +10pts
-    - category: Replace one Laser Pistol and CCW
+    - category: Replace one Laser Pistols and CCWs
       upgrades:
       - name: Laser Pistol, Energy Sword
         rules: 9", A1, AP(2), A2, AP(1), Rending
@@ -408,7 +414,7 @@ v3.5.3:
       - name: Shred Blaster Pistol, Energy Sword
         rules: 12", A2, Rending, A2, AP(1), Rending
         cost_modifier: +15pts
-    - category: Replace one Laser Pistol
+    - category: Replace one Laser Pistols
       upgrades:
       - name: Heavy Laser Blaster
         rules: 18", A3, AP(2)
@@ -416,9 +422,13 @@ v3.5.3:
       - name: Shred Blaster
         rules: 24", A4, Rending
         cost_modifier: +50pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Grenade Packs
         rules: Crossing Attack(1)
         cost_modifier: +20pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Psy-Marker
         rules: Piercing Spotter
         cost_modifier: +25pts
@@ -446,7 +456,7 @@ v3.5.3:
     - Strider
     cost: 190
     upgrade_categories:
-    - category: Replace one Shard Pistol and Energy Sword
+    - category: Replace one Shard Pistols and Energy Swords
       upgrades:
       - name: Sgt. Shard Pistol, Sgt. Energy Sword
         rules: 12", A1, Crack, A2, AP(1), Rending
@@ -462,6 +472,8 @@ v3.5.3:
       - name: Killing Axe
         rules: A1, AP(2), Deadly(3)
         cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Banshee Howl
         rules: Fear(2)
         cost_modifier: +20pts
@@ -490,7 +502,7 @@ v3.5.3:
     - Stealth
     cost: 195
     upgrade_categories:
-    - category: Replace one Shard Pistol and Stinger Blade
+    - category: Replace one Shard Pistols and Stinger Blades
       upgrades:
       - name: Sgt. Shard Pistol, Sgt. Stinger Blade
         rules: 12", A1, Crack, A2, Reliable, Bane
@@ -530,7 +542,7 @@ v3.5.3:
     - Teleport
     cost: 250
     upgrade_categories:
-    - category: Replace one Web Spinner
+    - category: Replace one Web Spinners
       upgrades:
       - name: Spinner Carbine
         rules: 18", A2, AP(4)
@@ -538,7 +550,7 @@ v3.5.3:
       - name: Heavy Web Spinner
         rules: 12", A4, AP(4)
         cost_modifier: +25pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Dual Shifter Picks
         rules: A2, Bane
@@ -570,7 +582,7 @@ v3.5.3:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace one Heavy Flamer
+    - category: Replace one Heavy Flamers
       upgrades:
       - name: Fusion Pike
         rules: 18", A1, AP(4), Deadly(3)
@@ -599,7 +611,12 @@ v3.5.3:
     - Stealth
     - Strider
     cost: 145
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Psy-Marker
+        rules: Piercing Spotter
+        cost_modifier: +25pts
   - name: Vanquishers
     size: 3
     quality: 3+
@@ -622,12 +639,12 @@ v3.5.3:
     - Relentless
     cost: 200
     upgrade_categories:
-    - category: Replace any Surge Rocket
+    - category: Replace any Surge Rockets
       upgrades:
       - name: Impact Rockets
         rules: 30", A1, AP(3), Deadly(3)
         cost_modifier: +15pts
-    - category: Replace one Surge Rocket
+    - category: Replace one Surge Rockets
       upgrades:
       - name: Shard Cannon
         rules: 24", A3, AP(1), Crack
@@ -635,6 +652,8 @@ v3.5.3:
       - name: Arcing Rockets
         rules: 30", A1, AP(1), Blast(3), Indirect
         cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Psy-Marker
         rules: Piercing Spotter
         cost_modifier: +25pts
@@ -690,7 +709,7 @@ v3.5.3:
       - name: Dual Energy Swords
         rules: A4, AP(1), Rending
         cost_modifier: +20pts
-    - category: Replace any Killing Axe
+    - category: Replace any Killing Axes
       upgrades:
       - name: Energy Sword
         rules: A3, AP(1), Rending
@@ -727,7 +746,12 @@ v3.5.3:
     - Strider
     cost: 230
     upgrade_categories:
-    - category: Replace any Mounted Shardgun and Sniper Rifle
+    - category: Upgrade any model with
+      upgrades:
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +30pts
+    - category: Replace any Mounted Shardguns and Sniper Rifle
       upgrades:
       - name: Shard Cannon
         rules: 24", A3, AP(1), Crack
@@ -735,6 +759,8 @@ v3.5.3:
       - name: Burst Laser
         rules: 30", A3, AP(2)
         cost_modifier: +20pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Hologram Field
         rules: Stealth Aura
         cost_modifier: +45pts
@@ -787,6 +813,8 @@ v3.5.3:
       - name: Energy Sword
         rules: A3, AP(1), Rending
         cost_modifier: +5pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Hologram Field
         rules: Stealth Aura
         cost_modifier: +45pts
@@ -837,7 +865,7 @@ v3.5.3:
       - name: Hologram Field
         rules: Stealth
         cost_modifier: +15pts
-    - category: Replace Mounted Shardgun
+    - category: Replace Mounted Shardguns
       upgrades:
       - name: Light Shard Cannon
         rules: 24", A2, AP(1), Crack
@@ -867,7 +895,7 @@ v3.5.3:
     - Strider
     cost: 210
     upgrade_categories:
-    - category: Replace Mounted Shardgun
+    - category: Replace Mounted Shardguns
       upgrades:
       - name: Light Shard Cannon
         rules: 24", A2, AP(1), Crack
@@ -957,7 +985,7 @@ v3.5.3:
     - Strider
     cost: 520
     upgrade_categories:
-    - category: Replace 2x Rapid Shard Cannon
+    - category: Replace 2x Rapid Shard Cannons
       upgrades:
       - name: Prism Cannon
         rules: 36", A2, AP(4), Deadly(6)
@@ -965,7 +993,7 @@ v3.5.3:
       - name: Spinner Cannon
         rules: 30", A4, AP(4), Blast(3), Indirect
         cost_modifier: +195pts
-    - category: Replace any Rapid Shard Cannon
+    - category: Replace any Rapid Shard Cannons
       upgrades:
       - name: Rapid Missile Launcher
         rules: 30", A2, AP(2), Deadly(3), Unstoppable
@@ -984,7 +1012,7 @@ v3.5.3:
       - name: Hologram Field
         rules: Stealth
         cost_modifier: +30pts
-    - category: Replace Mounted Shardgun
+    - category: Replace Mounted Shardguns
       upgrades:
       - name: Light Shard Cannon
         rules: 24", A2, AP(1), Crack
@@ -1036,7 +1064,7 @@ v3.5.3:
       - name: 2x Great Elemental Sword
         rules: A6, AP(1), Rending
         cost_modifier: +60pts
-    - category: Replace any Shardgun
+    - category: Replace any Shardguns
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -1124,7 +1152,7 @@ v3.5.3:
     - Highborn
     cost: 825
     upgrade_categories:
-    - category: Replace Dual Titan Claw
+    - category: Replace Dual Titan Claws
       upgrades:
       - name: Titan Axe, Titan Shield
         rules: A6, AP(2), Deadly(3), Fortified

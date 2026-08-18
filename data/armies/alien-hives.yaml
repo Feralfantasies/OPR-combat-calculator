@@ -48,7 +48,7 @@ v3.5.3:
       - name: Psychic Synapses
         rules: Caster(3)
         cost_modifier: +60pts
-    - category: Replace any Heavy Razor Claw
+    - category: Replace any Heavy Razor Claws
       upgrades:
       - name: Smashing Club
         rules: A1, AP(2), Blast(3)
@@ -157,7 +157,7 @@ v3.5.3:
       - name: Wings
         rules: Ambush, Flying
         cost_modifier: +35pts
-    - category: Replace any Heavy Razor Claw
+    - category: Replace any Heavy Razor Claws
       upgrades:
       - name: Smashing Club
         rules: A1, AP(2), Blast(3)
@@ -243,7 +243,7 @@ v3.5.3:
       - name: Bio-Tech Master
         rules: Increased Shooting Range Aura
         cost_modifier: +35pts
-    - category: Replace Razor Claw
+    - category: Replace Razor Claws
       upgrades:
       - name: Smashing Club
         rules: A1, Blast(3)
@@ -317,6 +317,8 @@ v3.5.3:
       - name: Serrated Claws
         rules: A2, AP(4)
         cost_modifier: +10pts
+    - category: Upgrade all models with one
+      upgrades:
       - name: Adrenaline Fueled
         rules: Fast
         cost_modifier: +15pts
@@ -372,6 +374,8 @@ v3.5.3:
       - name: Bio-Spiker
         rules: 18", A1, AP(1), Reliable, Takedown
         cost_modifier: +15pts
+    - category: Upgrade all models with one
+      upgrades:
       - name: Adrenaline Fueled
         rules: Fast
         cost_modifier: +15pts
@@ -398,7 +402,23 @@ v3.5.3:
     - Resistance
     - Strider
     cost: 125
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Synaptic Relay
+        rules: Spell Conduit
+        cost_modifier: +10pts
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Adrenaline Fueled
+        rules: Fast
+        cost_modifier: +15pts
+      - name: Toxic Cysts
+        rules: Bane in Melee
+        cost_modifier: +10pts
+      - name: Combat Mutations
+        rules: Piercing Growth
+        cost_modifier: +15pts
   - name: Winged Grunts
     size: 10
     quality: 5+
@@ -420,6 +440,20 @@ v3.5.3:
     - Hive Bond
     cost: 125
     upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Toxic Cysts
+        rules: Bane in Melee
+        cost_modifier: +5pts
+      - name: Adrenaline Fueled
+        rules: Fast
+        cost_modifier: +15pts
+      - name: Aerial Drop
+        rules: Ambush
+        cost_modifier: +20pts
+      - name: Combat Mutations
+        rules: Piercing Growth
+        cost_modifier: +25pts
     - category: Replace all Bio-Spiners
       upgrades:
       - name: Bio-Borer
@@ -475,6 +509,8 @@ v3.5.3:
       - name: Ravager Bio-Cannon
         rules: 24", A3, Indirect, Destructive
         cost_modifier: +20pts
+    - category: Upgrade all models with one
+      upgrades:
       - name: Adrenaline Fueled
         rules: Fast
         cost_modifier: +5pts
@@ -507,6 +543,8 @@ v3.5.3:
       - name: Patient Stalker
         rules: Scout
         cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Mind Snatcher
         rules: Caster(1)
         cost_modifier: +15pts
@@ -526,7 +564,12 @@ v3.5.3:
     - Hive Bond
     - Strider
     cost: 75
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Spine Shooter
+        rules: 12", A4, AP(1)
+        cost_modifier: +45pts
   - name: Hive Warriors
     size: 3
     quality: 4+
@@ -542,6 +585,17 @@ v3.5.3:
     - Hive Bond
     cost: 115
     upgrade_categories:
+    - category: Any model may replace one Razor Claws
+      upgrades:
+      - name: Ravager Gun
+        rules: 18", A3
+        cost_modifier: +10pts
+      - name: Spitter Gun
+        rules: 24", A1, Blast(3)
+        cost_modifier: +10pts
+      - name: Twin Spine Guns
+        rules: 12", A4, AP(1)
+        cost_modifier: +15pts
     - category: Replace one Ravager Gun
       upgrades:
       - name: Shredder Gun
@@ -556,6 +610,8 @@ v3.5.3:
       - name: Acid Launcher
         rules: 30", A1, AP(2), Deadly(3), Unstoppable
         cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Wings
         rules: Ambush, Flying
         cost_modifier: +50pts
@@ -648,6 +704,8 @@ v3.5.3:
       - name: Whip Limbs
         rules: A4, Bane, Precise
         cost_modifier: +25pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Shrouding Mist
         rules: Stealth Buff
         cost_modifier: +30pts
@@ -667,6 +725,17 @@ v3.5.3:
     - Relentless
     cost: 155
     upgrade_categories:
+    - category: Any model may replace one Razor Claws
+      upgrades:
+      - name: Heavy Ravager Gun
+        rules: 18", A3, AP(1), Destructive
+        cost_modifier: +35pts
+      - name: Shock Harpoon
+        rules: 24", A1, AP(2), Deadly(3)
+        cost_modifier: +40pts
+      - name: Skewer Cannon
+        rules: 30", A2, AP(4), Unstoppable
+        cost_modifier: +60pts
     - category: Replace any Razor Claws
       upgrades:
       - name: Slashing Blade
@@ -799,7 +868,7 @@ v3.5.3:
     - Strider
     cost: 175
     upgrade_categories:
-    - category: Replace any Heavy Razor Claw
+    - category: Replace any Heavy Razor Claws
       upgrades:
       - name: Smashing Club
         rules: A1, AP(2), Blast(3)
@@ -1017,7 +1086,7 @@ v3.5.3:
       - name: Heavy Acid Cannon
         rules: 36", A2, AP(2), Deadly(6), Unstoppable
         cost_modifier: +90pts
-    - category: Replace one Heavy Razor Claw
+    - category: Replace one Heavy Razor Claws
       upgrades:
       - name: Killing Scream
         rules: Breath Attack
@@ -1129,7 +1198,7 @@ v3.5.3:
     - Hive Bond
     cost: 420
     upgrade_categories:
-    - category: Replace 3x Heavy Razor Claw
+    - category: Replace 3x Heavy Razor Claws
       upgrades:
       - name: Acid Spurt, Whip Limbs
         rules: 12", A2, Blast(3), Bane, A8, Bane, Precise
@@ -1236,7 +1305,7 @@ v3.5.3:
     - Hive Bond
     cost: 505
     upgrade_categories:
-    - category: Replace any Stinger Launcher
+    - category: Replace any Stinger Launchers
       upgrades:
       - name: Barb Launcher
         rules: 18", A2, AP(2), Blast(3)

@@ -88,7 +88,7 @@ v3.5.3:
       - name: Overseer
         rules: No Retreat Aura
         cost_modifier: +35pts
-    - category: Replace Lord Gauss Pistol and 2x CCW
+    - category: Replace Lord Gauss Pistol and 2x CCWs
       upgrades:
       - name: Dual Hyper Swords
         rules: A4, AP(1), Rending
@@ -110,7 +110,7 @@ v3.5.3:
       - name: Heavy Gauss Cannon
         rules: 30", A6, Destructive
         cost_modifier: +80pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Void Sword
         rules: A1, Blast(3)
@@ -241,7 +241,7 @@ v3.5.3:
       - name: Gauss Rifle
         rules: 24", A1, Destructive
         cost_modifier: +10pts
-    - category: Replace one Reaper Rifle
+    - category: Replace one Reaper Rifles
       upgrades:
       - name: Plasma Caster
         rules: 24", A1, AP(4)
@@ -287,6 +287,8 @@ v3.5.3:
       - name: Hyper Sword, Combat Shields
         rules: A2, AP(1), Rending, Shielded
         cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetpacks
         rules: Ambush, Flying, Swift
         cost_modifier: +45pts
@@ -306,18 +308,18 @@ v3.5.3:
     - Self-Repair
     - Slow
     cost: 130
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Machine-Horror
+        rules: Fear(1)
+        cost_modifier: +10pts
   - name: Eternals
     size: 5
     quality: 3+
     defense: 2+
     tough: null
     weapons:
-    - name: ''
-      range: null
-      attacks: A5
-      ap: null
-      special_rules: []
     - name: Flux Carbines
       range: 18"
       attacks: A2
@@ -361,7 +363,12 @@ v3.5.3:
     - Self-Repair
     - Slow
     cost: 110
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Hyperspace Reapers
+        rules: Ambushing Piercing Shot
+        cost_modifier: +15pts
   - name: Bot Swarms
     size: 3
     quality: 5+
@@ -396,7 +403,23 @@ v3.5.3:
     - Self-Repair
     - Strider
     cost: 175
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Any model may replace Spike Whips
+      upgrades:
+      - name: 2x Metal Fangs
+        rules: A2, Rending
+        cost_modifier: +5pts
+      - name: Shock Whips
+        rules: A4, AP(1), Surge
+        cost_modifier: +5pts
+    - category: Any model may replace one Metal Fangs
+      upgrades:
+      - name: Twin Atom-Caster
+        rules: 12", A2, AP(1)
+        cost_modifier: Free
+      - name: Death Gaze
+        rules: 12", A2, AP(4)
+        cost_modifier: +10pts
   - name: Destroyer Snakes
     size: 3
     quality: 3+
@@ -419,9 +442,13 @@ v3.5.3:
       - name: Heavy Reaper Blade
         rules: A1, AP(3), Deadly(6), Shred
         cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Plasmabot
         rules: Rending in Melee
         cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Elite Vanguard
         rules: Scout
         cost_modifier: +35pts
@@ -455,6 +482,8 @@ v3.5.3:
       - name: Heavy Gauss Cannon
         rules: 30", A6, Destructive
         cost_modifier: +40pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Phase Core
         rules: Ambush
         cost_modifier: +35pts
@@ -481,6 +510,8 @@ v3.5.3:
       - name: Heavy Reaper Blade
         rules: A1, AP(3), Deadly(6), Shred
         cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Plasmabot
         rules: Rending in Melee
         cost_modifier: +25pts
@@ -490,12 +521,7 @@ v3.5.3:
     defense: 4+
     tough: 3
     weapons:
-    - name: Rapid
-      range: null
-      attacks: A3
-      ap: null
-      special_rules: []
-    - name: Flux Carbines
+    - name: Rapid Flux Carbines
       range: 18"
       attacks: A4
       ap: null
@@ -512,7 +538,7 @@ v3.5.3:
     - Strider
     cost: 215
     upgrade_categories:
-    - category: Replace any Rapid Flux Carbine
+    - category: Replace any Rapid Flux Carbines
       upgrades:
       - name: Rapid Gauss Rifle
         rules: 24", A3, Destructive
@@ -893,11 +919,6 @@ v3.5.3:
       ap: AP(3)
       special_rules:
       - Deadly(6)
-    - name: ''
-      range: null
-      attacks: A1
-      ap: null
-      special_rules: []
     - name: Flux Sphere Array
       range: 24"
       attacks: A9
@@ -977,12 +998,7 @@ v3.5.3:
     defense: 2+
     tough: 6
     weapons:
-    - name: Twin
-      range: null
-      attacks: A1
-      ap: null
-      special_rules: []
-    - name: Flux Cannon
+    - name: Twin Flux Cannon
       range: 24"
       attacks: A6
       ap: AP(1)
@@ -1012,12 +1028,7 @@ v3.5.3:
       ap: AP(4)
       special_rules:
       - Unstoppable
-    - name: Twin
-      range: null
-      attacks: A1
-      ap: null
-      special_rules: []
-    - name: Flux Cannon
+    - name: Twin Flux Cannon
       range: 24"
       attacks: A6
       ap: AP(1)

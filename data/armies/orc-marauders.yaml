@@ -37,7 +37,7 @@ v3.5.3:
       - name: Gun Master
         rules: Unpredictable Shooter Aura
         cost_modifier: +40pts
-    - category: Replace one Heavy Club
+    - category: Replace one Heavy Clubs
       upgrades:
       - name: Carbine, Heavy Flamer-Mod
         rules: 18", A2, 12", A1, AP(1), Blast(3), Limited, Reliable
@@ -50,7 +50,7 @@ v3.5.3:
       - name: Rocket-Mod
         rules: 18", A1, AP(2), Deadly(3), Limited
         cost_modifier: +5pts
-    - category: Replace any Heavy Club
+    - category: Replace any Heavy Clubs
       upgrades:
       - name: Heavy Saw
         rules: A1, AP(2), Deadly(3)
@@ -383,6 +383,17 @@ v3.5.3:
     - Ferocious
     cost: 155
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Scary Banner
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: War Banner
+        rules: Speed Feat Aura
+        cost_modifier: +20pts
+      - name: Field Doctor
+        rules: Regeneration Aura
+        cost_modifier: +40pts
     - category: Replace all Pistols and CCWS
       upgrades:
       - name: Carbine, CCW
@@ -447,6 +458,8 @@ v3.5.3:
       - name: Dual Hand Weapons
         rules: A2
         cost_modifier: Free
+    - category: Upgrade one model with one
+      upgrades:
       - name: Scary Banner
         rules: Fear(2)
         cost_modifier: +20pts
@@ -477,11 +490,24 @@ v3.5.3:
     - Ferocious
     cost: 105
     upgrade_categories:
-    - category: Replace any Pistol
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Scary Banner
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: War Banner
+        rules: Speed Feat Aura
+        cost_modifier: +15pts
+      - name: Field Doctor
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace any Pistols
       upgrades:
       - name: Carbine
         rules: 18", A2
         cost_modifier: +10pts
+    - category: Take one Carbine attachment
+      upgrades:
       - name: Heavy Flamer-Mod
         rules: 12", A1, AP(1), Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -491,7 +517,7 @@ v3.5.3:
       - name: Carbine-Mod
         rules: 18", A2
         cost_modifier: +10pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Heavy Axe
         rules: A2, AP(1), Rending
@@ -499,7 +525,7 @@ v3.5.3:
       - name: Heavy Claw
         rules: A2, AP(4)
         cost_modifier: +20pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Heavy Club
         rules: A1, Blast(3)
@@ -539,7 +565,7 @@ v3.5.3:
       - name: Carbine
         rules: 18", A2
         cost_modifier: +30pts
-    - category: Replace one Pistol
+    - category: Replace one Pistols
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -564,7 +590,7 @@ v3.5.3:
       - name: Sniper Carbine
         rules: 18", A1, AP(1), Reliable, Takedown
         cost_modifier: +10pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Heavy Club
         rules: A1, Blast(3)
@@ -606,7 +632,7 @@ v3.5.3:
       - name: Shotgun
         rules: 12", A2, AP(1)
         cost_modifier: +30pts
-    - category: Replace one Pistol
+    - category: Replace one Pistols
       upgrades:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
@@ -620,7 +646,7 @@ v3.5.3:
       - name: Lightning Pistol
         rules: 12", A2, Rending, Unstoppable
         cost_modifier: +10pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Heavy Club
         rules: A1, Blast(3)
@@ -669,11 +695,13 @@ v3.5.3:
       - name: Railgun
         rules: 30", A3, AP(2), Unstoppable
         cost_modifier: +85pts
-    - category: Replace any Flamer
+    - category: Replace any Flamers
       upgrades:
       - name: Bomb Spear
         rules: A1, AP(4), Deadly(3)
         cost_modifier: +15pts
+    - category: Upgrade any model with
+      upgrades:
       - name: Bomb Drone
         rules: 18", A1, Blast(3), Limited
         cost_modifier: +5pts
@@ -701,7 +729,7 @@ v3.5.3:
     - Ferocious Boost
     cost: 95
     upgrade_categories:
-    - category: Replace any Heavy Flamer
+    - category: Replace any Heavy Flamers
       upgrades:
       - name: Killer-Rocket Pod
         rules: 12", A1, Deadly(3), Tear
@@ -718,6 +746,8 @@ v3.5.3:
       - name: Plasma Cannon
         rules: 30", A1, AP(4), Blast(3)
         cost_modifier: +45pts
+    - category: Upgrade any model with
+      upgrades:
       - name: Bomb Drone
         rules: 18", A1, Blast(3), Limited
         cost_modifier: +5pts
@@ -751,7 +781,15 @@ v3.5.3:
     - Ferocious
     cost: 160
     upgrade_categories:
-    - category: Replace any Heavy Flamer-Mod
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Scary Banner
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: War Banner
+        rules: Speed Feat Aura
+        cost_modifier: +30pts
+    - category: Replace any Heavy Flamer-Mods
       upgrades:
       - name: Carbine-Mod
         rules: 18", A2
@@ -759,7 +797,7 @@ v3.5.3:
       - name: Rocket-Mod
         rules: 18", A1, AP(2), Deadly(3), Limited
         cost_modifier: +5pts
-    - category: Replace any Heavy Club
+    - category: Replace any Heavy Clubs
       upgrades:
       - name: Heavy Saw
         rules: A1, AP(2), Deadly(3)
@@ -770,7 +808,7 @@ v3.5.3:
       - name: Heavy Claw
         rules: A3, AP(4)
         cost_modifier: +30pts
-    - category: Replace one Carbine and Carbine-Mod and Heavy Club
+    - category: Replace one Carbines and Carbine-Mod and Heavy Clubs
       upgrades:
       - name: Dual Heavy Saws
         rules: A2, AP(2), Deadly(3)
@@ -833,7 +871,7 @@ v3.5.3:
     - Ferocious
     cost: 165
     upgrade_categories:
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Heavy Club
         rules: A1, Blast(3)
@@ -874,7 +912,7 @@ v3.5.3:
     - Ferocious
     cost: 225
     upgrade_categories:
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Heavy Club
         rules: A1, Blast(3)

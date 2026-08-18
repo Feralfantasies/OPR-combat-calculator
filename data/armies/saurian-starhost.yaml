@@ -101,7 +101,7 @@ v3.5.3:
       - name: Crusader
         rules: Rending when Shooting Aura
         cost_modifier: +65pts
-    - category: Replace any Heavy Mace
+    - category: Replace any Heavy Maces
       upgrades:
       - name: Power Knuckle
         rules: A3, AP(2)
@@ -297,11 +297,18 @@ v3.5.3:
     - Strider
     cost: 80
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Sacred Destiny
+        rules: Protection Feat
+        cost_modifier: +10pts
     - category: Replace all Energy Shields
       upgrades:
       - name: CCW
         rules: A2
         cost_modifier: +10pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Phase Backpacks
         rules: Teleport
         cost_modifier: +15pts
@@ -326,12 +333,17 @@ v3.5.3:
     - Primal
     cost: 95
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Sacred Destiny
+        rules: Protection Feat
+        cost_modifier: +10pts
     - category: Replace all Pistols and CCWs
       upgrades:
       - name: Carbine, CCW
         rules: 18", A2, A1
         cost_modifier: +20pts
-    - category: Replace one Pistol
+    - category: Replace one Pistols
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -374,6 +386,8 @@ v3.5.3:
       - name: Precision Carbine
         rules: 18", A1, AP(1), Precise
         cost_modifier: Free
+    - category: Upgrade one model with
+      upgrades:
       - name: Advanced Locator
         rules: Ambush Beacon
         cost_modifier: +15pts
@@ -393,16 +407,23 @@ v3.5.3:
     - Primal
     cost: 145
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Sacred Destiny
+        rules: Protection Feat
+        cost_modifier: +10pts
     - category: Replace all Hammers
       upgrades:
       - name: Mace-Shots, Mace
         rules: 12", A2, AP(1), A2
         cost_modifier: +30pts
-    - category: Replace one Hammer
+    - category: Replace one Hammers
       upgrades:
       - name: Great Hammer
         rules: A1, AP(2), Blast(3)
         cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Hardened Elites
         rules: Fortified
         cost_modifier: +10pts
@@ -476,12 +497,12 @@ v3.5.3:
     - Ravage(1)
     cost: 130
     upgrade_categories:
-    - category: Replace any Pistol
+    - category: Replace any Pistols
       upgrades:
       - name: Spike Pistol
         rules: 9", A2, Rending
         cost_modifier: +5pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Power Spear
         rules: A2, Thrust
@@ -524,6 +545,8 @@ v3.5.3:
       - name: Shock Pistol, Energy Shields
         rules: 12", A1, AP(4), Shielded
         cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Disposable Bombs
         rules: A1, AP(1), Blast(3), Limited, Strafing
         cost_modifier: +15pts
@@ -554,6 +577,8 @@ v3.5.3:
       - name: Shock Pistol, Energy Shields
         rules: 12", A1, AP(4), Shielded
         cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Hunting Bait
         rules: Precision Target(1)
         cost_modifier: +25pts
@@ -579,7 +604,12 @@ v3.5.3:
     - Primal
     cost: 155
     upgrade_categories:
-    - category: Replace any Bludgeon
+    - category: Upgrade all models with
+      upgrades:
+      - name: Sacred Destiny
+        rules: Protection Feat
+        cost_modifier: +20pts
+    - category: Replace any Bludgeons
       upgrades:
       - name: Power Knuckle
         rules: A1, AP(2)
@@ -590,6 +620,8 @@ v3.5.3:
       - name: Power Claw
         rules: A1, AP(1), Rending
         cost_modifier: +5pts
+    - category: Upgrade any model with
+      upgrades:
       - name: Missile Pod
         rules: 18", A1, AP(1), Limited, Unstoppable
         cost_modifier: +5pts

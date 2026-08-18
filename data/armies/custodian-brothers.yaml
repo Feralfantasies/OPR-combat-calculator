@@ -381,12 +381,23 @@ v3.5.3:
     - Guardian
     cost: 195
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
     - category: Replace all Shot-Mounts and Custodian Axes
       upgrades:
       - name: Burst Shot-Mount, Heavy CCW
         rules: 12", A3, AP(1), A1, AP(1)
         cost_modifier: +35pts
-    - category: Replace any Shot-Mount
+    - category: Replace any Shot-Mounts
       upgrades:
       - name: Flame-Mount
         rules: 12", A1, Blast(3), Reliable
@@ -406,7 +417,7 @@ v3.5.3:
       - name: Storm-Mount
         rules: 24", A3, AP(1)
         cost_modifier: +35pts
-    - category: Replace any Custodian Axe
+    - category: Replace any Custodian Axes
       upgrades:
       - name: Custodian Halberd
         rules: A1, Deadly(3), Tear
@@ -440,12 +451,23 @@ v3.5.3:
     - Versatile Attack
     cost: 220
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
     - category: Replace all Shot-Mounts and Custodian Axes
       upgrades:
       - name: Burst Shot-Mount, Heavy CCW
         rules: 12", A3, AP(1), A1, AP(1)
         cost_modifier: +40pts
-    - category: Replace any Shot-Mount
+    - category: Replace any Shot-Mounts
       upgrades:
       - name: Flame-Mount
         rules: 12", A1, Blast(3), Reliable
@@ -465,7 +487,7 @@ v3.5.3:
       - name: Storm-Mount
         rules: 24", A3, AP(1)
         cost_modifier: +50pts
-    - category: Replace any Custodian Axe
+    - category: Replace any Custodian Axes
       upgrades:
       - name: Custodian Halberd
         rules: A1, Deadly(3), Tear
@@ -499,12 +521,23 @@ v3.5.3:
     - Guardian
     cost: 295
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
     - category: Replace all Shot-Mounts and Heavy CCWS
       upgrades:
       - name: Burst Shot-Mount, Heavy Hand Weapon
         rules: 12", A3, AP(1), A1, AP(1)
         cost_modifier: Free
-    - category: Replace any Shot-Mount
+    - category: Replace any Shot-Mounts
       upgrades:
       - name: Destroyer Long Pistol
         rules: 18", A3, Rending
@@ -512,7 +545,7 @@ v3.5.3:
       - name: Storm-Mount
         rules: 24", A3, AP(1)
         cost_modifier: +35pts
-    - category: Replace any Heavy CCW
+    - category: Replace any Heavy CCWs
       upgrades:
       - name: Energy Sword
         rules: A3, AP(1), Rending
@@ -520,6 +553,8 @@ v3.5.3:
       - name: Custodian Spear
         rules: A3, AP(3)
         cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Inhibitor Array
         rules: Ranged Shrouding Aura
         cost_modifier: +10pts
@@ -548,7 +583,23 @@ v3.5.3:
     - Fearless
     - Guardian
     cost: 335
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Inhibitor Array
+        rules: Ranged Shrouding Aura
+        cost_modifier: +45pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
   - name: Vigilant Sisters
     size: 5
     quality: 4+
@@ -565,7 +616,12 @@ v3.5.3:
     - Furious
     - Guardian
     cost: 120
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Heretic Spotter
+        rules: Piercing Target(1)
+        cost_modifier: +35pts
   - name: Prosecution Sisters
     size: 5
     quality: 4+
@@ -586,7 +642,12 @@ v3.5.3:
     - Guardian
     - Relentless
     cost: 130
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Heretic Spotter
+        rules: Piercing Target(1)
+        cost_modifier: +35pts
   - name: Hunter Sisters
     size: 3
     quality: 4+
@@ -609,7 +670,12 @@ v3.5.3:
     - Guardian
     - Scout
     cost: 95
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Heretic Spotter
+        rules: Piercing Target(1)
+        cost_modifier: +35pts
   - name: Destroyer
     size: 1
     quality: 3+
@@ -710,7 +776,7 @@ v3.5.3:
     - Guardian
     cost: 190
     upgrade_categories:
-    - category: Replace Heavy Flamer and Energy Claw
+    - category: Replace Heavy Flamer and Energy Claws
       upgrades:
       - name: Twin Heavy Flamer
         rules: 12", A2, AP(1), Blast(3), Reliable
@@ -732,7 +798,7 @@ v3.5.3:
       - name: Heavy Storm Rifle
         rules: 24", A6, AP(1)
         cost_modifier: +60pts
-    - category: Replace Energy Claw
+    - category: Replace Energy Claws
       upgrades:
       - name: Energy Fist
         rules: A3, AP(4)
@@ -882,7 +948,7 @@ v3.5.3:
     - Guardian
     cost: 370
     upgrade_categories:
-    - category: Replace any Walker Fist
+    - category: Replace any Walker Fists
       upgrades:
       - name: Super-Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(6)
@@ -890,6 +956,8 @@ v3.5.3:
       - name: Heavy Minigun
         rules: 24", A6, AP(2)
         cost_modifier: +60pts
+    - category: Upgrade any Walker Fist with one
+      upgrades:
       - name: Storm Rifle
         rules: 24", A3, AP(1)
         cost_modifier: +45pts
@@ -989,7 +1057,7 @@ v3.5.3:
     - Guardian
     cost: 695
     upgrade_categories:
-    - category: Replace any Walker Fist and Twin Plasma
+    - category: Replace any Walker Fists and Twin Plasmas
       upgrades:
       - name: Storm Cannon
         rules: 30", A2, AP(3), Deadly(3)
@@ -1030,7 +1098,7 @@ v3.5.3:
     - category: Upgrade with
       upgrades:
       - name: Transport
-        rules: '6'
+        rules: Transport(6)
         cost_modifier: +20pts
   - name: Custodian Heavy Battle Tank
     size: 1

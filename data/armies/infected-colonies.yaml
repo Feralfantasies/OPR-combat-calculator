@@ -192,7 +192,12 @@ v3.5.3:
     - Infected
     - Strider
     cost: 125
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Evolving Strain
+        rules: Precision Growth
+        cost_modifier: +25pts
   - name: Infected Zombies
     size: 10
     quality: 5+
@@ -210,7 +215,12 @@ v3.5.3:
     - Regeneration
     - Slow
     cost: 130
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Evolving Strain
+        rules: Precision Growth
+        cost_modifier: +25pts
   - name: Infected Soldiers
     size: 10
     quality: 5+
@@ -251,7 +261,7 @@ v3.5.3:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
         cost_modifier: +20pts
-    - category: Replace one Carbine and CCW
+    - category: Replace one Carbines and CCWs
       upgrades:
       - name: Sgt. Pistol, Energy Sword
         rules: 12", A1, A2, AP(1), Rending
@@ -289,7 +299,7 @@ v3.5.3:
     - Infected
     cost: 150
     upgrade_categories:
-    - category: Replace any Heavy Machinegun
+    - category: Replace any Heavy Machineguns
       upgrades:
       - name: Missile Launcher
         rules: 30", A1, AP(2), Deadly(3), Unstoppable
@@ -325,7 +335,7 @@ v3.5.3:
     - Relentless
     cost: 80
     upgrade_categories:
-    - category: Replace any Grenade Launcher
+    - category: Replace any Grenade Launchers
       upgrades:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
@@ -368,7 +378,7 @@ v3.5.3:
       - name: Hardened Claw
         rules: A2, AP(4)
         cost_modifier: +15pts
-    - category: Replace one Toxic Claw
+    - category: Replace one Toxic Claws
       upgrades:
       - name: Barbed Claw
         rules: A1, AP(2), Deadly(3)
@@ -406,7 +416,12 @@ v3.5.3:
     - Infected
     - Strider
     cost: 80
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Evolving Strain
+        rules: Precision Growth
+        cost_modifier: +15pts
   - name: Crazed Ravens
     size: 3
     quality: 5+
@@ -422,7 +437,12 @@ v3.5.3:
     - Flying
     - Infected
     cost: 90
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Evolving Strain
+        rules: Precision Growth
+        cost_modifier: +10pts
   - name: Rabid Dogs
     size: 5
     quality: 4+
@@ -462,11 +482,13 @@ v3.5.3:
     - Infected
     cost: 180
     upgrade_categories:
-    - category: Replace any Sharp Talon
+    - category: Replace any Sharp Talons
       upgrades:
       - name: Piercing Beak
         rules: A1, AP(2), Deadly(3)
         cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Swoop Attack
         rules: Impact(1)
         cost_modifier: +15pts
@@ -486,12 +508,12 @@ v3.5.3:
     - Infected
     cost: 230
     upgrade_categories:
-    - category: Replace any Dual Sharp Claw
+    - category: Replace any Dual Sharp Claws
       upgrades:
       - name: Dual Smashing Fists
         rules: A4, AP(4)
         cost_modifier: +15pts
-    - category: Replace one Dual Sharp Claw
+    - category: Replace one Dual Sharp Claws
       upgrades:
       - name: Heavy Dual Serrated Claws
         rules: A2, AP(1), Blast(3)

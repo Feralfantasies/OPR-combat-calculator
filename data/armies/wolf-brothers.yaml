@@ -159,6 +159,8 @@ v3.5.3:
       - name: Master Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +65pts
+    - category: Take one Master Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +10pts
@@ -269,6 +271,8 @@ v3.5.3:
       - name: Master Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +50pts
+    - category: Take one Master Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -395,6 +399,8 @@ v3.5.3:
       - name: Master Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +35pts
+    - category: Take one Master Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -451,7 +457,7 @@ v3.5.3:
       - name: Shotgun, CCW
         rules: 12", A2, AP(1), A1
         cost_modifier: +10pts
-    - category: Replace one Heavy Pistol
+    - category: Replace one Heavy Pistols
       upgrades:
       - name: Plasma Rifle
         rules: 24", A1, AP(4)
@@ -473,13 +479,15 @@ v3.5.3:
       - name: Sniper Rifle
         rules: 30", A1, AP(1), Reliable, Takedown
         cost_modifier: +20pts
+    - category: Upgrade all models with any
+      upgrades:
       - name: Forward Sentries
         rules: Scout
         cost_modifier: +15pts
       - name: Camo Cloaks
         rules: Stealth
         cost_modifier: +15pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -519,7 +527,18 @@ v3.5.3:
     - Wolfborn
     cost: 135
     upgrade_categories:
-    - category: Replace one Heavy Pistol
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +10pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace one Heavy Pistols
       upgrades:
       - name: Plasma Rifle
         rules: 24", A1, AP(4)
@@ -533,12 +552,12 @@ v3.5.3:
       - name: Gravity Rifle
         rules: 18", A1, AP(1), Blast(3), Lacerate
         cost_modifier: +20pts
-    - category: Replace one Heavy Pistol
+    - category: Replace one Heavy Pistols
       upgrades:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
         cost_modifier: +5pts
-    - category: Replace one Heavy Pistol and Heavy CCW
+    - category: Replace one Heavy Pistols and Heavy CCWs
       upgrades:
       - name: Heavy Pistol, Energy Hammer
         rules: 12", A1, AP(1), A1, Blast(3)
@@ -552,10 +571,12 @@ v3.5.3:
       - name: Heavy Pistol, Energy Fist
         rules: 12", A1, AP(1), A2, AP(4)
         cost_modifier: +10pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetpacks
         rules: Ambush, Flying
         cost_modifier: +30pts
-    - category: Replace one Heavy Pistol and Heavy CCW
+    - category: Replace one Heavy Pistols and Heavy CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -594,7 +615,18 @@ v3.5.3:
     - Wolfborn
     cost: 160
     upgrade_categories:
-    - category: Replace one Heavy Rifle
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +10pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace one Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -629,7 +661,7 @@ v3.5.3:
       - name: Laser Cannon
         rules: 36", A1, AP(3), Deadly(3)
         cost_modifier: +60pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -665,7 +697,18 @@ v3.5.3:
     - Wolfborn
     cost: 95
     upgrade_categories:
-    - category: Replace any Heavy Pistol and Combat Shield
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+    - category: Replace any Heavy Pistols and Combat Shield
       upgrades:
       - name: Heavy CCW, Combat Shield
         rules: A2, AP(1), Shielded
@@ -679,7 +722,7 @@ v3.5.3:
       - name: Heavy Chainsaw Sword
         rules: A4, AP(1)
         cost_modifier: +20pts
-    - category: Replace any Heavy Pistol
+    - category: Replace any Heavy Pistols
       upgrades:
       - name: Flamer Pistol
         rules: 6", A1, Blast(3), Reliable
@@ -698,10 +741,12 @@ v3.5.3:
       - name: Energy Fist
         rules: A2, AP(4)
         cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetpacks
         rules: Ambush, Flying
         cost_modifier: +20pts
-    - category: Replace one Heavy Pistol and Heavy CCW
+    - category: Replace one Heavy Pistols and Heavy CCW
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -741,7 +786,18 @@ v3.5.3:
     - Wolfborn
     cost: 120
     upgrade_categories:
-    - category: Replace any Heavy Rifle
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+    - category: Replace any Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -776,6 +832,8 @@ v3.5.3:
       - name: Laser Cannon
         rules: 36", A1, AP(3), Deadly(3)
         cost_modifier: +70pts
+    - category: Any model may take one Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +10pts
@@ -788,7 +846,7 @@ v3.5.3:
       - name: Gravity-Mod
         rules: 18", A1, AP(1), Blast(3), Limited, Lacerate
         cost_modifier: +15pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -838,6 +896,8 @@ v3.5.3:
       - name: Heavy Wolf Axe
         rules: A2, AP(4)
         cost_modifier: +10pts
+    - category: Upgrade any model with
+      upgrades:
       - name: Backpack-GL
         rules: 24", A1, Blast(3), Limited
         cost_modifier: +10pts
@@ -865,7 +925,7 @@ v3.5.3:
     - Wolfborn
     cost: 135
     upgrade_categories:
-    - category: Replace any Heavy Flamer
+    - category: Replace any Heavy Flamers
       upgrades:
       - name: Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(3)
@@ -903,6 +963,17 @@ v3.5.3:
     - Wolfborn
     cost: 240
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +10pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +30pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +55pts
     - category: Replace all Combat Shields and CCWS
       upgrades:
       - name: Dual Energy Claws
@@ -922,7 +993,7 @@ v3.5.3:
       - name: Cyclone Missiles, Storm Rifle
         rules: 24", A1, AP(2), Deadly(3), Unstoppable, 24", A3, AP(1)
         cost_modifier: +50pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Energy Hammer
         rules: A1, Blast(3)
@@ -952,7 +1023,12 @@ v3.5.3:
     - Strider
     - Wolfborn
     cost: 120
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Cyborg Body
+        rules: Regeneration
+        cost_modifier: +10pts
   - name: Wolf Riders
     size: 3
     quality: 3+
@@ -981,7 +1057,7 @@ v3.5.3:
     - Wolfborn
     cost: 285
     upgrade_categories:
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Heavy Pistol, Energy Hammer
         rules: 12", A1, AP(1), A1, Blast(3)
@@ -994,12 +1070,12 @@ v3.5.3:
       - name: Combat Shield
         rules: Shielded
         cost_modifier: +5pts
-    - category: Replace any Heavy Pistol
+    - category: Replace any Heavy Pistols
       upgrades:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
         cost_modifier: +5pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Energy Sword
         rules: A2, AP(1), Rending
@@ -1035,7 +1111,7 @@ v3.5.3:
     - Wolfborn
     cost: 225
     upgrade_categories:
-    - category: Replace any Grenade Launcher
+    - category: Replace any Grenade Launchers
       upgrades:
       - name: Twin Heavy Rifle
         rules: 24", A2, AP(1)
@@ -1050,7 +1126,7 @@ v3.5.3:
       - name: Off-Road Tires
         rules: Scout, Strider
         cost_modifier: +20pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -1114,7 +1190,7 @@ v3.5.3:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -1276,6 +1352,7 @@ v3.5.3:
     - Fearless
     - Immobile
     - Transport(11)
+    - Wolfborn
     cost: 145
     upgrade_categories:
     - category: Upgrade with
@@ -1310,7 +1387,7 @@ v3.5.3:
     - Wolfborn
     cost: 240
     upgrade_categories:
-    - category: Replace any Heavy Flamer
+    - category: Replace any Heavy Flamers
       upgrades:
       - name: Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(3)
@@ -1321,7 +1398,7 @@ v3.5.3:
       - name: Minigun
         rules: 24", A4, AP(1)
         cost_modifier: +30pts
-    - category: Replace one Heavy Flamer
+    - category: Replace one Heavy Flamers
       upgrades:
       - name: Twin Typhoon Missiles
         rules: 24", A4, AP(2), Unstoppable
@@ -1429,7 +1506,7 @@ v3.5.3:
       - name: Rapid Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +50pts
-    - category: Replace Twin Heavy Machineguns
+    - category: Replace Twin Heavy Machinegun
       upgrades:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
@@ -1472,11 +1549,13 @@ v3.5.3:
     - Wolfborn
     cost: 400
     upgrade_categories:
-    - category: Replace 2x Walker Fist
+    - category: Replace 2x Walker Fists
       upgrades:
       - name: Walker Axe, Combat Shield
         rules: A4, AP(4), Deadly(3), Fortified
         cost_modifier: +45pts
+    - category: Upgrade any Walker Claw with one
+      upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
         cost_modifier: +25pts
@@ -1486,7 +1565,7 @@ v3.5.3:
       - name: Storm Rifle
         rules: 24", A3, AP(1)
         cost_modifier: +45pts
-    - category: Replace one Walker Fist
+    - category: Replace one Walker Fists
       upgrades:
       - name: Walker Claw
         rules: A4, AP(1), Rending
@@ -1512,7 +1591,7 @@ v3.5.3:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
         cost_modifier: +90pts
-    - category: Replace one Walker Fist
+    - category: Replace one Walker Fists
       upgrades:
       - name: Walker Claw
         rules: A4, AP(1), Rending
@@ -1523,6 +1602,8 @@ v3.5.3:
       - name: Twin Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +90pts
+    - category: Upgrade any Walker Fist with one
+      upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
         cost_modifier: +25pts
@@ -1555,11 +1636,13 @@ v3.5.3:
     - Wolfborn
     cost: 435
     upgrade_categories:
-    - category: Replace 2x Walker Fist
+    - category: Replace 2x Walker Fists
       upgrades:
       - name: Walker Axe, Combat Shield
         rules: A4, AP(4), Deadly(3), Fortified
         cost_modifier: +50pts
+    - category: Upgrade any Walker Claw with one
+      upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
         cost_modifier: +30pts
@@ -1569,7 +1652,7 @@ v3.5.3:
       - name: Storm Rifle
         rules: 24", A3, AP(1)
         cost_modifier: +60pts
-    - category: Replace one Walker Fist
+    - category: Replace one Walker Fists
       upgrades:
       - name: Walker Claw
         rules: A4, AP(1), Rending
@@ -1595,7 +1678,7 @@ v3.5.3:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
         cost_modifier: +115pts
-    - category: Replace one Walker Fist
+    - category: Replace one Walker Fists
       upgrades:
       - name: Walker Claw
         rules: A4, AP(1), Rending
@@ -1606,6 +1689,8 @@ v3.5.3:
       - name: Twin Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +120pts
+    - category: Upgrade any Walker Fist with one
+      upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
         cost_modifier: +30pts

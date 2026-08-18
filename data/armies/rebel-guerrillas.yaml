@@ -33,6 +33,8 @@ v3.5.3:
       - name: Captain
         rules: Rending in Melee Aura
         cost_modifier: +40pts
+    - category: Upgrade any model with
+      upgrades:
       - name: Claw Gauntlets
         rules: Bane in Melee
         cost_modifier: +10pts
@@ -148,7 +150,7 @@ v3.5.3:
     - Guerrilla
     cost: 150
     upgrade_categories:
-    - category: Replace any Carbine
+    - category: Replace any Carbines
       upgrades:
       - name: Shotgun
         rules: 12", A2, AP(1)
@@ -161,7 +163,7 @@ v3.5.3:
       - name: Shred Rifle
         rules: 18", A2, Rending
         cost_modifier: +5pts
-    - category: Replace one Carbine
+    - category: Replace one Carbines
       upgrades:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
@@ -178,6 +180,8 @@ v3.5.3:
       - name: Minigun
         rules: 24", A4, AP(1)
         cost_modifier: +20pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Gun Drone
         rules: 24", A1, AP(1), Limited
         cost_modifier: +5pts
@@ -187,7 +191,7 @@ v3.5.3:
       - name: Medical Training
         rules: Regeneration Aura
         cost_modifier: +40pts
-    - category: Replace one Carbine and CCW
+    - category: Replace one Carbines and CCWs
       upgrades:
       - name: Sgt. Pistol, Energy Sword
         rules: 12", A1, A2, AP(1), Rending
@@ -225,7 +229,7 @@ v3.5.3:
     - Guerrilla
     cost: 125
     upgrade_categories:
-    - category: Replace any Pistol
+    - category: Replace any Pistols
       upgrades:
       - name: Burst Gun
         rules: 6", A2
@@ -243,10 +247,12 @@ v3.5.3:
       - name: Energy Sword
         rules: A2, AP(1), Rending
         cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Wings
         rules: Ambush, Flying
         cost_modifier: +35pts
-    - category: Replace one Pistol and CCW
+    - category: Replace one Pistols and CCWs
       upgrades:
       - name: Sgt. Pistol, Energy Sword
         rules: 12", A1, A2, AP(1), Rending
@@ -299,6 +305,8 @@ v3.5.3:
       - name: Cluster Power Rifle
         rules: 30", A1, AP(4), Blast(3), Lacerate, Precise
         cost_modifier: +35pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Spotting Beacon
         rules: Piercing Tag(1)
         cost_modifier: +25pts
@@ -323,7 +331,7 @@ v3.5.3:
     - Guerrilla
     cost: 120
     upgrade_categories:
-    - category: Replace any Carbine
+    - category: Replace any Carbines
       upgrades:
       - name: Shotgun
         rules: 12", A2, AP(1)
@@ -336,7 +344,7 @@ v3.5.3:
       - name: Plasma Rifle
         rules: 24", A1, AP(4)
         cost_modifier: +10pts
-    - category: Replace one Carbine
+    - category: Replace one Carbines
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -353,16 +361,20 @@ v3.5.3:
       - name: Minigun
         rules: 24", A4, AP(1)
         cost_modifier: +35pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Medical Training
         rules: Regeneration Aura
         cost_modifier: +20pts
       - name: Spotting Beacon
         rules: Piercing Tag(1)
         cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Camo Cloaks
         rules: Stealth
         cost_modifier: +15pts
-    - category: Replace one Carbine and CCW
+    - category: Replace one Carbines and CCWs
       upgrades:
       - name: Sgt. Pistol, Energy Sword
         rules: 12", A1, A2, AP(1), Rending
@@ -402,7 +414,7 @@ v3.5.3:
     - Guerrilla
     cost: 90
     upgrade_categories:
-    - category: Replace one Shotgun
+    - category: Replace one Shotguns
       upgrades:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
@@ -410,7 +422,7 @@ v3.5.3:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
         cost_modifier: +10pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Energy Sword
         rules: A2, AP(1), Rending
@@ -456,7 +468,12 @@ v3.5.3:
     - Furious
     - Guerrilla
     cost: 135
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade any model with
+      upgrades:
+      - name: Claw Gauntlets
+        rules: Bane in Melee
+        cost_modifier: +5pts
   - name: Chelonians
     size: 3
     quality: 3+
@@ -480,7 +497,7 @@ v3.5.3:
     - Slow
     cost: 220
     upgrade_categories:
-    - category: Replace any Wrist-Flamer
+    - category: Replace any Wrist-Flamers
       upgrades:
       - name: Light Cluster-GL
         rules: 18", A1, Blast(3), Lacerate, Precise
@@ -511,7 +528,7 @@ v3.5.3:
       - name: Energy Lance
         rules: A2, AP(1), Thrust
         cost_modifier: +20pts
-    - category: Replace one Burst Pistol
+    - category: Replace one Burst Pistols
       upgrades:
       - name: Plasma Rifle
         rules: 24", A1, AP(4)
@@ -528,7 +545,7 @@ v3.5.3:
       - name: Cluster-GL
         rules: 24", A1, Blast(3), Lacerate, Precise
         cost_modifier: +15pts
-    - category: Replace one Burst Pistol and CCW
+    - category: Replace one Burst Pistols and CCWs
       upgrades:
       - name: Sgt. Pistol, Energy Sword
         rules: 12", A1, A2, AP(1), Rending

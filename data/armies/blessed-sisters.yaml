@@ -206,6 +206,8 @@ v3.5.3:
       - name: Master Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +60pts
+    - category: Take one Master Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -326,6 +328,8 @@ v3.5.3:
       - name: Master Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +45pts
+    - category: Take one Master Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -498,6 +502,8 @@ v3.5.3:
       - name: Master Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +35pts
+    - category: Take one Master Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -542,6 +548,17 @@ v3.5.3:
     - Devout
     cost: 85
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Sacred Banner
+        rules: Courage Aura
+        cost_modifier: +10pts
+      - name: Canticle Megaphone
+        rules: Precision Target(1)
+        cost_modifier: +25pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +40pts
     - category: Replace all Dual CCWs
       upgrades:
       - name: Rifle, CCW
@@ -583,6 +600,8 @@ v3.5.3:
       - name: Dual Arc-Flails
         rules: A2, Rending
         cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Flagellants
         rules: Regeneration
         cost_modifier: +10pts
@@ -606,7 +625,18 @@ v3.5.3:
     - Devout
     cost: 110
     upgrade_categories:
-    - category: Replace one Heavy Rifle
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Sacred Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Canticle Megaphone
+        rules: Precision Target(1)
+        cost_modifier: +25pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace one Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -632,7 +662,7 @@ v3.5.3:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
         cost_modifier: +30pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -685,7 +715,7 @@ v3.5.3:
       - name: Shred Rifle
         rules: 18", A2, Rending
         cost_modifier: +10pts
-    - category: Replace one Heavy Rifle
+    - category: Replace one Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -699,7 +729,7 @@ v3.5.3:
       - name: Flamer Sniper Rifle
         rules: 18", A2, Reliable, Disintegrate, Takedown
         cost_modifier: +25pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -739,6 +769,17 @@ v3.5.3:
     - Shielded
     cost: 135
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Sacred Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Canticle Megaphone
+        rules: Precision Target(1)
+        cost_modifier: +25pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
     - category: Replace all Halberds and Heavy Pistols
       upgrades:
       - name: Procession Sword
@@ -752,12 +793,12 @@ v3.5.3:
       - name: Mace
         rules: A2, AP(2)
         cost_modifier: +10pts
-    - category: Replace one Halberd
+    - category: Replace one Halberds
       upgrades:
       - name: Sacred Spear
         rules: A1, AP(2), Deadly(3)
         cost_modifier: +5pts
-    - category: Replace one Heavy Pistol
+    - category: Replace one Heavy Pistols
       upgrades:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
@@ -768,6 +809,8 @@ v3.5.3:
       - name: Fusion Pistol
         rules: 6", A1, AP(4), Deadly(3)
         cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Procession Banner
         rules: Fear(2)
         cost_modifier: +20pts
@@ -805,7 +848,7 @@ v3.5.3:
       - name: Twin Light Plasma Pistols
         rules: 12", A2, AP(2)
         cost_modifier: +5pts
-    - category: Replace one Twin Heavy Pistols and CCW
+    - category: Replace one Twin Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -844,7 +887,7 @@ v3.5.3:
     - Flying
     cost: 175
     upgrade_categories:
-    - category: Replace one Heavy Pistol
+    - category: Replace one Heavy Pistols
       upgrades:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
@@ -875,7 +918,18 @@ v3.5.3:
     - Devout
     cost: 80
     upgrade_categories:
-    - category: Replace any Heavy Rifle
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Sacred Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Canticle Megaphone
+        rules: Precision Target(1)
+        cost_modifier: +25pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+    - category: Replace any Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -901,7 +955,7 @@ v3.5.3:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
         cost_modifier: +35pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -943,7 +997,7 @@ v3.5.3:
     - Devout Boost
     cost: 110
     upgrade_categories:
-    - category: Replace any Blessed Flamer
+    - category: Replace any Blessed Flamers
       upgrades:
       - name: Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(3)
@@ -968,6 +1022,17 @@ v3.5.3:
     - Shielded
     cost: 140
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Sacred Banner
+        rules: Courage Aura
+        cost_modifier: +15pts
+      - name: Canticle Megaphone
+        rules: Precision Target(1)
+        cost_modifier: +25pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +55pts
     - category: Replace all Combat Shields and CCWS
       upgrades:
       - name: Dual Energy Claws
@@ -984,7 +1049,7 @@ v3.5.3:
       - name: Twin Heavy Fusion Rifle
         rules: 18", A2, AP(4), Deadly(3)
         cost_modifier: +45pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Energy Hammer
         rules: A1, Blast(3)
@@ -1069,7 +1134,7 @@ v3.5.3:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
         cost_modifier: +15pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -1342,7 +1407,7 @@ v3.5.3:
       - name: God-Queen's Curse
         rules: Casting Debuff
         cost_modifier: +10pts
-    - category: Replace Organ Heavy Missiles
+    - category: Replace Organ Heavy Missile
       upgrades:
       - name: Organ Mortar Array
         rules: 36", A3, AP(1), Blast(3), Indirect
@@ -1381,7 +1446,7 @@ v3.5.3:
       - name: Twin Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +40pts
-    - category: Replace any Blessed Flamer
+    - category: Replace any Blessed Flamers
       upgrades:
       - name: Storm Rifle
         rules: 24", A3, AP(1)
@@ -1437,7 +1502,7 @@ v3.5.3:
     - Scout
     cost: 275
     upgrade_categories:
-    - category: Replace any Heavy Flail
+    - category: Replace any Heavy Flails
       upgrades:
       - name: Rapid Blessed Flamer, Bash
         rules: 12", A2, Blast(3), Reliable, Disintegrate, A1
@@ -1456,7 +1521,7 @@ v3.5.3:
       - name: Light Chainsaw
         rules: A1, AP(2), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace any Heavy Flail
+    - category: Replace any Heavy Flails
       upgrades:
       - name: Heavy Chainsaw
         rules: A1, AP(4), Deadly(3)
@@ -1493,7 +1558,7 @@ v3.5.3:
     - Regeneration
     cost: 250
     upgrade_categories:
-    - category: Replace any Heavy Flail
+    - category: Replace any Heavy Flails
       upgrades:
       - name: Rapid Heavy Machinegun, Bash
         rules: 30", A6, AP(1), A1
@@ -1512,7 +1577,7 @@ v3.5.3:
       - name: Light Fist
         rules: A2, AP(4)
         cost_modifier: +20pts
-    - category: Replace any Heavy Flail
+    - category: Replace any Heavy Flails
       upgrades:
       - name: Heavy Chainsaw
         rules: A1, AP(4), Deadly(3)
@@ -1555,7 +1620,7 @@ v3.5.3:
     - Fearless
     cost: 785
     upgrade_categories:
-    - category: Replace any Titan Flail
+    - category: Replace any Titan Flails
       upgrades:
       - name: Titan Claw
         rules: A12, AP(1)
@@ -1581,7 +1646,7 @@ v3.5.3:
       - name: Titan Autocannon
         rules: 36", A12, AP(2)
         cost_modifier: +240pts
-    - category: Replace any Blessed Hull-Flamer
+    - category: Replace any Blessed Hull-Flamers
       upgrades:
       - name: Heavy Hull-Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable

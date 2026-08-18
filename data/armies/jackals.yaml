@@ -193,12 +193,20 @@ v3.5.3:
     - Strider
     cost: 135
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Satellite Backpack
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+      - name: Hunter's Mark
+        rules: Precision Tag(1)
+        cost_modifier: +15pts
     - category: Replace all Scrap Rifles and CCWS
       upgrades:
       - name: Scrap Pistol, CCW
         rules: 12", A1, A2
         cost_modifier: Free
-    - category: Replace up to two Scrap Rifle
+    - category: Replace up to two Scrap Rifles
       upgrades:
       - name: Hunting Shotgun
         rules: 9", A2, Shatter
@@ -239,7 +247,7 @@ v3.5.3:
     - Strider
     cost: 70
     upgrade_categories:
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Junk Sword
         rules: A1, AP(1), Rending
@@ -247,7 +255,7 @@ v3.5.3:
       - name: Claw Hand
         rules: A1, AP(4)
         cost_modifier: +5pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Scrap Club
         rules: A1, Blast(3)
@@ -276,12 +284,20 @@ v3.5.3:
     - Strider
     cost: 125
     upgrade_categories:
-    - category: Replace any Energy Rifle
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Satellite Backpack
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+      - name: Hunter's Mark
+        rules: Precision Tag(1)
+        cost_modifier: +15pts
+    - category: Replace any Energy Rifles
       upgrades:
       - name: Shotgun
         rules: 12", A2, AP(1)
         cost_modifier: Free
-    - category: Replace one Energy Rifle
+    - category: Replace one Energy Rifles
       upgrades:
       - name: Heavy Shred Rifle
         rules: 18", A2, AP(1), Rending
@@ -328,7 +344,7 @@ v3.5.3:
       - name: Energy Rifle
         rules: 24", A1, AP(1)
         cost_modifier: +45pts
-    - category: Replace one Scrap Pistol
+    - category: Replace one Scrap Pistols
       upgrades:
       - name: Zapper Gun
         rules: 12", A2, Surge
@@ -339,7 +355,7 @@ v3.5.3:
       - name: Hunting Shotgun
         rules: 9", A2, Shatter
         cost_modifier: +10pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Junk Sword
         rules: A2, AP(1), Rending
@@ -347,7 +363,7 @@ v3.5.3:
       - name: Claw Gauntlet
         rules: A2, AP(4)
         cost_modifier: +15pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Scrap Club
         rules: A1, Blast(3)
@@ -378,7 +394,20 @@ v3.5.3:
     - Scrapper
     - Strider
     cost: 145
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Satellite Backpack
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+      - name: Hunter's Mark
+        rules: Precision Tag(1)
+        cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Charged Ammo
+        rules: Ambushing Piercing Shot
+        cost_modifier: +20pts
   - name: Hounds
     size: 5
     quality: 5+
@@ -406,6 +435,8 @@ v3.5.3:
       - name: Territorial Beast
         rules: Scout
         cost_modifier: +5pts
+    - category: Upgrade all models with any
+      upgrades:
       - name: Vicious Bite
         rules: Ignores Regeneration in Melee
         cost_modifier: +5pts
@@ -430,7 +461,7 @@ v3.5.3:
     - Strider
     cost: 155
     upgrade_categories:
-    - category: Replace any Explosive Spear
+    - category: Replace any Explosive Spears
       upgrades:
       - name: Harpoon
         rules: A2, Thrust
@@ -464,7 +495,15 @@ v3.5.3:
     - Strider
     cost: 195
     upgrade_categories:
-    - category: Replace any Heavy Machinegun
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Satellite Backpack
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+      - name: Hunter's Mark
+        rules: Precision Tag(1)
+        cost_modifier: +15pts
+    - category: Replace any Heavy Machineguns
       upgrades:
       - name: Hunting Rifle
         rules: 24", A1, Reliable, Shatter, Takedown

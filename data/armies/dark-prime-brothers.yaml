@@ -198,6 +198,8 @@ v3.5.3:
       - name: Master Heavy Rifle
         rules: 24", A2, AP(1)
         cost_modifier: +30pts
+    - category: Upgrade Master Marksman Carbine with
+      upgrades:
       - name: Scope
         rules: Precise
         cost_modifier: +10pts
@@ -290,6 +292,8 @@ v3.5.3:
       - name: Master Heavy Rifle
         rules: 24", A2, AP(1)
         cost_modifier: +20pts
+    - category: Upgrade Master Marksman Carbine with
+      upgrades:
       - name: Scope
         rules: Precise
         cost_modifier: +10pts
@@ -381,6 +385,8 @@ v3.5.3:
       - name: Master Heavy Rifle
         rules: 24", A2, AP(1)
         cost_modifier: +15pts
+    - category: Upgrade Master Marksman Carbine with
+      upgrades:
       - name: Scope
         rules: Precise
         cost_modifier: +5pts
@@ -430,7 +436,12 @@ v3.5.3:
     - Scout
     - Strider
     cost: 145
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all Marksman Carbines with
+      upgrades:
+      - name: Scopes
+        rules: Precise
+        cost_modifier: +10pts
   - name: Dark Raider Brothers
     size: 5
     quality: 4+
@@ -454,7 +465,7 @@ v3.5.3:
     - Strider
     cost: 125
     upgrade_categories:
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Heavy Pistol, Energy Hammer
         rules: 12", A1, AP(1), A1, Blast(3)
@@ -471,6 +482,8 @@ v3.5.3:
       - name: Heavy Pistol, Energy Fist
         rules: 12", A1, AP(1), A2, AP(4)
         cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Orbital Drop
         rules: Ambush
         cost_modifier: +15pts
@@ -496,7 +509,7 @@ v3.5.3:
     - Fearless
     cost: 155
     upgrade_categories:
-    - category: Replace any Precision Rifle
+    - category: Replace any Precision Rifles
       upgrades:
       - name: Heavy Rifle
         rules: 24", A1, AP(1)
@@ -504,7 +517,7 @@ v3.5.3:
       - name: Auto-Rifle
         rules: 18", A2
         cost_modifier: Free
-    - category: Replace one Precision Rifle
+    - category: Replace one Precision Rifles
       upgrades:
       - name: Anti-Gravity Rifle
         rules: 18", A1, Shatter
@@ -521,10 +534,12 @@ v3.5.3:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
         cost_modifier: +35pts
+    - category: Take one Heavy Rifle attachment
+      upgrades:
       - name: Grenade-Mod
         rules: 24", A1, Blast(3), Limited
         cost_modifier: +10pts
-    - category: Replace one Precision Rifle and CCW
+    - category: Replace one Precision Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -542,6 +557,8 @@ v3.5.3:
       - name: Energy Fist
         rules: A2, AP(4)
         cost_modifier: +10pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: The Founder's Banner
         rules: Versatile Reach Aura
         cost_modifier: +5pts
@@ -572,7 +589,7 @@ v3.5.3:
     - Fearless
     cost: 170
     upgrade_categories:
-    - category: Replace one Heavy Pistol
+    - category: Replace one Heavy Pistols
       upgrades:
       - name: Flamer Pistol
         rules: 6", A1, Blast(3), Reliable
@@ -580,7 +597,7 @@ v3.5.3:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
         cost_modifier: +5pts
-    - category: Replace one Heavy CCW
+    - category: Replace one Heavy CCWs
       upgrades:
       - name: Energy Hammer
         rules: A1, Blast(3)
@@ -594,9 +611,13 @@ v3.5.3:
       - name: Energy Fist
         rules: A2, AP(4)
         cost_modifier: +10pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetpacks
         rules: Ambush, Flying
         cost_modifier: +35pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: The Founder's Banner
         rules: Versatile Reach Aura
         cost_modifier: +10pts
@@ -629,7 +650,7 @@ v3.5.3:
     - Versatile Attack
     cost: 110
     upgrade_categories:
-    - category: Replace any Anti-Gravity Rifle
+    - category: Replace any Anti-Gravity Rifles
       upgrades:
       - name: Heavy Rifle
         rules: 24", A1, AP(1)
@@ -640,7 +661,7 @@ v3.5.3:
       - name: Precision Rifle
         rules: 24", A1, Precise
         cost_modifier: +5pts
-    - category: Replace any Anti-Gravity Rifle
+    - category: Replace any Anti-Gravity Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -657,6 +678,8 @@ v3.5.3:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
         cost_modifier: +50pts
+    - category: Any model may take one Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +10pts
@@ -672,7 +695,7 @@ v3.5.3:
       - name: Fusion-Mod
         rules: 12", A1, AP(4), Deadly(3), Limited
         cost_modifier: +15pts
-    - category: Replace one Anti-Gravity Rifle and CCW
+    - category: Replace one Anti-Gravity Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -690,6 +713,8 @@ v3.5.3:
       - name: Energy Fist
         rules: A2, AP(4)
         cost_modifier: +10pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: The Founder's Banner
         rules: Versatile Reach Aura
         cost_modifier: +5pts
@@ -717,7 +742,7 @@ v3.5.3:
     - Versatile Attack
     cost: 90
     upgrade_categories:
-    - category: Replace any Heavy Pistol and Combat Shield
+    - category: Replace any Heavy Pistols and Combat Shield
       upgrades:
       - name: Energy Hammer, Combat Shield
         rules: A1, Blast(3), Shielded
@@ -731,7 +756,7 @@ v3.5.3:
       - name: Heavy Chainsaw Sword
         rules: A4, AP(1)
         cost_modifier: +20pts
-    - category: Replace any Heavy Pistol
+    - category: Replace any Heavy Pistols
       upgrades:
       - name: Flamer Pistol
         rules: 6", A1, Blast(3), Reliable
@@ -756,9 +781,13 @@ v3.5.3:
       - name: Energy Fist
         rules: A2, AP(4)
         cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetpacks
         rules: Ambush, Flying
         cost_modifier: +20pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: The Founder's Banner
         rules: Versatile Reach Aura
         cost_modifier: +5pts
@@ -790,12 +819,12 @@ v3.5.3:
     - Relentless
     cost: 200
     upgrade_categories:
-    - category: Replace any HE-Launcher
+    - category: Replace any HE-Launchers
       upgrades:
       - name: AT-Launcher
         rules: 30", A1, AP(2), Unstoppable
         cost_modifier: +5pts
-    - category: Replace one HE-Launcher
+    - category: Replace one HE-Launchers
       upgrades:
       - name: Vengeance HE-Launcher
         rules: 30", A1, Blast(3), Indirect
@@ -803,6 +832,8 @@ v3.5.3:
       - name: Vengeance AT-Launcher
         rules: 30", A1, AP(2), Deadly(3)
         cost_modifier: +35pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Mini-GL
         rules: 18", A1, Indirect, Limited
         cost_modifier: +15pts
@@ -828,7 +859,7 @@ v3.5.3:
     - Relentless
     cost: 225
     upgrade_categories:
-    - category: Replace any Plasma Rifle
+    - category: Replace any Plasma Rifles
       upgrades:
       - name: Heavy Plasma Rifle
         rules: 30", A1, AP(4)
@@ -886,7 +917,7 @@ v3.5.3:
     - Strider
     cost: 155
     upgrade_categories:
-    - category: Replace any Sniper Rifle
+    - category: Replace any Sniper Rifles
       upgrades:
       - name: Laser Sniper Rifle
         rules: 30", A1, AP(2), Deadly(3), Reliable, Takedown
@@ -937,7 +968,7 @@ v3.5.3:
     - Fearless
     cost: 230
     upgrade_categories:
-    - category: Replace any Grave Precision Rifle
+    - category: Replace any Grave Precision Rifles
       upgrades:
       - name: Grave Auto-Rifle
         rules: 18", A4
@@ -945,7 +976,7 @@ v3.5.3:
       - name: Grave Heavy Rifle
         rules: 24", A3, AP(1)
         cost_modifier: +15pts
-    - category: Replace one Grave Precision Rifle
+    - category: Replace one Grave Precision Rifles
       upgrades:
       - name: Grave Heavy Machinegun
         rules: 30", A4, AP(1)
@@ -968,6 +999,17 @@ v3.5.3:
     - Shielded
     cost: 245
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +10pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +30pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +55pts
     - category: Replace all Combat Shields and CCWS
       upgrades:
       - name: Dual Energy Claws
@@ -987,7 +1029,7 @@ v3.5.3:
       - name: Cyclone Missiles, Storm Rifle
         rules: 24", A1, AP(2), Deadly(3), Unstoppable, 24", A3, AP(1)
         cost_modifier: +50pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Energy Hammer
         rules: A1, Blast(3)
@@ -1058,12 +1100,12 @@ v3.5.3:
       - name: Dual Energy Swords
         rules: A4, AP(1), Rending
         cost_modifier: +25pts
-    - category: Replace any Relic Sword
+    - category: Replace any Relic Swords
       upgrades:
       - name: Energy Sword
         rules: A3, AP(1), Rending
         cost_modifier: +5pts
-    - category: Replace any Heavy Pistol
+    - category: Replace any Heavy Pistols
       upgrades:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
@@ -1099,12 +1141,12 @@ v3.5.3:
     - Relentless
     cost: 245
     upgrade_categories:
-    - category: Replace any Fusion Rifle
+    - category: Replace any Fusion Rifles
       upgrades:
       - name: Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace one Fusion Rifle
+    - category: Replace one Fusion Rifles
       upgrades:
       - name: Super-Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(6)
@@ -1132,11 +1174,13 @@ v3.5.3:
     - Fearless
     cost: 315
     upgrade_categories:
-    - category: Replace any Twin Fist-Flamer
+    - category: Replace any Twin Fist-Flamers
       upgrades:
       - name: Twin Fist-Pistols
         rules: 12", A3
         cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Shoulder-GL
         rules: 18", A1, AP(2)
         cost_modifier: +45pts
@@ -1223,7 +1267,7 @@ v3.5.3:
     - Transport(11)
     cost: 310
     upgrade_categories:
-    - category: Replace Twin Frag-GLs
+    - category: Replace Twin Frag-GL
       upgrades:
       - name: Twin Storm Rifle
         rules: 24", A6, AP(1)
@@ -1305,7 +1349,7 @@ v3.5.3:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
         cost_modifier: +85pts
-    - category: Replace Twin Frag-GLs
+    - category: Replace Twin Frag-GL
       upgrades:
       - name: Twin Storm Rifle
         rules: 24", A6, AP(1)
@@ -1363,7 +1407,7 @@ v3.5.3:
       - name: Laser Talon
         rules: 24", A3, AP(3)
         cost_modifier: +25pts
-    - category: Replace Strike Missile
+    - category: Replace Strike Missiles
       upgrades:
       - name: AA-Pod
         rules: 24", A2, AP(2), Unstoppable
@@ -1459,7 +1503,7 @@ v3.5.3:
     - Fearless
     cost: 505
     upgrade_categories:
-    - category: Replace one Walker Claw
+    - category: Replace one Walker Claws
       upgrades:
       - name: Heavy Flamer, Walker Fist
         rules: 12", A1, AP(1), Blast(3), Reliable, A4, AP(4)
@@ -1476,7 +1520,7 @@ v3.5.3:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
         cost_modifier: +90pts
-    - category: Replace one Walker Claw
+    - category: Replace one Walker Claws
       upgrades:
       - name: Heavy Flamer, Walker Fist
         rules: 12", A1, AP(1), Blast(3), Reliable, A4, AP(4)

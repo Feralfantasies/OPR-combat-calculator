@@ -209,7 +209,7 @@ v3.5.3:
       - name: Carbine
         rules: 18", A2
         cost_modifier: +15pts
-    - category: Replace one Long Rifle
+    - category: Replace one Long Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -229,7 +229,7 @@ v3.5.3:
       - name: Shishi Turret
         rules: Missiles (30", A2, AP(3), Unstoppable)
         cost_modifier: +35pts
-    - category: Replace one Long Rifle and CCW
+    - category: Replace one Long Rifles and CCWs
       upgrades:
       - name: Twin Heavy Pistol, CCW
         rules: 12", A2, AP(1), A1
@@ -237,9 +237,13 @@ v3.5.3:
       - name: Heavy Pistol, Royal Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
         cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Honor-Bound
         rules: Vengeance
         cost_modifier: +15pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Attack Drone
         rules: Drone Laser Gun (18", A1, Limited, Tear)
         cost_modifier: +5pts
@@ -270,7 +274,7 @@ v3.5.3:
     - Scout
     cost: 100
     upgrade_categories:
-    - category: Replace any Long Rifle
+    - category: Replace any Long Rifles
       upgrades:
       - name: Carbine
         rules: 18", A2
@@ -283,9 +287,13 @@ v3.5.3:
       - name: Sniper Rifle
         rules: 30", A1, AP(1), Reliable, Takedown
         cost_modifier: +25pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Dynastic Triangulator
         rules: Ambush Beacon
         cost_modifier: +15pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Attack Drone
         rules: Drone Laser Gun (18", A1, Limited, Tear)
         cost_modifier: +5pts
@@ -320,7 +328,7 @@ v3.5.3:
     - Teleport
     cost: 170
     upgrade_categories:
-    - category: Replace any Auto-Gun and Sword
+    - category: Replace any Auto-Guns and Swords
       upgrades:
       - name: Auto-Gun, Sickle
         rules: 12", A1, Rending, A1, AP(2)
@@ -356,7 +364,12 @@ v3.5.3:
     - Versatile Attack
     cost: 180
     upgrade_categories:
-    - category: Replace one Spear-Shot
+    - category: Upgrade one model with
+      upgrades:
+      - name: Honor-Bound
+        rules: Vengeance
+        cost_modifier: +15pts
+    - category: Replace one Spear-Shots
       upgrades:
       - name: Spear-Flame
         rules: 12", A1, Blast(3), Limited, Reliable
@@ -392,7 +405,7 @@ v3.5.3:
     - Strider
     cost: 120
     upgrade_categories:
-    - category: Replace one Laser Gun
+    - category: Replace one Laser Guns
       upgrades:
       - name: Heavy Laser Gun
         rules: 24", A1, Deadly(3), Tear
@@ -417,7 +430,23 @@ v3.5.3:
     - Clan Warrior
     cost: 180
     upgrade_categories:
-    - category: Replace any Heavy Fist
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Attack Drone
+        rules: Drone Laser Gun (18", A1, Limited, Tear)
+        cost_modifier: +5pts
+      - name: Energy Drone
+        rules: Ignores Cover Aura
+        cost_modifier: Free
+      - name: Shield Drone
+        rules: Stealth Aura
+        cost_modifier: +45pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Honor-Bound
+        rules: Vengeance
+        cost_modifier: +15pts
+    - category: Replace any Heavy Fists
       upgrades:
       - name: Gun-Fist
         rules: 24", A2
@@ -428,7 +457,7 @@ v3.5.3:
       - name: Plasma-Fist
         rules: 24", A2, AP(4)
         cost_modifier: +40pts
-    - category: Replace one Heavy Fist
+    - category: Replace one Heavy Fists
       upgrades:
       - name: Flame-Fist
         rules: 12", A1, Blast(3), Reliable
@@ -442,12 +471,16 @@ v3.5.3:
       - name: Missile-Fist
         rules: 30", A2, AP(3), Unstoppable
         cost_modifier: +40pts
+    - category: Any model may replace 2x Heavy Fist
+      upgrades:
       - name: Sword, Combat Shield
         rules: A2, AP(1), Rending, Shielded
         cost_modifier: +5pts
       - name: Heavy Glaive
         rules: A3, AP(2)
         cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetpacks
         rules: Ambush, Flying
         cost_modifier: +65pts
@@ -467,7 +500,15 @@ v3.5.3:
     - Clan Warrior
     - Flying
     cost: 95
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Vanguard Hunt Master
+        rules: Scout
+        cost_modifier: +15pts
+      - name: Combat Hunt Master
+        rules: Unpredictable Fighter
+        cost_modifier: +15pts
   - name: Cyber Lizards
     size: 5
     quality: 4+
@@ -484,7 +525,15 @@ v3.5.3:
     - Clan Warrior
     - Strider
     cost: 85
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Vanguard Hunt Master
+        rules: Scout
+        cost_modifier: +15pts
+      - name: Combat Hunt Master
+        rules: Unpredictable Fighter
+        cost_modifier: +20pts
   - name: Cyber Beast
     size: 1
     quality: 3+
@@ -500,7 +549,15 @@ v3.5.3:
     - Clan Warrior
     - Furious
     cost: 95
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Vanguard Hunt Master
+        rules: Scout
+        cost_modifier: +20pts
+      - name: Combat Hunt Master
+        rules: Unpredictable Fighter
+        cost_modifier: +20pts
   - name: Dynasty APC
     size: 1
     quality: 4+

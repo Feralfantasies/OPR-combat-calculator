@@ -301,7 +301,7 @@ v3.5.3:
       - name: Master Soul Carrier
         rules: Caster(3)
         cost_modifier: +55pts
-    - category: Replace Dual CCW
+    - category: Replace Dual CCWs
       upgrades:
       - name: Syringe Pistol, CCW
         rules: 12", A1, Deadly(3), A2
@@ -416,7 +416,12 @@ v3.5.3:
     - Melee Evasion
     cost: 105
     upgrade_categories:
-    - category: Replace one Barb Pistol and CCW
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +15pts
+    - category: Replace one Barb Pistols and CCWs
       upgrades:
       - name: Net & Spear
         rules: A3, Thrust
@@ -430,7 +435,7 @@ v3.5.3:
       - name: Dual Crystal Claws
         rules: A4, Rending
         cost_modifier: +10pts
-    - category: Replace one Barb Pistol and CCW
+    - category: Replace one Barb Pistols and CCWs
       upgrades:
       - name: Sgt. Barb Pistol, Energy Sword
         rules: 12", A1, Lacerate, A2, AP(1), Rending
@@ -464,7 +469,12 @@ v3.5.3:
     - Harassing
     cost: 95
     upgrade_categories:
-    - category: Replace one Barb Rifle
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +15pts
+    - category: Replace one Barb Rifles
       upgrades:
       - name: EMP Rifle
         rules: 18", A2, Rending
@@ -484,7 +494,7 @@ v3.5.3:
       - name: Laser Cannon
         rules: 36", A1, AP(3), Deadly(3)
         cost_modifier: +45pts
-    - category: Replace one Barb Rifle and CCW
+    - category: Replace one Barb Rifles and CCWs
       upgrades:
       - name: Sgt. Barb Pistol, Energy Sword
         rules: 12", A1, Lacerate, A2, AP(1), Rending
@@ -519,7 +529,12 @@ v3.5.3:
     - Melee Evasion
     cost: 75
     upgrade_categories:
-    - category: Replace any Barb Pistol and CCW
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +10pts
+    - category: Replace any Barb Pistols and CCWs
       upgrades:
       - name: Dual Sword-Flails
         rules: A1, AP(2), Blast(3)
@@ -533,7 +548,7 @@ v3.5.3:
       - name: Energy Glaive
         rules: A4, AP(1)
         cost_modifier: +15pts
-    - category: Replace one Barb Pistol and CCW
+    - category: Replace one Barb Pistols and CCWs
       upgrades:
       - name: Sgt. Barb Pistol, Energy Sword
         rules: 12", A1, Lacerate, A2, AP(1), Rending
@@ -567,7 +582,12 @@ v3.5.3:
     - Harassing
     cost: 75
     upgrade_categories:
-    - category: Replace any Barb Rifle
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +10pts
+    - category: Replace any Barb Rifles
       upgrades:
       - name: Scrapper
         rules: 12", A1, Blast(3), Reliable
@@ -587,7 +607,7 @@ v3.5.3:
       - name: Laser Cannon
         rules: 36", A1, AP(3), Deadly(3)
         cost_modifier: +60pts
-    - category: Replace one Barb Rifle and CCW
+    - category: Replace one Barb Rifles and CCWs
       upgrades:
       - name: Sgt. Barb Pistol, Energy Sword
         rules: 12", A1, Lacerate, A2, AP(1), Rending
@@ -617,7 +637,7 @@ v3.5.3:
     - Martial Prowess
     cost: 130
     upgrade_categories:
-    - category: Replace any Courtesan's Sword
+    - category: Replace any Courtesan's Swords
       upgrades:
       - name: Ghoulish Claws
         rules: A4, Rending
@@ -652,7 +672,12 @@ v3.5.3:
     - Strider
     cost: 185
     upgrade_categories:
-    - category: Replace one Glaive
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +25pts
+    - category: Replace one Glaives
       upgrades:
       - name: Agony Whip
         rules: A1, Blast(3)
@@ -663,7 +688,7 @@ v3.5.3:
       - name: Grapple Claw
         rules: A1, AP(2), Deadly(3)
         cost_modifier: +5pts
-    - category: Replace one Twin Barb-Pod
+    - category: Replace one Twin Barb-Pods
       upgrades:
       - name: Barb-Pod, Phantom-GL
         rules: 18", A1, Lacerate, 18", A1, Blast(3)
@@ -708,7 +733,12 @@ v3.5.3:
     - Harassing
     cost: 150
     upgrade_categories:
-    - category: Replace one Barb Carbine
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +20pts
+    - category: Replace one Barb Carbines
       upgrades:
       - name: EMP Rifle
         rules: 18", A2, Rending
@@ -728,7 +758,7 @@ v3.5.3:
       - name: Laser Cannon
         rules: 36", A1, AP(3), Deadly(3)
         cost_modifier: +40pts
-    - category: Replace one Barb Carbine and CCW
+    - category: Replace one Barb Carbines and CCWs
       upgrades:
       - name: Sgt. Barb Pistol, Energy Sword
         rules: 12", A1, Lacerate, A2, AP(1), Rending
@@ -789,7 +819,7 @@ v3.5.3:
     - Regeneration
     cost: 255
     upgrade_categories:
-    - category: Replace any Acid Gun and Scissor Claw
+    - category: Replace any Acid Guns and Scissor Claws
       upgrades:
       - name: Dual Scissor Claws
         rules: A4, AP(4)
@@ -823,7 +853,7 @@ v3.5.3:
     - Strider
     cost: 210
     upgrade_categories:
-    - category: Replace one Twin Barb Rifle
+    - category: Replace one Twin Barb Rifles
       upgrades:
       - name: Plas-Blaster
         rules: 18", A2, AP(4)
@@ -831,7 +861,7 @@ v3.5.3:
       - name: Heavy Fusion Gun
         rules: 18", A1, AP(4), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Spiked Talon
         rules: A1, AP(2), Deadly(3)
@@ -855,7 +885,15 @@ v3.5.3:
     - Flying
     - Harassing
     cost: 100
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Pathfinder Beast Handler
+        rules: Vanguard
+        cost_modifier: +10pts
+      - name: Combat Beast Handler
+        rules: Unpredictable Fighter
+        cost_modifier: +15pts
   - name: Blood Hounds
     size: 5
     quality: 4+
@@ -872,7 +910,15 @@ v3.5.3:
     - Fast
     - Harassing
     cost: 90
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Pathfinder Beast Handler
+        rules: Vanguard
+        cost_modifier: +10pts
+      - name: Combat Beast Handler
+        rules: Unpredictable Fighter
+        cost_modifier: +20pts
   - name: Clawed Beast
     size: 1
     quality: 3+
@@ -888,7 +934,15 @@ v3.5.3:
     - Furious
     - Harassing
     cost: 115
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Pathfinder Beast Handler
+        rules: Vanguard
+        cost_modifier: +15pts
+      - name: Combat Beast Handler
+        rules: Unpredictable Fighter
+        cost_modifier: +20pts
   - name: Leech Engine
     size: 1
     quality: 4+
@@ -954,7 +1008,7 @@ v3.5.3:
     - Regeneration
     cost: 160
     upgrade_categories:
-    - category: Replace one Acid Spewer
+    - category: Replace one Acid Spewers
       upgrades:
       - name: Twin EMP Rifle
         rules: 18", A4, Rending
@@ -968,7 +1022,7 @@ v3.5.3:
       - name: Twin Heavy Fusion Gun
         rules: 18", A2, AP(4), Deadly(3)
         cost_modifier: +65pts
-    - category: Replace one Acid Spewer
+    - category: Replace one Acid Spewers
       upgrades:
       - name: Heavy Claws
         rules: A3, AP(1)
@@ -1098,7 +1152,7 @@ v3.5.3:
     - Strider
     cost: 335
     upgrade_categories:
-    - category: Replace any Barb Cannon
+    - category: Replace any Barb Cannons
       upgrades:
       - name: Destroyer Cannon
         rules: 36", A3, AP(2)

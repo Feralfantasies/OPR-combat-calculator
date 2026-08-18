@@ -233,7 +233,18 @@ v3.5.3:
     - Watchborn
     cost: 115
     upgrade_categories:
-    - category: Replace any Heavy Pistol and Heavy CCW
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+    - category: Replace any Heavy Pistols and Heavy CCWs
       upgrades:
       - name: Heavy Energy Hammer
         rules: A1, AP(2), Blast(3)
@@ -282,6 +293,8 @@ v3.5.3:
       - name: Missile Launcher
         rules: 30", A1, AP(2), Deadly(3), Unstoppable
         cost_modifier: +50pts
+    - category: Any model may take one Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +10pts
@@ -294,10 +307,12 @@ v3.5.3:
       - name: Fusion-Mod
         rules: 12", A1, AP(4), Deadly(3), Limited
         cost_modifier: +15pts
+    - category: Any model may take one Heavy Machinegun attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +10pts
-    - category: Replace any Heavy Pistol
+    - category: Replace any Heavy Pistols
       upgrades:
       - name: Flamer Pistol
         rules: 6", A1, Blast(3), Reliable
@@ -311,7 +326,7 @@ v3.5.3:
       - name: Fusion Pistol
         rules: 6", A1, AP(4), Deadly(3)
         cost_modifier: +10pts
-    - category: Replace any Heavy CCW
+    - category: Replace any Heavy CCWs
       upgrades:
       - name: Energy Hammer
         rules: A1, Blast(3)
@@ -325,6 +340,8 @@ v3.5.3:
       - name: Energy Fist
         rules: A2, AP(4)
         cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Combat Shield
         rules: Shielded
         cost_modifier: +5pts
@@ -352,7 +369,18 @@ v3.5.3:
     - Watchborn
     cost: 125
     upgrade_categories:
-    - category: Replace any Heavy Pistol and Energy Hammer
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+    - category: Replace any Heavy Pistols and Energy Hammers
       upgrades:
       - name: Heavy Energy Hammer
         rules: A1, AP(2), Blast(3)
@@ -360,7 +388,7 @@ v3.5.3:
       - name: Dual Energy Claws
         rules: A4, Rending
         cost_modifier: +15pts
-    - category: Replace any Heavy Pistol
+    - category: Replace any Heavy Pistols
       upgrades:
       - name: Flamer Pistol
         rules: 6", A1, Blast(3), Reliable
@@ -374,7 +402,7 @@ v3.5.3:
       - name: Fusion Pistol
         rules: 6", A1, AP(4), Deadly(3)
         cost_modifier: +10pts
-    - category: Replace any Energy Hammer
+    - category: Replace any Energy Hammers
       upgrades:
       - name: Heavy CCW
         rules: A2, AP(1)
@@ -388,6 +416,8 @@ v3.5.3:
       - name: Energy Fist
         rules: A2, AP(4)
         cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Combat Shields
         rules: Shielded
         cost_modifier: +5pts
@@ -409,6 +439,17 @@ v3.5.3:
     - Watchborn
     cost: 230
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +10pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +30pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +55pts
     - category: Replace all Combat Shields and CCWS
       upgrades:
       - name: Dual Energy Claws
@@ -428,7 +469,7 @@ v3.5.3:
       - name: Cyclone Missiles, Storm Rifle
         rules: 24", A1, AP(2), Deadly(3), Unstoppable, 24", A3, AP(1)
         cost_modifier: +65pts
-    - category: Replace any CCW
+    - category: Replace any CCWs
       upgrades:
       - name: Energy Hammer
         rules: A1, Blast(3)
@@ -488,7 +529,7 @@ v3.5.3:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
         cost_modifier: +20pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -648,7 +689,7 @@ v3.5.3:
     - Watchborn
     cost: 395
     upgrade_categories:
-    - category: Replace one Walker Fist
+    - category: Replace one Walker Fists
       upgrades:
       - name: Twin Heavy Flamer
         rules: 12", A2, AP(1), Blast(3), Reliable
@@ -671,7 +712,7 @@ v3.5.3:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
         cost_modifier: +115pts
-    - category: Replace one Walker Fist
+    - category: Replace one Walker Fists
       upgrades:
       - name: Missile Array
         rules: 30", A4, AP(2), Unstoppable
@@ -679,6 +720,8 @@ v3.5.3:
       - name: Twin Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +120pts
+    - category: Upgrade any Walker Fist with one
+      upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
         cost_modifier: +30pts

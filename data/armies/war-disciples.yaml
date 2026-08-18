@@ -55,6 +55,8 @@ v3.5.3:
       - name: Rapid Storm Rifle, CCW
         rules: 24", A6, AP(1), A4
         cost_modifier: +70pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
       - name: Plasma-Mod
         rules: 24", A1, AP(4), Limited
         cost_modifier: +10pts
@@ -150,6 +152,8 @@ v3.5.3:
       - name: Champion Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +70pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +15pts
@@ -255,6 +259,8 @@ v3.5.3:
       - name: Champion Storm Rifle
         rules: 24", A4, AP(1)
         cost_modifier: +50pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +15pts
@@ -377,6 +383,14 @@ v3.5.3:
     - Warbound
     cost: 135
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +25pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +40pts
     - category: Replace all Rifles and CCWS
       upgrades:
       - name: Pistol, CCW
@@ -422,12 +436,12 @@ v3.5.3:
     - Warbound
     cost: 150
     upgrade_categories:
-    - category: Replace one Dual CCW
+    - category: Replace one Dual CCWs
       upgrades:
       - name: Energy Sword
         rules: A2, AP(1), Rending
         cost_modifier: +10pts
-    - category: Replace one Dual CCW
+    - category: Replace one Dual CCWs
       upgrades:
       - name: CCW, Great Weapon
         rules: A2, A1, AP(2)
@@ -435,6 +449,8 @@ v3.5.3:
       - name: Dual CCWs
         rules: A4
         cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Banner
         rules: null
         cost_modifier: +10pts
@@ -458,12 +474,20 @@ v3.5.3:
     - Warbound
     cost: 160
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +15pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +25pts
     - category: Replace all Heavy Rifles and CCWS
       upgrades:
       - name: Heavy Pistol, Heavy CCW
         rules: 12", A1, AP(1), A2, AP(1)
         cost_modifier: +25pts
-    - category: Replace one Heavy Rifle
+    - category: Replace one Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -492,7 +516,7 @@ v3.5.3:
       - name: Autocannon
         rules: 36", A3, AP(2)
         cost_modifier: +60pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -528,7 +552,15 @@ v3.5.3:
     - Warbound
     cost: 115
     upgrade_categories:
-    - category: Replace any Heavy Rifle and CCW
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +10pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +15pts
+    - category: Replace any Heavy Rifles and CCWs
       upgrades:
       - name: Heavy Pistol, Heavy CCW
         rules: 12", A1, AP(1), A2, AP(1)
@@ -536,7 +568,7 @@ v3.5.3:
       - name: Dual Energy Claws
         rules: A4, Rending
         cost_modifier: +20pts
-    - category: Replace any Heavy Rifle
+    - category: Replace any Heavy Rifles
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -565,6 +597,8 @@ v3.5.3:
       - name: Autocannon
         rules: 36", A3, AP(2)
         cost_modifier: +80pts
+    - category: Any model may take one Heavy Rifle attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +15pts
@@ -577,7 +611,7 @@ v3.5.3:
       - name: Fusion-Mod
         rules: 12", A1, AP(4), Deadly(3), Limited
         cost_modifier: +20pts
-    - category: Replace one Heavy Rifle and CCW
+    - category: Replace one Heavy Rifles and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -657,12 +691,12 @@ v3.5.3:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
         cost_modifier: +5pts
-    - category: Replace any Heavy CCW
+    - category: Replace any Heavy CCWs
       upgrades:
       - name: Energy Sword
         rules: A2, AP(1), Rending
         cost_modifier: +5pts
-    - category: Replace one Heavy Pistol and Heavy CCW
+    - category: Replace one Heavy Pistols and Heavy CCWs
       upgrades:
       - name: Heavy Chainsaw Sword
         rules: A4, AP(1)
@@ -690,7 +724,7 @@ v3.5.3:
     - Warbound
     cost: 150
     upgrade_categories:
-    - category: Replace any Heavy Flamer
+    - category: Replace any Heavy Flamers
       upgrades:
       - name: Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(3)
@@ -730,6 +764,14 @@ v3.5.3:
     - Warbound
     cost: 240
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +55pts
     - category: Replace all Dual Energy Claws
       upgrades:
       - name: Rapid Heavy Rifle, Flamer-Mod, CCW
@@ -878,7 +920,7 @@ v3.5.3:
       - name: Fusion Rifle
         rules: 12", A1, AP(4), Deadly(3)
         cost_modifier: +25pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Energy Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -998,7 +1040,7 @@ v3.5.3:
       - name: Rapid Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +25pts
-    - category: Replace Twin Heavy Machineguns
+    - category: Replace Twin Heavy Machinegun
       upgrades:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
@@ -1053,12 +1095,12 @@ v3.5.3:
     - Warbound
     cost: 300
     upgrade_categories:
-    - category: Replace one Brute Hammer
+    - category: Replace one Brute Hammers
       upgrades:
       - name: Missile Array
         rules: 30", A4, AP(2), Unstoppable
         cost_modifier: +60pts
-    - category: Replace one Brute Hammer
+    - category: Replace one Brute Hammers
       upgrades:
       - name: Super-Heavy Fusion Rifle
         rules: 18", A1, AP(4), Deadly(6)
@@ -1075,7 +1117,7 @@ v3.5.3:
       - name: Twin Laser Cannon
         rules: 36", A2, AP(3), Deadly(3)
         cost_modifier: +125pts
-    - category: Replace any Brute Hammer
+    - category: Replace any Brute Hammers
       upgrades:
       - name: Brute Flail
         rules: A4, AP(1), Rending
@@ -1086,6 +1128,8 @@ v3.5.3:
       - name: Brute Fist
         rules: A4, AP(4)
         cost_modifier: +25pts
+    - category: Upgrade any Brute Fist with one
+      upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
         cost_modifier: +35pts
@@ -1120,12 +1164,12 @@ v3.5.3:
     - Warbound
     cost: 390
     upgrade_categories:
-    - category: Replace Steel Tail
+    - category: Replace Steel Tails
       upgrades:
       - name: Dual Maul Cutters
         rules: A6, AP(3)
         cost_modifier: +5pts
-    - category: Replace Steel Tail and Fiend Claw
+    - category: Replace Steel Tails and Fiend Claws
       upgrades:
       - name: Twin Fiend Autocannon
         rules: 36", A8, AP(2)
@@ -1223,7 +1267,7 @@ v3.5.3:
       - name: Anti-Tank Cannon
         rules: 30", A1, AP(3), Deadly(6)
         cost_modifier: Free
-    - category: Replace any Hell Flail
+    - category: Replace any Hell Flails
       upgrades:
       - name: Twin Heavy Flamer
         rules: 12", A2, AP(1), Blast(3), Reliable

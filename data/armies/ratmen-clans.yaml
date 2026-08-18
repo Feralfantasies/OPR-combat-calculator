@@ -282,6 +282,11 @@ v3.5.3:
     - Scurry
     cost: 105
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Clan Backup
+        rules: Reinforcement
+        cost_modifier: +65pts
     - category: Replace all Electro-Flails
       upgrades:
       - name: Dual CCWs
@@ -324,6 +329,11 @@ v3.5.3:
     - Scurry
     cost: 125
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Clan Backup
+        rules: Reinforcement
+        cost_modifier: +80pts
     - category: Replace all Pistols and CCWS
       upgrades:
       - name: Carbine, CCW
@@ -349,7 +359,7 @@ v3.5.3:
       - name: Heavy Machinegun, CCW
         rules: 30", A3, AP(1), A1
         cost_modifier: +20pts
-    - category: Replace one Pistol and CCW
+    - category: Replace one Pistols and CCWs
       upgrades:
       - name: Sgt. Pistol, Electro-Sword
         rules: 12", A1, A2, AP(1), Rending
@@ -390,6 +400,11 @@ v3.5.3:
     - Scurry
     cost: 75
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Clan Backup
+        rules: Reinforcement
+        cost_modifier: +45pts
     - category: Replace all Electro-Bombs
       upgrades:
       - name: Sling-Bombs
@@ -429,6 +444,8 @@ v3.5.3:
       - name: Carbine, CCW
         rules: 18", A2, A1
         cost_modifier: +20pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Smoke Grenades
         rules: Evasive Aura
         cost_modifier: +40pts
@@ -453,6 +470,11 @@ v3.5.3:
     - Scurry
     cost: 110
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Clan Backup
+        rules: Reinforcement
+        cost_modifier: +70pts
     - category: Replace all Heavy Pistols and CCWS
       upgrades:
       - name: Shotgun, CCW
@@ -461,7 +483,7 @@ v3.5.3:
       - name: Heavy Carbine, CCW
         rules: 18", A2, AP(1), A1
         cost_modifier: +35pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Shred Rifle, CCW
         rules: 18", A2, Rending, A1
@@ -478,7 +500,7 @@ v3.5.3:
       - name: Heavy Machinegun, CCW
         rules: 30", A3, AP(1), A1
         cost_modifier: +30pts
-    - category: Replace one Heavy Pistol and CCW
+    - category: Replace one Heavy Pistols and CCWs
       upgrades:
       - name: Sgt. Heavy Pistol, Electro-Sword
         rules: 12", A1, AP(1), A2, AP(1), Rending
@@ -549,7 +571,7 @@ v3.5.3:
     - Scurry
     cost: 160
     upgrade_categories:
-    - category: Replace any Heavy Flamer
+    - category: Replace any Heavy Flamers
       upgrades:
       - name: Rocket Launcher
         rules: 18", A1, AP(2), Deadly(3)
@@ -594,7 +616,7 @@ v3.5.3:
       - name: Electro-Lance
         rules: A2, AP(1), Thrust
         cost_modifier: +25pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Electro-Hammer
         rules: A1, Blast(3)
@@ -707,7 +729,15 @@ v3.5.3:
     - Scurry
     - Strider
     cost: 80
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Pathfinder Rat Master
+        rules: Vanguard
+        cost_modifier: +10pts
+      - name: Combat Rat Master
+        rules: Unpredictable Fighter
+        cost_modifier: +15pts
   - name: Giant Rats
     size: 10
     quality: 5+
@@ -724,7 +754,15 @@ v3.5.3:
     - Scurry
     - Strider
     cost: 105
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Pathfinder Rat Master
+        rules: Vanguard
+        cost_modifier: +10pts
+      - name: Combat Rat Master
+        rules: Unpredictable Fighter
+        cost_modifier: +10pts
   - name: Mecha-Ogre
     size: 1
     quality: 4+
@@ -910,7 +948,7 @@ v3.5.3:
     - Scurry
     cost: 380
     upgrade_categories:
-    - category: Replace Heavy Claw
+    - category: Replace Heavy Claws
       upgrades:
       - name: Twin Shred Cannon
         rules: 24", A8, Rending
@@ -1058,7 +1096,7 @@ v3.5.3:
     - Scurry
     cost: 810
     upgrade_categories:
-    - category: Replace Titan Heavy Rocket Array
+    - category: Replace Titan Heavy Rocket Arrays
       upgrades:
       - name: Titan Flamer Cannons
         rules: 18", A3, AP(1), Blast(6), Reliable

@@ -185,6 +185,8 @@ v3.5.3:
       - name: Bolt-Smasher Pistol
         rules: 9", A1, Deadly(3), Tear
         cost_modifier: +10pts
+    - category: Take one Boss Carbine attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -350,6 +352,24 @@ v3.5.3:
     - Mischievous
     cost: 95
     upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Junk Banner
+        rules: Courage Aura
+        cost_modifier: +10pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +40pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Ramshackle Crew
+        rules: Instinctive
+        cost_modifier: +15pts
     - category: Replace up to two Scrap Guns
       upgrades:
       - name: Bubble Rifle
@@ -387,6 +407,16 @@ v3.5.3:
     - Mischievous
     cost: 110
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +10pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Ramshackle Crew
+        rules: Instinctive
+        cost_modifier: +20pts
     - category: Replace up to two Pistols
       upgrades:
       - name: Chucker Pistol
@@ -421,6 +451,8 @@ v3.5.3:
       - name: Dual Killer Claws
         rules: A4, Rending
         cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Jetpack
         rules: Ambush, Flying
         cost_modifier: +35pts
@@ -440,7 +472,17 @@ v3.5.3:
     - Mischievous
     - Unpredictable Fighter
     cost: 170
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Ramshackle Crew
+        rules: Instinctive
+        cost_modifier: +10pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Rapid Mutations
+        rules: Regeneration
+        cost_modifier: +25pts
   - name: Commandos
     size: 5
     quality: 5+
@@ -463,6 +505,11 @@ v3.5.3:
     - Strider
     cost: 65
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +10pts
     - category: Replace all Scrap Guns and CCWS
       upgrades:
       - name: Pistol, CCW
@@ -471,7 +518,7 @@ v3.5.3:
       - name: Shotgun, CCW
         rules: 12", A2, AP(1), A1
         cost_modifier: +20pts
-    - category: Replace one Scrap Gun
+    - category: Replace one Scrap Guns
       upgrades:
       - name: Bubble Rifle
         rules: 24", A1, AP(4)
@@ -493,6 +540,8 @@ v3.5.3:
       - name: Scrap Sniper
         rules: 24", A1, AP(1), Reliable, Takedown
         cost_modifier: +30pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Camo Cloaks
         rules: Stealth
         cost_modifier: +15pts
@@ -516,7 +565,15 @@ v3.5.3:
     - Mischievous
     cost: 110
     upgrade_categories:
-    - category: Replace any Boss Pistol
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Junk Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+    - category: Replace any Boss Pistols
       upgrades:
       - name: Shotgun
         rules: 12", A2, AP(1)
@@ -524,7 +581,7 @@ v3.5.3:
       - name: Boss Carbine
         rules: 18", A2
         cost_modifier: +5pts
-    - category: Replace one Boss Pistol
+    - category: Replace one Boss Pistols
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -541,6 +598,8 @@ v3.5.3:
       - name: Bolt-Smasher Rifle
         rules: 18", A1, Deadly(3), Tear
         cost_modifier: +30pts
+    - category: Take one Boss Carbine attachment
+      upgrades:
       - name: Flamer-Mod
         rules: 12", A1, Blast(3), Limited, Reliable
         cost_modifier: +5pts
@@ -553,7 +612,7 @@ v3.5.3:
       - name: Bolt-Smasher-Mod
         rules: 18", A1, Deadly(3), Limited, Tear
         cost_modifier: +10pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Killer Hammer
         rules: A1, Blast(3)
@@ -589,7 +648,17 @@ v3.5.3:
     - Scout
     cost: 70
     upgrade_categories:
-    - category: Replace one Pistol
+    - category: Upgrade all models with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Ramshackle Crew
+        rules: Instinctive
+        cost_modifier: +10pts
+    - category: Replace one Pistols
       upgrades:
       - name: Chucker Pistol
         rules: 9", A2, Rending
@@ -606,7 +675,7 @@ v3.5.3:
       - name: Bolt-Smasher Pistol
         rules: 9", A1, Deadly(3), Tear
         cost_modifier: +10pts
-    - category: Replace one Pistol and CCW
+    - category: Replace one Pistols and CCWs
       upgrades:
       - name: Pistol, Killer Hammer
         rules: 12", A1, A1, Blast(3)
@@ -646,7 +715,12 @@ v3.5.3:
     - Relentless
     cost: 120
     upgrade_categories:
-    - category: Replace any Heavy Machinegun
+    - category: Upgrade all models with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +30pts
+    - category: Replace any Heavy Machineguns
       upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
@@ -692,6 +766,11 @@ v3.5.3:
     - Strider
     cost: 160
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +5pts
     - category: Replace any Scrap Guns
       upgrades:
       - name: Bubble Rifle
@@ -731,7 +810,17 @@ v3.5.3:
     - Mischievous
     cost: 155
     upgrade_categories:
-    - category: Replace any Rocket Launcher
+    - category: Upgrade all models with
+      upgrades:
+      - name: Trash Goggles
+        rules: Good Shot
+        cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Self-Destruction Payload
+        rules: Deathstrike(3)
+        cost_modifier: +15pts
+    - category: Replace any Rocket Launchers
       upgrades:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
@@ -766,7 +855,7 @@ v3.5.3:
     - Mischievous
     cost: 170
     upgrade_categories:
-    - category: Replace any Rocket Launcher
+    - category: Replace any Rocket Launchers
       upgrades:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
@@ -780,10 +869,12 @@ v3.5.3:
       - name: Bubble Cannon
         rules: 30", A1, AP(4), Blast(3)
         cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Trash Goggles
         rules: Good Shot
         cost_modifier: +25pts
-    - category: Replace any Mini-Claw
+    - category: Replace any Mini-Claws
       upgrades:
       - name: Mini-Saw
         rules: A1, AP(2), Deadly(3)
@@ -821,7 +912,7 @@ v3.5.3:
       - name: Targeted Frenzy
         rules: Unpredictable Shooter Mark
         cost_modifier: +40pts
-    - category: Replace any Rocket Launcher
+    - category: Replace any Rocket Launchers
       upgrades:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
@@ -879,7 +970,7 @@ v3.5.3:
       - name: Heavy Chucker Cannon
         rules: 24", A8, Rending
         cost_modifier: +60pts
-    - category: Replace Sponson-Flamer
+    - category: Replace Sponson-Flamers
       upgrades:
       - name: Sponson-MGs
         rules: 30", A6, AP(1)

@@ -306,7 +306,7 @@ v3.5.3:
       - name: Iron Blaster
         rules: 18", A2, AP(1)
         cost_modifier: +45pts
-    - category: Replace one Rifle
+    - category: Replace one Rifles
       upgrades:
       - name: Auto H-Rifle
         rules: 18", A2, Rending
@@ -329,13 +329,15 @@ v3.5.3:
       - name: Missile Launcher
         rules: 30", A1, AP(2), Deadly(3), Unstoppable
         cost_modifier: +35pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Spectrum Scanner
         rules: Ignores Cover when Shooting Aura
         cost_modifier: +10pts
       - name: Medical Training
         rules: Regeneration Aura
         cost_modifier: +20pts
-    - category: Replace one Rifle and CCW
+    - category: Replace one Rifles and CCWs
       upgrades:
       - name: Sgt. Pistol, Plasma Sword
         rules: 12", A1, A2, AP(1), Rending
@@ -375,6 +377,11 @@ v3.5.3:
     - Sturdy
     cost: 75
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Guild Bounty
+        rules: Precision Frenzy
+        cost_modifier: +5pts
     - category: Replace all Great Axes
       upgrades:
       - name: Heavy Heat Axe
@@ -383,11 +390,13 @@ v3.5.3:
       - name: Dual Berserker Axes
         rules: A2
         cost_modifier: +10pts
-    - category: Replace one Great Axe
+    - category: Replace one Great Axes
       upgrades:
       - name: Assault Grenade Launcher, CCW
         rules: 18", A1, Blast(3), A2
         cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Cyber-Augments
         rules: Regeneration
         cost_modifier: +10pts
@@ -417,7 +426,7 @@ v3.5.3:
       - name: Iron Blaster
         rules: 18", A2, AP(1)
         cost_modifier: +65pts
-    - category: Replace one Iron Shotgun
+    - category: Replace one Iron Shotguns
       upgrades:
       - name: Heavy Flamer
         rules: 12", A1, AP(1), Blast(3), Reliable
@@ -431,13 +440,15 @@ v3.5.3:
       - name: Plasma Cannon
         rules: 30", A1, AP(4), Blast(3)
         cost_modifier: +65pts
+    - category: Upgrade one model with one
+      upgrades:
       - name: Spectrum Scanner
         rules: Ignores Cover when Shooting Aura
         cost_modifier: +5pts
       - name: Medical Training
         rules: Regeneration Aura
         cost_modifier: +20pts
-    - category: Replace one Iron Shotgun and CCW
+    - category: Replace one Iron Shotguns and CCWs
       upgrades:
       - name: Sgt. Iron Pistol, Plasma Sword
         rules: 9", A2, AP(1), A2, AP(1), Rending
@@ -477,12 +488,17 @@ v3.5.3:
     - Sturdy
     cost: 120
     upgrade_categories:
-    - category: Replace any Iron Pistol
+    - category: Upgrade all models with
+      upgrades:
+      - name: Guild Bounty
+        rules: Precision Frenzy
+        cost_modifier: +15pts
+    - category: Replace any Iron Pistols
       upgrades:
       - name: Iron Shotgun
         rules: 6", A2, AP(2)
         cost_modifier: Free
-    - category: Replace one Iron Pistol
+    - category: Replace one Iron Pistols
       upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
@@ -493,12 +509,12 @@ v3.5.3:
       - name: Drill M-Platform
         rules: 18", A1, AP(2), Deadly(3), Shred
         cost_modifier: +25pts
-    - category: Replace one Iron Pistol and CCW
+    - category: Replace one Iron Pistols and CCWs
       upgrades:
       - name: Drill A-Platform
         rules: A1, AP(4), Deadly(3)
         cost_modifier: +10pts
-    - category: Replace one Iron Pistol and CCW
+    - category: Replace one Iron Pistols and CCWs
       upgrades:
       - name: Sgt. Iron Pistol, Plasma Sword
         rules: 9", A2, AP(1), A2, AP(1), Rending
@@ -538,6 +554,11 @@ v3.5.3:
     - Sturdy
     cost: 115
     upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Guild Bounty
+        rules: Precision Frenzy
+        cost_modifier: +10pts
     - category: Replace all Pistols and CCWS
       upgrades:
       - name: Twin Glove-Pistols, Bash
@@ -554,7 +575,7 @@ v3.5.3:
       - name: Plasma Pistol
         rules: 12", A1, AP(4)
         cost_modifier: +5pts
-    - category: Replace one Pistol
+    - category: Replace one Pistols
       upgrades:
       - name: Flamer Pistol
         rules: 6", A1, Blast(3), Reliable
@@ -567,7 +588,7 @@ v3.5.3:
       - name: Shock Gauntlet
         rules: A2, AP(4)
         cost_modifier: +15pts
-    - category: Replace one CCW
+    - category: Replace one CCWs
       upgrades:
       - name: Shock Hammer
         rules: A1, Blast(3)
@@ -594,12 +615,12 @@ v3.5.3:
     - Sturdy
     cost: 110
     upgrade_categories:
-    - category: Replace any Heat Hammer
+    - category: Replace any Heat Hammers
       upgrades:
       - name: Heat Axe
         rules: A2, Shred
         cost_modifier: +5pts
-    - category: Replace one Heat Hammer
+    - category: Replace one Heat Hammers
       upgrades:
       - name: Great Heat Hammer
         rules: A1, AP(2), Blast(3), Shred
@@ -628,7 +649,15 @@ v3.5.3:
     - Stealth
     - Sturdy
     cost: 135
-    upgrade_categories: []
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Beamer Ammo
+        rules: Surge when Shooting
+        cost_modifier: +5pts
+      - name: Heat Ammo
+        rules: Shred when Shooting
+        cost_modifier: +10pts
   - name: Thunder Support
     size: 3
     quality: 4+
@@ -652,7 +681,7 @@ v3.5.3:
     - Sturdy
     cost: 170
     upgrade_categories:
-    - category: Replace any Mortar
+    - category: Replace any Mortars
       upgrades:
       - name: Heavy Machinegun
         rules: 30", A3, AP(1)
@@ -669,6 +698,8 @@ v3.5.3:
       - name: Autocannon
         rules: 36", A3, AP(2)
         cost_modifier: +25pts
+    - category: Upgrade one model with
+      upgrades:
       - name: Spectrum Scanner
         rules: Ignores Cover when Shooting Aura
         cost_modifier: Free
@@ -718,7 +749,7 @@ v3.5.3:
       - name: Plasma Cannon
         rules: 30", A1, AP(4), Blast(3)
         cost_modifier: +65pts
-    - category: Replace any Shock Hammer
+    - category: Replace any Shock Hammers
       upgrades:
       - name: Plasma Axe
         rules: A1, AP(2), Deadly(3)
@@ -729,6 +760,8 @@ v3.5.3:
       - name: Shock Gauntlet
         rules: A3, AP(4)
         cost_modifier: +30pts
+    - category: Upgrade all models with
+      upgrades:
       - name: Exo-GL
         rules: 18", A1, Blast(3), Limited
         cost_modifier: +20pts
@@ -789,7 +822,12 @@ v3.5.3:
     - Sturdy
     cost: 210
     upgrade_categories:
-    - category: Replace any Iron Pistol
+    - category: Upgrade all models with
+      upgrades:
+      - name: Guild Bounty
+        rules: Precision Frenzy
+        cost_modifier: +20pts
+    - category: Replace any Iron Pistols
       upgrades:
       - name: Iron Shotgun
         rules: 6", A2, AP(2)
@@ -1042,7 +1080,7 @@ v3.5.3:
     - Sturdy
     cost: 430
     upgrade_categories:
-    - category: Replace any Twin Light AA-Gun
+    - category: Replace any Twin Light AA-Guns
       upgrades:
       - name: Twin Light Fusion AA-Gun
         rules: 24", A2, AP(4), Deadly(3), Unstoppable
@@ -1117,7 +1155,7 @@ v3.5.3:
     - Sturdy
     cost: 280
     upgrade_categories:
-    - category: Replace any Shock Hammer
+    - category: Replace any Shock Hammers
       upgrades:
       - name: Plasma Sword
         rules: A4, AP(1), Rending
@@ -1140,6 +1178,8 @@ v3.5.3:
       - name: Twin Autocannon
         rules: 36", A6, AP(2)
         cost_modifier: +120pts
+    - category: Upgrade any Light Walker Fist with one
+      upgrades:
       - name: Flamer
         rules: 12", A1, Blast(3), Reliable
         cost_modifier: +20pts
@@ -1220,7 +1260,7 @@ v3.5.3:
       - name: Iron Cannon
         rules: 24", A3, AP(1), Blast(3)
         cost_modifier: +10pts
-    - category: Replace any Twin Heavy Rifle
+    - category: Replace any Twin Heavy Rifles
       upgrades:
       - name: Light C-Beamer
         rules: 24", A2, AP(1), Surge
