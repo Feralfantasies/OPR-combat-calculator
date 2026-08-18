@@ -498,7 +498,7 @@ mod tests {
         )
         .expect("second duplicate resolves by option_index");
         assert!(second.has_rule(&SpecialRule::Caster(3)));
-        assert!(second.points == test_unit().points + 20);
+        assert_eq!(second.points, test_unit().points + 20);
 
         // Out-of-range option index is an error.
         let bad = apply_upgrades(
