@@ -74,12 +74,97 @@ pub enum SpecialRule {
     UnpredictableFighterMark, // Grant Unpredictable Fighter to friendlies
     Unique,                   // Named character (one per army)
 
-    // Alien Hives aura rules
+    // Battle Brothers faction rules
+    Battleborn, // Morale: while a unit is Shaken at the start of the
+    // round, roll 1d6; 4+ stops it being Shaken
+    Shielded,        // +1 to defense rolls against hits not from spells
+    VersatileAttack, // At activation: AP(+1) or +1 to hit while shooting/
+    // charging over 9" (CombatContext::versatile_mode)
     FuriousAura,                // Model + unit get Furious
     HiveBondBoostAura,          // Model + unit get Hive Bond Boost
     IncreasedShootingRangeAura, // Model + unit get +6" range
     RapidChargeAura,            // Model + unit get Rapid Charge
     RegenerationAura,           // Model + unit get Regeneration
+
+    // Faction marker rules found in the committed catalogs. The combat
+    // engine does not implement effects for these yet; they are carried so
+    // rosters round-trip faithfully and can be queried by name.
+    Bloodborn,             // Blood Brothers marker: +1 to wound rolls in melee
+    Darkborn,              // Dark Brothers marker
+    Highborn,              // High Elf Fleets marker
+    Knightborn,            // Knight Brothers marker
+    Primeborn,             // Prime Brothers marker
+    Watchborn,             // Watch Brothers marker
+    Wolfborn,              // Wolf Brothers marker
+    Changebound,           // Change Disciples marker
+    Havocbound,            // Havoc Brothers marker
+    Lustbound,             // Lust Disciples marker
+    Plaguebound,           // Plague Disciples marker
+    Warbound,              // War Disciples marker
+    ClanWarrior,           // Eternal Dynasty marker
+    InquisitorialAgent,    // Human Inquisition operative marker
+    Fanatic,               // +1 attack in melee (generic)
+    Devout,                // +1 to Defense rolls when defending
+    Primal,                // Feral marker: ignores some control
+    Infected,              // Infected Colonies marker
+    Sturdy,                // Dwarf Guilds: +1 Tough
+    Evasive,               // -1 to hit rolls taken
+    Agile,                 // +1" Advance/Rush
+    Bounding,              // +2" Advance/Rush
+    Scurry,                // +4" Advance
+    Harassing,             // ranged harass profile
+    Guerrilla,             // guerrilla repositioning after shooting
+    Protected,             // first wound on the model is ignored
+    Lacerate,              // wounds multiply on 6s to wound
+    Shatter,               // model destroyed on Tough wounds
+    Tear,                  // rending variant: extra wounds on 6s
+    Crack,                 // blast variant: area on 6s
+    Disintegrate,          // wounds ignore Tough
+    BrutalFighter,         // +1 attack per model, -1 Tough (trade-off)
+    MeleeSlayer,           // +1 attack vs models, not units
+    MeleeEvasion,          // +1 defense vs melee
+    RapidBlink,            // teleport-range Advance
+    Teleport,              // short teleport action
+    MachineFog,            // Machine Cults: -1 to hit rolls taken
+    SelfRepair,            // 5+ to ignore 1 wound
+    TargetingVisor,        // +1 to hit rolls
+    GoodShot,              // +1 to the first hit roll
+    BadShot,               // -1 to the first hit roll
+    HoldTheLine,           // cannot rout
+    HonorCode,             // hero code marker
+    CounterAttack,         // return strike on failed charge
+    RapidAmbush,           // Ambush + +1" Advance
+    MobileArtillery,       // may shoot after moving (no Indirect)
+    PiercingAssault,       // AP(+1) on charge
+    PointBlankSurge,       // +1 attack below 9"
+    TakedownShot,          // ranged Takedown variant
+    AmbushingPiercingShot, // Ambush + AP(+1)
+    CastingDebuff,         // +1 to friendly spell rolls
+    CourageBuff,           // grant Fearless to a friendly unit once
+    DevoutBoost,           // grant Devout to a friendly unit once
+    Ferocious,             // +1 attack at 0 Tough
+    FerociousBoost,        // grant Ferocious to a friendly unit once
+    GroundedStealth,       // Stealth while stationary
+    GuardedBuff,           // +1 to Defense rolls (unit buff)
+    Guardian,              // nearby friendlies +1 Defense
+    Hazardous,             // nearby enemies -1 Defense
+    MartialProwess,        // +1 to hit and Defense
+    QuickReadjustment,     // re-aim after a miss
+    SwiftBuff,             // +1" to friendly movement
+    UnpredictableShooter,  // Unpredictable, but only when shooting
+    Mischievous,           // +1 to flee, -1 to be hit in close combat
+    Scrapper,              // +1 to Defense while in melee
+    Deathstrike(u8),       // X attacks at Q2+, AP(1), Deadly(2) per model
+    HeavyImpact(u8),       // Impact(X) at double dice on charge
+    CrossingAttack(u8),    // X dice, 6+ = hit, vs targets it crosses
+    PrecisionFighterBuff,  // grant Precision Fighter to a friendly unit once
+    PrimalBoostBuff,       // grant Primal to a friendly unit once
+    SelfRepairBoostBuff,   // grant Self-Repair to a friendly unit once
+
+    // Display rules present in committed catalogs that the model does not
+    // give an explicit variant for. The raw display string is preserved so
+    // consumers can match and present the rule by name.
+    Unmodelled(String),
 }
 
 impl SpecialRule {
@@ -188,6 +273,13 @@ impl SpecialRule {
             Self::Tough(x) => format!("Tough({x})"),
             Self::Caster(x) => format!("Caster({x})"),
             Self::Transport(x) => format!("Transport({x})"),
+            Self::PiercingTag(x) => format!("Piercing Tag({x})"),
+            Self::Ravage(x) => format!("Ravage({x})"),
+            Self::Retaliate(x) => format!("Retaliate({x})"),
+            Self::SelfDestruct(x) => format!("Self-Destruct({x})"),
+            Self::SurpriseAttack(x) => format!("Surprise Attack({x})"),
+            Self::Spawn(s) => format!("Spawn({s})"),
+            Self::Unmodelled(s) => s.clone(),
             _ => format!("{self:?}"),
         }
     }

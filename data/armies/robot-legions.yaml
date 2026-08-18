@@ -1,0 +1,1027 @@
+v3.5.3:
+  name: Robot Legions
+  id: 4k5amkxoybdiqotm
+  units:
+  - name: Tri-Scorpion Lord
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Annihilation Gun
+      range: 18"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Harvest Blade
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    special_rules:
+    - Hero
+    - Ravage(4)
+    - Relentless
+    - Self-Repair
+    - Strider
+    cost: 205
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Re-Animator
+        rules: Reanimation Aura
+        cost_modifier: +30pts
+      - name: Psychomancer
+        rules: Stealth Aura
+        cost_modifier: +30pts
+      - name: Controller
+        rules: Piercing Assault Aura
+        cost_modifier: +35pts
+      - name: Chronomancer
+        rules: Ambush Aura
+        cost_modifier: +35pts
+      - name: Overseer
+        rules: No Retreat Aura
+        cost_modifier: +35pts
+  - name: Annihilator Lord
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Lord Gauss Pistol
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Destructive
+      count: 1
+    - name: CCWs
+      attacks: A2
+      count: 2
+    special_rules:
+    - Hero
+    - Self-Repair
+    - Strider
+    cost: 120
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Warden
+        rules: Relentless Aura
+        cost_modifier: +10pts
+      - name: Re-Animator
+        rules: Reanimation Aura
+        cost_modifier: +30pts
+      - name: Psychomancer
+        rules: Stealth Aura
+        cost_modifier: +30pts
+      - name: Technomancer
+        rules: Caster(2)
+        cost_modifier: +35pts
+      - name: Controller
+        rules: Piercing Assault Aura
+        cost_modifier: +35pts
+      - name: Overseer
+        rules: No Retreat Aura
+        cost_modifier: +35pts
+    - category: Replace Lord Gauss Pistol and 2x CCWs
+      upgrades:
+      - name: Dual Hyper Swords
+        rules: A4, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Staff-Shots, Hyper Sword, Combat Staff
+        rules: 12", A3, AP(1), A3, AP(1), Rending, A3, AP(1)
+        cost_modifier: +40pts
+    - category: Replace Lord Gauss Pistol
+      upgrades:
+      - name: Combat Shield
+        rules: Shielded
+        cost_modifier: +5pts
+      - name: Wrist-Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Wrist-Plasma
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Heavy Gauss Cannon
+        rules: 30", A6, Destructive
+        cost_modifier: +80pts
+    - category: Replace any CCWs
+      upgrades:
+      - name: Void Sword
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Doom Scythe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Hyper Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Phase Glaive
+        rules: A3, AP(4)
+        cost_modifier: +30pts
+    - category: Upgrade with
+      upgrades:
+      - name: Phase Core
+        rules: Ambush
+        cost_modifier: +20pts
+  - name: Robot Lord
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Hero
+    - Self-Repair
+    - Shielded
+    - Slow
+    cost: 45
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Warden
+        rules: Relentless Aura
+        cost_modifier: +10pts
+      - name: Re-Animator
+        rules: Reanimation Aura
+        cost_modifier: +30pts
+      - name: Psychomancer
+        rules: Stealth Aura
+        cost_modifier: +30pts
+      - name: Technomancer
+        rules: Caster(2)
+        cost_modifier: +35pts
+      - name: Chronomancer
+        rules: Ambush Aura
+        cost_modifier: +35pts
+      - name: Overseer
+        rules: No Retreat Aura
+        cost_modifier: +35pts
+    - category: Replace Combat Shield and CCW
+      upgrades:
+      - name: Staff-Shots, Combat Staff
+        rules: 12", A3, AP(1), A3, AP(1)
+        cost_modifier: +25pts
+    - category: Replace Combat Shield
+      upgrades:
+      - name: Lord Gauss Pistol
+        rules: 12", A2, Destructive
+        cost_modifier: +5pts
+      - name: Wrist-Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Wrist-Plasma
+        rules: 24", A1, AP(4)
+        cost_modifier: +20pts
+      - name: Lord Reaper Rifle
+        rules: 18", A2, AP(1), Shred
+        cost_modifier: +20pts
+      - name: Lord Gauss Rifle
+        rules: 24", A2, Destructive
+        cost_modifier: +20pts
+      - name: Gauss Blaster
+        rules: 18", A4, Destructive
+        cost_modifier: +35pts
+    - category: Replace CCW
+      upgrades:
+      - name: Void Sword
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Doom Scythe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Hyper Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Phase Glaive
+        rules: A3, AP(4)
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Pet Technoaide
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+      - name: Jetpack
+        rules: Ambush, Flying, Swift
+        cost_modifier: +25pts
+  - name: Warriors
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Reaper Rifles
+      range: 18"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Shred
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Self-Repair
+    - Slow
+    cost: 100
+    upgrade_categories:
+    - category: Replace all Reaper Rifles
+      upgrades:
+      - name: Gauss Rifle
+        rules: 24", A1, Destructive
+        cost_modifier: +10pts
+    - category: Replace one Reaper Rifles
+      upgrades:
+      - name: Plasma Caster
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Flame Caster
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Fusion Caster
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Ray Caster
+        rules: 18", A2, AP(4), Unstoppable
+        cost_modifier: +20pts
+  - name: Guardians
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Atom-Casters
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 5
+    - name: Void Blades
+      attacks: A2
+      count: 5
+    special_rules:
+    - Self-Repair
+    - Slow
+    cost: 125
+    upgrade_categories:
+    - category: Replace all Atom-Casters and Void Blades
+      upgrades:
+      - name: War Scythe
+        rules: A2, AP(2)
+        cost_modifier: +10pts
+      - name: Rod-Shots, Rod
+        rules: 12", A2, AP(1), A1
+        cost_modifier: +10pts
+      - name: Hyper Sword, Combat Shields
+        rules: A2, AP(1), Rending, Shielded
+        cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Jetpacks
+        rules: Ambush, Flying, Swift
+        cost_modifier: +45pts
+  - name: Flesh-Eaters
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Metal Claws
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    special_rules:
+    - Infiltrate
+    - Self-Repair
+    - Slow
+    cost: 130
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Machine-Horror
+        rules: Fear(1)
+        cost_modifier: +10pts
+  - name: Eternals
+    size: 5
+    quality: 3+
+    defense: 2+
+    tough: null
+    weapons:
+    - name: Flux Carbines
+      range: 18"
+      attacks: A2
+      special_rules:
+      - Surge
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Self-Repair
+    - Slow
+    cost: 150
+    upgrade_categories:
+    - category: Replace all Flux Carbines
+      upgrades:
+      - name: Heavy Gauss Rifle
+        rules: 24", A2, Destructive
+        cost_modifier: +60pts
+  - name: Snipers
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: D-Marks
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Reliable
+      - Takedown
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Self-Repair
+    - Slow
+    cost: 110
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Hyperspace Reapers
+        rules: Ambushing Piercing Shot
+        cost_modifier: +15pts
+  - name: Bot Swarms
+    size: 3
+    quality: 5+
+    defense: 6+
+    tough: 3
+    weapons:
+    - name: Swarm Attacks
+      attacks: A3
+      special_rules:
+      - Rending
+      count: 3
+    special_rules:
+    - Self-Repair
+    - Strider
+    cost: 100
+    upgrade_categories: []
+  - name: Robot Snakes
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Spike Whips
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+      count: 3
+    special_rules:
+    - Fast
+    - Self-Repair
+    - Strider
+    cost: 175
+    upgrade_categories:
+    - category: Any model may replace Spike Whips
+      upgrades:
+      - name: 2x Metal Fangs
+        rules: A2, Rending
+        cost_modifier: +5pts
+      - name: Shock Whips
+        rules: A4, AP(1), Surge
+        cost_modifier: +5pts
+    - category: Any model may replace one Metal Fangs
+      upgrades:
+      - name: Twin Atom-Caster
+        rules: 12", A2, AP(1)
+        cost_modifier: Free
+      - name: Death Gaze
+        rules: 12", A2, AP(4)
+        cost_modifier: +10pts
+  - name: Destroyer Snakes
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Dual Reaper Blades
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Shred
+      count: 3
+    special_rules:
+    - Self-Repair
+    - Strider
+    cost: 225
+    upgrade_categories:
+    - category: Replace one Dual Reaper Blades
+      upgrades:
+      - name: Heavy Reaper Blade
+        rules: A1, AP(3), Deadly(6), Shred
+        cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Plasmabot
+        rules: Rending in Melee
+        cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Elite Vanguard
+        rules: Scout
+        cost_modifier: +35pts
+  - name: Annihilators
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Dual Hyper Swords
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 3
+    special_rules:
+    - Self-Repair
+    - Strider
+    cost: 240
+    upgrade_categories:
+    - category: Replace all Dual Hyper Swords
+      upgrades:
+      - name: Gauss Cannon, CCW
+        rules: 24", A4, Destructive, A1
+        cost_modifier: +70pts
+    - category: Replace one Gauss Cannon
+      upgrades:
+      - name: Ray Cannon
+        rules: 24", A2, AP(4), Unstoppable
+        cost_modifier: Free
+      - name: Heavy Gauss Cannon
+        rules: 30", A6, Destructive
+        cost_modifier: +40pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Phase Core
+        rules: Ambush
+        cost_modifier: +35pts
+  - name: Tri-Scorpions
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Dual Reaper Blades
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Shred
+      count: 3
+    special_rules:
+    - Ravage(2)
+    - Self-Repair
+    - Strider
+    cost: 260
+    upgrade_categories:
+    - category: Replace one Dual Reaper Blades
+      upgrades:
+      - name: Heavy Reaper Blade
+        rules: A1, AP(3), Deadly(6), Shred
+        cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Plasmabot
+        rules: Rending in Melee
+        cost_modifier: +25pts
+  - name: Hover Bikes
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Rapid Flux Carbines
+      range: 18"
+      attacks: A4
+      special_rules:
+      - Surge
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fast
+    - Self-Repair
+    - Strider
+    cost: 215
+    upgrade_categories:
+    - category: Replace any Rapid Flux Carbines
+      upgrades:
+      - name: Rapid Gauss Rifle
+        rules: 24", A3, Destructive
+        cost_modifier: +10pts
+      - name: Atom-Beamer
+        rules: 24", A3, AP(1)
+        cost_modifier: +10pts
+  - name: Tri-Scorpion Pistoleer
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Disintegration Pistol
+      range: 12"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: CCW
+      attacks: A3
+      count: 1
+    special_rules:
+    - Ambushing Piercing Shot
+    - Relentless
+    - Self-Repair
+    - Strider
+    cost: 175
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Networked Target Lock
+        rules: Indirect Mark
+        cost_modifier: +35pts
+  - name: Forge Spider
+    size: 1
+    quality: 4+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Twin Atom-Beamer
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: Spider Fangs
+      attacks: A6
+      special_rules:
+      - Bane
+      count: 1
+    special_rules:
+    - Self-Repair
+    - Strider
+    cost: 170
+    upgrade_categories:
+    - category: Upgrade with any
+      upgrades:
+      - name: Widowmaker
+        rules: Ambush
+        cost_modifier: +15pts
+      - name: Repair Nanobots
+        rules: Self-Repair Boost Buff
+        cost_modifier: +20pts
+      - name: Bot Fabricator
+        rules: Spawn(Bot Swarms [3])
+        cost_modifier: +100pts
+    - category: Replace Twin Atom-Beamer
+      upgrades:
+      - name: Atom-Beamer, Cyber-Palps
+        rules: 24", A3, AP(1), Mend
+        cost_modifier: +5pts
+  - name: Heavy Annihilator
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Heavy Gauss Cannon
+      range: 30"
+      attacks: A6
+      special_rules:
+      - Destructive
+      count: 1
+    - name: Heavy CCW
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Self-Repair
+    - Strider
+    cost: 195
+    upgrade_categories:
+    - category: Replace Heavy Gauss Cannon
+      upgrades:
+      - name: Exterminator Cannon
+        rules: 30", A2, AP(2), Blast(3)
+        cost_modifier: +10pts
+      - name: Heavy Ray Cannon
+        rules: 24", A4, AP(4), Unstoppable
+        cost_modifier: +15pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Phase Core
+        rules: Ambush
+        cost_modifier: +20pts
+      - name: Networked Target Lock
+        rules: Indirect Mark
+        cost_modifier: +35pts
+  - name: Transport Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Gauss Rifle Array
+      range: 24"
+      attacks: A3
+      special_rules:
+      - Destructive
+      count: 1
+    special_rules:
+    - Impact(3)
+    - Self-Repair
+    - Strider
+    - Transport(11)
+    cost: 200
+    upgrade_categories:
+    - category: Upgrade with any
+      upgrades:
+      - name: Repair Nanobots
+        rules: Self-Repair Boost Buff
+        cost_modifier: +20pts
+  - name: Tripod Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Rapid Particle Beam
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: Stomp
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(1)
+    - Self-Repair
+    - Strider
+    cost: 185
+    upgrade_categories:
+    - category: Replace Rapid Particle Beam
+      upgrades:
+      - name: Rapid Doom Blaster
+        rules: 24", A2, AP(1), Blast(3)
+        cost_modifier: +20pts
+      - name: Rapid Ray Caster
+        rules: 18", A4, AP(4), Unstoppable
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Tripod Queen
+        rules: Swift Buff
+        cost_modifier: +15pts
+      - name: Twin Gauss Rifle
+        rules: 24", A2, Destructive
+        cost_modifier: +30pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Repair Nanobots
+        rules: Self-Repair Boost Buff
+        cost_modifier: +20pts
+      - name: Networked Target Lock
+        rules: Indirect Mark
+        cost_modifier: +35pts
+  - name: Doom Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Doom Cannon
+      range: 30"
+      attacks: A3
+      ap: AP(2)
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Gauss Rifle Array
+      range: 24"
+      attacks: A3
+      special_rules:
+      - Destructive
+      count: 1
+    special_rules:
+    - Impact(3)
+    - Self-Repair
+    - Strider
+    cost: 375
+    upgrade_categories:
+    - category: Replace Doom Cannon
+      upgrades:
+      - name: Heavy Doom Cannon
+        rules: 30", A3, AP(3), Deadly(3)
+        cost_modifier: +40pts
+  - name: Spider Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Twin Fusion Ray
+      range: 18"
+      attacks: A2
+      ap: AP(4)
+      special_rules:
+      - Deadly(6)
+      count: 1
+    - name: Crushing Legs
+      attacks: A2
+      ap: AP(2)
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(2)
+    - Self-Repair
+    - Strider
+    cost: 445
+    upgrade_categories:
+    - category: Replace Twin Fusion Ray
+      upgrades:
+      - name: Twin Heavy Gauss Cannon
+        rules: 24", A12, Destructive
+        cost_modifier: +20pts
+      - name: Twin Atom-Shredder
+        rules: 24", A12, AP(1)
+        cost_modifier: +30pts
+      - name: Twin Exterminator Cannon
+        rules: 30", A4, AP(2), Blast(3)
+        cost_modifier: +55pts
+  - name: Wraith-Shard
+    size: 1
+    quality: 2+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Nanobot Shards
+      range: 18"
+      attacks: A4
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    - name: Wraith Strike
+      attacks: A8
+      special_rules:
+      - Rending
+      count: 1
+    special_rules:
+    - Caster(3)
+    - Fear(2)
+    - Fearless
+    - Flying
+    - Self-Repair
+    cost: 780
+    upgrade_categories:
+    - category: Replace Nanobot Shards
+      upgrades:
+      - name: Void Shard
+        rules: 24", A12, AP(2)
+        cost_modifier: +85pts
+  - name: Support Platform
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Ray Caster
+      range: 18"
+      attacks: A2
+      ap: AP(4)
+      special_rules:
+      - Unstoppable
+      count: 1
+    special_rules:
+    - Impact(3)
+    - Mobile Artillery
+    - Self-Repair
+    - Strider
+    - Swift Buff
+    cost: 220
+    upgrade_categories:
+    - category: Replace Ray Caster
+      upgrades:
+      - name: Flux Cannon
+        rules: 24", A3, AP(1), Surge
+        cost_modifier: +5pts
+      - name: Gauss Cannon
+        rules: 24", A4, Destructive
+        cost_modifier: +15pts
+    - category: Replace Overseer Pilot
+      upgrades:
+      - name: Twin Flux Cannon
+        rules: 24", A6, AP(1), Surge
+        cost_modifier: +80pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Repair Nanobots
+        rules: Self-Repair Boost Buff
+        cost_modifier: +20pts
+      - name: Networked Target Lock
+        rules: Indirect Mark
+        cost_modifier: +35pts
+  - name: Great Monolith
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Monolith Blast
+      range: 24"
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Crushing Legs
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    - name: Stomp
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    special_rules:
+    - Caster(3)
+    - Fear(3)
+    - Fearless
+    - Self-Repair
+    - Strider
+    cost: 760
+    upgrade_categories:
+    - category: Replace Monolith Blast
+      upgrades:
+      - name: Monolith Beam
+        rules: 18", A3, AP(3), Deadly(6)
+        cost_modifier: +55pts
+    - category: Upgrade with up to two
+      upgrades:
+      - name: Technoward
+        rules: Casting Buff
+        cost_modifier: +10pts
+  - name: Death Fortress
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Destruction Pulse
+      range: 30"
+      attacks: A2
+      ap: AP(3)
+      special_rules:
+      - Deadly(6)
+      count: 1
+    - name: Flux Sphere Array
+      range: 24"
+      attacks: A9
+      ap: AP(1)
+      special_rules:
+      - Surge
+      count: 1
+    special_rules:
+    - Fear(3)
+    - Fearless
+    - Impact(6)
+    - Self-Repair
+    - Strider
+    cost: 820
+    upgrade_categories:
+    - category: Replace Destruction Pulse
+      upgrades:
+      - name: Atom-Scourge
+        rules: 24", A9, AP(4)
+        cost_modifier: +45pts
+    - category: Replace Flux Sphere Array
+      upgrades:
+      - name: Gauss Arc Array
+        rules: 24", A12, Destructive
+        cost_modifier: +25pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Warp Gate
+        rules: Transport(21)
+        cost_modifier: +70pts
+      - name: Wraith-Shard Vault
+        rules: Caster(4), Tough(6)
+        cost_modifier: +250pts
+  - name: Great Wraith-Shard
+    size: 1
+    quality: 2+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Nanobot Shards
+      range: 18"
+      attacks: A4
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Great Wraith Strike
+      attacks: A12
+      special_rules:
+      - Rending
+      count: 1
+    - name: Stomp
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    special_rules:
+    - Caster(4)
+    - Fear(3)
+    - Fearless
+    - Self-Repair
+    - Self-Repair Boost Buff
+    cost: 1045
+    upgrade_categories:
+    - category: Replace Nanobot Shards
+      upgrades:
+      - name: Void Shard
+        rules: 24", A12, AP(2)
+        cost_modifier: +85pts
+    - category: Replace Wraith Seer
+      upgrades:
+      - name: Great Wraith
+        rules: Wraith Spear (A2, AP(4), Deadly(3)), Flying
+        cost_modifier: +135pts
+  - name: Night Transport
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Flux Cannon
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Surge
+      count: 1
+    - name: Close-Range Gauss Array
+      range: 12"
+      attacks: A6
+      special_rules:
+      - Destructive
+      count: 1
+    special_rules:
+    - Aircraft
+    - Self-Repair
+    - Transport(11)
+    cost: 380
+    upgrade_categories: []
+  - name: Doom Fighter
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Doom Ray
+      range: 24"
+      attacks: A4
+      ap: AP(4)
+      special_rules:
+      - Unstoppable
+      count: 1
+    - name: Twin Flux Cannon
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Surge
+      count: 1
+    special_rules:
+    - Aircraft
+    - Self-Repair
+    cost: 370
+    upgrade_categories: []

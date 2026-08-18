@@ -1,0 +1,933 @@
+v3.5.3:
+  name: Human Inquisition
+  id: jpc0kyil0juwy602
+  units:
+  - name: Inquisitor
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Heavy Pistol
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Hero
+    - Inquisitorial Agent
+    cost: 60
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Daemon Hunter
+        rules: Precision Fighter Aura
+        cost_modifier: +30pts
+      - name: Witch Hunter
+        rules: Resistance Aura
+        cost_modifier: +35pts
+      - name: Tactical Master
+        rules: Delayed Action
+        cost_modifier: +45pts
+      - name: Alien Hunter
+        rules: Precision Shooter Aura
+        cost_modifier: +45pts
+      - name: Forbidden Loremaster
+        rules: Caster(2)
+        cost_modifier: +50pts
+    - category: Replace Heavy Pistol
+      upgrades:
+      - name: Needle Pistol
+        rules: 12", A1, Bane
+        cost_modifier: Free
+      - name: Combat Shield
+        rules: Fortified
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Heavy Rifle
+        rules: 24", A1, AP(1)
+        cost_modifier: +10pts
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +10pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +25pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +35pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +50pts
+    - category: Take one Heavy Rifle attachment
+      upgrades:
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +10pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +15pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +20pts
+      - name: Chain-Fist
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +20pts
+    - category: Upgrade with
+      upgrades:
+      - name: Guard Dog
+        rules: Repel Ambushers
+        cost_modifier: +20pts
+  - name: Inquisitorial Officer
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Pistol
+      range: 12"
+      attacks: A1
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Hero
+    - Inquisitorial Agent
+    cost: 35
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: High Priest
+        rules: Spell Accumulator(1)
+        cost_modifier: +15pts
+      - name: Tactical Master
+        rules: Delayed Action
+        cost_modifier: +45pts
+      - name: Forbidden Loremaster
+        rules: Caster(2)
+        cost_modifier: +50pts
+      - name: Navigator
+        rules: Bounding Aura
+        cost_modifier: +55pts
+    - category: Replace Pistol
+      upgrades:
+      - name: Combat Shield
+        rules: Fortified
+        cost_modifier: +5pts
+      - name: Needle Pistol
+        rules: 12", A1, Bane
+        cost_modifier: +5pts
+      - name: Rifle
+        rules: 24", A1
+        cost_modifier: +5pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Needle Sword
+        rules: A2, Bane
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Chainsaw Sword
+        rules: A2, AP(2)
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with
+      upgrades:
+      - name: Guard Dog
+        rules: Repel Ambushers
+        cost_modifier: +20pts
+  - name: Espionage Ministry Assassin
+    size: 1
+    quality: 2+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Neuro Pistol
+      range: 12"
+      attacks: A3
+      ap: AP(1)
+      special_rules:
+      - Bane
+      count: 1
+    - name: Toxic Blade
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Bane
+      count: 1
+    special_rules:
+    - Evasive
+    - Hero
+    - Hit & Run
+    - Inquisitorial Agent
+    - Protected
+    - Surprise Attack(3)
+    cost: 270
+    upgrade_categories: []
+  - name: Terrorism Ministry Assassin
+    size: 1
+    quality: 2+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Helmet Laser
+      range: 18"
+      attacks: A3
+      ap: AP(2)
+      special_rules:
+      - Reliable
+      - Takedown
+      count: 1
+    - name: CCW
+      attacks: A1
+      count: 1
+    special_rules:
+    - Casting Debuff
+    - Evasive
+    - Hero
+    - Inquisitorial Agent
+    - Resistance
+    - Teleport
+    cost: 250
+    upgrade_categories: []
+  - name: Warfare Ministry Assassin
+    size: 1
+    quality: 2+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Executioner Gun
+      range: 12"
+      attacks: A2
+      ap: AP(4)
+      count: 1
+    - name: Executioner Claw
+      attacks: A3
+      ap: AP(4)
+      count: 1
+    special_rules:
+    - Brutal Fighter
+    - Evasive
+    - Fast
+    - Hero
+    - Inquisitorial Agent
+    - Regeneration
+    cost: 240
+    upgrade_categories: []
+  - name: Surveillance Ministry Assassin
+    size: 1
+    quality: 2+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Heavy Sniper Rifle
+      range: 36"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+      - Reliable
+      - Takedown
+      count: 1
+    - name: CCW
+      attacks: A1
+      count: 1
+    special_rules:
+    - Evasive
+    - Hero
+    - Inquisitorial Agent
+    - Scout
+    - Strider
+    - Takedown Shot
+    cost: 295
+    upgrade_categories: []
+  - name: Breacher Guard
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Rifles
+      range: 24"
+      attacks: A1
+      count: 10
+    - name: CCWs
+      attacks: A1
+      count: 10
+    special_rules:
+    - Inquisitorial Agent
+    cost: 145
+    upgrade_categories:
+    - category: Replace all Rifles
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +30pts
+    - category: Replace up to two Rifles
+      upgrades:
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Grenade Launcher
+        rules: 24", A1, Blast(3)
+        cost_modifier: +10pts
+      - name: Drum Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +20pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +25pts
+    - category: Replace one Rifles and CCWs
+      upgrades:
+      - name: Sgt. Pistol, Sgt. Hand Weapon
+        rules: 12", A1, A2
+        cost_modifier: Free
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: Drum Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Sgt. Hand Weapon
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Inquisitorial Standard
+        rules: Courage Aura
+        cost_modifier: +15pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+  - name: Riot Judges
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: CCWs
+      attacks: A2
+      count: 5
+    special_rules:
+    - Fortified
+    - Inquisitorial Agent
+    cost: 95
+    upgrade_categories:
+    - category: Replace all Riot Shields and CCWS
+      upgrades:
+      - name: Heavy Pistol, Riot Shield
+        rules: 12", A1, AP(1), Bash (A1), Fortified
+        cost_modifier: +10pts
+      - name: Heavy Pistol, CCW
+        rules: 12", A1, AP(1), A2
+        cost_modifier: +30pts
+      - name: Heavy Rifle, CCW
+        rules: 24", A1, AP(1), A1
+        cost_modifier: +40pts
+    - category: Replace any Heavy Rifle
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: Free
+    - category: Replace any CCWs
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Chainsaw Sword
+        rules: A2, AP(2)
+        cost_modifier: +10pts
+    - category: Replace one Heavy Rifle
+      upgrades:
+      - name: Drum Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Grenade Launcher
+        rules: 24", A1, Blast(3)
+        cost_modifier: +10pts
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +35pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guard Dog
+        rules: Repel Ambushers
+        cost_modifier: +20pts
+      - name: Riot Paramedic
+        rules: Regeneration Aura
+        cost_modifier: +30pts
+  - name: Missionary Henchmen
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Furious
+    - Inquisitorial Agent
+    cost: 45
+    upgrade_categories:
+    - category: Replace any Pistols
+      upgrades:
+      - name: Needle Pistol
+        rules: 12", A1, Bane
+        cost_modifier: +5pts
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+    - category: Replace any CCWs
+      upgrades:
+      - name: Energy Fist
+        rules: A1, AP(4)
+        cost_modifier: +5pts
+      - name: Needle Sword
+        rules: A2, Bane
+        cost_modifier: +5pts
+      - name: Chainsaw Sword
+        rules: A2, AP(2)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Text
+        rules: Shred in Melee Aura
+        cost_modifier: +20pts
+  - name: Acolyte Henchmen
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fearless
+    - Inquisitorial Agent
+    cost: 50
+    upgrade_categories:
+    - category: Replace any Pistols
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+    - category: Replace any Pistols and CCWs
+      upgrades:
+      - name: Rifle, CCW
+        rules: 24", A1, A1
+        cost_modifier: Free
+      - name: Needle Rifle, CCW
+        rules: 24", A1, Bane, A1
+        cost_modifier: +5pts
+    - category: Replace any Rifle
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +20pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Flame
+        rules: Repel Ambushers
+        cost_modifier: +20pts
+  - name: Mystic Henchmen
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Bounding
+    - Inquisitorial Agent
+    cost: 55
+    upgrade_categories:
+    - category: Replace any Pistols
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+    - category: Replace any CCWs
+      upgrades:
+      - name: Chainsaw Sword
+        rules: A2, AP(2)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Icon
+        rules: Casting Debuff
+        cost_modifier: +15pts
+  - name: Crusader Henchmen
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Needle Swords
+      attacks: A2
+      special_rules:
+      - Bane
+      count: 3
+    special_rules:
+    - Fortified
+    - Inquisitorial Agent
+    cost: 65
+    upgrade_categories:
+    - category: Replace any Needle Swords
+      upgrades:
+      - name: Energy Fist
+        rules: A1, AP(4)
+        cost_modifier: +5pts
+      - name: Chainsaw Sword
+        rules: A2, AP(2)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Chain
+        rules: Furious Aura
+        cost_modifier: +5pts
+  - name: Gunsmith Henchmen
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Rifles
+      range: 24"
+      attacks: A1
+      count: 3
+    - name: Claws
+      attacks: A1
+      count: 3
+    special_rules:
+    - Inquisitorial Agent
+    - Unpredictable Shooter
+    cost: 80
+    upgrade_categories:
+    - category: Replace any Rifles
+      upgrades:
+      - name: Long Rifle
+        rules: 30", A1
+        cost_modifier: +5pts
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Needle Rifle
+        rules: 24", A1, Bane
+        cost_modifier: +5pts
+      - name: Carbine
+        rules: 18", A2
+        cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Core
+        rules: Piercing Tag(1)
+        cost_modifier: +35pts
+  - name: Psychic Henchmen
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Caster Group
+    - Inquisitorial Agent
+    cost: 105
+    upgrade_categories:
+    - category: Replace any Pistols
+      upgrades:
+      - name: Needle Pistol
+        rules: 12", A1, Bane
+        cost_modifier: +5pts
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+    - category: Replace any CCWs
+      upgrades:
+      - name: Needle Sword
+        rules: A2, Bane
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Sceptre
+        rules: Spell Conduit
+        cost_modifier: +15pts
+  - name: Repenting Henchmen
+    size: 3
+    quality: 3+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Shock-Whips
+      attacks: A3
+      special_rules:
+      - Surge
+      count: 3
+    special_rules:
+    - Inquisitorial Agent
+    - Scout
+    cost: 95
+    upgrade_categories:
+    - category: Replace any Shock-Whips
+      upgrades:
+      - name: Toxin-Whip
+        rules: A3, Bane
+        cost_modifier: +5pts
+      - name: Barb-Whip
+        rules: A3, Shred
+        cost_modifier: +10pts
+      - name: Chain-Whip
+        rules: A3, AP(1)
+        cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Mask
+        rules: Fear(1)
+        cost_modifier: +15pts
+  - name: Possessed Henchmen
+    size: 3
+    quality: 3+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Daemon Ripples
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Indirect
+      - Bane
+      count: 3
+    - name: Claws
+      attacks: A1
+      count: 3
+    special_rules:
+    - Inquisitorial Agent
+    - Quick Readjustment
+    cost: 95
+    upgrade_categories:
+    - category: Replace any Daemon Ripples
+      upgrades:
+      - name: Daemon Burst
+        rules: 12", A1, Blast(3), Indirect
+        cost_modifier: +5pts
+      - name: Daemon Strike
+        rules: 12", A2, AP(1), Indirect
+        cost_modifier: +5pts
+      - name: Daemon Beam
+        rules: 12", A1, AP(2), Deadly(3), Indirect
+        cost_modifier: +20pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Lock
+        rules: Defensive Growth Aura
+        cost_modifier: +10pts
+  - name: Assassin Henchmen
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Dual Shock-Whips
+      attacks: A4
+      special_rules:
+      - Surge
+      count: 3
+    special_rules:
+    - Evasive
+    - Inquisitorial Agent
+    cost: 125
+    upgrade_categories:
+    - category: Replace all Dual Shock-Whips
+      upgrades:
+      - name: Dual Needle Swords
+        rules: A4, Bane
+        cost_modifier: +15pts
+      - name: Dual Barb-Whips
+        rules: A4, Shred
+        cost_modifier: +30pts
+      - name: Dual Energy Swords
+        rules: A4, AP(1), Rending
+        cost_modifier: +65pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Needle Pistol
+        rules: 12", A1, Bane
+        cost_modifier: +25pts
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Warfare Ministry Agent
+        rules: Fast, Regeneration
+        cost_modifier: +25pts
+      - name: Terrorism Ministry Agent
+        rules: Resistance, Teleport
+        cost_modifier: +30pts
+      - name: Surveillance Ministry Agent
+        rules: Fortified, Scout, Strider
+        cost_modifier: +30pts
+      - name: Espionage Ministry Agent
+        rules: Hit & Run, Infiltrate, Protected
+        cost_modifier: +40pts
+  - name: Cyborg Henchmen
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Fusion Rifles
+      range: 18"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Deadly(3)
+      count: 3
+    - name: Cyborg Arms
+      attacks: A1
+      ap: AP(2)
+      count: 3
+    special_rules:
+    - Inquisitorial Agent
+    - Relentless
+    cost: 215
+    upgrade_categories:
+    - category: Replace any Heavy Fusion Rifles
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: Free
+      - name: Shred Cannon
+        rules: 24", A4, Rending
+        cost_modifier: +20pts
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +25pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +25pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Bearer of the Coil
+        rules: Stealth Aura
+        cost_modifier: +20pts
+  - name: Transport Vehicle
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Flamers
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 2
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Inquisitorial Agent
+    - Transport(11)
+    cost: 255
+    upgrade_categories:
+    - category: Upgrade with any
+      upgrades:
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +15pts
+      - name: Camouflage Netting
+        rules: Stealth
+        cost_modifier: +20pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +20pts
+      - name: Pintle-Machinegun
+        rules: 30", A2, AP(1)
+        cost_modifier: +35pts
+    - category: Replace any Heavy Flamers
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +15pts
+    - category: Replace one Heavy Flamers
+      upgrades:
+      - name: Laser Machinegun
+        rules: 30", A3, AP(3)
+        cost_modifier: +40pts
+  - name: Combat Vehicle
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Acid Cannon
+      range: 18"
+      attacks: A6
+      special_rules:
+      - Bane
+      count: 1
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Inquisitorial Agent
+    cost: 295
+    upgrade_categories:
+    - category: Replace Acid Cannon
+      upgrades:
+      - name: Fusion Cannon
+        rules: 24", A1, AP(4), Deadly(6)
+        cost_modifier: +45pts
+      - name: Twin Flamer Cannon
+        rules: 18", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +50pts
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +15pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +20pts
+      - name: Camouflage Netting
+        rules: Stealth
+        cost_modifier: +30pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +20pts
+      - name: Pintle-Machinegun
+        rules: 30", A2, AP(1)
+        cost_modifier: +35pts

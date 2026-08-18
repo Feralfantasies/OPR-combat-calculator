@@ -28,9 +28,9 @@ This is an unofficial fan project. It is **not affiliated with, endorsed by, or 
 │       │   ├── cache.rs          # local HTML caching with metadata
 │       │   ├── http_client.rs    # rate-limited HTTP client
 │       │   └── error.rs          # error types
-│       └── data/
-│           ├── cache/            # cached HTML from Army Forge
-│           └── *.yaml            # 43 generated army data files
+├── data/                 # generated army data (repo root)
+│   ├── armies/           # 43 generated army YAML catalogs (committed)
+│   └── cache/            # cached HTML from Army Forge (git-ignored)
 └── docs/                 # OKF v0.2 knowledge bundle (rules, architecture, computation)
 ```
 

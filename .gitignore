@@ -1,4 +1,5 @@
 /target
 reference/*
 .pi
-data
+.turnlog/
+data/cache/

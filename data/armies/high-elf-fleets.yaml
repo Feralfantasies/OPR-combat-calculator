@@ -1,0 +1,1248 @@
+v3.5.3:
+  name: High Elf Fleets
+  id: 7i7blhft75q9zfdc
+  units:
+  - name: Elven Noble
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Hero
+    - Highborn
+    - Shielded
+    cost: 45
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: High Avenger
+        rules: Hit & Run Shooter Aura
+        cost_modifier: +20pts
+      - name: Ancient Commander
+        rules: Highborn Boost Aura
+        cost_modifier: +25pts
+      - name: Elemental Hexer
+        rules: Shred in Melee Aura
+        cost_modifier: +30pts
+      - name: Guardian Cleric
+        rules: Resistance Aura
+        cost_modifier: +30pts
+      - name: High Oracle
+        rules: Caster(2)
+        cost_modifier: +50pts
+      - name: Master High Oracle
+        rules: Caster(3)
+        cost_modifier: +80pts
+    - category: Replace CCW and Combat Shield
+      upgrades:
+      - name: Master Shard Pistol, CCW
+        rules: 12", A2, Crack, A2
+        cost_modifier: +10pts
+    - category: Replace Master Shard Pistol
+      upgrades:
+      - name: Master Laser Pistol
+        rules: 9", A2, AP(2)
+        cost_modifier: +5pts
+      - name: Master Shard Carbine
+        rules: 18", A3, Crack
+        cost_modifier: +15pts
+      - name: Master Laser Blaster
+        rules: 18", A2, AP(2)
+        cost_modifier: +15pts
+      - name: Great Flamer Axe
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Great Fusion Axe
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Master Web Spinner
+        rules: 12", A3, AP(4)
+        cost_modifier: +30pts
+      - name: Surge Rockets, Vanquisher Leader
+        rules: 24", A3, AP(1), Unstoppable, Relentless
+        cost_modifier: +40pts
+      - name: Master Sniper Rifle
+        rules: 30", A2, AP(1), Reliable, Takedown
+        cost_modifier: +50pts
+      - name: Impact Rockets, Vanquisher Leader
+        rules: 30", A1, AP(3), Deadly(3), Relentless
+        cost_modifier: +55pts
+    - category: Replace CCW
+      upgrades:
+      - name: Dire Sword
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Killing Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Spear
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+      - name: Master Stinger Blade
+        rules: A3, Reliable, Bane
+        cost_modifier: +15pts
+    - category: Upgrade with
+      upgrades:
+      - name: Shield Projector
+        rules: Stealth Aura
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Retributor Leader
+        rules: Fearless
+        cost_modifier: +5pts
+      - name: Stinger Leader
+        rules: Scout, Stealth
+        cost_modifier: +20pts
+      - name: Revenant Leader
+        rules: Agile, Fear(1), Strider
+        cost_modifier: +25pts
+      - name: Glider Leader
+        rules: Ambush, Crossing Attack(1), Flying
+        cost_modifier: +25pts
+      - name: Shifter Leader
+        rules: Ambush, Teleport
+        cost_modifier: +30pts
+      - name: Jetbike
+        rules: Mounted Shardguns (12", A2, Crack), Fast, Strider, Tough(3)
+        cost_modifier: +85pts
+  - name: Elite Protector
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Hero
+    - Highborn
+    - Shielded
+    cost: 35
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Psy-Artillerist
+        rules: Re-Position Artillery
+        cost_modifier: +10pts
+      - name: Acolyte Psy-Seer
+        rules: Spell Conduit
+        cost_modifier: +15pts
+      - name: High Avenger
+        rules: Hit & Run Shooter Aura
+        cost_modifier: +20pts
+      - name: Elemental Hexer
+        rules: Shred in Melee Aura
+        cost_modifier: +30pts
+      - name: Guardian Cleric
+        rules: Resistance Aura
+        cost_modifier: +30pts
+      - name: Psy-Weaver
+        rules: Increased Shooting Range Aura
+        cost_modifier: +35pts
+      - name: High Oracle
+        rules: Caster(2)
+        cost_modifier: +50pts
+    - category: Replace CCW and Combat Shield
+      upgrades:
+      - name: Master Shard Pistol, CCW
+        rules: 12", A2, Crack, A2
+        cost_modifier: +5pts
+    - category: Replace Master Shard Pistol
+      upgrades:
+      - name: Master Laser Pistol
+        rules: 9", A2, AP(2)
+        cost_modifier: +5pts
+      - name: Master Shard Carbine
+        rules: 18", A3, Crack
+        cost_modifier: +10pts
+      - name: Master Laser Blaster
+        rules: 18", A2, AP(2)
+        cost_modifier: +10pts
+      - name: Great Flamer Axe
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Great Fusion Axe
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Master Web Spinner
+        rules: 12", A3, AP(4)
+        cost_modifier: +20pts
+      - name: Surge Rockets, Vanquisher Leader
+        rules: 24", A3, AP(1), Unstoppable, Relentless
+        cost_modifier: +35pts
+      - name: Master Sniper Rifle
+        rules: 30", A2, AP(1), Reliable, Takedown
+        cost_modifier: +55pts
+      - name: Impact Rockets, Vanquisher Leader
+        rules: 30", A1, AP(3), Deadly(3), Relentless
+        cost_modifier: +45pts
+    - category: Replace CCW
+      upgrades:
+      - name: Dire Sword
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Killing Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Energy Spear
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+      - name: Master Stinger Blade
+        rules: A3, Reliable, Bane
+        cost_modifier: +20pts
+    - category: Upgrade with
+      upgrades:
+      - name: Shield Projector
+        rules: Stealth Aura
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Striker Leader
+        rules: Scout
+        cost_modifier: +10pts
+      - name: Sniper Leader
+        rules: Scout, Stealth, Strider
+        cost_modifier: +20pts
+      - name: Jetbike
+        rules: Mounted Shardguns (12", A2, Crack), Fast, Strider, Tough(3)
+        cost_modifier: +65pts
+  - name: Acolytes
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Shard Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Crack
+      count: 3
+    - name: Energy Swords
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 3
+    special_rules:
+    - Caster Group
+    - Highborn
+    cost: 150
+    upgrade_categories:
+    - category: Replace any Energy Swords
+      upgrades:
+      - name: Energy Spear
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Jetbike
+        rules: Mounted Shardguns (12", A2, Crack), Fast, Strider, Tough(3)
+        cost_modifier: +125pts
+  - name: Protectors
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Shardguns
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Crack
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Highborn
+    cost: 100
+    upgrade_categories:
+    - category: Replace one Shardguns
+      upgrades:
+      - name: Gun Platform
+        rules: Shard Cannon (24", A3, AP(1), Crack)
+        cost_modifier: +30pts
+      - name: Gun Platform
+        rules: Missile Launcher (30", A1, AP(2), Deadly(3), Unstoppable)
+        cost_modifier: +30pts
+      - name: Gun Platform
+        rules: Burst Laser (30", A3, AP(2))
+        cost_modifier: +40pts
+      - name: Gun Platform
+        rules: Laser Cannon (36", A1, AP(3), Deadly(3))
+        cost_modifier: +45pts
+      - name: Gun Platform
+        rules: Shatter Cannon (36", A3, AP(1), Rending)
+        cost_modifier: +50pts
+  - name: Strikers
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Shard Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Crack
+      count: 5
+    - name: CCWs
+      attacks: A2
+      count: 5
+    special_rules:
+    - Highborn
+    - Scout
+    cost: 105
+    upgrade_categories:
+    - category: Replace one Shard Pistols
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+    - category: Replace one CCWs
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Hologram Platform
+        rules: Stealth Aura
+        cost_modifier: +25pts
+  - name: Retributors
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Energy Swords
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 5
+    special_rules:
+    - Fearless
+    - Highborn
+    - Shielded
+    cost: 105
+    upgrade_categories:
+    - category: Replace all Energy Swords and Combat Shields
+      upgrades:
+      - name: Shard Carbine, CCW
+        rules: 18", A2, Crack, A1
+        cost_modifier: +65pts
+    - category: Replace one Shard Carbine
+      upgrades:
+      - name: Twin Shard Carbine
+        rules: 18", A4, Crack
+        cost_modifier: +20pts
+    - category: Replace one Energy Swords and Combat Shield
+      upgrades:
+      - name: Shard Pistol, Dire Sword, Sgt. Armor
+        rules: 12", A1, Crack, A1, Blast(3), Shielded
+        cost_modifier: +10pts
+      - name: Shard Pistol, Energy Sword, Sgt. Armor
+        rules: 12", A1, Crack, A2, AP(1), Rending, Shielded
+        cost_modifier: +15pts
+    - category: Replace Shard Pistol
+      upgrades:
+      - name: Flicker Shield
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Psy-Marker
+        rules: Piercing Spotter
+        cost_modifier: +25pts
+  - name: Gliders
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Laser Pistols
+      range: 9"
+      attacks: A1
+      ap: AP(2)
+      count: 5
+    - name: CCWs
+      attacks: A2
+      count: 5
+    special_rules:
+    - Ambush
+    - Flying
+    - Highborn
+    cost: 165
+    upgrade_categories:
+    - category: Replace all Laser Pistols and CCWS
+      upgrades:
+      - name: Laser Blaster, CCW
+        rules: 18", A1, AP(2), A1
+        cost_modifier: +10pts
+    - category: Replace one Laser Pistols and CCWs
+      upgrades:
+      - name: Laser Pistol, Energy Sword
+        rules: 9", A1, AP(2), A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Shred Blaster Pistol, Energy Sword
+        rules: 12", A2, Rending, A2, AP(1), Rending
+        cost_modifier: +15pts
+    - category: Replace one Laser Pistols
+      upgrades:
+      - name: Heavy Laser Blaster
+        rules: 18", A3, AP(2)
+        cost_modifier: +35pts
+      - name: Shred Blaster
+        rules: 24", A4, Rending
+        cost_modifier: +50pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Grenade Packs
+        rules: Crossing Attack(1)
+        cost_modifier: +20pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Psy-Marker
+        rules: Piercing Spotter
+        cost_modifier: +25pts
+  - name: Revenants
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Shard Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Crack
+      count: 5
+    - name: Energy Swords
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 5
+    special_rules:
+    - Agile
+    - Highborn
+    - Strider
+    cost: 190
+    upgrade_categories:
+    - category: Replace one Shard Pistols and Energy Swords
+      upgrades:
+      - name: Sgt. Shard Pistol, Sgt. Energy Sword
+        rules: 12", A1, Crack, A2, AP(1), Rending
+        cost_modifier: Free
+      - name: Mirror Scythe
+        rules: A4, Rending
+        cost_modifier: +5pts
+      - name: Tri-Chakram, Sword
+        rules: 12", A3, AP(1), Reliable, A2
+        cost_modifier: +20pts
+    - category: Replace Sgt. Energy Sword
+      upgrades:
+      - name: Killing Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Banshee Howl
+        rules: Fear(2)
+        cost_modifier: +20pts
+  - name: Stingers
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Shard Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Crack
+      count: 5
+    - name: Stinger Blades
+      attacks: A2
+      special_rules:
+      - Reliable
+      - Bane
+      count: 5
+    special_rules:
+    - Highborn
+    - Scout
+    - Stealth
+    cost: 195
+    upgrade_categories:
+    - category: Replace one Shard Pistols and Stinger Blades
+      upgrades:
+      - name: Sgt. Shard Pistol, Sgt. Stinger Blade
+        rules: 12", A1, Crack, A2, Reliable, Bane
+        cost_modifier: Free
+      - name: Dual Energy Swords
+        rules: A4, AP(1), Rending
+        cost_modifier: +15pts
+    - category: Replace Sgt. Shard Pistol
+      upgrades:
+      - name: Scorpion Fist
+        rules: 12", A3, Rending
+        cost_modifier: +15pts
+    - category: Replace Sgt. Stinger Blade
+      upgrades:
+      - name: Stinger Dagger
+        rules: A1, Blast(3), Reliable, Bane
+        cost_modifier: +5pts
+  - name: Shifters
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Web Spinners
+      range: 12"
+      attacks: A2
+      ap: AP(4)
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Ambush
+    - Highborn
+    - Teleport
+    cost: 250
+    upgrade_categories:
+    - category: Replace one Web Spinners
+      upgrades:
+      - name: Spinner Carbine
+        rules: 18", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Heavy Web Spinner
+        rules: 12", A4, AP(4)
+        cost_modifier: +25pts
+    - category: Replace one CCWs
+      upgrades:
+      - name: Dual Shifter Picks
+        rules: A2, Bane
+        cost_modifier: +5pts
+  - name: Scorchers
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Flamers
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Highborn
+    cost: 120
+    upgrade_categories:
+    - category: Replace all Heavy Flamers
+      upgrades:
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+    - category: Replace one Heavy Flamers
+      upgrades:
+      - name: Fusion Pike
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+  - name: Snipers
+    size: 3
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Sniper Rifles
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Reliable
+      - Takedown
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Highborn
+    - Scout
+    - Stealth
+    - Strider
+    cost: 145
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Psy-Marker
+        rules: Piercing Spotter
+        cost_modifier: +25pts
+  - name: Vanquishers
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Surge Rockets
+      range: 24"
+      attacks: A3
+      ap: AP(1)
+      special_rules:
+      - Unstoppable
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Highborn
+    - Relentless
+    cost: 200
+    upgrade_categories:
+    - category: Replace any Surge Rockets
+      upgrades:
+      - name: Impact Rockets
+        rules: 30", A1, AP(3), Deadly(3)
+        cost_modifier: +15pts
+    - category: Replace one Surge Rockets
+      upgrades:
+      - name: Shard Cannon
+        rules: 24", A3, AP(1), Crack
+        cost_modifier: +5pts
+      - name: Arcing Rockets
+        rules: 30", A1, AP(1), Blast(3), Indirect
+        cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Psy-Marker
+        rules: Piercing Spotter
+        cost_modifier: +25pts
+  - name: Elemental Protectors
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Distortion Guns
+      range: 12"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Blast(3)
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Fearless
+    - Highborn
+    - Relentless
+    cost: 215
+    upgrade_categories:
+    - category: Replace all Distortion Guns
+      upgrades:
+      - name: Wraith Cannon
+        rules: 12", A3, AP(4)
+        cost_modifier: +55pts
+  - name: Elemental Strikers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Killing Axes
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+      count: 3
+    special_rules:
+    - Fearless
+    - Furious
+    - Highborn
+    - Shielded
+    cost: 230
+    upgrade_categories:
+    - category: Replace all Killing Axes and Combat Shields
+      upgrades:
+      - name: Dual Energy Swords
+        rules: A4, AP(1), Rending
+        cost_modifier: +20pts
+    - category: Replace any Killing Axes
+      upgrades:
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Energy Spear
+        rules: A3, AP(4)
+        cost_modifier: +15pts
+  - name: Jetbike Protectors
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Mounted Shardguns
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Crack
+      count: 3
+    - name: Shard Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Crack
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fast
+    - Highborn
+    - Strider
+    cost: 230
+    upgrade_categories:
+    - category: Upgrade any model with
+      upgrades:
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +30pts
+    - category: Replace any Mounted Shardguns and Sniper Rifle
+      upgrades:
+      - name: Shard Cannon
+        rules: 24", A3, AP(1), Crack
+        cost_modifier: +5pts
+      - name: Burst Laser
+        rules: 30", A3, AP(2)
+        cost_modifier: +20pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Hologram Field
+        rules: Stealth Aura
+        cost_modifier: +45pts
+      - name: Flicker Shield
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+  - name: Jetbike Strikers
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Mounted Shardguns
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Crack
+      count: 3
+    - name: Shard Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Crack
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fast
+    - Highborn
+    - Impact(1)
+    - Strider
+    cost: 250
+    upgrade_categories:
+    - category: Replace all Shard Pistols and CCWs
+      upgrades:
+      - name: Energy Lance
+        rules: A2, AP(1), Thrust
+        cost_modifier: +20pts
+    - category: Replace one Energy Lance
+      upgrades:
+      - name: Energy Spear
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+      - name: Killing Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Hologram Field
+        rules: Stealth Aura
+        cost_modifier: +45pts
+      - name: Master-Crafted Engines
+        rules: Scout Aura
+        cost_modifier: +65pts
+  - name: Anti-Gravity APC
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Mounted Shardguns
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Crack
+      count: 1
+    special_rules:
+    - Fast
+    - Highborn
+    - Impact(3)
+    - Strider
+    - Transport(11)
+    cost: 195
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: 2x Shard Cannon
+        rules: 24", A3, AP(1), Crack
+        cost_modifier: +100pts
+    - category: Replace any Shard Cannon
+      upgrades:
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: Burst Laser
+        rules: 30", A3, AP(2)
+        cost_modifier: +15pts
+      - name: Shatter Cannon
+        rules: 36", A3, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +20pts
+    - category: Upgrade with
+      upgrades:
+      - name: Hologram Field
+        rules: Stealth
+        cost_modifier: +15pts
+    - category: Replace Mounted Shardguns
+      upgrades:
+      - name: Light Shard Cannon
+        rules: 24", A2, AP(1), Crack
+        cost_modifier: +20pts
+  - name: Heavy Jetbike
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Shard Cannon
+      range: 24"
+      attacks: A3
+      ap: AP(1)
+      special_rules:
+      - Crack
+      count: 1
+    - name: Mounted Shardguns
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Crack
+      count: 1
+    special_rules:
+    - Fast
+    - Highborn
+    - Impact(3)
+    - Strider
+    cost: 210
+    upgrade_categories:
+    - category: Replace Mounted Shardguns
+      upgrades:
+      - name: Light Shard Cannon
+        rules: 24", A2, AP(1), Crack
+        cost_modifier: +20pts
+    - category: Upgrade with
+      upgrades:
+      - name: Hologram Field
+        rules: Stealth
+        cost_modifier: +15pts
+    - category: Replace Shard Cannon
+      upgrades:
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: Burst Laser
+        rules: 30", A3, AP(2)
+        cost_modifier: +15pts
+      - name: Shatter Cannon
+        rules: 36", A3, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +20pts
+  - name: Combat Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Rapid Shard Cannon
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Crack
+      count: 1
+    - name: Stomp
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Highborn
+    - Scout
+    cost: 230
+    upgrade_categories:
+    - category: Replace Rapid Shard Cannon
+      upgrades:
+      - name: Rapid Missile Launcher
+        rules: 30", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +10pts
+      - name: Rapid Burst Laser
+        rules: 30", A6, AP(2)
+        cost_modifier: +30pts
+      - name: Rapid Shatter Cannon
+        rules: 36", A6, AP(1), Rending
+        cost_modifier: +40pts
+      - name: Rapid Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +45pts
+    - category: Upgrade with
+      upgrades:
+      - name: Hologram Field
+        rules: Stealth
+        cost_modifier: +15pts
+  - name: Anti-Gravity Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Rapid Shard Cannons
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Crack
+      count: 2
+    - name: Mounted Shardguns
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Crack
+      count: 1
+    special_rules:
+    - Fast
+    - Highborn
+    - Impact(6)
+    - Strider
+    cost: 520
+    upgrade_categories:
+    - category: Replace 2x Rapid Shard Cannons
+      upgrades:
+      - name: Prism Cannon
+        rules: 36", A2, AP(4), Deadly(6)
+        cost_modifier: +45pts
+      - name: Spinner Cannon
+        rules: 30", A4, AP(4), Blast(3), Indirect
+        cost_modifier: +195pts
+    - category: Replace any Rapid Shard Cannons
+      upgrades:
+      - name: Rapid Missile Launcher
+        rules: 30", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +10pts
+      - name: Rapid Burst Laser
+        rules: 30", A6, AP(2)
+        cost_modifier: +30pts
+      - name: Rapid Shatter Cannon
+        rules: 36", A6, AP(1), Rending
+        cost_modifier: +40pts
+      - name: Rapid Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +45pts
+    - category: Upgrade with
+      upgrades:
+      - name: Hologram Field
+        rules: Stealth
+        cost_modifier: +30pts
+    - category: Replace Mounted Shardguns
+      upgrades:
+      - name: Light Shard Cannon
+        rules: 24", A2, AP(1), Crack
+        cost_modifier: +20pts
+  - name: Great Elemental
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Shardguns
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Crack
+      count: 2
+    - name: Great Axe
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(6)
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Fortified
+    - Highborn
+    cost: 360
+    upgrade_categories:
+    - category: Replace Great Axe and Great Shield
+      upgrades:
+      - name: 2x Great Claw
+        rules: A4, Rending
+        cost_modifier: +5pts
+      - name: Great Elemental Sword, Great Shield
+        rules: A6, AP(1), Rending, Fortified
+        cost_modifier: +20pts
+      - name: 2x Great Axe
+        rules: A1, AP(2), Deadly(6)
+        cost_modifier: +20pts
+      - name: Great Spear, Great Shield
+        rules: A6, AP(4), Fortified
+        cost_modifier: +45pts
+      - name: 2x Great Elemental Sword
+        rules: A6, AP(1), Rending
+        cost_modifier: +60pts
+    - category: Replace any Shardguns
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Rapid Shard Cannon
+        rules: 24", A6, AP(1), Crack
+        cost_modifier: +100pts
+      - name: Rapid Missile Launcher
+        rules: 30", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +110pts
+      - name: Rapid Burst Laser
+        rules: 30", A6, AP(2)
+        cost_modifier: +130pts
+      - name: Rapid Shatter Cannon
+        rules: 36", A6, AP(1), Rending
+        cost_modifier: +145pts
+      - name: Rapid Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +145pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Elemental Curse
+        rules: Unwieldy Debuff
+        cost_modifier: +15pts
+      - name: Elemental Seer
+        rules: Caster(2)
+        cost_modifier: +50pts
+  - name: Support Artillery
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Burst Mortar
+      range: 30"
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      - Indirect
+      count: 1
+    - name: Artillery Crew
+      attacks: A3
+      count: 1
+    special_rules:
+    - Artillery
+    cost: 145
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Hologram Field
+        rules: Stealth
+        cost_modifier: +10pts
+    - category: Replace Burst Mortar
+      upgrades:
+      - name: Heavy Mortar
+        rules: 24", A1, AP(2), Deadly(6), Indirect
+        cost_modifier: +25pts
+      - name: AA-Cannon
+        rules: 36", A6, AP(1), Unstoppable
+        cost_modifier: +60pts
+  - name: Titan Elemental
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 24
+    weapons:
+    - name: Dual Titan Claws
+      attacks: A24
+      special_rules:
+      - Rending
+      count: 1
+    - name: Stomp
+      attacks: A8
+      ap: AP(2)
+      count: 1
+    special_rules:
+    - Fear(4)
+    - Fearless
+    - Highborn
+    cost: 825
+    upgrade_categories:
+    - category: Replace Dual Titan Claws
+      upgrades:
+      - name: Titan Axe, Titan Shield
+        rules: A6, AP(2), Deadly(3), Fortified
+        cost_modifier: +5pts
+      - name: Twin Heavy Wraith Cannon
+        rules: 24", A2, AP(4), Deadly(9)
+        cost_modifier: +125pts
+    - category: Replace Titan Axe
+      upgrades:
+      - name: Titan Sword
+        rules: A20, AP(1), Rending
+        cost_modifier: +45pts
+      - name: Titan Spear
+        rules: A16, AP(4)
+        cost_modifier: +70pts
+      - name: Sun Cannon
+        rules: 36", A3, AP(2), Blast(6)
+        cost_modifier: +100pts
+    - category: Upgrade with up to two
+      upgrades:
+      - name: Rapid Shard Cannon
+        rules: 24", A6, AP(1), Crack
+        cost_modifier: +100pts
+      - name: Rapid Burst Laser
+        rules: 30", A6, AP(2)
+        cost_modifier: +130pts
+      - name: Rapid Shatter Cannon
+        rules: 36", A6, AP(1), Rending
+        cost_modifier: +145pts
+    - category: Upgrade with
+      upgrades:
+      - name: Elemental Curse
+        rules: Unwieldy Debuff
+        cost_modifier: +15pts
+  - name: Elemental Avatar
+    size: 1
+    quality: 2+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Flame Sword
+      attacks: A12
+      ap: AP(2)
+      special_rules:
+      - Rending
+      count: 1
+    - name: Stomp
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    special_rules:
+    - Caster(4)
+    - Fear(3)
+    - Fearless
+    - Highborn
+    - Regeneration
+    cost: 925
+    upgrade_categories:
+    - category: Replace Oracle Avatar
+      upgrades:
+      - name: Great Avatar
+        rules: Gaze of Doom (12", A3, AP(4), Deadly(3))
+        cost_modifier: +40pts
+    - category: Upgrade with
+      upgrades:
+      - name: Elemental Curse
+        rules: Unwieldy Debuff
+        cost_modifier: +15pts
+  - name: Seer Plane
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Distortion Guns
+      range: 18"
+      attacks: A4
+      ap: AP(3)
+      special_rules:
+      - Blast(3)
+      count: 1
+    special_rules:
+    - Aircraft
+    - Caster(2)
+    - Highborn
+    cost: 380
+    upgrade_categories: []
+  - name: Venator Plane
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Rapid Pulse Laser
+      range: 36"
+      attacks: A6
+      ap: AP(3)
+      special_rules:
+      - Unstoppable
+      count: 1
+    - name: Twin Shatter Cannon
+      range: 36"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 1
+    special_rules:
+    - Aircraft
+    - Highborn
+    cost: 495
+    upgrade_categories:
+    - category: Replace Twin Shatter Cannon
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: Free

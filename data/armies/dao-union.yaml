@@ -1,0 +1,1032 @@
+v3.5.3:
+  name: DAO Union
+  id: z8205ez2boggzs22
+  units:
+  - name: Battle Suit Elite
+    size: 1
+    quality: 4+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Suit-Bursts
+      range: 18"
+      attacks: A1
+      special_rules:
+      - Rending
+      count: 2
+    - name: Suit-Flamers
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 2
+    - name: Bash
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Flying
+    - Hero
+    - Targeting Visor
+    cost: 155
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Storm Leader
+        rules: Hit & Run Shooter Aura
+        cost_modifier: +20pts
+      - name: Captain
+        rules: Targeting Visor Boost Aura
+        cost_modifier: +25pts
+      - name: Master Armorer
+        rules: Counter-Attack Aura
+        cost_modifier: +35pts
+      - name: Big Game Hunter
+        rules: Ranged Slayer Aura
+        cost_modifier: +40pts
+    - category: Upgrade with
+      upgrades:
+      - name: Gun Drone
+        rules: Drone Pulse-Gun (18", A2, Limited, Rending)
+        cost_modifier: +5pts
+    - category: Replace any Suit-Flamers and Suit-Bursts
+      upgrades:
+      - name: Suit-Burst, Suit-Ion
+        rules: 18", A1, Rending, 18", A1, AP(1), Blast(3)
+        cost_modifier: +5pts
+      - name: Suit-Burst, Suit-Fuse
+        rules: 18", A1, Rending, 12", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Suit-Frag, Suit-Burst
+        rules: 24", A1, Blast(3), Indirect, 18", A1, Rending
+        cost_modifier: +10pts
+      - name: 2x Rapid Suit-Burst
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+    - category: Replace 2x Suit-Flamers and 2x Suit-Bursts
+      upgrades:
+      - name: 2x Rapid Suit-Burst, Plasma Sword, Energy Shield
+        rules: 18", A2, Rending, A4, AP(1), Rending, Shielded
+        cost_modifier: +30pts
+      - name: Rapid Heavy Suit-Burst, Rapid Suit-Burst
+        rules: 24", A6, AP(1), Rending, 18", A2, Rending
+        cost_modifier: +65pts
+    - category: Replace any Rapid Suit-Burst
+      upgrades:
+      - name: Rapid Suit-Missiles
+        rules: 30", A2, Disintegrate, Unstoppable
+        cost_modifier: +10pts
+      - name: Rapid Suit-Plasma
+        rules: 24", A2, AP(4)
+        cost_modifier: +30pts
+    - category: Upgrade with
+      upgrades:
+      - name: Drop-Thrusters
+        rules: Ambush
+        cost_modifier: +15pts
+  - name: Grunt Leader
+    size: 1
+    quality: 5+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Holy Baton
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      count: 1
+    special_rules:
+    - Good Shot
+    - Hero
+    - Targeting Visor
+    cost: 25
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: High Sage
+        rules: Fortified Aura
+        cost_modifier: +10pts
+      - name: Captain
+        rules: Targeting Visor Boost Aura
+        cost_modifier: +25pts
+      - name: Master Armorer
+        rules: Counter-Attack Aura
+        cost_modifier: +35pts
+      - name: Big Game Hunter
+        rules: Ranged Slayer Aura
+        cost_modifier: +40pts
+      - name: Ethereal Elder
+        rules: Caster(2)
+        cost_modifier: +40pts
+    - category: Upgrade with
+      upgrades:
+      - name: Gun Drone
+        rules: Drone Pulse-Gun (18", A2, Limited, Rending)
+        cost_modifier: +5pts
+    - category: Replace Holy Baton
+      upgrades:
+      - name: Holy Halberd
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Holy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Holy Dual-Spear
+        rules: A3, AP(4)
+        cost_modifier: +15pts
+      - name: Leader Pulse Pistol, CCW
+        rules: 12", A2, AP(1), A2
+        cost_modifier: +15pts
+    - category: Replace Leader Pulse Pistol
+      upgrades:
+      - name: Leader Pulse Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +5pts
+      - name: Leader Pulse Carbine
+        rules: 18", A3, AP(1)
+        cost_modifier: +15pts
+      - name: Leader Pulse Rifle
+        rules: 30", A2, AP(1)
+        cost_modifier: +15pts
+    - category: Replace CCW
+      upgrades:
+      - name: Plasma Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Plasma Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Particle Wall
+        rules: Shielded
+        cost_modifier: +5pts
+      - name: Spotter Leader
+        rules: Scout
+        cost_modifier: +5pts
+  - name: Security Grunts
+    size: 5
+    quality: 5+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Pulse Shotguns
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Good Shot
+    - Targeting Visor
+    cost: 105
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Inhibitor Drone
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Gun Drone
+        rules: Drone Pulse-Gun (18", A2, Limited, Rending)
+        cost_modifier: +5pts
+      - name: Recon Drone
+        rules: Ambush Beacon
+        cost_modifier: +15pts
+      - name: Shield Drone
+        rules: Stealth Aura
+        cost_modifier: +25pts
+    - category: Replace one Pulse Shotguns
+      upgrades:
+      - name: Burst Carbine
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Fusion Carbine
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +35pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Particle Wall
+        rules: Shielded
+        cost_modifier: +5pts
+    - category: Replace one Pulse Shotguns and CCWs
+      upgrades:
+      - name: Pulse Pistol, Plasma Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Plasma Sword
+      upgrades:
+      - name: Plasma Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Tactical Grunts
+    size: 5
+    quality: 5+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Pulse Rifles
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Good Shot
+    - Targeting Visor
+    cost: 115
+    upgrade_categories:
+    - category: Replace all Pulse Rifles
+      upgrades:
+      - name: Pulse Carbine
+        rules: 18", A2, AP(1)
+        cost_modifier: +25pts
+    - category: Replace one Pulse Rifles
+      upgrades:
+      - name: Burst Carbine
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Support Turret
+        rules: Missile Pod (30", A2, Disintegrate, Unstoppable)
+        cost_modifier: +15pts
+      - name: Fusion Carbine
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +30pts
+      - name: Support Turret
+        rules: Smart Missiles (30", A3, AP(1), Indirect)
+        cost_modifier: +45pts
+    - category: Replace one Pulse Rifles and CCWs
+      upgrades:
+      - name: Pulse Pistol, Plasma Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Pulse Pistol
+      upgrades:
+      - name: Pulse Rifle
+        rules: 30", A1, AP(1)
+        cost_modifier: +10pts
+      - name: Pulse Carbine
+        rules: 18", A2, AP(1)
+        cost_modifier: +15pts
+    - category: Replace Plasma Sword
+      upgrades:
+      - name: Plasma Gauntlet
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Gun Drone
+        rules: Drone Pulse-Gun (18", A2, Limited, Rending)
+        cost_modifier: +5pts
+      - name: Spotter Drone
+        rules: Precision Spotter
+        cost_modifier: +15pts
+      - name: Shield Drone
+        rules: Stealth Aura
+        cost_modifier: +25pts
+  - name: Spotter Squad
+    size: 5
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pulse Carbines
+      range: 18"
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Good Shot
+    - Scout
+    - Targeting Visor
+    cost: 145
+    upgrade_categories:
+    - category: Replace up to three Pulse Carbines
+      upgrades:
+      - name: Scoped Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +20pts
+    - category: Replace one Scoped Rifle
+      upgrades:
+      - name: Ion Rifle
+        rules: 30", A1, AP(1), Blast(3)
+        cost_modifier: Free
+      - name: Rail Rifle
+        rules: 30", A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+    - category: Upgrade any model with
+      upgrades:
+      - name: Spotting Laser
+        rules: Precision Spotter
+        cost_modifier: +15pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Inhibitor Drone
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Gun Drone
+        rules: Drone Pulse-Gun (18", A2, Limited, Rending)
+        cost_modifier: +5pts
+      - name: Recon Drone
+        rules: Ambush Beacon
+        cost_modifier: +15pts
+      - name: Shield Drone
+        rules: Stealth Aura
+        cost_modifier: +25pts
+      - name: Accelerator Drone
+        rules: Increased Shooting Range Aura
+        cost_modifier: +35pts
+  - name: Stealth Suits
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Rapid Burst Carbines
+      range: 18"
+      attacks: A4
+      special_rules:
+      - Rending
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Ambush
+    - Stealth
+    - Targeting Visor
+    cost: 250
+    upgrade_categories:
+    - category: Replace any Rapid Burst Carbines
+      upgrades:
+      - name: Fusion Carbine
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Recon Locator
+        rules: Ambush Beacon
+        cost_modifier: +15pts
+      - name: Spotting Laser
+        rules: Precision Spotter
+        cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Backpack Thrusters
+        rules: Flying
+        cost_modifier: +25pts
+  - name: Battle Suits
+    size: 3
+    quality: 4+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Suit-Bursts
+      range: 18"
+      attacks: A1
+      special_rules:
+      - Rending
+      count: 9
+    - name: Bashes
+      attacks: A2
+      count: 3
+    special_rules:
+    - Flying
+    - Targeting Visor
+    cost: 220
+    upgrade_categories:
+    - category: Replace any Suit-Bursts
+      upgrades:
+      - name: Suit-Missiles
+        rules: 30", A1, Disintegrate, Unstoppable
+        cost_modifier: +5pts
+      - name: Suit-Plasma
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+    - category: Replace one Suit-Bursts
+      upgrades:
+      - name: Suit-Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Suit-Ion
+        rules: 18", A1, AP(1), Blast(3)
+        cost_modifier: +15pts
+      - name: Suit-Fuse
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Suit-Frag
+        rules: 24", A1, Blast(3), Indirect
+        cost_modifier: +20pts
+    - category: Any model may replace 2x Suit-Burst
+      upgrades:
+      - name: Suit-Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Sword, Energy Shield
+        rules: A2, AP(1), Rending, Shielded
+        cost_modifier: +5pts
+      - name: Suit-Ion
+        rules: 18", A1, AP(1), Blast(3)
+        cost_modifier: +5pts
+      - name: Suit-Fuse
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Suit-Frag
+        rules: 24", A1, Blast(3), Indirect
+        cost_modifier: +10pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Drop-Thrusters
+        rules: Ambush
+        cost_modifier: +25pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Gun Drone
+        rules: Drone Pulse-Gun (18", A2, Limited, Rending)
+        cost_modifier: +5pts
+      - name: Spotter Drone
+        rules: Precision Spotter
+        cost_modifier: +15pts
+      - name: Shield Drone
+        rules: Stealth Aura
+        cost_modifier: +45pts
+  - name: Gun Drones
+    size: 5
+    quality: 5+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Twin Pulse-Guns
+      range: 18"
+      attacks: A2
+      special_rules:
+      - Rending
+      count: 5
+    - name: Tasers
+      attacks: A1
+      count: 5
+    special_rules:
+    - Good Shot
+    - Strider
+    - Targeting Visor
+    cost: 150
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Precision Rounds
+        rules: Ignores Cover when Shooting
+        cost_modifier: +15pts
+      - name: Shock Rounds
+        rules: Shred when Shooting
+        cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Self-Repair
+        rules: Regeneration
+        cost_modifier: +10pts
+  - name: Sniper Drones
+    size: 3
+    quality: 5+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Pulse Rifles
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    - name: Tasers
+      attacks: A1
+      count: 3
+    special_rules:
+    - Good Shot
+    - Strider
+    - Targeting Visor
+    cost: 75
+    upgrade_categories:
+    - category: Upgrade all Pulse Rifles with
+      upgrades:
+      - name: Drone Controller
+        rules: Reliable, Takedown
+        cost_modifier: +75pts
+  - name: Hover Transport
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Burst Carbine
+      range: 18"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 1
+    - name: Twin Heavy Pulse-Gun
+      range: 18"
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Strider
+    - Targeting Visor
+    - Transport(11)
+    cost: 220
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Homing Frag-Missiles
+        rules: 24", A1, AP(1), Blast(3), Indirect, Limited
+        cost_modifier: +15pts
+      - name: Homing AT-Missiles
+        rules: 30", A1, AP(2), Deadly(3), Indirect, Limited
+        cost_modifier: +20pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Inhibitor System
+        rules: Melee Shrouding
+        cost_modifier: +5pts
+      - name: Vision Scrambler
+        rules: Stealth
+        cost_modifier: +15pts
+    - category: Replace Twin Heavy Pulse-Gun
+      upgrades:
+      - name: Twin Heavy Burst Carbine
+        rules: 18", A4, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Twin Heavy Missile Pod
+        rules: 30", A4, AP(1), Disintegrate, Unstoppable
+        cost_modifier: +40pts
+      - name: Twin Heavy Frag Pod
+        rules: 24", A2, AP(1), Blast(3), Indirect
+        cost_modifier: +45pts
+      - name: Twin Heavy Smart Missiles
+        rules: 30", A6, AP(2), Indirect
+        cost_modifier: +120pts
+  - name: Hover Attack Bike
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Burst Carbine
+      range: 18"
+      attacks: A2
+      special_rules:
+      - Rending
+      count: 1
+    - name: Twin Heavy Pulse-Gun
+      range: 18"
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fast
+    - Impact(3)
+    - Strider
+    - Targeting Visor
+    cost: 180
+    upgrade_categories:
+    - category: Upgrade with any
+      upgrades:
+      - name: Inhibitor System
+        rules: Melee Shrouding
+        cost_modifier: +5pts
+      - name: Vision Scrambler
+        rules: Stealth
+        cost_modifier: +15pts
+    - category: Replace Burst Carbine
+      upgrades:
+      - name: Fusion Carbine
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+    - category: Upgrade with
+      upgrades:
+      - name: Weak Spot Locator
+        rules: Piercing Shooting Mark
+        cost_modifier: +50pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Homing Frag-Missiles
+        rules: 24", A1, AP(1), Blast(3), Indirect, Limited
+        cost_modifier: +15pts
+      - name: Homing AT-Missiles
+        rules: 30", A1, AP(2), Deadly(3), Indirect, Limited
+        cost_modifier: +20pts
+  - name: Hover Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Sub-Railgun
+      range: 36"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Twin Heavy Pulse-Gun
+      range: 18"
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fast
+    - Impact(6)
+    - Strider
+    - Targeting Visor
+    cost: 370
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Homing Frag-Missiles
+        rules: 24", A1, AP(1), Blast(3), Indirect, Limited
+        cost_modifier: +15pts
+      - name: Homing AT-Missiles
+        rules: 30", A1, AP(2), Deadly(3), Indirect, Limited
+        cost_modifier: +20pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Inhibitor System
+        rules: Melee Shrouding
+        cost_modifier: +5pts
+      - name: Vision Scrambler
+        rules: Stealth
+        cost_modifier: +30pts
+    - category: Replace Sub-Railgun and Twin Heavy Pulse-Gun
+      upgrades:
+      - name: Heavy Sub-Railgun, Heavy Pulse-Gun
+        rules: 36", A2, AP(1), Blast(6), 18", A2, AP(1)
+        cost_modifier: +15pts
+    - category: Replace Sub-Railgun
+      upgrades:
+      - name: Homing Frag-Missile Array
+        rules: 24", A2, AP(1), Blast(3), Indirect
+        cost_modifier: +5pts
+      - name: Ion Cannon
+        rules: 30", A2, AP(2), Blast(3)
+        cost_modifier: +10pts
+      - name: Homing AT-Missile Array
+        rules: 30", A2, AP(2), Deadly(3), Indirect
+        cost_modifier: +50pts
+      - name: Railgun
+        rules: 36", A2, AP(4), Deadly(3)
+        cost_modifier: +70pts
+    - category: Replace Heavy Sub-Railgun
+      upgrades:
+      - name: Heavy Homing Frag-Missile Array
+        rules: 24", A2, AP(1), Blast(6), Indirect
+        cost_modifier: +5pts
+      - name: Heavy Ion Cannon
+        rules: 30", A2, AP(2), Blast(6)
+        cost_modifier: +15pts
+      - name: Heavy Homing AT-Missile Array
+        rules: 30", A2, AP(2), Deadly(6), Indirect
+        cost_modifier: +80pts
+      - name: Heavy Railgun
+        rules: 36", A2, AP(4), Deadly(6)
+        cost_modifier: +115pts
+    - category: Replace Heavy Pulse-Gun
+      upgrades:
+      - name: Heavy Burst Carbine
+        rules: 18", A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Heavy Missile Pod
+        rules: 30", A2, AP(1), Disintegrate, Unstoppable
+        cost_modifier: +20pts
+      - name: Heavy Frag Pod
+        rules: 24", A1, AP(1), Blast(3), Indirect
+        cost_modifier: +20pts
+      - name: Heavy Smart Missiles
+        rules: 30", A3, AP(2), Indirect
+        cost_modifier: +60pts
+    - category: Replace Twin Heavy Pulse-Gun
+      upgrades:
+      - name: Twin Heavy Burst Carbine
+        rules: 18", A4, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Twin Heavy Missile Pod
+        rules: 30", A4, AP(1), Disintegrate, Unstoppable
+        cost_modifier: +40pts
+      - name: Twin Heavy Frag Pod
+        rules: 24", A2, AP(1), Blast(3), Indirect
+        cost_modifier: +45pts
+      - name: Twin Heavy Smart Missiles
+        rules: 30", A6, AP(2), Indirect
+        cost_modifier: +120pts
+  - name: Heavy Battle Suit
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Quad Frag Pod
+      range: 24"
+      attacks: A4
+      special_rules:
+      - Blast(3)
+      - Indirect
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(2)
+    - Targeting Visor
+    cost: 320
+    upgrade_categories:
+    - category: Replace Quad Frag Pod
+      upgrades:
+      - name: Quad Missile Pod
+        rules: 30", A8, Disintegrate, Unstoppable
+        cost_modifier: +5pts
+      - name: Twin Heavy Rail Rifle
+        rules: 30", A2, AP(2), Deadly(6)
+        cost_modifier: +35pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Twin Suit Missile Pod
+        rules: 30", A3, Disintegrate, Unstoppable
+        cost_modifier: +45pts
+      - name: Twin Plasma Rifle
+        rules: 24", A2, AP(4)
+        cost_modifier: +50pts
+      - name: Twin Suit Smart Missiles
+        rules: 30", A4, AP(1), Indirect
+        cost_modifier: +85pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Gun Drone
+        rules: Drone Pulse-Gun (18", A2, Limited, Rending)
+        cost_modifier: +5pts
+      - name: Shield Drone
+        rules: Stealth
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Homing Frag-Missiles
+        rules: 24", A1, AP(1), Blast(3), Indirect, Limited
+        cost_modifier: +15pts
+      - name: Homing AT-Missiles
+        rules: 30", A1, AP(2), Deadly(3), Indirect, Limited
+        cost_modifier: +20pts
+  - name: Heavy Stealth Suit
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Heavy Ion Carbine
+      range: 18"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(6)
+      count: 1
+    - name: Twin Burst Carbine
+      range: 18"
+      attacks: A4
+      special_rules:
+      - Rending
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Ambush
+    - Fear(2)
+    - Stealth
+    - Targeting Visor
+    cost: 345
+    upgrade_categories:
+    - category: Replace Heavy Ion Carbine
+      upgrades:
+      - name: Heavy Fusion Carbine
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +35pts
+    - category: Replace Twin Burst Carbine
+      upgrades:
+      - name: Twin Flamer
+        rules: 12", A2, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Twin Fusion Carbine
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Backpack Thrusters
+        rules: Flying
+        cost_modifier: +35pts
+      - name: Weak Spot Locator
+        rules: Piercing Shooting Mark
+        cost_modifier: +50pts
+      - name: Stealth Drone
+        rules: Evasive
+        cost_modifier: +55pts
+  - name: Tide Titan
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Twin Plasma Rifle
+      range: 24"
+      attacks: A2
+      ap: AP(4)
+      count: 1
+    - name: Heavy Plasma Swords
+      attacks: A8
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 2
+    - name: Stomp
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    special_rules:
+    - Fear(3)
+    - Targeting Visor
+    cost: 505
+    upgrade_categories:
+    - category: Replace one Heavy Plasma Swords
+      upgrades:
+      - name: Titan Burst Carbine
+        rules: 18", A12, AP(1), Rending
+        cost_modifier: +100pts
+      - name: Twin Ion Cannon
+        rules: 30", A4, AP(2), Blast(3)
+        cost_modifier: +130pts
+    - category: Replace one Heavy Plasma Swords
+      upgrades:
+      - name: Nova Shield
+        rules: Evasive
+        cost_modifier: +20pts
+    - category: Replace Twin Plasma Rifle
+      upgrades:
+      - name: Twin Missile Pod
+        rules: 30", A4, Disintegrate, Unstoppable
+        cost_modifier: +10pts
+      - name: Twin Fusion Carbine
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +45pts
+      - name: Twin Smart Missiles
+        rules: 30", A6, AP(1), Indirect
+        cost_modifier: +75pts
+  - name: Surge Titan
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 24
+    weapons:
+    - name: Cluster Rockets
+      range: 24"
+      attacks: A8
+      ap: AP(1)
+      count: 1
+    - name: Pulse Blaster
+      range: 24"
+      attacks: A3
+      ap: AP(2)
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Stomp
+      attacks: A8
+      ap: AP(2)
+      count: 1
+    special_rules:
+    - Fear(4)
+    - Targeting Visor
+    cost: 710
+    upgrade_categories:
+    - category: Replace Pulse Blaster
+      upgrades:
+      - name: Pulse Driver
+        rules: 36", A3, AP(3), Deadly(3)
+        cost_modifier: +75pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Twin Flamer
+        rules: 12", A2, Blast(3), Reliable
+        cost_modifier: +40pts
+      - name: Destroyer Missiles
+        rules: 30", A1, AP(2), Deadly(3)
+        cost_modifier: +50pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Twin Missile Pod
+        rules: 30", A4, Disintegrate, Unstoppable
+        cost_modifier: +60pts
+      - name: Twin Smart Missiles
+        rules: 30", A6, AP(1), Indirect
+        cost_modifier: +125pts
+    - category: Replace Twin Flamer
+      upgrades:
+      - name: Twin Heavy Burst Carbine
+        rules: 18", A4, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Twin Frag Pod
+        rules: 24", A2, Blast(3), Indirect
+        cost_modifier: +15pts
+  - name: Razor Fighter
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Ion Cannon
+      range: 30"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Twin Burst Carbine
+      range: 18"
+      attacks: A4
+      special_rules:
+      - Rending
+      count: 1
+    special_rules:
+    - Aircraft
+    - Targeting Visor
+    cost: 270
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Frag-Missiles
+        rules: 24", A1, AP(1), Blast(3), Limited
+        cost_modifier: +10pts
+      - name: AT-Missiles
+        rules: 30", A1, AP(2), Deadly(3), Limited
+        cost_modifier: +20pts
+    - category: Replace Twin Burst Carbine
+      upgrades:
+      - name: Twin Missile Pod
+        rules: 30", A4, Disintegrate, Unstoppable
+        cost_modifier: +15pts
+  - name: Sun Bomber
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Ion Rifle
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Missile Pod
+      range: 30"
+      attacks: A2
+      special_rules:
+      - Disintegrate
+      - Unstoppable
+      count: 1
+    - name: Pulse Bombs
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Strafing
+      count: 1
+    special_rules:
+    - Aircraft
+    - Targeting Visor
+    cost: 275
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Frag-Missiles
+        rules: 24", A1, AP(1), Blast(3), Limited
+        cost_modifier: +10pts
+      - name: AT-Missiles
+        rules: 30", A1, AP(2), Deadly(3), Limited
+        cost_modifier: +20pts

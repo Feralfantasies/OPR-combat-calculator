@@ -1,0 +1,1350 @@
+v3.5.3:
+  name: Change Disciples
+  id: r6hr29338u4micfw
+  units:
+  - name: Change Destroyer Champion
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: Champion Heavy Rifle
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    - name: CCW
+      attacks: A4
+      count: 1
+    special_rules:
+    - Ambush
+    - Changebound
+    - Hero
+    cost: 150
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Executioner
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Apostle
+        rules: Relentless Aura
+        cost_modifier: +10pts
+      - name: Icon Bearer
+        rules: Resistance Aura
+        cost_modifier: +30pts
+      - name: Dark Smith
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Lord of Change
+        rules: Changebound Boost Aura
+        cost_modifier: +40pts
+      - name: Warlock
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Warlock
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Replace Champion Heavy Rifle and CCW
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A8, Rending
+        cost_modifier: +10pts
+      - name: Rapid Storm Rifle, CCW
+        rules: 24", A6, AP(1), A4
+        cost_modifier: +60pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +5pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Shred-Mod
+        rules: 18", A2, Limited, Rending
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A2, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A4, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Energy Axe
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +30pts
+      - name: Energy Fist
+        rules: A4, AP(4)
+        cost_modifier: +35pts
+  - name: Chosen Change Champion
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Flamer Pistol
+      range: 6"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Changebound
+    - Hero
+    - Versatile Attack
+    cost: 65
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Executioner
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Icon Bearer
+        rules: Resistance Aura
+        cost_modifier: +30pts
+      - name: Agitator
+        rules: Scout Aura
+        cost_modifier: +35pts
+      - name: Dark Smith
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Lord of Change
+        rules: Changebound Boost Aura
+        cost_modifier: +40pts
+      - name: Warlock
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Warlock
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Replace Flamer Pistol and CCW
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +15pts
+      - name: Hex-Shot, Hexed Staff
+        rules: 12", A4, Shred, A2, Shred
+        cost_modifier: +30pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Hexed Pistol
+        rules: 9", A2, Shred
+        cost_modifier: +5pts
+      - name: Champion Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +10pts
+      - name: Hexed Rifle
+        rules: 18", A2, Shred
+        cost_modifier: +15pts
+      - name: Champion Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +20pts
+      - name: Champion Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +30pts
+      - name: Champion Storm Rifle
+        rules: 24", A4, AP(1)
+        cost_modifier: +65pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +10pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Shred-Mod
+        rules: 18", A2, Limited, Rending
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +15pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Energy Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +20pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Disc of Change
+        rules: Fast, Strider, Tough(3)
+        cost_modifier: +75pts
+      - name: Combat Bike
+        rules: Twin Heavy Rifle (24", A2, AP(1)), Fast, Tough(3)
+        cost_modifier: +100pts
+  - name: Change Champion
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Flamer Pistol
+      range: 6"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Changebound
+    - Hero
+    cost: 60
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Executioner
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Icon Bearer
+        rules: Resistance Aura
+        cost_modifier: +30pts
+      - name: Agitator
+        rules: Scout Aura
+        cost_modifier: +35pts
+      - name: Dark Smith
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Lord of Change
+        rules: Changebound Boost Aura
+        cost_modifier: +40pts
+      - name: Warlock
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Warlock
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Replace Flamer Pistol and CCW
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+      - name: Hex-Shot, Hexed Staff
+        rules: 12", A4, Shred, A2, Shred
+        cost_modifier: +25pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Hexed Pistol
+        rules: 9", A2, Shred
+        cost_modifier: +5pts
+      - name: Champion Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Hexed Rifle
+        rules: 18", A2, Shred
+        cost_modifier: +10pts
+      - name: Champion Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Champion Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +20pts
+      - name: Champion Storm Rifle
+        rules: 24", A4, AP(1)
+        cost_modifier: +50pts
+    - category: Take one Champion Heavy Rifle attachment
+      upgrades:
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +5pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Shred-Mod
+        rules: 18", A2, Limited, Rending
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Energy Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Disc of Change
+        rules: Fast, Strider, Tough(3)
+        cost_modifier: +75pts
+      - name: Combat Bike
+        rules: Twin Heavy Rifle (24", A2, AP(1)), Fast, Tough(3)
+        cost_modifier: +90pts
+  - name: Change Cultist Champion
+    size: 1
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Champion Pistol
+      range: 12"
+      attacks: A2
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Changebound
+    - Hero
+    cost: 35
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Executioner
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Apostle
+        rules: Relentless Aura
+        cost_modifier: +10pts
+      - name: Icon Bearer
+        rules: Resistance Aura
+        cost_modifier: +30pts
+      - name: Agitator
+        rules: Scout Aura
+        cost_modifier: +35pts
+      - name: Psy-Witch
+        rules: Caster(2)
+        cost_modifier: +45pts
+    - category: Replace Champion Pistol and CCW
+      upgrades:
+      - name: Cursed Blade
+        rules: A3, AP(2), Rending
+        cost_modifier: +10pts
+    - category: Replace Champion Pistol
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Champion Rifle
+        rules: 24", A2
+        cost_modifier: +5pts
+      - name: Champion Shred Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Champion Shotgun
+        rules: 12", A4, AP(1)
+        cost_modifier: +10pts
+      - name: Champion Sniper Rifle
+        rules: 30", A2, AP(1), Reliable, Takedown
+        cost_modifier: +60pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+  - name: Change Birdman Champion
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Pistol
+      range: 12"
+      attacks: A1
+      count: 1
+    - name: Hexed Sword
+      attacks: A3
+      special_rules:
+      - Shred
+      count: 1
+    special_rules:
+    - Changebound
+    - Hero
+    cost: 45
+    upgrade_categories:
+    - category: Replace all Hexed Sword
+      upgrades:
+      - name: Dual CCWs
+        rules: A4
+        cost_modifier: Free
+      - name: Spear
+        rules: A2, AP(1), Thrust
+        cost_modifier: Free
+    - category: Replace Pistol
+      upgrades:
+      - name: Burst Pistol
+        rules: 12", A2
+        cost_modifier: +5pts
+      - name: Hexed Bow
+        rules: 18", A3, Shred
+        cost_modifier: +20pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Shaman
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Disc of Change
+        rules: Fast, Strider, Tough(3)
+        cost_modifier: +55pts
+  - name: Change Cultists
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Rifles
+      range: 24"
+      attacks: A1
+      count: 10
+    - name: CCWs
+      attacks: A1
+      count: 10
+    special_rules:
+    - Changebound
+    cost: 145
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +25pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +40pts
+    - category: Replace all Rifles and CCWS
+      upgrades:
+      - name: Pistol, CCW
+        rules: 12", A1, A2
+        cost_modifier: Free
+    - category: Replace up to two Rifles
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Grenade Launcher
+        rules: 24", A1, Blast(3)
+        cost_modifier: +10pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Machinegun
+        rules: 30", A3
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +25pts
+  - name: Change Birdmen
+    size: 10
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Dual CCWs
+      attacks: A2
+      count: 10
+    special_rules:
+    - Changebound
+    cost: 150
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +25pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +40pts
+    - category: Replace all Dual CCWs
+      upgrades:
+      - name: Pistol, Hexed Sword
+        rules: 12", A1, A1, Shred
+        cost_modifier: +15pts
+  - name: Change Brothers
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Rifles
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Changebound
+    cost: 155
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +15pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +25pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Warlock Apprentice
+        rules: Caster(1)
+        cost_modifier: +20pts
+    - category: Replace all Heavy Rifles
+      upgrades:
+      - name: Hexed Rifle
+        rules: 18", A2, Shred
+        cost_modifier: +20pts
+    - category: Replace all Heavy Rifles and CCWS
+      upgrades:
+      - name: Heavy Pistol, Heavy CCW
+        rules: 12", A1, AP(1), A2, AP(1)
+        cost_modifier: +10pts
+    - category: Replace one Heavy Rifles
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +35pts
+      - name: Reaper Cannon
+        rules: 24", A4, Shred
+        cost_modifier: +35pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +40pts
+      - name: Autocannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +55pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +60pts
+    - category: Replace one Heavy Rifles and CCWs
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Chosen Change Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Rifles
+      range: 24"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Changebound
+    - Versatile Attack
+    cost: 115
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +10pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +15pts
+    - category: Replace all Heavy Rifles
+      upgrades:
+      - name: Hexed Rifle
+        rules: 18", A2, Shred
+        cost_modifier: +20pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Warlock Apprentice
+        rules: Caster(1)
+        cost_modifier: +20pts
+    - category: Replace any Heavy Rifles and CCWs
+      upgrades:
+      - name: Heavy Pistol, Heavy CCW
+        rules: 12", A1, AP(1), A2, AP(1)
+        cost_modifier: +5pts
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+    - category: Replace any Heavy Rifles
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Reaper Cannon
+        rules: 24", A4, Shred
+        cost_modifier: +45pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +50pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +70pts
+      - name: Autocannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +75pts
+    - category: Any model may take one Heavy Rifle attachment
+      upgrades:
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +10pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Shred-Mod
+        rules: 18", A2, Limited, Rending
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +15pts
+    - category: Replace one Heavy Rifles and CCWs
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+  - name: Change Support
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Flamers
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Changebound
+    - Relentless
+    cost: 130
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Warlock Apprentice
+        rules: Caster(1)
+        cost_modifier: +20pts
+    - category: Replace any Heavy Flamers
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Reaper Cannon
+        rules: 24", A4, Shred
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +25pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +30pts
+      - name: Hexed Cannon
+        rules: 24", A4, AP(1), Shred
+        cost_modifier: +45pts
+      - name: Plasma Cannon
+        rules: 30", A1, AP(4), Blast(3)
+        cost_modifier: +50pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +50pts
+      - name: Autocannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +50pts
+  - name: Change Destroyers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Dual Energy Claws
+      attacks: A4
+      special_rules:
+      - Rending
+      count: 3
+    special_rules:
+    - Ambush
+    - Changebound
+    cost: 235
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Havoc Favour
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: Icon of Havoc
+        rules: Versatile Defense Aura
+        cost_modifier: +55pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Warlock Apprentice
+        rules: Caster(1)
+        cost_modifier: +20pts
+    - category: Replace one Dual Energy Claws
+      upgrades:
+      - name: Hex-Shot, Hexed Staff
+        rules: 12", A4, Shred, A2, Shred
+        cost_modifier: +15pts
+    - category: Replace all Dual Energy Claws
+      upgrades:
+      - name: Rapid Heavy Rifle, Flamer-Mod, CCW
+        rules: 24", A2, AP(1), 12", A1, Blast(3), Limited, Reliable, A1
+        cost_modifier: +35pts
+      - name: Storm Rifle, CCW
+        rules: 24", A3, AP(1), A1
+        cost_modifier: +60pts
+    - category: Replace any Flamer-Mod
+      upgrades:
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +5pts
+      - name: Shred-Mod
+        rules: 18", A2, Limited, Rending
+        cost_modifier: +5pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +5pts
+    - category: Replace one Storm Rifle
+      upgrades:
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: Free
+      - name: Reaper Cannon
+        rules: 24", A4, Shred
+        cost_modifier: +5pts
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Missile Rack, Operator Storm Rifle
+        rules: 24", A1, AP(2), Deadly(3), Unstoppable, 24", A3, AP(1)
+        cost_modifier: +50pts
+    - category: Replace any CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +20pts
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +25pts
+      - name: Energy Fist
+        rules: A3, AP(4)
+        cost_modifier: +35pts
+  - name: Change Mutated Cultists
+    size: 10
+    quality: 5+
+    defense: 6+
+    tough: null
+    weapons:
+    - name: Claws
+      attacks: A2
+      count: 10
+    special_rules:
+    - Changebound
+    - Unpredictable Fighter
+    cost: 135
+    upgrade_categories: []
+  - name: Change Mutated Brothers
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Claws
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    special_rules:
+    - Changebound
+    - Fast
+    - Unpredictable Fighter
+    cost: 170
+    upgrade_categories:
+    - category: Replace all Mutant Legs
+      upgrades:
+      - name: Mutant Wings
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+  - name: Change Greater Mutated
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Heavy Claws
+      attacks: A4
+      ap: AP(1)
+      count: 3
+    special_rules:
+    - Changebound
+    - Fast
+    - Unpredictable Fighter
+    cost: 255
+    upgrade_categories: []
+  - name: Change Birdmen Disc Riders
+    size: 3
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Burst Pistols
+      range: 12"
+      attacks: A2
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Changebound
+    - Fast
+    - Strider
+    cost: 165
+    upgrade_categories:
+    - category: Replace all Burst Pistols and CCWs
+      upgrades:
+      - name: Dual CCWs
+        rules: A4
+        cost_modifier: +5pts
+      - name: Spear
+        rules: A2, AP(1), Thrust
+        cost_modifier: +5pts
+    - category: Replace all Burst Pistols
+      upgrades:
+      - name: Hexed Bow
+        rules: 18", A3, Shred
+        cost_modifier: +45pts
+  - name: Change Mutated Destroyer
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Dual Mutated Claws
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Ambush
+    - Changebound
+    - Unpredictable
+    cost: 155
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Summoned Tendrils
+        rules: Dangerous Terrain Debuff
+        cost_modifier: +35pts
+    - category: Replace Dual Mutated Claws
+      upgrades:
+      - name: Mutated Gun, Mutated Claw
+        rules: 24", A6, AP(1), A3, AP(1)
+        cost_modifier: +95pts
+  - name: Change APC
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Storm Rifle
+      range: 24"
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Changebound
+    - Fast
+    - Impact(3)
+    - Transport(11)
+    cost: 215
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Rapid Heavy Rifle, Flamer-Mod
+        rules: 24", A2, AP(1), 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +35pts
+      - name: Rapid Heavy Rifle, Shred-Mod
+        rules: 24", A2, AP(1), 18", A2, Limited, Rending
+        cost_modifier: +35pts
+      - name: Plasma-Mod, Rapid Heavy Rifle
+        rules: 24", A1, AP(4), Limited, 24", A2, AP(1)
+        cost_modifier: +40pts
+      - name: Rapid Heavy Rifle, Fusion-Mod
+        rules: 24", A2, AP(1), 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +40pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Havoc Missiles
+        rules: 24", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Spiked Ram
+        rules: Impact(2)
+        cost_modifier: +10pts
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +15pts
+  - name: Change Sentinel Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Hell Missile Rack
+      range: 24"
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+      - Limited
+      - Unstoppable
+      count: 1
+    - name: Flamer Cannon
+      range: 18"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: Fusion Rifle
+      range: 12"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Stomp
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Changebound
+    - Fear(1)
+    cost: 215
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Summoned Tendrils
+        rules: Dangerous Terrain Debuff
+        cost_modifier: +35pts
+    - category: Replace Fusion Rifle
+      upgrades:
+      - name: Flamer, Walker Claw
+        rules: 12", A1, Blast(3), Reliable, A4, AP(1), Rending
+        cost_modifier: +25pts
+  - name: Change Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: Demolition Cannon
+      range: 24"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Blast(6)
+      - Indirect
+      count: 1
+    special_rules:
+    - Changebound
+    - Fast
+    - Impact(6)
+    cost: 510
+    upgrade_categories:
+    - category: Replace Demolition Cannon
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +25pts
+      - name: Rapid Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +25pts
+    - category: Replace Twin Heavy Machinegun
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +45pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Rapid Heavy Rifle, Flamer-Mod
+        rules: 24", A2, AP(1), 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +35pts
+      - name: Rapid Heavy Rifle, Shred-Mod
+        rules: 24", A2, AP(1), 18", A2, Limited, Rending
+        cost_modifier: +35pts
+      - name: Plasma-Mod, Rapid Heavy Rifle
+        rules: 24", A1, AP(4), Limited, 24", A2, AP(1)
+        cost_modifier: +40pts
+      - name: Rapid Heavy Rifle, Fusion-Mod
+        rules: 24", A2, AP(1), 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +40pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Havoc Missiles
+        rules: 24", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Spiked Ram
+        rules: Impact(2)
+        cost_modifier: +10pts
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +30pts
+  - name: Change Infernal Brute
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Brute Hammers
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      count: 2
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Changebound
+    - Fear(2)
+    cost: 305
+    upgrade_categories:
+    - category: Replace one Brute Hammers
+      upgrades:
+      - name: Missile Array
+        rules: 30", A4, AP(2), Unstoppable
+        cost_modifier: +70pts
+    - category: Replace one Brute Hammers
+      upgrades:
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +55pts
+      - name: Heavy Reaper Cannon
+        rules: 24", A6, AP(1), Shred
+        cost_modifier: +80pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +80pts
+      - name: Heavy Plasma Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +85pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +125pts
+    - category: Replace any Brute Hammers
+      upgrades:
+      - name: Brute Flail
+        rules: A4, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Brute Axe
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +25pts
+      - name: Brute Fist
+        rules: A4, AP(4)
+        cost_modifier: +30pts
+    - category: Upgrade any Brute Fist with one
+      upgrades:
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +25pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+  - name: Change Mech-Fiend
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Fiend Claws
+      attacks: A4
+      special_rules:
+      - Rending
+      count: 1
+    - name: Steel Tails
+      attacks: A8
+      ap: AP(1)
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Changebound
+    - Fear(2)
+    - Regeneration
+    cost: 395
+    upgrade_categories:
+    - category: Replace Steel Tails
+      upgrades:
+      - name: Dual Maul Cutters
+        rules: A6, AP(3)
+        cost_modifier: +10pts
+    - category: Replace Steel Tails and Fiend Claws
+      upgrades:
+      - name: Twin Fiend Autocannon
+        rules: 36", A8, AP(2)
+        cost_modifier: +105pts
+      - name: Twin Ecto-Cannons
+        rules: 24", A4, AP(4), Blast(3)
+        cost_modifier: +180pts
+  - name: Change Vortex Beast
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Vortex of Mutation
+      range: 18"
+      attacks: A3
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Barbed Tentacles
+      attacks: A8
+      ap: AP(1)
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Changebound
+    - Fear(2)
+    - Regeneration
+    - Unpredictable Fighter
+    cost: 455
+    upgrade_categories: []
+  - name: Change Heavy Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Quad Laser Cannon
+      range: 36"
+      attacks: A4
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Changebound
+    - Fast
+    - Impact(9)
+    - Transport(11)
+    cost: 880
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Rapid Heavy Rifle, Flamer-Mod
+        rules: 24", A2, AP(1), 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +35pts
+      - name: Rapid Heavy Rifle, Shred-Mod
+        rules: 24", A2, AP(1), 18", A2, Limited, Rending
+        cost_modifier: +35pts
+      - name: Plasma-Mod, Rapid Heavy Rifle
+        rules: 24", A1, AP(4), Limited, 24", A2, AP(1)
+        cost_modifier: +40pts
+      - name: Rapid Heavy Rifle, Fusion-Mod
+        rules: 24", A2, AP(1), 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +40pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Havoc Missiles
+        rules: 24", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Spiked Ram
+        rules: Impact(2)
+        cost_modifier: +10pts
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +45pts
+  - name: Change Despoiler Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Heavy Plasma Cannon
+      range: 30"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Blast(6)
+      count: 1
+    - name: Despoiler Claws
+      attacks: A4
+      ap: AP(3)
+      count: 1
+    - name: Hell Flails
+      attacks: A4
+      count: 2
+    - name: Stomp
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    special_rules:
+    - Changebound
+    - Fear(3)
+    - Regeneration
+    cost: 690
+    upgrade_categories:
+    - category: Replace Heavy Plasma Cannon
+      upgrades:
+      - name: Anti-Tank Cannon
+        rules: 30", A1, AP(3), Deadly(6)
+        cost_modifier: Free
+    - category: Replace any Hell Flails
+      upgrades:
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +35pts
+      - name: Havoc Missiles
+        rules: 24", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +80pts
+      - name: Heavy Reaper Cannon
+        rules: 24", A6, AP(1), Shred
+        cost_modifier: +80pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +80pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +125pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Twin Pain Cannons
+        rules: 24", A2, Blast(3)
+        cost_modifier: +50pts
+      - name: Dual Maul Cutters
+        rules: A6, AP(3)
+        cost_modifier: +70pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +100pts
+  - name: Change Dragon
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Forge Flamethrower
+      range: 18"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    special_rules:
+    - Aircraft
+    - Changebound
+    - Regeneration
+    cost: 265
+    upgrade_categories:
+    - category: Replace Forge Flamethrower
+      upgrades:
+      - name: Forge Cannon
+        rules: 30", A8, AP(3)
+        cost_modifier: +130pts

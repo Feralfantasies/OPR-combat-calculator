@@ -9,6 +9,28 @@ pub enum AttackType {
     MeleeReturn,
 }
 
+/// The Versatile Attack effect a unit picked when it activated (v3.5.3).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
+pub enum VersatileMode {
+    /// AP(+1) when shooting or charging enemies over 9".
+    Ap1,
+    /// +1 to hit rolls when shooting or charging enemies over 9".
+    HitBonus,
+}
+
+impl VersatileMode {
+    /// Parse the `versatile_mode` field of [`CombatContext`]
+    /// (0 = AP(+1), 1 = hit bonus).
+    #[must_use]
+    pub const fn from_u8(value: u8) -> Option<Self> {
+        match value {
+            0 => Some(Self::Ap1),
+            1 => Some(Self::HitBonus),
+            _ => None,
+        }
+    }
+}
+
 /// Contextual information about the combat that affects special rules.
 /// This captures the "state" of the attack for rule resolution.
 ///
@@ -30,6 +52,10 @@ pub struct CombatContext {
     pub defender_in_cover: bool,
     /// Whether the attacker is fatigued (only hit on unmodified 6)
     pub attacker_fatigued: bool,
+    /// Versatile Attack effect picked at activation (0 = AP(+1),
+    /// 1 = +1 to hit, 2 = none; see [`VersatileMode`]).
+    #[serde(default)]
+    pub versatile_mode: u8,
 }
 
 impl CombatContext {
@@ -43,6 +69,7 @@ impl CombatContext {
             attacker_moved: false,
             defender_in_cover: false,
             attacker_fatigued: false,
+            versatile_mode: 2,
         }
     }
 
@@ -56,6 +83,7 @@ impl CombatContext {
             attacker_moved: false,
             defender_in_cover: false,
             attacker_fatigued: false,
+            versatile_mode: 2,
         }
     }
 
@@ -69,6 +97,7 @@ impl CombatContext {
             attacker_moved: false,
             defender_in_cover: false,
             attacker_fatigued: fatigued,
+            versatile_mode: 2,
         }
     }
 
@@ -107,10 +136,25 @@ impl CombatContext {
         self
     }
 
+    /// Set the distance between attacker and defender (builder pattern)
+    #[must_use]
+    pub const fn with_distance(mut self, distance: u8) -> Self {
+        self.distance = distance;
+        self
+    }
+
     /// Set whether attacker is fatigued (builder pattern)
     #[must_use]
     pub const fn with_fatigue(mut self, fatigued: bool) -> Self {
         self.attacker_fatigued = fatigued;
+        self
+    }
+
+    /// Set the Versatile Attack effect picked at activation
+    /// (0 = AP(+1), 1 = +1 to hit, 2 = none).
+    #[must_use]
+    pub const fn with_versatile_mode(mut self, mode: u8) -> Self {
+        self.versatile_mode = mode;
         self
     }
 }

@@ -12,7 +12,7 @@ The combat simulator needs accurate, up-to-date unit data from all Grimdark Futu
 
 1. **Fetch phase**: Downloads all army pages from Army Forge with rate limiting
 2. **Parse phase**: Extracts structured data from cached HTML and writes YAML files
-3. **Output**: 40+ YAML files (one per army, including subfactions) with complete unit rosters
+3. **Output**: 43 YAML files (one per army, including subfactions) with complete unit rosters
 
 The YAML files are consumed by the `api` crate to populate the combat simulator with real unit stats, weapons, and upgrade options.
 
@@ -29,7 +29,7 @@ The data-collector uses a strict two-phase architecture to separate network I/O 
         │
         ▼
 ┌─────────────┐
-│ Parse Phase │──▶ data/*.yaml (structured data)
+│ Parse Phase │──▶ data/armies/*.yaml (structured data)
 └─────────────┘
 ```
 
@@ -60,7 +60,7 @@ The parse phase reads exclusively from local cache:
 
 ### Output Format
 
-Each army is written to `data/<army-name>.yaml` with:
+Each army is written to `data/armies/<army-name>.yaml` with:
 
 ```yaml
 v3.5.3:  # Army version as top-level key
@@ -112,7 +112,7 @@ cargo run -p data-collector -- -vv
 ### Output
 
 - **Cache**: `data/cache/*.html` (raw HTML from Army Forge)
-- **YAML**: `data/*.yaml` (40+ files, one per army)
+- **YAML**: `data/armies/*.yaml` (43 files, one per army; versioned in git)
 - **Metadata**: `data/cache/metadata.json` (timestamps)
 
 ## Gotchas and Known Issues
@@ -176,7 +176,7 @@ if stat.starts_with("AP") {
 }
 ```
 
-**How to verify**: Run `grep "attacks: AP" data/*.yaml | wc -l` — should return 0.
+**How to verify**: Run `grep "attacks: AP" data/armies/*.yaml | wc -l` — should return 0.
 
 ### 4. Multi-Weapon Upgrade Parsing Bug (Fixed)
 
@@ -224,7 +224,7 @@ for (i, c) in text.char_indices() {
 }
 ```
 
-**How to verify**: Check `data/battle-brothers.yaml` for "Heavy Razor Claws, CCW" upgrades — should have clean `rules` field.
+**How to verify**: Check `data/armies/battle-brothers.yaml` for "Heavy Razor Claws, CCW" upgrades — should have clean `rules` field.
 
 ### 5. Tough Field Extraction
 
@@ -262,7 +262,7 @@ fn parse_special_rules_with_tough(rules: &str) -> (Vec<String>, Option<u32>) {
 }
 ```
 
-**How to verify**: Run `grep -l "tough:" data/*.yaml | wc -l` — should match total YAML count.
+**How to verify**: Run `grep -l "tough:" data/armies/*.yaml | wc -l` — should match total YAML count.
 
 ### 6. Filename Parsing for Army IDs with Underscores
 
@@ -313,7 +313,7 @@ let army_name = html
     .unwrap_or("Unknown Army");
 ```
 
-**How to verify**: Check that `data/elven-jesters.yaml` exists and has correct name.
+**How to verify**: Check that `data/armies/elven-jesters.yaml` exists and has correct name.
 
 ### 8. Rate Limiting
 
@@ -342,9 +342,9 @@ impl HttpClient {
 The following checks are run by the auditor to verify correctness:
 
 1. **Clippy**: `cargo clippy --all-targets --all-features -p data-collector` — zero warnings
-2. **YAML count**: `ls data/*.yaml | wc -l` — should be 40+
-3. **Tough field**: `grep -l "tough:" data/*.yaml | wc -l` — should match YAML count
-4. **AP parsing**: `grep "attacks: AP" data/*.yaml | wc -l` — should be 0
+2. **YAML count**: `ls data/armies/*.yaml | wc -l` — should be 40+
+3. **Tough field**: `grep -l "tough:" data/armies/*.yaml | wc -l` — should match YAML count
+4. **AP parsing**: `grep "attacks: AP" data/armies/*.yaml | wc -l` — should be 0
 5. **Subfactions**: Check for `battle-brothers.yaml`, `prime-brothers.yaml`, `havoc-brothers.yaml` and their variants
 
 ### Manual Validation
@@ -362,14 +362,14 @@ To manually validate the data-collector:
 
    ```bash
    cargo run -p data-collector -- parse
-   cat data/alien-hives.yaml | head -30
+   cat data/armies/alien-hives.yaml | head -30
    ```
 
 3. **Check for parsing errors**:
 
    ```bash
-   grep -r "Unknown Army" data/*.yaml  # Should return nothing
-   grep -r "units: []" data/*.yaml    # Should return nothing
+   grep -r "Unknown Army" data/armies/*.yaml  # Should return nothing
+   grep -rF 'units: []' data/armies/*.yaml    # Should return nothing
    ```
 
 ## Future Improvements

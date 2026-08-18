@@ -1,0 +1,1659 @@
+v3.5.3:
+  name: Knight Prime Brothers
+  id: wopr4xvwa51xh3mc
+  units:
+  - name: Knight Grave Prime Master
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 6
+    weapons:
+    - name: CCW
+      attacks: A4
+      count: 1
+    special_rules:
+    - Fearless
+    - Hero
+    - Knightborn
+    - Shielded
+    cost: 125
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Ancient Protector
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Judge
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Lieutenant
+        rules: Rapid Rush Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Knight Champion
+        rules: Unpredictable Fighter Aura
+        cost_modifier: +30pts
+      - name: Archivist
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Archivist
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Replace Combat Shield and CCW
+      upgrades:
+      - name: Master Grave Heavy Pistol, CCW
+        rules: 12", A4, AP(1), A4
+        cost_modifier: +10pts
+      - name: Dual Energy Claws
+        rules: A8, Rending
+        cost_modifier: +20pts
+      - name: Dual Energy Swords
+        rules: A8, AP(1), Rending
+        cost_modifier: +40pts
+      - name: Fist-Flamer, CCW, Energy Fist
+        rules: 6", A2, Blast(3), Reliable, A4, A4, AP(4)
+        cost_modifier: +55pts
+      - name: Fist-Pistol, CCW, Energy Fist
+        rules: 12", A6, A4, A4, AP(4)
+        cost_modifier: +65pts
+    - category: Replace Master Grave Heavy Pistol
+      upgrades:
+      - name: Master Grave Plasma Pistol
+        rules: 12", A4, AP(4)
+        cost_modifier: +25pts
+      - name: Master Grave Precision Rifle
+        rules: 24", A4, Precise
+        cost_modifier: +30pts
+      - name: Master Grave Auto-Rifle
+        rules: 18", A8
+        cost_modifier: +30pts
+      - name: Master Grave Heavy Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +60pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A2, Blast(3)
+        cost_modifier: +5pts
+      - name: Chain-Fist
+        rules: A2, AP(2), Deadly(3)
+        cost_modifier: +30pts
+      - name: Energy Fist
+        rules: A4, AP(4)
+        cost_modifier: +35pts
+      - name: Energy Greatsword
+        rules: A6, AP(1), Rending
+        cost_modifier: +35pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Xenos Hunter
+        rules: Melee Slayer
+        cost_modifier: +5pts
+      - name: Honor Guard
+        rules: Ravage(3)
+        cost_modifier: +10pts
+      - name: The Founder's Avenger
+        rules: Retaliate(1)
+        cost_modifier: +15pts
+      - name: Destroyer Armor
+        rules: Ambush
+        cost_modifier: +20pts
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +45pts
+  - name: Knight Veteran Prime Master
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Fearless
+    - Hero
+    - Knightborn
+    - Shielded
+    - Versatile Attack
+    cost: 65
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Ancient Protector
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Artillerist
+        rules: Re-Position Artillery
+        cost_modifier: +10pts
+      - name: Judge
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Lieutenant
+        rules: Rapid Rush Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Knight Champion
+        rules: Unpredictable Fighter Aura
+        cost_modifier: +30pts
+      - name: Engineer
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Archivist
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Archivist
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Combat Bike
+        rules: Twin Heavy Rifle (24", A2, AP(1)), Fast, Tough(3)
+        cost_modifier: +115pts
+    - category: Replace Combat Shield and CCW
+      upgrades:
+      - name: Flamer Pistol, CCW
+        rules: 6", A1, Blast(3), Reliable, A2
+        cost_modifier: +5pts
+      - name: Flamer Pistol, Combat Shield
+        rules: 6", A1, Blast(3), Reliable, Bash (A1), Shielded
+        cost_modifier: +5pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +15pts
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +15pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Anti-Gravity Pistol
+        rules: 9", A2, Shatter
+        cost_modifier: +5pts
+      - name: Master Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +10pts
+      - name: Master Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +20pts
+      - name: Master Auto-Rifle
+        rules: 18", A3
+        cost_modifier: +20pts
+      - name: Master Marksman Carbine
+        rules: 18", A2, Rending, Takedown
+        cost_modifier: +25pts
+      - name: Master Precision Rifle
+        rules: 24", A2, Precise
+        cost_modifier: +25pts
+      - name: Master Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +30pts
+    - category: Upgrade Master Marksman Carbine with
+      upgrades:
+      - name: Scope
+        rules: Precise
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Relic Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +20pts
+  - name: Knight Prime Master
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Fearless
+    - Hero
+    - Knightborn
+    - Shielded
+    cost: 60
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Ancient Protector
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Artillerist
+        rules: Re-Position Artillery
+        cost_modifier: +10pts
+      - name: Judge
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Lieutenant
+        rules: Rapid Rush Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Knight Champion
+        rules: Unpredictable Fighter Aura
+        cost_modifier: +30pts
+      - name: Engineer
+        rules: Mend
+        cost_modifier: +40pts
+      - name: Archivist
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Archivist
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Replace Combat Shield and CCW
+      upgrades:
+      - name: Flamer Pistol, CCW
+        rules: 6", A1, Blast(3), Reliable, A2
+        cost_modifier: +5pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Anti-Gravity Pistol
+        rules: 9", A2, Shatter
+        cost_modifier: +5pts
+      - name: Master Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Master Auto-Rifle
+        rules: 18", A3
+        cost_modifier: +15pts
+      - name: Master Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Master Marksman Carbine
+        rules: 18", A2, Rending, Takedown
+        cost_modifier: +20pts
+      - name: Master Precision Rifle
+        rules: 24", A2, Precise
+        cost_modifier: +20pts
+      - name: Master Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +20pts
+    - category: Upgrade Master Marksman Carbine with
+      upgrades:
+      - name: Scope
+        rules: Precise
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Relic Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Combat Bike
+        rules: Twin Heavy Rifle (24", A2, AP(1)), Fast, Tough(3)
+        cost_modifier: +105pts
+  - name: Knight Elite Raider
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Flamer Pistol
+      range: 6"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Fearless
+    - Furious
+    - Hero
+    - Knightborn
+    - Strider
+    cost: 60
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Ancient Protector
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Judge
+        rules: Bane in Melee Aura
+        cost_modifier: +15pts
+      - name: Captain
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Archivist
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Commander
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Flamer Pistol
+      upgrades:
+      - name: Anti-Gravity Pistol
+        rules: 9", A2, Shatter
+        cost_modifier: +5pts
+      - name: Master Heavy Pistol
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Master Auto-Rifle
+        rules: 18", A3
+        cost_modifier: +5pts
+      - name: Master Precision Rifle
+        rules: 24", A2, Precise
+        cost_modifier: +10pts
+      - name: Master Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +10pts
+      - name: Master Marksman Carbine
+        rules: 18", A2, Rending, Takedown
+        cost_modifier: +15pts
+      - name: Master Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +15pts
+    - category: Upgrade Master Marksman Carbine with
+      upgrades:
+      - name: Scope
+        rules: Precise
+        cost_modifier: +5pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Relic Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Infiltration Gear
+        rules: Scout
+        cost_modifier: +10pts
+      - name: Orbital Drop
+        rules: Ambush
+        cost_modifier: +10pts
+  - name: Knight Infiltration Brothers
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Marksman Carbines
+      range: 18"
+      attacks: A1
+      special_rules:
+      - Rending
+      - Takedown
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Scout
+    - Strider
+    cost: 145
+    upgrade_categories:
+    - category: Upgrade all Marksman Carbines with
+      upgrades:
+      - name: Scopes
+        rules: Precise
+        cost_modifier: +10pts
+  - name: Knight Raider Brothers
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 5
+    - name: CCWs
+      attacks: A2
+      count: 5
+    special_rules:
+    - Fearless
+    - Furious
+    - Knightborn
+    - Strider
+    cost: 125
+    upgrade_categories:
+    - category: Replace one Heavy Pistols and CCWs
+      upgrades:
+      - name: Heavy Pistol, Energy Hammer
+        rules: 12", A1, AP(1), A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +10pts
+      - name: Heavy Pistol, Relic Sword
+        rules: 12", A1, AP(1), A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Heavy Pistol, Energy Fist
+        rules: 12", A1, AP(1), A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Orbital Drop
+        rules: Ambush
+        cost_modifier: +15pts
+  - name: Knight Prime Brothers
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Precision Rifles
+      range: 24"
+      attacks: A1
+      special_rules:
+      - Precise
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Fearless
+    - Knightborn
+    cost: 155
+    upgrade_categories:
+    - category: Replace any Precision Rifles
+      upgrades:
+      - name: Heavy Rifle
+        rules: 24", A1, AP(1)
+        cost_modifier: Free
+      - name: Auto-Rifle
+        rules: 18", A2
+        cost_modifier: Free
+    - category: Replace one Precision Rifles
+      upgrades:
+      - name: Anti-Gravity Rifle
+        rules: 18", A1, Shatter
+        cost_modifier: Free
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +35pts
+    - category: Take one Heavy Rifle attachment
+      upgrades:
+      - name: Grenade-Mod
+        rules: 24", A1, Blast(3), Limited
+        cost_modifier: +10pts
+    - category: Replace one Precision Rifles and CCWs
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Anti-Gravity Pistol
+        rules: 9", A2, Shatter
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +10pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+  - name: Knight Assault Prime Brothers
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 5
+    - name: Heavy CCWs
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    special_rules:
+    - Fearless
+    - Knightborn
+    cost: 165
+    upgrade_categories:
+    - category: Replace one Heavy Pistols
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace one Heavy CCWs
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: Free
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Relic Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Jetpacks
+        rules: Ambush, Flying
+        cost_modifier: +35pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +10pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +10pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+  - name: Knight Veteran Prime Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Anti-Gravity Rifles
+      range: 18"
+      attacks: A1
+      special_rules:
+      - Shatter
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Versatile Attack
+    cost: 110
+    upgrade_categories:
+    - category: Replace any Anti-Gravity Rifles
+      upgrades:
+      - name: Heavy Rifle
+        rules: 24", A1, AP(1)
+        cost_modifier: +5pts
+      - name: Auto-Rifle
+        rules: 18", A2
+        cost_modifier: +5pts
+      - name: Precision Rifle
+        rules: 24", A1, Precise
+        cost_modifier: +5pts
+    - category: Replace any Anti-Gravity Rifles
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +15pts
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +50pts
+    - category: Any model may take one Heavy Rifle attachment
+      upgrades:
+      - name: Flamer-Mod
+        rules: 12", A1, Blast(3), Limited, Reliable
+        cost_modifier: +10pts
+      - name: Plasma-Mod
+        rules: 24", A1, AP(4), Limited
+        cost_modifier: +10pts
+      - name: Anti-Gravity-Mod
+        rules: 18", A2, Limited, Shatter
+        cost_modifier: +10pts
+      - name: Grenade-Mod
+        rules: 24", A1, Blast(3), Limited
+        cost_modifier: +10pts
+      - name: Fusion-Mod
+        rules: 12", A1, AP(4), Deadly(3), Limited
+        cost_modifier: +15pts
+    - category: Replace one Anti-Gravity Rifles and CCWs
+      upgrades:
+      - name: Sgt. Heavy Pistol, Energy Sword
+        rules: 12", A1, AP(1), A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Heavy Pistol
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Anti-Gravity Pistol
+        rules: 9", A2, Shatter
+        cost_modifier: +10pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +10pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+  - name: Knight Veteran Assault Prime Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Shielded
+    - Versatile Attack
+    cost: 90
+    upgrade_categories:
+    - category: Replace any Heavy Pistols and Combat Shield
+      upgrades:
+      - name: Energy Hammer, Combat Shield
+        rules: A1, Blast(3), Shielded
+        cost_modifier: Free
+      - name: Heavy Pistol, Energy Hammer
+        rules: 12", A1, AP(1), A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +20pts
+      - name: Heavy Chainsaw Sword
+        rules: A4, AP(1)
+        cost_modifier: +20pts
+    - category: Replace any Heavy Pistols
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Anti-Gravity Pistol
+        rules: 9", A2, Shatter
+        cost_modifier: +10pts
+    - category: Replace any Energy Hammer
+      upgrades:
+      - name: Heavy CCW
+        rules: A2, AP(1)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Relic Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +20pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Jetpacks
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +5pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +15pts
+  - name: Knight Desolator Brothers
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: HE-Launchers
+      range: 30"
+      attacks: A2
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Relentless
+    cost: 200
+    upgrade_categories:
+    - category: Replace any HE-Launchers
+      upgrades:
+      - name: AT-Launcher
+        rules: 30", A1, AP(2), Unstoppable
+        cost_modifier: +5pts
+    - category: Replace one HE-Launchers
+      upgrades:
+      - name: Vengeance HE-Launcher
+        rules: 30", A1, Blast(3), Indirect
+        cost_modifier: +15pts
+      - name: Vengeance AT-Launcher
+        rules: 30", A1, AP(2), Deadly(3)
+        cost_modifier: +35pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Mini-GL
+        rules: 18", A1, Indirect, Limited
+        cost_modifier: +15pts
+  - name: Knight Blaster Brothers
+    size: 5
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Plasma Rifles
+      range: 24"
+      attacks: A1
+      ap: AP(4)
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Relentless
+    cost: 220
+    upgrade_categories:
+    - category: Replace any Plasma Rifles
+      upgrades:
+      - name: Heavy Plasma Rifle
+        rules: 30", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Plasma Auto-Rifle
+        rules: 24", A2, AP(4)
+        cost_modifier: +30pts
+  - name: Knight Infernal Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Flamers
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Relentless
+    cost: 105
+    upgrade_categories: []
+  - name: Knight Elimination Brothers
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Sniper Rifles
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Reliable
+      - Takedown
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Scout
+    - Stealth
+    - Strider
+    cost: 155
+    upgrade_categories:
+    - category: Replace any Sniper Rifles
+      upgrades:
+      - name: Laser Sniper Rifle
+        rules: 30", A1, AP(2), Deadly(3), Reliable, Takedown
+        cost_modifier: +70pts
+  - name: Knight Suppression Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: null
+    weapons:
+    - name: Assault Autocannons
+      range: 18"
+      attacks: A3
+      ap: AP(2)
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Ambush
+    - Fearless
+    - Flying
+    - Knightborn
+    - Relentless
+    cost: 210
+    upgrade_categories: []
+  - name: Knight Heavy Prime Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Grave Precision Rifles
+      range: 24"
+      attacks: A2
+      special_rules:
+      - Precise
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    cost: 230
+    upgrade_categories:
+    - category: Replace any Grave Precision Rifles
+      upgrades:
+      - name: Grave Auto-Rifle
+        rules: 18", A4
+        cost_modifier: Free
+      - name: Grave Heavy Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +15pts
+    - category: Replace one Grave Precision Rifles
+      upgrades:
+      - name: Grave Heavy Machinegun
+        rules: 30", A4, AP(1)
+        cost_modifier: +35pts
+  - name: Knight Grave Destroyers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: CCWs
+      attacks: A3
+      count: 3
+    special_rules:
+    - Ambush
+    - Fearless
+    - Knightborn
+    - Shielded
+    cost: 230
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: The Founder's Banner
+        rules: Versatile Reach Aura
+        cost_modifier: +10pts
+      - name: Detachment Banner
+        rules: Courage Aura
+        cost_modifier: +30pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+    - category: Replace all Combat Shields and CCWS
+      upgrades:
+      - name: Dual Energy Claws
+        rules: A4, Rending
+        cost_modifier: +15pts
+      - name: Storm Rifle, CCW
+        rules: 24", A3, AP(1), A1
+        cost_modifier: +75pts
+    - category: Replace one Storm Rifle
+      upgrades:
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +15pts
+      - name: Cyclone Missiles, Storm Rifle
+        rules: 24", A1, AP(2), Deadly(3), Unstoppable, 24", A3, AP(1)
+        cost_modifier: +50pts
+    - category: Replace any CCWs
+      upgrades:
+      - name: Energy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: Free
+      - name: Chain-Fist
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A3, AP(4)
+        cost_modifier: +25pts
+  - name: Knight Jetpack Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Twin Assault Blasters
+      range: 12"
+      attacks: A4
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Ambush
+    - Fearless
+    - Flying
+    - Knightborn
+    cost: 270
+    upgrade_categories:
+    - category: Replace all Twin Assault Blasters
+      upgrades:
+      - name: Twin Plasma Blaster
+        rules: 12", A2, AP(4)
+        cost_modifier: +20pts
+  - name: Knight Guard Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    - name: Relic Swords
+      attacks: A1
+      ap: AP(2)
+      special_rules:
+      - Deadly(3)
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Melee Slayer
+    - Shielded
+    cost: 260
+    upgrade_categories:
+    - category: Replace all Relic Swords and Combat Shields
+      upgrades:
+      - name: Dual Energy Swords
+        rules: A4, AP(1), Rending
+        cost_modifier: +25pts
+    - category: Replace any Relic Swords
+      upgrades:
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace any Heavy Pistols
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace all Xenos Hunters
+      upgrades:
+      - name: The Founder's Avenger
+        rules: Retaliate(1)
+        cost_modifier: +10pts
+      - name: Honor Guard
+        rules: Ravage(3)
+        cost_modifier: +20pts
+  - name: Knight Eradication Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Fusion Rifles
+      range: 12"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Deadly(3)
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    - Relentless
+    cost: 250
+    upgrade_categories:
+    - category: Replace any Fusion Rifles
+      upgrades:
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+    - category: Replace one Fusion Rifles
+      upgrades:
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +45pts
+  - name: Knight Aggro Brothers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Twin Fist-Flamers
+      range: 6"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 3
+    - name: Dual Energy Fists
+      attacks: A4
+      ap: AP(4)
+      count: 3
+    special_rules:
+    - Fearless
+    - Knightborn
+    cost: 315
+    upgrade_categories:
+    - category: Replace any Twin Fist-Flamers
+      upgrades:
+      - name: Twin Fist-Pistols
+        rules: 12", A3
+        cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Shoulder-GL
+        rules: 18", A1, AP(2)
+        cost_modifier: +45pts
+  - name: Knight Prime Brother Bikers
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Twin Heavy Rifles
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      count: 3
+    - name: Heavy Pistols
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fast
+    - Fearless
+    - Knightborn
+    cost: 300
+    upgrade_categories: []
+  - name: Knight Prime ATV
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Heavy Rifle
+      range: 24"
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    - name: Gatling Gun
+      range: 18"
+      attacks: A6
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(3)
+    - Knightborn
+    - Scout
+    - Strider
+    cost: 255
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Array
+        rules: Unstoppable Mark
+        cost_modifier: +25pts
+    - category: Replace Gatling Gun
+      upgrades:
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +30pts
+  - name: Knight Anti-Grav APC
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Twin Frag-GL
+      range: 18"
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(3)
+    - Knightborn
+    - Strider
+    - Transport(11)
+    cost: 315
+    upgrade_categories:
+    - category: Replace Twin Frag-GL
+      upgrades:
+      - name: Twin Storm Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +50pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Artillery Relay
+        rules: 36", A1, Blast(6), Indirect
+        cost_modifier: +65pts
+      - name: Twin AA-MG
+        rules: 30", A6, Unstoppable
+        cost_modifier: +75pts
+      - name: Heavy Machinegun, Shield Projector
+        rules: 30", A3, AP(1), Stealth
+        cost_modifier: +75pts
+      - name: Missile Array
+        rules: 30", A2, AP(3), Deadly(3)
+        cost_modifier: +130pts
+  - name: Knight Prime Drop Pod
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Death Launcher
+      range: 18"
+      attacks: A1
+      special_rules:
+      - Blast(6)
+      count: 1
+    special_rules:
+    - Ambush
+    - Fearless
+    - Immobile
+    - Knightborn
+    - Transport(11)
+    cost: 220
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Array
+        rules: Unstoppable Mark
+        cost_modifier: +25pts
+    - category: Replace Death Launcher
+      upgrades:
+      - name: Rapid Storm Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +60pts
+  - name: Knight Anti-Grav Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 15
+    weapons:
+    - name: Twin Frag-GL
+      range: 18"
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Twin Light Gatling Gun
+      range: 18"
+      attacks: A8
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(6)
+    - Knightborn
+    - Strider
+    cost: 525
+    upgrade_categories:
+    - category: Replace Twin Light Gatling Gun
+      upgrades:
+      - name: Twin Laser Talon
+        rules: 24", A6, AP(3)
+        cost_modifier: +80pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +85pts
+    - category: Replace Twin Frag-GL
+      upgrades:
+      - name: Twin Storm Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +50pts
+      - name: Twin Tempest Rifle
+        rules: 18", A8, AP(1)
+        cost_modifier: +50pts
+      - name: Twin Heavy Fusion Rifle
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +65pts
+    - category: Upgrade with one
+      upgrades:
+      - name: AA-Pod
+        rules: 24", A2, AP(2), Unstoppable
+        cost_modifier: +40pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +50pts
+  - name: Knight Attack Speeder
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Gatling Gun
+      range: 18"
+      attacks: A6
+      count: 1
+    - name: Strike Missiles
+      range: 18"
+      attacks: A1
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    special_rules:
+    - Ambush
+    - Fast
+    - Fearless
+    - Impact(3)
+    - Knightborn
+    - Strider
+    cost: 360
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Array
+        rules: Unstoppable Mark
+        cost_modifier: +25pts
+    - category: Replace Gatling Gun
+      upgrades:
+      - name: Fusion Destroyer
+        rules: 12", A2, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Laser Talon
+        rules: 24", A3, AP(3)
+        cost_modifier: +25pts
+    - category: Replace Strike Missiles
+      upgrades:
+      - name: AA-Pod
+        rules: 24", A2, AP(2), Unstoppable
+        cost_modifier: Free
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Frag-GL
+        rules: 18", A1, Blast(3)
+        cost_modifier: +20pts
+      - name: Rocket-GL
+        rules: 18", A2, AP(1)
+        cost_modifier: +20pts
+      - name: Fury Missiles
+        rules: 24", A1, AP(2), Deadly(3)
+        cost_modifier: +50pts
+  - name: Knight Light Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Walker Pistol
+      range: 18"
+      attacks: A2
+      ap: AP(2)
+      count: 1
+    - name: Incendiary Cannon
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: Stomp
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Knightborn
+    - Scout
+    cost: 330
+    upgrade_categories:
+    - category: Replace Incendiary Cannon
+      upgrades:
+      - name: Twin Iron-Cannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +90pts
+    - category: Replace Walker Pistol
+      upgrades:
+      - name: Light Fist
+        rules: A4, AP(2)
+        cost_modifier: +10pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Frag-GL
+        rules: 18", A1, Blast(3)
+        cost_modifier: +20pts
+      - name: Twin Walker-MG
+        rules: 24", A4, AP(1)
+        cost_modifier: +60pts
+  - name: Knight Combat Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 15
+    weapons:
+    - name: Chest-GL
+      range: 18"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Stomp
+      attacks: A5
+      ap: AP(2)
+      count: 1
+    - name: Walker Claws
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 2
+    special_rules:
+    - Fear(3)
+    - Fearless
+    - Knightborn
+    cost: 520
+    upgrade_categories:
+    - category: Replace one Walker Claws
+      upgrades:
+      - name: Heavy Flamer, Walker Fist
+        rules: 12", A1, AP(1), Blast(3), Reliable, A4, AP(4)
+        cost_modifier: +25pts
+      - name: Light Gatling Cannon
+        rules: 24", A10
+        cost_modifier: +40pts
+      - name: Heavy Anti-Gravity Cannon
+        rules: 24", A6, Shatter
+        cost_modifier: +45pts
+      - name: Heavy Plasma Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +50pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +90pts
+    - category: Replace one Walker Claws
+      upgrades:
+      - name: Heavy Flamer, Walker Fist
+        rules: 12", A1, AP(1), Blast(3), Reliable, A4, AP(4)
+        cost_modifier: +25pts
+      - name: Missile Array
+        rules: 30", A4, AP(2), Unstoppable
+        cost_modifier: +35pts
+    - category: Replace any Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Rifle
+        rules: 24", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Light Gatling Gun
+        rules: 18", A4
+        cost_modifier: +5pts
+    - category: Replace Chest-GL
+      upgrades:
+      - name: Chest-Gun
+        rules: 24", A2, AP(1)
+        cost_modifier: +10pts
+      - name: Chest-Fuser
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Chest-MG
+        rules: 30", A3, AP(1)
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: AA-Pod
+        rules: 24", A2, AP(2), Unstoppable
+        cost_modifier: +40pts
+      - name: AA-MG
+        rules: 30", A3, AP(1), Unstoppable
+        cost_modifier: +55pts
+  - name: Knight Support Turret
+    size: 1
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Twin Thunder Cannon
+      range: 24"
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Blast(3)
+      - Indirect
+      count: 1
+    - name: Turret Crew
+      attacks: A3
+      count: 1
+    special_rules:
+    - Artillery
+    - Fearless
+    - Knightborn
+    cost: 215
+    upgrade_categories:
+    - category: Replace Twin Thunder Cannon
+      upgrades:
+      - name: Twin Crack Cannon
+        rules: 24", A6, AP(1), Indirect, Rending
+        cost_modifier: +30pts
+      - name: Twin Laser Talon
+        rules: 24", A6, AP(3)
+        cost_modifier: +35pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +40pts
+    - category: Upgrade with
+      upgrades:
+      - name: Targeting Array
+        rules: Unstoppable Mark
+        cost_modifier: +25pts
+  - name: Knight Heavy Anti-Grav Destroyer Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: Heavy Anti-Gravity Cannon
+      range: 24"
+      attacks: A6
+      special_rules:
+      - Shatter
+      count: 1
+    - name: Heavy Gatling Gun
+      range: 18"
+      attacks: A8
+      count: 1
+    - name: Proximity Defense Array
+      range: 18"
+      attacks: A3
+      ap: AP(1)
+      special_rules:
+      - Unstoppable
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(9)
+    - Knightborn
+    - Strider
+    - Transport(6)
+    cost: 860
+    upgrade_categories:
+    - category: Replace Heavy Gatling Gun
+      upgrades:
+      - name: Rapid Laser Talon
+        rules: 24", A6, AP(3)
+        cost_modifier: +80pts
+    - category: Replace Twin Heavy Machinegun
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +45pts
+    - category: Replace Heavy Anti-Gravity Cannon
+      upgrades:
+      - name: Heavy Plasma Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +5pts
+      - name: Heavy Laser Cannon
+        rules: 36", A1, AP(3), Deadly(6)
+        cost_modifier: +5pts
+  - name: Knight Heavy Anti-Grav Transport Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: Heavy Gatling Gun
+      range: 18"
+      attacks: A8
+      count: 1
+    - name: Proximity Defense Array
+      range: 18"
+      attacks: A3
+      ap: AP(1)
+      special_rules:
+      - Unstoppable
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Impact(9)
+    - Knightborn
+    - Strider
+    - Transport(11)
+    cost: 770
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Gatling Gun
+        rules: 18", A6
+        cost_modifier: +45pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +50pts
+    - category: Replace Heavy Gatling Gun
+      upgrades:
+      - name: Rapid Laser Talon
+        rules: 24", A6, AP(3)
+        cost_modifier: +80pts
+    - category: Replace Twin Heavy Machinegun
+      upgrades:
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +45pts
