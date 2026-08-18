@@ -184,13 +184,16 @@ fn load_army_catalog(path: &Path) -> Result<(String, yaml_loader::YamlArmy), Yam
 /// Build runs once per process; load errors are available via
 /// [`load_errors`].
 ///
+/// Returns a borrowed view of the roster so lookups do not deep-clone all
+/// catalogs. Callers that need ownership use [`all_armies`].
+///
 /// # Errors
 ///
 /// Panics-free by design: if the data directory cannot be found the empty
 /// roster is returned and the error is carried in [`load_errors`].
 #[must_use]
-pub fn cached_armies() -> Vec<Army> {
-    let roster = ROSTER.get_or_init(|| match load_all_armies() {
+pub fn cached_armies() -> &'static [Army] {
+    ROSTER.get_or_init(|| match load_all_armies() {
         Ok((armies, errors)) => {
             record_load_errors(errors);
             armies
@@ -199,8 +202,7 @@ pub fn cached_armies() -> Vec<Army> {
             record_load_errors(vec![("<data directory>".to_string(), e.to_string())]);
             Vec::new()
         }
-    });
-    roster.clone()
+    })
 }
 
 fn record_load_errors(errors: LoadErrors) {
@@ -221,26 +223,30 @@ pub fn load_errors() -> LoadErrors {
         .unwrap_or_else(|| load_all_armies().unwrap_or_default().1)
 }
 
-/// All armies known to the calculator (cached, see [`cached_armies`]).
+/// All armies known to the calculator (owned copy of the cached roster,
+/// see [`cached_armies`]).
 #[must_use]
 pub fn all_armies() -> Vec<Army> {
-    cached_armies()
+    cached_armies().to_vec()
 }
 
 /// Look up an army by its id (the YAML file stem, e.g.
 /// `alien-hives`). Returns `None` if unknown.
 #[must_use]
 pub fn get_army(id: &str) -> Option<Army> {
-    cached_armies().into_iter().find(|a| a.id == id)
+    cached_armies().iter().find(|a| a.id == id).cloned()
 }
 
 /// Look up a unit within an army by unit name. Returns `None` if unknown.
 #[must_use]
 pub fn get_unit(army_id: &str, unit_name: &str) -> Option<Unit> {
-    get_army(army_id)?
+    cached_armies()
+        .iter()
+        .find(|a| a.id == army_id)?
         .units
-        .into_iter()
+        .iter()
         .find(|u| u.name == unit_name)
+        .cloned()
 }
 
 #[cfg(test)]

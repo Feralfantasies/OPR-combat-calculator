@@ -13,7 +13,7 @@ pub mod combat;
 pub mod models;
 pub mod yaml_loader;
 
-pub use armies::{Army, alien_hives, all_armies, get_army, get_unit, load_errors};
+pub use armies::{Army, alien_hives, all_armies, cached_armies, get_army, get_unit, load_errors};
 pub use combat::{AttackResult, AttackType, CombatContext, CombatResult, DieRoll, resolve_attack};
 pub use models::{
     SpecialRule, Unit, UpgradeGroup, UpgradeOption, UpgradeSelection, Weapon, WeaponChange,

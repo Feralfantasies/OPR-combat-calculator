@@ -13,16 +13,12 @@
     clippy::panic
 )]
 
-use opr_api::{
-    Army, SpecialRule, UpgradeSelection, all_armies, apply_upgrades, get_army, get_unit,
-};
-use std::sync::OnceLock;
+use opr_api::{SpecialRule, UpgradeSelection, apply_upgrades, cached_armies, get_army, get_unit};
 
-/// Per-test-binary cache: the registry itself is `OnceLock`-cached in the
-/// API, so at most one `Vec<Army>` clone is paid per test binary.
-fn roster() -> &'static [Army] {
-    static ROSTER: OnceLock<Vec<Army>> = OnceLock::new();
-    ROSTER.get_or_init(all_armies)
+/// The registry's cached roster, borrowed: the loader builds the roster
+/// once per process, so these tests pay no clones at all.
+fn roster() -> &'static [opr_api::Army] {
+    cached_armies()
 }
 
 /// Every committed catalog converts and carries a version key.
@@ -120,6 +116,7 @@ fn upgrade_selection_applies_rules_and_costs() {
         group: "Upgrade with one".to_string(),
         option: "Archivist".to_string(),
         index: None,
+        option_index: None,
     };
     let upgraded = apply_upgrades(&md, &[archivist]).expect("Archivist upgrade applies cleanly");
     assert_eq!(upgraded.points, base_points + 40);
@@ -132,6 +129,7 @@ fn upgrade_selection_applies_rules_and_costs() {
         group: "Replace CCW".to_string(),
         option: "Energy Fist".to_string(),
         index: None,
+        option_index: None,
     };
     let upgraded =
         apply_upgrades(&md, &[energy_fist]).expect("Energy Fist upgrade applies cleanly");
@@ -155,6 +153,7 @@ fn upgrade_selection_applies_rules_and_costs() {
         group: "Replace CCW".to_string(),
         option: "Energy Sword".to_string(),
         index: None,
+        option_index: None,
     };
     let upgraded =
         apply_upgrades(&md, &[energy_sword]).expect("Energy Sword upgrade applies cleanly");
@@ -178,11 +177,13 @@ fn pick_one_group_rejects_double_selection() {
                 group: "Upgrade with one".to_string(),
                 option: "Archivist".to_string(),
                 index: None,
+                option_index: None,
             },
             UpgradeSelection {
                 group: "Upgrade with one".to_string(),
                 option: "Preacher".to_string(),
                 index: None,
+                option_index: None,
             },
         ],
     );
@@ -209,6 +210,7 @@ fn repeated_group_names_resolve_by_index() {
             group: "Upgrade with one".to_string(),
             option: "Jetpack".to_string(),
             index: None,
+            option_index: None,
         }],
     );
     assert!(
@@ -222,6 +224,7 @@ fn repeated_group_names_resolve_by_index() {
             group: "Upgrade with one".to_string(),
             option: "Jetpack".to_string(),
             index: Some(7),
+            option_index: None,
         }],
     )
     .expect("index-based lookup selects the second group");

@@ -7,7 +7,9 @@
 mod yaml;
 
 use crate::models::unit::Unit;
-pub use yaml::{all_armies, data_dir, get_army, get_unit, load_all_armies, load_errors};
+pub use yaml::{
+    all_armies, cached_armies, data_dir, get_army, get_unit, load_all_armies, load_errors,
+};
 
 /// A named army roster.
 #[derive(Debug, Clone, serde::Serialize)]

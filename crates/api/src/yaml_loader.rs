@@ -90,6 +90,10 @@ pub struct YamlWeapon {
     pub ap: Option<String>,
     #[serde(default)]
     pub special_rules: Vec<String>,
+    /// Explicit wielder count (e.g. `9x Suit-Bursts` in the source list).
+    /// When absent the unit size is used as the quantity.
+    #[serde(default)]
+    pub count: Option<u8>,
 }
 
 /// YAML representation of an upgrade category.
@@ -118,10 +122,21 @@ pub fn load_army_from_yaml(path: &Path) -> Result<(String, YamlArmy), YamlError>
     parse_army_yaml(&contents)
 }
 
+/// Numeric version components for a `vMAJOR.MINOR.PATCH`-style key.
+/// Unparsable components sort as 0, so malformed keys never outrank
+/// valid ones.
+fn version_key(version: &str) -> Vec<u32> {
+    version
+        .trim_start_matches('v')
+        .split('.')
+        .map(|part| part.parse().unwrap_or(0))
+        .collect()
+}
+
 /// Parse army YAML text into (version, army).
 ///
-/// When several version keys are present, the highest-sorting key is
-/// selected so the result is deterministic.
+/// When several version keys are present, the highest *numeric* version
+/// wins (string sorting would rank `v3.10.0` below `v3.9.0`).
 ///
 /// # Errors
 ///
@@ -131,7 +146,7 @@ pub fn parse_army_yaml(contents: &str) -> Result<(String, YamlArmy), YamlError> 
     let (version, army) = yaml_file
         .versions
         .into_iter()
-        .next_back()
+        .max_by_key(|(key, _)| version_key(key))
         .ok_or(YamlError::NoArmyData)?;
 
     Ok((version, army))
@@ -163,7 +178,8 @@ pub fn convert_unit(yaml_unit: &YamlUnit) -> Result<Unit, YamlError> {
         unit.tough = tough;
     }
 
-    // Convert weapons (unit size = number of models wielding them)
+    // Convert weapons; an explicit per-weapon count (collected from the
+    // `9x Weapon` source form) overrides the unit-size wielder default.
     for yaml_weapon in &yaml_unit.weapons {
         let weapon = convert_weapon(yaml_weapon, yaml_unit.size)?;
         unit = unit.with_weapon(weapon);
@@ -184,18 +200,17 @@ pub fn convert_unit(yaml_unit: &YamlUnit) -> Result<Unit, YamlError> {
     Ok(unit)
 }
 
-/// Convert a YAML weapon to the internal Weapon model.
+/// Convert a YAML weapon.
+///
+/// `default_quantity` is the wielder count used when the entry carries no
+/// explicit `count` (the unit size: catalogs without `9x Weapon` entries
+/// wield every weapon from every model).
 ///
 /// # Errors
 ///
 /// Returns an error if the weapon cannot be converted.
-/// Convert a YAML weapon. `quantity` is the number of models wielding it
-/// (the unit size; catalogs do not record per-weapon wielder counts).
-///
-/// # Errors
-///
-/// Returns an error if the weapon cannot be converted.
-pub fn convert_weapon(yaml_weapon: &YamlWeapon, quantity: u8) -> Result<Weapon, YamlError> {
+pub fn convert_weapon(yaml_weapon: &YamlWeapon, default_quantity: u8) -> Result<Weapon, YamlError> {
+    let quantity = yaml_weapon.count.unwrap_or(default_quantity);
     let attacks = parse_attacks(&yaml_weapon.attacks)?;
 
     // Determine if this is a melee or ranged weapon
@@ -238,13 +253,30 @@ pub fn convert_upgrade_category(
         options.push(option);
     }
 
+    let required_weapon = required_weapon_from_category(&yaml_category.category);
+
     Ok(UpgradeGroup {
         name: yaml_category.category.clone(),
         mode,
         options,
         target_weapon: target_weapon_from_category(&yaml_category.category),
+        required_weapon,
         replace_count: replace_count_from_category(&yaml_category.category),
     })
+}
+
+/// The weapon an attachment category requires its parent to be.
+/// `Take one Master Heavy Rifle attachment` -> `Master Heavy Rifle`;
+/// `Any model may take one Heavy Rifle attachment` -> `Heavy Rifle`.
+/// `None` for every other category.
+fn required_weapon_from_category(category: &str) -> Option<String> {
+    let rest = category.strip_suffix(" attachment")?;
+    let rest = rest.strip_suffix(' ')?;
+    let parent = rest.strip_suffix(" one ")?;
+    if parent == "Take" || parent == "Any model may take" {
+        return Some(parent.to_string());
+    }
+    None
 }
 
 /// The weapon a replacement category swaps out, parsed from the category
@@ -261,9 +293,10 @@ fn target_weapon_from_category(category: &str) -> Option<String> {
 }
 
 /// How many instances of the target a replacement removes: `Replace any X`
-/// removes one instance, every other replacement removes all.
+/// and `Replace one X` remove one instance, every other replacement removes
+/// all.
 fn replace_count_from_category(category: &str) -> ReplaceCount {
-    if category.starts_with("Replace any") {
+    if category.starts_with("Replace any") || category.starts_with("Replace one") {
         ReplaceCount::One
     } else {
         ReplaceCount::All
@@ -849,6 +882,7 @@ v3.5.3:
             attacks: "A2".to_string(),
             ap: None,
             special_rules: Vec::new(),
+            count: None,
         };
         let weapon = convert_weapon(&w, 5).unwrap();
         assert_eq!(weapon.quantity, 5);
@@ -862,11 +896,25 @@ v3.5.3:
             attacks: "A1".to_string(),
             ap: Some("AP(1)".to_string()),
             special_rules: Vec::new(),
+            count: Some(9),
         };
+        // An explicit per-weapon count overrides the unit-size default.
         let weapon = convert_weapon(&ranged, 3).unwrap();
-        assert_eq!(weapon.quantity, 3);
+        assert_eq!(weapon.quantity, 9);
         assert_eq!(weapon.range, Some(24));
         assert_eq!(weapon.get_ap(), Some(1));
+
+        // No count: the default (unit size) applies.
+        let no_count = YamlWeapon {
+            name: "CCWs".to_string(),
+            range: None,
+            attacks: "A1".to_string(),
+            ap: None,
+            special_rules: Vec::new(),
+            count: None,
+        };
+        let weapon = convert_weapon(&no_count, 3).unwrap();
+        assert_eq!(weapon.quantity, 3);
     }
 
     #[test]
@@ -904,6 +952,10 @@ v3.5.3:
             ReplaceCount::One
         );
         assert_eq!(
+            replace_count_from_category("Replace one CCW"),
+            ReplaceCount::One
+        );
+        assert_eq!(
             replace_count_from_category("Replace CCW"),
             ReplaceCount::All
         );
@@ -915,6 +967,21 @@ v3.5.3:
             replace_count_from_category("Upgrade with one"),
             ReplaceCount::All
         );
+    }
+
+    #[test]
+    fn test_version_selection_is_numeric() {
+        // Numeric ordering: v3.10.0 outranks v3.9.0 (lexicographic would
+        // rank it lower and pick the older roster).
+        let doc = "\"v3.9.0\":\n  name: Unit\n  id: unit\n  units: []\n".to_string()
+            + "\"v3.10.0\":\n  name: Unit\n  id: unit\n  units: []\n";
+        let (version, _) = parse_army_yaml(&doc).expect("two versions parse");
+        assert_eq!(version, "v3.10.0");
+
+        // A single version still resolves.
+        let (version, _) = parse_army_yaml("\"v1.0.0\":\n  name: Unit\n  id: unit\n  units: []\n")
+            .expect("one version parses");
+        assert_eq!(version, "v1.0.0");
     }
 
     #[test]
