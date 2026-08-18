@@ -13,7 +13,7 @@
 //! 7. Wound application     - Deadly(X), Tough(X)
 //! 8. Regeneration          - Regeneration (skipped by Bane/Rending/Unstoppable)
 
-use crate::combat::context::CombatContext;
+use crate::combat::context::{CombatContext, VersatileMode};
 use crate::combat::dice;
 use crate::models::rules::SpecialRule;
 use crate::models::unit::Unit;
@@ -65,7 +65,7 @@ pub fn resolve_attack(
 ) -> Result<CombatResult, String> {
     let mut result = CombatResult::default();
 
-    let weapons: Vec<&Weapon> = select_weapons(attacker, context);
+    let weapons = select_weapons(attacker, context);
 
     // Phase 1: Impact(X) — extra dice on a charge unless fatigued
     if context.is_melee()
@@ -77,7 +77,7 @@ pub fn resolve_attack(
         result.attacks.push(impact);
     }
 
-    for weapon in weapons {
+    for weapon in &weapons {
         let attack = resolve_weapon_attack(attacker, weapon, defender, context)?;
         result.total_net_wounds = result.total_net_wounds.saturating_add(attack.net_wounds);
         result.attacks.push(attack);
@@ -169,32 +169,91 @@ fn resolve_weapon_attack(
 }
 
 /// Weapons the attacker can use in this context.
+/// Weapons the attacker can use in this context.
 ///
-/// Versatile Attack lets the unit choose any of its weapons whether
-/// striking in melee or shooting; everyone else is limited to weapons
-/// matching the context type.
+/// Versatile Attack (v3.5.3): on activation the unit picks one effect that
+/// lasts until the end of the activation (see `CombatContext::versatile_mode`):
+/// all its models either get AP(+1) or +1 to hit, **only** when shooting or
+/// charging enemies over 9". Without the rule (or when the pick is not
+/// active) units are limited to weapons matching the context type, and in
+/// melee a Versatile-Attack unit may pick its best weapon instead (the
+/// classic "choose any weapon" interpretation).
 #[must_use]
-fn select_weapons<'a>(attacker: &'a Unit, context: &CombatContext) -> Vec<&'a Weapon> {
-    if attacker.has_rule(&SpecialRule::VersatileAttack) {
-        attacker.weapons.iter().collect()
-    } else if context.is_melee() {
+fn context_weapon_refs<'a>(attacker: &'a Unit, context: &CombatContext) -> Vec<&'a Weapon> {
+    if context.is_melee() {
         attacker.melee_weapons()
     } else {
         attacker.ranged_weapons()
     }
 }
 
+#[must_use]
+fn select_weapons(attacker: &Unit, context: &CombatContext) -> Vec<Weapon> {
+    if !attacker.has_rule(&SpecialRule::VersatileAttack) {
+        return context_weapon_refs(attacker, context)
+            .into_iter()
+            .cloned()
+            .collect();
+    }
+
+    // The activation effect fires only while shooting, or charging,
+    // against enemies over 9".
+    let effect_active = VersatileMode::from_u8(context.versatile_mode).is_some()
+        && context.is_long_range()
+        && (context.is_ranged() || context.is_charging);
+
+    if !effect_active && context.is_melee() {
+        // Melee without the activation effect active: the unit may still
+        // pick its best weapon (any weapon in hand).
+        return attacker.weapons.clone();
+    }
+
+    let context_weapons: Vec<Weapon> = context_weapon_refs(attacker, context)
+        .into_iter()
+        .cloned()
+        .collect();
+    if effect_active {
+        // AP(+1) pick: every context weapon without AP gains AP(1);
+        // weapons that already have AP are left unchanged.
+        context_weapons
+            .into_iter()
+            .map(|weapon| {
+                if weapon.get_ap().is_some() {
+                    weapon
+                } else {
+                    weapon.with_rule(SpecialRule::AP(1))
+                }
+            })
+            .collect()
+    } else {
+        // +1-to-hit pick (applied in `compute_hit_modifier`): context
+        // weapons only.
+        context_weapons
+    }
+}
+
 /// Compute the total modifier to apply to hit rolls.
 ///
-/// Battleborn: +1 to hit rolls when attacking in melee.
+/// Versatile Attack "hit bonus" pick: +1 to hit rolls while the activation
+/// effect is active (shooting or charging enemies over 9").
+///
+/// Fatigued units hit on unmodified 6s only, so **positive** modifiers are
+/// ignored for them (a fatigued Battle Brothers unit cannot bank a raw 5
+/// into a hit); negative modifiers still apply. Other hit-modifier rules
+/// (Indirect, Thrust, Stealth) would add further modifiers here.
+/// TODO: implement those rule modifiers.
 fn compute_hit_modifier(attacker: &Unit, context: &CombatContext) -> i32 {
-    // Indirect (shooting after moving), Thrust (charging) and Stealth
-    // (defender at >9") would add further modifiers here.
-    // TODO: Implement those rule modifiers.
-    if context.is_melee() && attacker.has_rule(&SpecialRule::Battleborn) {
-        return 1;
+    let effect_active = matches!(
+        VersatileMode::from_u8(context.versatile_mode),
+        Some(VersatileMode::HitBonus)
+    ) && context.is_long_range()
+        && (context.is_ranged() || context.is_charging);
+    let modifier = i32::from(effect_active && attacker.has_rule(&SpecialRule::VersatileAttack));
+
+    if context.attacker_fatigued && modifier > 0 {
+        return 0;
     }
-    0
+    modifier
 }
 
 /// Determine the effective Quality target for hit rolls.
@@ -269,19 +328,29 @@ fn apply_blast(hits: u32, weapon: &Weapon, defender_quantity: u8) -> u32 {
 }
 
 /// Determine the effective Defense target, applying AP and cover.
-fn effective_defense(weapon: &Weapon, defender: &Unit, context: &CombatContext) -> u8 {
+/// Base defense target before AP, with Shielded applied. Cover does not
+/// apply (it only defends against ranged attacks).
+///
+/// Shielded (v3.5.3): +1 to defense rolls against hits that are **not
+/// from spells**. Weapon attacks, charges and Impact are all melee strikes,
+/// so Shielded lowers the target in any context; spells are not modeled as
+/// ranged attacks yet, so this helper is spell-free today.
+fn base_defense_for_strikes(defender: &Unit) -> i32 {
     let mut defense = i32::from(defender.defense);
+    if defender.has_rule(&SpecialRule::Shielded) {
+        defense = defense.saturating_sub(1);
+    }
+    defense
+}
+
+/// Determine the defense roll target for a weapon attack.
+fn effective_defense(weapon: &Weapon, defender: &Unit, context: &CombatContext) -> u8 {
+    let mut defense = base_defense_for_strikes(defender);
 
     // Cover: +1 to the defender's rolls vs shooting, so the defender
     // needs 1 LESS to block. (AP by contrast subtracts from the rolls,
     // so the target goes UP.)
     if context.is_ranged() && context.defender_in_cover {
-        defense = defense.saturating_sub(1);
-    }
-
-    // Shielded: +1 to the defender's rolls in any context, so the
-    // defender needs 1 LESS to block.
-    if defender.has_rule(&SpecialRule::Shielded) {
         defense = defense.saturating_sub(1);
     }
 
@@ -397,7 +466,12 @@ fn resolve_impact(attacker: &Unit, defender: &Unit) -> Option<AttackResult> {
     let dice_count = u32::from(x).saturating_mul(u32::from(attacker.quantity));
     let rolls = dice::roll_d6s(dice_count, 0);
     let hits = dice::count_successes(&rolls, 2);
-    let defense_target = defender.defense.clamp(2, 6);
+    // Impact resolves as a melee strike, so it goes through the shared
+    // defense helper (Shielded included) rather than the raw defense value.
+    let defense_target = base_defense_for_strikes(defender)
+        .clamp(2, 6)
+        .try_into()
+        .unwrap_or(6);
     let defense_rolls = dice::roll_d6s(hits, 0);
     let blocked = dice::count_successes(&defense_rolls, defense_target);
     let wounds = hits.saturating_sub(blocked);
@@ -716,79 +790,126 @@ mod tests {
     // ------------------------------------------------------------------
 
     #[test]
-    fn battleborn_grants_melee_hit_bonus_only() {
+    fn battleborn_grants_no_hit_modifier() {
+        // Battleborn is a morale rule (4+ to recover from Shaken), not a
+        // hit modifier: hit resolution must not reference it at all.
         let plain = Unit::new("Soldier", 1, 3, 3);
         let born = Unit::new("Soldier", 1, 3, 3).with_rule(SpecialRule::Battleborn);
 
-        let melee = CombatContext::melee_charge();
-        assert_eq!(compute_hit_modifier(&plain, &melee), 0);
-        assert_eq!(compute_hit_modifier(&born, &melee), 1);
-
-        // The bonus is melee-only.
-        let ranged = CombatContext::ranged(12);
-        assert_eq!(compute_hit_modifier(&born, &ranged), 0);
+        for context in [
+            CombatContext::melee_charge(),
+            CombatContext::melee_charge().with_distance(12),
+            CombatContext::ranged(12),
+        ] {
+            assert_eq!(compute_hit_modifier(&born, &context), 0);
+            assert_eq!(compute_hit_modifier(&plain, &context), 0);
+        }
     }
 
     #[test]
-    fn battleborn_hits_significantly_more_at_high_quality() {
-        // Quality 6 needs natural 6s to hit; Battleborn's +1 turns 5s
-        // into hits too. Over 600 single-attack resolutions the totals
-        // diverge far beyond any flaking: E[plain] = 600/6 = 100,
-        // E[Born] = 600/3 = 200, sigma ~9-12.
-        let resolve_hits = |with_born: bool| -> u32 {
-            let mut unit = Unit::new("Q6", 1, 6, 3).with_weapon(Weapon::melee("Claws", 1, 1));
-            if with_born {
-                unit = unit.with_rule(SpecialRule::Battleborn);
-            }
-            let defender = Unit::new("Target", 5, 3, 4);
-            let mut hits = 0u32;
-            for _ in 0..600 {
-                let result = resolve_attack(&unit, &defender, &CombatContext::melee_charge())
-                    .expect("resolution succeeds");
-                hits += result
-                    .attacks
-                    .first()
-                    .expect("one weapon")
-                    .hits_before_multiplier;
-            }
-            hits
-        };
+    fn fatigued_attacker_ignores_positive_modifiers() {
+        // A fatigued unit hits on unmodified 6s only: a positive hit
+        // modifier must not turn a raw 5 into a success.
+        let versatile = Unit::new("Vet", 1, 3, 3).with_rule(SpecialRule::VersatileAttack);
 
-        let plain = resolve_hits(false);
-        let born = resolve_hits(true);
-        assert!(
-            born > plain,
-            "Battleborn (total {born}) must hit more than plain (total {plain})"
-        );
-        // 6-sigma bands around the expectations 100 / 200.
-        assert!(
-            (40..=160).contains(&plain),
-            "plain Q6 total {plain} far off 100"
-        );
-        assert!(
-            (140..=260).contains(&born),
-            "Battleborn Q6 total {born} far off 200"
-        );
+        // No fatigue: the picked +1 bonus applies when the effect is active
+        // (shooting over 9").
+        let active = CombatContext::ranged(12).with_versatile_mode(1);
+        assert_eq!(compute_hit_modifier(&versatile, &active), 1);
+
+        // Fatigued: the positive modifier is suppressed.
+        let fatigued = active.with_fatigue(true);
+        assert_eq!(compute_hit_modifier(&versatile, &fatigued), 0);
+
+        // End-to-end over 200 resolutions: a fatigued Versatile attacker at
+        // quality 3 with the hit pick active scores only on unmodified 6s
+        // (effective quality 6), so 5 rolls are never banked.
+        let unit = Unit::new("Q3", 1, 3, 3)
+            .with_rule(SpecialRule::VersatileAttack)
+            .with_weapon(Weapon::ranged("Gun", 1, 1, 12));
+        let defender = Unit::new("Target", 1, 3, 4);
+        for _ in 0..200 {
+            let result = resolve_attack(
+                &unit,
+                &defender,
+                &CombatContext::ranged(12)
+                    .with_versatile_mode(1)
+                    .with_fatigue(true),
+            )
+            .expect("resolution succeeds");
+            let attack = result.attacks.first().expect("one weapon");
+            assert!(attack.hits_before_multiplier <= 1);
+        }
     }
 
     #[test]
-    fn versatile_attack_offers_every_weapon_in_any_context() {
-        let plain = Unit::new("Fighter", 1, 3, 3)
+    fn versatile_attack_conditions_and_picks() {
+        let versatile = Unit::new("Vet", 1, 3, 3)
+            .with_rule(SpecialRule::VersatileAttack)
             .with_weapon(Weapon::melee("Claws", 1, 2))
             .with_weapon(Weapon::ranged("Pistol", 1, 1, 18));
-        let versatile = plain.clone().with_rule(SpecialRule::VersatileAttack);
 
-        let melee = CombatContext::melee_charge();
-        let ranged = CombatContext::ranged(3);
+        // The activation effect only fires when shooting, or charging
+        // against enemies over 9". Without an active pick, a shooting
+        // context offers only the context-matching weapons; a melee
+        // context keeps the best-weapon choice (any weapon in hand).
+        for context in [
+            CombatContext::melee_charge(), // charge under 9": no effect
+            CombatContext::ranged(3),      // shooting close: no effect
+        ] {
+            let weapons = select_weapons(&versatile, &context);
+            if context.is_melee() {
+                assert_eq!(weapons.len(), 2);
+            } else {
+                assert_eq!(weapons.len(), 1);
+            }
+            assert_eq!(compute_hit_modifier(&versatile, &context), 0);
+        }
 
-        // Without the rule, contexts only offer weapons of the matching
-        // type (previous behavior).
-        assert_eq!(select_weapons(&plain, &melee).len(), 1);
-        assert_eq!(select_weapons(&plain, &ranged).len(), 1);
+        // Active hit pick (mode 1): +1 while shooting, or charging,
+        // against a target over 9".
+        assert_eq!(
+            compute_hit_modifier(
+                &versatile,
+                &CombatContext::ranged(12).with_versatile_mode(1)
+            ),
+            1
+        );
+        assert_eq!(
+            compute_hit_modifier(
+                &versatile,
+                &CombatContext::melee_charge()
+                    .with_distance(12)
+                    .with_versatile_mode(1)
+            ),
+            1
+        );
 
-        // Versatile Attack unlocks every weapon in every context.
-        assert_eq!(select_weapons(&versatile, &melee).len(), 2);
-        assert_eq!(select_weapons(&versatile, &ranged).len(), 2);
+        // Active AP(+1) pick (mode 0): charging over 9" upgrades AP-less
+        // melee weapons; no hit modifier is granted.
+        let ap_context = CombatContext::melee_charge()
+            .with_distance(12)
+            .with_versatile_mode(0);
+        let weapons = select_weapons(&versatile, &ap_context);
+        assert_eq!(weapons.len(), 1, "melee context: only the melee weapon");
+        assert_eq!(weapons[0].get_ap(), Some(1), "Claws should carry AP(1)");
+        assert_eq!(compute_hit_modifier(&versatile, &ap_context), 0);
+
+        // Same AP pick against a shooting target over 9": the pistol
+        // (no AP) gains AP(1).
+        let ranged_ap = select_weapons(
+            &versatile,
+            &CombatContext::ranged(12).with_versatile_mode(0),
+        );
+        assert_eq!(ranged_ap.len(), 1);
+        assert_eq!(ranged_ap[0].get_ap(), Some(1));
+
+        // Without the rule: context weapons only, never upgraded.
+        let plain_unit =
+            Unit::new("Plain", 1, 3, 3).with_weapon(Weapon::ranged("Pistol", 1, 1, 18));
+        let weapons = select_weapons(&plain_unit, &CombatContext::ranged(12));
+        assert_eq!(weapons.len(), 1);
+        assert_eq!(weapons[0].get_ap(), None);
     }
 
     #[test]
@@ -831,6 +952,44 @@ mod tests {
         assert_eq!(
             effective_defense(&ranged_weapon, &shielded, &ranged.with_cover(true)),
             2
+        );
+    }
+
+    #[test]
+    fn shielded_applies_to_impact() {
+        // Impact resolves through the shared strike-defense helper, so a
+        // Shielded defender gets the same -1 target as for weapon hits.
+        let plain = Unit::new("Guard", 1, 3, 4);
+        let shielded = Unit::new("Guard", 1, 3, 4).with_rule(SpecialRule::Shielded);
+        let context = CombatContext::melee_charge();
+
+        assert_eq!(base_defense_for_strikes(&plain), 4);
+        assert_eq!(base_defense_for_strikes(&shielded), 3);
+
+        // End-to-end over 500 charge resolutions: a Shielded defender
+        // blocks more Impact hits than a plain one (target 3 vs 4 is far
+        // beyond dice noise for 500 dice).
+        let impact_attacker = Unit::new("APC", 1, 3, 3)
+            .with_rule(SpecialRule::Impact(4))
+            .with_weapon(Weapon::melee("Gun", 1, 1));
+
+        let blocked = |defender: &Unit| -> u32 {
+            let mut total = 0u32;
+            for _ in 0..500 {
+                let result = resolve_attack(&impact_attacker, defender, &context)
+                    .expect("resolution succeeds");
+                if let Some(impact) = result.attacks.iter().find(|a| a.weapon_name == "Impact") {
+                    total = total.saturating_add(impact.blocked_hits);
+                }
+            }
+            total
+        };
+
+        let plain_blocked = blocked(&plain);
+        let shielded_blocked = blocked(&shielded);
+        assert!(
+            shielded_blocked > plain_blocked,
+            "Shielded (total {shielded_blocked}) must block more Impact hits than plain (total {plain_blocked})"
         );
     }
 }

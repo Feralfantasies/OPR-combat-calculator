@@ -75,9 +75,11 @@ pub enum SpecialRule {
     Unique,                   // Named character (one per army)
 
     // Battle Brothers faction rules
-    Battleborn,                 // +1 to hit rolls when attacking in melee
-    Shielded,                   // +1 to defense rolls
-    VersatileAttack,            // Can use best attack value in melee or shooting
+    Battleborn, // Morale: while a unit is Shaken at the start of the
+    // round, roll 1d6; 4+ stops it being Shaken
+    Shielded,        // +1 to defense rolls against hits not from spells
+    VersatileAttack, // At activation: AP(+1) or +1 to hit while shooting/
+    // charging over 9" (CombatContext::versatile_mode)
     FuriousAura,                // Model + unit get Furious
     HiveBondBoostAura,          // Model + unit get Hive Bond Boost
     IncreasedShootingRangeAura, // Model + unit get +6" range
