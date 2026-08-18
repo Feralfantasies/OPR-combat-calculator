@@ -290,8 +290,9 @@ pub fn convert_upgrade_option(yaml_upgrade: &YamlUpgrade) -> Result<UpgradeOptio
     let rules = yaml_upgrade.rules.as_deref().unwrap_or("");
 
     // Replacement entries use weapon-specification syntax: optional range,
-    // one or more "A<attacks>" values, then rule names.
-    if let Some(weapon) = parse_upgrade_weapon(rules) {
+    // one or more "A<attacks>" values, then rule names. The option's own
+    // name becomes the weapon name.
+    if let Some(weapon) = parse_upgrade_weapon(&yaml_upgrade.name, rules) {
         return Ok(UpgradeOption {
             name: yaml_upgrade.name.clone(),
             description,
@@ -326,9 +327,11 @@ pub fn convert_upgrade_option(yaml_upgrade: &YamlUpgrade) -> Result<UpgradeOptio
 
 /// Parse an upgrade option's weapon specification, e.g.
 /// `24", A6, AP(1)` -> a ranged weapon with 6 attacks and AP(1), or
-/// `A2, Blast(3)` -> a melee weapon. Returns `None` when the string is not
+/// `A2, Blast(3)` -> a melee weapon. `name` is the display name of the
+/// upgrade the specification belongs to (the replaced weapon takes it).
+/// Returns `None` when the string is not
 /// in weapon-specification form (no `A<number>` attacks value).
-fn parse_upgrade_weapon(rules: &str) -> Option<Weapon> {
+fn parse_upgrade_weapon(name: &str, rules: &str) -> Option<Weapon> {
     let parts: Vec<&str> = rules
         .split(',')
         .map(str::trim)
@@ -364,8 +367,8 @@ fn parse_upgrade_weapon(rules: &str) -> Option<Weapon> {
     }
 
     let mut weapon = range.map_or_else(
-        || Weapon::melee("Weapon", 1, attacks),
-        |r| Weapon::ranged("Weapon", 1, attacks, r),
+        || Weapon::melee(name, 1, attacks),
+        |r| Weapon::ranged(name, 1, attacks, r),
     );
     for name in &rule_names {
         weapon = weapon.with_rule(parse_special_rule(name).ok()?);
@@ -916,12 +919,14 @@ v3.5.3:
 
     #[test]
     fn test_parse_upgrade_weapon_spec() {
-        let w = parse_upgrade_weapon(r#"24", A6, AP(1)"#).unwrap();
+        let w = parse_upgrade_weapon("Rapid Storm Rifle", r#"24", A6, AP(1)"#).unwrap();
+        assert_eq!(w.name, "Rapid Storm Rifle");
         assert_eq!(w.range, Some(24));
         assert_eq!(w.attacks, 6);
         assert_eq!(w.get_ap(), Some(1));
 
-        let w = parse_upgrade_weapon("A2, Blast(3)").unwrap();
+        let w = parse_upgrade_weapon("Energy Hammer", "A2, Blast(3)").unwrap();
+        assert_eq!(w.name, "Energy Hammer");
         assert_eq!(w.range, None);
         assert_eq!(w.attacks, 2);
         assert!(matches!(
@@ -930,8 +935,8 @@ v3.5.3:
         ));
 
         // Plain rule text is not a weapon specification.
-        assert!(parse_upgrade_weapon("Furious").is_none());
-        assert!(parse_upgrade_weapon("").is_none());
+        assert!(parse_upgrade_weapon("Anything", "Furious").is_none());
+        assert!(parse_upgrade_weapon("Anything", "").is_none());
     }
 
     #[test]
