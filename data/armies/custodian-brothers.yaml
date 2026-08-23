@@ -1,0 +1,1120 @@
+v3.5.3:
+  name: Custodian Brothers
+  id: ewbra8nv3nq3k27p
+  units:
+  - name: Master Destroyer
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Flame-Mount
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: Custodian Axe
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      count: 1
+    - name: Stomp
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Ambush
+    - Fearless
+    - Guardian
+    - Hero
+    cost: 250
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Warden
+        rules: Unstoppable in Melee
+        cost_modifier: +5pts
+      - name: Captain
+        rules: Guardian Boost
+        cost_modifier: +10pts
+      - name: Accuser
+        rules: Shred when Shooting
+        cost_modifier: +10pts
+      - name: Watcher
+        rules: Hit & Run Shooter
+        cost_modifier: +20pts
+      - name: Army Standard Bearer
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: Disruptor
+        rules: Stealth
+        cost_modifier: +25pts
+    - category: Replace Flame-Mount and Custodian Axe
+      upgrades:
+      - name: Rapid Wrist-GL, Burst Shot-Mount
+        rules: 18", A2, Blast(3), 12", A3, AP(1)
+        cost_modifier: +20pts
+    - category: Replace Flame-Mount
+      upgrades:
+      - name: Burst Shot-Mount
+        rules: 12", A3, AP(1)
+        cost_modifier: +5pts
+      - name: Fuse-Mount
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Bolt-Mount
+        rules: 18", A3, Rending
+        cost_modifier: +15pts
+      - name: Needler-Mount
+        rules: 24", A3, Bane
+        cost_modifier: +20pts
+      - name: Destructor-Mount
+        rules: 24", A2, Tear
+        cost_modifier: +25pts
+      - name: Storm-Mount
+        rules: 24", A3, AP(1)
+        cost_modifier: +25pts
+    - category: Replace Custodian Axe
+      upgrades:
+      - name: Custodian Halberd
+        rules: A2, Deadly(3), Tear
+        cost_modifier: +30pts
+      - name: Custodian Sword
+        rules: A6, AP(1), Rending
+        cost_modifier: +35pts
+      - name: Custodian Spear
+        rules: A6, AP(3)
+        cost_modifier: +45pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast
+        cost_modifier: +15pts
+      - name: The Founder's Warding
+        rules: Regeneration
+        cost_modifier: +30pts
+      - name: Envoy Banner
+        rules: Dash
+        cost_modifier: +35pts
+  - name: Veteran Master Custodian
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Rapid Shot-Mount
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    - name: Custodian Axe
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      count: 1
+    special_rules:
+    - Fearless
+    - Guardian
+    - Hero
+    - Versatile Attack
+    cost: 150
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Captain
+        rules: Guardian Boost Aura
+        cost_modifier: +10pts
+      - name: Warden
+        rules: Unstoppable in Melee Aura
+        cost_modifier: +15pts
+      - name: Watcher
+        rules: Hit & Run Shooter Aura
+        cost_modifier: +20pts
+      - name: Army Standard Bearer
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: Disruptor
+        rules: Stealth Aura
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +45pts
+      - name: Custodian Jetbike
+        rules: Heavy Rifle Array (24", A6, AP(1)), Fast, Strider, Tough(3)
+        cost_modifier: +230pts
+    - category: Replace Heavy Rifle Array
+      upgrades:
+      - name: Twin Devastator
+        rules: 24", A4, AP(3)
+        cost_modifier: Free
+      - name: Twin Laser Pulser
+        rules: 24", A2, AP(2), Blast(3)
+        cost_modifier: Free
+      - name: Fusion Missiles
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +15pts
+    - category: Replace Rapid Shot-Mount and Custodian Axe
+      upgrades:
+      - name: Wrist-GL, Burst Shot-Mount, Heavy CCW
+        rules: 18", A1, Blast(3), 12", A3, AP(1), A2, AP(1)
+        cost_modifier: +25pts
+      - name: Energy Lance
+        rules: A6, AP(1), Thrust
+        cost_modifier: +30pts
+    - category: Replace Rapid Shot-Mount
+      upgrades:
+      - name: Flame-Mount
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Fuse-Mount
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Bolt-Mount
+        rules: 18", A3, Rending
+        cost_modifier: +25pts
+      - name: Needler-Mount
+        rules: 24", A3, Bane
+        cost_modifier: +30pts
+      - name: Destructor-Mount
+        rules: 24", A2, Tear
+        cost_modifier: +40pts
+      - name: Storm-Mount
+        rules: 24", A3, AP(1)
+        cost_modifier: +40pts
+    - category: Replace Custodian Axe
+      upgrades:
+      - name: Custodian Halberd
+        rules: A2, Deadly(3), Tear
+        cost_modifier: +40pts
+      - name: Custodian Sword
+        rules: A6, AP(1), Rending
+        cost_modifier: +40pts
+      - name: Custodian Spear
+        rules: A6, AP(3)
+        cost_modifier: +55pts
+  - name: Master Custodian
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Rapid Shot-Mount
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    - name: Custodian Axe
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      count: 1
+    special_rules:
+    - Fearless
+    - Guardian
+    - Hero
+    cost: 135
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Captain
+        rules: Guardian Boost Aura
+        cost_modifier: +10pts
+      - name: Warden
+        rules: Unstoppable in Melee Aura
+        cost_modifier: +15pts
+      - name: Watcher
+        rules: Hit & Run Shooter Aura
+        cost_modifier: +20pts
+      - name: Army Standard Bearer
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: Disruptor
+        rules: Stealth Aura
+        cost_modifier: +30pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Jetpack
+        rules: Ambush, Flying
+        cost_modifier: +45pts
+      - name: Custodian Jetbike
+        rules: Heavy Rifle Array (24", A6, AP(1)), Fast, Strider, Tough(3)
+        cost_modifier: +200pts
+    - category: Replace Heavy Rifle Array
+      upgrades:
+      - name: Twin Devastator
+        rules: 24", A4, AP(3)
+        cost_modifier: +5pts
+      - name: Twin Laser Pulser
+        rules: 24", A2, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Fusion Missiles
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +10pts
+    - category: Replace Rapid Shot-Mount and Custodian Axe
+      upgrades:
+      - name: Wrist-GL, Burst Shot-Mount, Heavy CCW
+        rules: 18", A1, Blast(3), 12", A3, AP(1), A2, AP(1)
+        cost_modifier: +20pts
+      - name: Energy Lance
+        rules: A6, AP(1), Thrust
+        cost_modifier: +30pts
+    - category: Replace Rapid Shot-Mount
+      upgrades:
+      - name: Flame-Mount
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Fuse-Mount
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Bolt-Mount
+        rules: 18", A3, Rending
+        cost_modifier: +20pts
+      - name: Needler-Mount
+        rules: 24", A3, Bane
+        cost_modifier: +20pts
+      - name: Destructor-Mount
+        rules: 24", A2, Tear
+        cost_modifier: +30pts
+      - name: Storm-Mount
+        rules: 24", A3, AP(1)
+        cost_modifier: +30pts
+    - category: Replace Custodian Axe
+      upgrades:
+      - name: Custodian Halberd
+        rules: A2, Deadly(3), Tear
+        cost_modifier: +30pts
+      - name: Custodian Sword
+        rules: A6, AP(1), Rending
+        cost_modifier: +35pts
+      - name: Custodian Spear
+        rules: A6, AP(3)
+        cost_modifier: +45pts
+  - name: Great Sister
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Energy Sword
+      attacks: A4
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 1
+    special_rules:
+    - Guardian
+    - Hero
+    cost: 55
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Captain
+        rules: Guardian Boost Aura
+        cost_modifier: +10pts
+      - name: Warden
+        rules: Unstoppable in Melee Aura
+        cost_modifier: +15pts
+      - name: Accuser
+        rules: Shred when Shooting Aura
+        cost_modifier: +30pts
+      - name: Disruptor
+        rules: Stealth Aura
+        cost_modifier: +30pts
+      - name: Sorceress
+        rules: Caster(2)
+        cost_modifier: +45pts
+      - name: Master Sorceress
+        rules: Caster(3)
+        cost_modifier: +70pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Prosecution Rifle, CCW
+        rules: 24", A2, A4
+        cost_modifier: Free
+      - name: Flamer, CCW
+        rules: 12", A1, Blast(3), Reliable, A4
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Prosecution Ammo
+        rules: Relentless
+        cost_modifier: Free
+      - name: Vigilant Oath
+        rules: Furious
+        cost_modifier: +5pts
+      - name: Hunter Instincts
+        rules: Scout
+        cost_modifier: +10pts
+  - name: Custodian Brothers
+    size: 3
+    quality: 3+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Shot-Mounts
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    - name: Custodian Axes
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      count: 3
+    special_rules:
+    - Fearless
+    - Guardian
+    cost: 195
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
+    - category: Replace all Shot-Mounts and Custodian Axes
+      upgrades:
+      - name: Burst Shot-Mount, Heavy CCW
+        rules: 12", A3, AP(1), A1, AP(1)
+        cost_modifier: +35pts
+    - category: Replace any Shot-Mounts
+      upgrades:
+      - name: Flame-Mount
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Fuse-Mount
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Bolt-Mount
+        rules: 18", A3, Rending
+        cost_modifier: +25pts
+      - name: Needler-Mount
+        rules: 24", A3, Bane
+        cost_modifier: +30pts
+      - name: Destructor-Mount
+        rules: 24", A2, Tear
+        cost_modifier: +35pts
+      - name: Storm-Mount
+        rules: 24", A3, AP(1)
+        cost_modifier: +35pts
+    - category: Replace any Custodian Axes
+      upgrades:
+      - name: Custodian Halberd
+        rules: A1, Deadly(3), Tear
+        cost_modifier: +15pts
+      - name: Custodian Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Custodian Spear
+        rules: A3, AP(3)
+        cost_modifier: +25pts
+  - name: Veteran Custodian Brothers
+    size: 3
+    quality: 3+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Shot-Mounts
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    - name: Custodian Axes
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      count: 3
+    special_rules:
+    - Fearless
+    - Guardian
+    - Versatile Attack
+    cost: 220
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
+    - category: Replace all Shot-Mounts and Custodian Axes
+      upgrades:
+      - name: Burst Shot-Mount, Heavy CCW
+        rules: 12", A3, AP(1), A1, AP(1)
+        cost_modifier: +40pts
+    - category: Replace any Shot-Mounts
+      upgrades:
+      - name: Flame-Mount
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+      - name: Fuse-Mount
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +30pts
+      - name: Bolt-Mount
+        rules: 18", A3, Rending
+        cost_modifier: +35pts
+      - name: Needler-Mount
+        rules: 24", A3, Bane
+        cost_modifier: +40pts
+      - name: Destructor-Mount
+        rules: 24", A2, Tear
+        cost_modifier: +50pts
+      - name: Storm-Mount
+        rules: 24", A3, AP(1)
+        cost_modifier: +50pts
+    - category: Replace any Custodian Axes
+      upgrades:
+      - name: Custodian Halberd
+        rules: A1, Deadly(3), Tear
+        cost_modifier: +20pts
+      - name: Custodian Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +20pts
+      - name: Custodian Spear
+        rules: A3, AP(3)
+        cost_modifier: +30pts
+  - name: Jetpack Brothers
+    size: 3
+    quality: 3+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Shot-Mounts
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    - name: Heavy CCWs
+      attacks: A3
+      ap: AP(1)
+      count: 3
+    special_rules:
+    - Ambush
+    - Fearless
+    - Flying
+    - Guardian
+    cost: 295
+    upgrade_categories:
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
+    - category: Replace all Shot-Mounts and Heavy CCWS
+      upgrades:
+      - name: Burst Shot-Mount, Heavy Hand Weapon
+        rules: 12", A3, AP(1), A1, AP(1)
+        cost_modifier: Free
+    - category: Replace any Shot-Mounts
+      upgrades:
+      - name: Destroyer Long Pistol
+        rules: 18", A3, Rending
+        cost_modifier: +25pts
+      - name: Storm-Mount
+        rules: 24", A3, AP(1)
+        cost_modifier: +35pts
+    - category: Replace any Heavy CCWs
+      upgrades:
+      - name: Energy Sword
+        rules: A3, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Custodian Spear
+        rules: A3, AP(3)
+        cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Inhibitor Array
+        rules: Ranged Shrouding Aura
+        cost_modifier: +10pts
+  - name: Sagittarius Brothers
+    size: 3
+    quality: 3+
+    defense: 2+
+    tough: 3
+    weapons:
+    - name: Bolt Rifles
+      range: 18"
+      attacks: A2
+      ap: AP(1)
+      count: 3
+    - name: Disintegrator-Mods
+      range: 18"
+      attacks: A2
+      ap: AP(3)
+      count: 3
+    - name: Heavy CCWs
+      attacks: A1
+      ap: AP(1)
+      count: 3
+    special_rules:
+    - Fearless
+    - Guardian
+    cost: 335
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Inhibitor Array
+        rules: Ranged Shrouding Aura
+        cost_modifier: +45pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast Aura
+        cost_modifier: +30pts
+      - name: The Founder's Warding
+        rules: Regeneration Aura
+        cost_modifier: +55pts
+      - name: Envoy Banner
+        rules: Dash Aura
+        cost_modifier: +65pts
+  - name: Vigilant Sisters
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Energy Swords
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 5
+    special_rules:
+    - Furious
+    - Guardian
+    cost: 120
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Heretic Spotter
+        rules: Piercing Target(1)
+        cost_modifier: +35pts
+  - name: Prosecution Sisters
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Prosecution Rifles
+      range: 24"
+      attacks: A2
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Guardian
+    - Relentless
+    cost: 130
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Heretic Spotter
+        rules: Piercing Target(1)
+        cost_modifier: +35pts
+  - name: Hunter Sisters
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Flamers
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Guardian
+    - Scout
+    cost: 95
+    upgrade_categories:
+    - category: Upgrade one model with
+      upgrades:
+      - name: Heretic Spotter
+        rules: Piercing Target(1)
+        cost_modifier: +35pts
+  - name: Destroyer
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Rapid Shot-Mount
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    - name: Custodian Axe
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      count: 1
+    special_rules:
+    - Ambush
+    - Fearless
+    - Guardian
+    cost: 160
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Guardian Banner
+        rules: Steadfast
+        cost_modifier: +10pts
+      - name: The Founder's Warding
+        rules: Regeneration
+        cost_modifier: +20pts
+      - name: Envoy Banner
+        rules: Dash
+        cost_modifier: +20pts
+    - category: Replace Rapid Shot-Mount and Custodian Axe
+      upgrades:
+      - name: Storm-Mount, Wrist-GL, Heavy CCW
+        rules: 24", A3, AP(1), 18", A1, Blast(3), A2, AP(1)
+        cost_modifier: +40pts
+    - category: Replace Rapid Shot-Mount
+      upgrades:
+      - name: Flame-Mount
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Bolt-Mount
+        rules: 18", A3, Rending
+        cost_modifier: +20pts
+      - name: Fuse-Mount
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Needler-Mount
+        rules: 24", A3, Bane
+        cost_modifier: +20pts
+      - name: Destructor-Mount
+        rules: 24", A2, Tear
+        cost_modifier: +30pts
+      - name: Storm-Mount
+        rules: 24", A3, AP(1)
+        cost_modifier: +30pts
+    - category: Replace Custodian Axe
+      upgrades:
+      - name: Custodian Halberd
+        rules: A2, Deadly(3), Tear
+        cost_modifier: +30pts
+      - name: Custodian Sword
+        rules: A6, AP(1), Rending
+        cost_modifier: +35pts
+      - name: Custodian Spear
+        rules: A6, AP(3)
+        cost_modifier: +45pts
+  - name: Destructor
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: Energy Claws
+      attacks: A3
+      special_rules:
+      - Rending
+      count: 1
+    - name: Stomp
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Ambush
+    - Fearless
+    - Guardian
+    cost: 190
+    upgrade_categories:
+    - category: Replace Heavy Flamer and Energy Claws
+      upgrades:
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Twin Destructor
+        rules: 24", A4, Tear
+        cost_modifier: +40pts
+      - name: Heavy Storm Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +40pts
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Flamer
+        rules: 12", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +25pts
+      - name: Twin Destructor
+        rules: 24", A4, Tear
+        cost_modifier: +60pts
+      - name: Heavy Storm Rifle
+        rules: 24", A6, AP(1)
+        cost_modifier: +60pts
+    - category: Replace Energy Claws
+      upgrades:
+      - name: Energy Fist
+        rules: A3, AP(4)
+        cost_modifier: +20pts
+  - name: Custodian APC
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Storm Rifle
+      range: 24"
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Guardian
+    - Impact(3)
+    - Transport(11)
+    cost: 215
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+      - name: Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +15pts
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +15pts
+  - name: Custodian Jetbiker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Rifle Array
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: Energy Lance
+      attacks: A3
+      ap: AP(1)
+      special_rules:
+      - Thrust
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Guardian
+    - Strider
+    cost: 260
+    upgrade_categories:
+    - category: Replace Heavy Rifle Array
+      upgrades:
+      - name: Twin Devastator
+        rules: 24", A4, AP(3)
+        cost_modifier: +5pts
+      - name: Twin Laser Pulser
+        rules: 24", A2, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Fusion Missiles
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +10pts
+  - name: Anti-Grav Light Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Blazer
+      range: 30"
+      attacks: A2
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Guardian
+    - Impact(3)
+    - Strider
+    cost: 280
+    upgrade_categories: []
+  - name: Anti-Grav Battle Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Twin Heavy Blazer
+      range: 36"
+      attacks: A2
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Twin Bolt Cannon
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Guardian
+    - Impact(6)
+    - Strider
+    cost: 565
+    upgrade_categories:
+    - category: Replace Twin Heavy Blazer
+      upgrades:
+      - name: Twin Accelerator
+        rules: 36", A6, Tear
+        cost_modifier: +15pts
+  - name: Custodian Combat Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    - name: Walker Fists
+      attacks: A4
+      ap: AP(4)
+      count: 2
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Guardian
+    cost: 370
+    upgrade_categories:
+    - category: Replace any Walker Fists
+      upgrades:
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +20pts
+      - name: Heavy Minigun
+        rules: 24", A6, AP(2)
+        cost_modifier: +60pts
+    - category: Upgrade any Walker Fist with one
+      upgrades:
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts
+    - category: Upgrade with
+      upgrades:
+      - name: Super-Charging Array
+        rules: Shred Mark
+        cost_modifier: +30pts
+  - name: Custodian Assault Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Rapid Burst Shot-Mount
+      range: 12"
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    - name: Heavy Sword
+      attacks: A12
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 1
+    - name: Stomp
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(2)
+    - Fearless
+    - Guardian
+    - Shielded
+    cost: 430
+    upgrade_categories:
+    - category: Replace Combat Shield and Heavy Sword
+      upgrades:
+      - name: 2x Flamer, Heavy Custodian Spear
+        rules: 12", A1, Blast(3), Reliable, A4, AP(3), Deadly(3)
+        cost_modifier: +20pts
+    - category: Replace Rapid Burst Shot-Mount
+      upgrades:
+      - name: Rapid Flame-Mount
+        rules: 12", A2, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Rapid Destructor-Mount
+        rules: 24", A4, Tear
+        cost_modifier: +55pts
+      - name: Rapid Storm-Mount
+        rules: 24", A6, AP(1)
+        cost_modifier: +60pts
+    - category: Replace any Flamer
+      upgrades:
+      - name: Destroyer
+        rules: 24", A3, Rending
+        cost_modifier: +25pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +25pts
+    - category: Upgrade with
+      upgrades:
+      - name: Super-Charging Array
+        rules: Shred Mark
+        cost_modifier: +30pts
+  - name: Custodian Heavy Walker
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 15
+    weapons:
+    - name: Bolt Launcher
+      range: 24"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: Twin Plasmas
+      range: 12"
+      attacks: A2
+      ap: AP(4)
+      special_rules:
+      - Blast(3)
+      count: 2
+    - name: Stomp
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    - name: Walker Fists
+      attacks: A4
+      ap: AP(4)
+      count: 2
+    special_rules:
+    - Fear(3)
+    - Fearless
+    - Guardian
+    cost: 695
+    upgrade_categories:
+    - category: Replace any Walker Fists and Twin Plasmas
+      upgrades:
+      - name: Storm Cannon
+        rules: 30", A2, AP(3), Deadly(3)
+        cost_modifier: +10pts
+      - name: Accelerator Gun
+        rules: 36", A6, Tear
+        cost_modifier: +40pts
+    - category: Upgrade with
+      upgrades:
+      - name: Super-Charging Array
+        rules: Shred Mark
+        cost_modifier: +30pts
+  - name: Anti-Grav Heavy Battle Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Twin Blazer
+      range: 30"
+      attacks: A2
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Twin Heavy Bolt Cannon
+      range: 30"
+      attacks: A12
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Guardian
+    - Impact(9)
+    - Strider
+    cost: 835
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Transport
+        rules: Transport(6)
+        cost_modifier: +20pts
+  - name: Custodian Heavy Battle Tank
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 18
+    weapons:
+    - name: Quad Laser Cannon
+      range: 36"
+      attacks: A4
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fast
+    - Fearless
+    - Guardian
+    - Impact(9)
+    - Transport(11)
+    cost: 885
+    upgrade_categories:
+    - category: Upgrade with any
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +15pts
+      - name: Storm Rifle
+        rules: 24", A3, AP(1)
+        cost_modifier: +45pts

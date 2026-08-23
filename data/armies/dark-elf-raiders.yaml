@@ -1,0 +1,1228 @@
+v3.5.3:
+  name: Dark Elf Raiders
+  id: q11la9v8h1heu9ja
+  units:
+  - name: Dark Lord
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Elite Barb Pistol
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Harassing
+    - Hero
+    cost: 55
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Alchemist
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Agoniser
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Raid Leader
+        rules: Harassing Boost Aura
+        cost_modifier: +25pts
+      - name: Tormentor
+        rules: Piercing Hunter Aura
+        cost_modifier: +40pts
+    - category: Replace Elite Barb Pistol
+      upgrades:
+      - name: Elite EMP Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Phantom-GL
+        rules: 18", A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Elite Plas-Blaster Pistol
+        rules: 6", A3, AP(4)
+        cost_modifier: +10pts
+      - name: Elite Barb Rifle
+        rules: 24", A2, Lacerate
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Agony Whip
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Shell Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +5pts
+      - name: Witch Master
+        rules: Melee Evasion
+        cost_modifier: +5pts
+      - name: Wings
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Hoverboard
+        rules: Agile, Scout, Strider
+        cost_modifier: +25pts
+      - name: Jetbike
+        rules: Twin Barb Rifle (24", A2, Lacerate), Fast, Strider, Tough(3)
+        cost_modifier: +95pts
+  - name: Elite True Raider
+    size: 1
+    quality: 3+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Elite Barb Pistol
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Harassing
+    - Hero
+    cost: 50
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Alchemist
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Dread Ruler
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Agoniser
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Tormentor
+        rules: Piercing Hunter Aura
+        cost_modifier: +40pts
+    - category: Replace Elite Barb Pistol
+      upgrades:
+      - name: Elite EMP Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Phantom-GL
+        rules: 18", A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Elite Plas-Blaster Pistol
+        rules: 6", A3, AP(4)
+        cost_modifier: +10pts
+      - name: Elite Barb Rifle
+        rules: 24", A2, Lacerate
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Agony Whip
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Shell Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+    - category: Replace Elite Barb Pistol and CCW
+      upgrades:
+      - name: Dual Sword-Flails
+        rules: A1, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Net & Spear
+        rules: A3, Thrust
+        cost_modifier: +5pts
+      - name: Dual Crystal Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+      - name: Energy Glaive
+        rules: A4, AP(1)
+        cost_modifier: +10pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +5pts
+      - name: Witch Master
+        rules: Melee Evasion
+        cost_modifier: +5pts
+      - name: Wings
+        rules: Ambush, Flying
+        cost_modifier: +20pts
+      - name: Hoverboard
+        rules: Agile, Scout, Strider
+        cost_modifier: +25pts
+      - name: Jetbike
+        rules: Twin Barb Rifle (24", A2, Lacerate), Armor(4), Fast, Strider, Tough(3)
+        cost_modifier: +100pts
+  - name: Elite Raider
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Elite Barb Pistol
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Harassing
+    - Hero
+    cost: 40
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Alchemist
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Dread Ruler
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Agoniser
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Tormentor
+        rules: Piercing Hunter Aura
+        cost_modifier: +40pts
+    - category: Replace Elite Barb Pistol
+      upgrades:
+      - name: Elite EMP Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Phantom-GL
+        rules: 18", A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Elite Plas-Blaster Pistol
+        rules: 6", A3, AP(4)
+        cost_modifier: +5pts
+      - name: Elite Barb Rifle
+        rules: 24", A2, Lacerate
+        cost_modifier: +10pts
+    - category: Replace CCW
+      upgrades:
+      - name: Agony Whip
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Shell Sword
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+    - category: Replace Elite Barb Pistol and CCW
+      upgrades:
+      - name: Dual Sword-Flails
+        rules: A1, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Net & Spear
+        rules: A3, Thrust
+        cost_modifier: +5pts
+      - name: Dual Crystal Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+      - name: Energy Glaive
+        rules: A4, AP(1)
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +5pts
+      - name: Witch Master
+        rules: Melee Evasion
+        cost_modifier: +5pts
+      - name: Wings
+        rules: Ambush, Flying
+        cost_modifier: +15pts
+      - name: Hoverboard
+        rules: Agile, Scout, Strider
+        cost_modifier: +20pts
+      - name: Jetbike
+        rules: Twin Barb Rifle (24", A2, Lacerate), Armor(4), Fast, Strider, Tough(3)
+        cost_modifier: +80pts
+  - name: Gene-Tech Master
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Dual CCWs
+      attacks: A4
+      count: 1
+    special_rules:
+    - Harassing
+    - Hero
+    - Regeneration
+    cost: 45
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Alchemist
+        rules: Melee Shrouding Aura
+        cost_modifier: +5pts
+      - name: Dread Ruler
+        rules: Courage Aura
+        cost_modifier: +5pts
+      - name: Agoniser
+        rules: Furious Aura
+        cost_modifier: +5pts
+      - name: Raid Leader
+        rules: Harassing Boost Aura
+        cost_modifier: +25pts
+      - name: Soul Carrier
+        rules: Caster(2)
+        cost_modifier: +35pts
+      - name: Master Soul Carrier
+        rules: Caster(3)
+        cost_modifier: +55pts
+    - category: Replace Dual CCWs
+      upgrades:
+      - name: Syringe Pistol, CCW
+        rules: 12", A1, Deadly(3), A2
+        cost_modifier: +5pts
+    - category: Replace Syringe Pistol
+      upgrades:
+      - name: Elite Barb Pistol
+        rules: 12", A2, Lacerate
+        cost_modifier: Free
+      - name: Acid Gun
+        rules: 12", A1, Blast(3), Reliable, Bane
+        cost_modifier: +15pts
+      - name: Arcane Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +20pts
+    - category: Replace CCW
+      upgrades:
+      - name: Agony Whip
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Venom Sword
+        rules: A2, Bane
+        cost_modifier: +5pts
+      - name: Electro-Corroder
+        rules: A2, AP(1), Bane
+        cost_modifier: +5pts
+      - name: Leech Claw
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Syringe Claw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Scissor Claw
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Gene-Warriors
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Dual CCWs
+      attacks: A2
+      count: 5
+    special_rules:
+    - Harassing
+    - Regeneration
+    cost: 80
+    upgrade_categories:
+    - category: Replace up to two Dual CCWS
+      upgrades:
+      - name: Barb Pistol, CCW
+        rules: 12", A1, Lacerate, A2
+        cost_modifier: +5pts
+    - category: Replace one Barb Pistol
+      upgrades:
+      - name: Syringe Pistol
+        rules: 12", A1, Deadly(3)
+        cost_modifier: +5pts
+      - name: Acid Gun
+        rules: 12", A1, Blast(3), Reliable, Bane
+        cost_modifier: +20pts
+    - category: Replace one Barb Pistol
+      upgrades:
+      - name: Bone Gun
+        rules: 18", A2, Rending
+        cost_modifier: +15pts
+      - name: Arcane Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +25pts
+    - category: Replace one CCW
+      upgrades:
+      - name: Agony Whip
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Venom Sword
+        rules: A2, Bane
+        cost_modifier: +5pts
+      - name: Electro-Corroder
+        rules: A2, AP(1), Bane
+        cost_modifier: +5pts
+      - name: Leech Claw
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Syringe Claw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Scissor Claw
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Witches
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Barb Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Lacerate
+      count: 5
+    - name: CCWs
+      attacks: A2
+      count: 5
+    special_rules:
+    - Harassing
+    - Melee Evasion
+    cost: 105
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +15pts
+    - category: Replace one Barb Pistols and CCWs
+      upgrades:
+      - name: Net & Spear
+        rules: A3, Thrust
+        cost_modifier: +5pts
+      - name: Dual Sword-Flails
+        rules: A1, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Energy Glaive
+        rules: A4, AP(1)
+        cost_modifier: +10pts
+      - name: Dual Crystal Claws
+        rules: A4, Rending
+        cost_modifier: +10pts
+    - category: Replace one Barb Pistols and CCWs
+      upgrades:
+      - name: Sgt. Barb Pistol, Energy Sword
+        rules: 12", A1, Lacerate, A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Barb Pistol
+      upgrades:
+      - name: EMP Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Blaster Pistol
+        rules: 6", A2, AP(4)
+        cost_modifier: +5pts
+  - name: Warriors
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Barb Rifles
+      range: 24"
+      attacks: A1
+      special_rules:
+      - Lacerate
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Harassing
+    cost: 95
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +15pts
+    - category: Replace one Barb Rifles
+      upgrades:
+      - name: EMP Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Scrapper
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Scythe Launcher
+        rules: 30", A1, AP(3), Unstoppable
+        cost_modifier: +15pts
+      - name: Plas-Blaster
+        rules: 18", A2, AP(4)
+        cost_modifier: +20pts
+      - name: Barb Cannon
+        rules: 30", A3, Lacerate
+        cost_modifier: +20pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +45pts
+    - category: Replace one Barb Rifles and CCWs
+      upgrades:
+      - name: Sgt. Barb Pistol, Energy Sword
+        rules: 12", A1, Lacerate, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Barb Pistol
+      upgrades:
+      - name: EMP Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Blaster Pistol
+        rules: 6", A2, AP(4)
+        cost_modifier: +5pts
+  - name: True Witches
+    size: 3
+    quality: 3+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Barb Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Lacerate
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Harassing
+    - Melee Evasion
+    cost: 75
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +10pts
+    - category: Replace any Barb Pistols and CCWs
+      upgrades:
+      - name: Dual Sword-Flails
+        rules: A1, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Net & Spear
+        rules: A3, Thrust
+        cost_modifier: +10pts
+      - name: Dual Crystal Claws
+        rules: A4, Rending
+        cost_modifier: +15pts
+      - name: Energy Glaive
+        rules: A4, AP(1)
+        cost_modifier: +15pts
+    - category: Replace one Barb Pistols and CCWs
+      upgrades:
+      - name: Sgt. Barb Pistol, Energy Sword
+        rules: 12", A1, Lacerate, A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Barb Pistol
+      upgrades:
+      - name: EMP Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Blaster Pistol
+        rules: 6", A2, AP(4)
+        cost_modifier: +10pts
+  - name: True Warriors
+    size: 3
+    quality: 3+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Barb Rifles
+      range: 24"
+      attacks: A1
+      special_rules:
+      - Lacerate
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Harassing
+    cost: 75
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +10pts
+    - category: Replace any Barb Rifles
+      upgrades:
+      - name: Scrapper
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: EMP Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Scythe Launcher
+        rules: 30", A1, AP(3), Unstoppable
+        cost_modifier: +15pts
+      - name: Barb Cannon
+        rules: 30", A3, Lacerate
+        cost_modifier: +25pts
+      - name: Plas-Blaster
+        rules: 18", A2, AP(4)
+        cost_modifier: +30pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +60pts
+    - category: Replace one Barb Rifles and CCWs
+      upgrades:
+      - name: Sgt. Barb Pistol, Energy Sword
+        rules: 12", A1, Lacerate, A2, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Replace Sgt. Barb Pistol
+      upgrades:
+      - name: EMP Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Blaster Pistol
+        rules: 6", A2, AP(4)
+        cost_modifier: +10pts
+  - name: Court Henchmen
+    size: 3
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Courtesan's Swords
+      attacks: A4
+      special_rules:
+      - Bane
+      count: 3
+    special_rules:
+    - Harassing
+    - Martial Prowess
+    cost: 130
+    upgrade_categories:
+    - category: Replace any Courtesan's Swords
+      upgrades:
+      - name: Ghoulish Claws
+        rules: A4, Rending
+        cost_modifier: +5pts
+      - name: Naga Guns, Barb Dagger
+        rules: 18", A4, Lacerate, A1, Lacerate
+        cost_modifier: +20pts
+      - name: Medusa's Gaze, Barb Dagger
+        rules: 12", A4, AP(3), A1, Lacerate
+        cost_modifier: +35pts
+  - name: Hoverboard Riders
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Twin Barb-Pods
+      range: 18"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 5
+    - name: Glaives
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    special_rules:
+    - Agile
+    - Harassing
+    - Scout
+    - Strider
+    cost: 185
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +25pts
+    - category: Replace one Glaives
+      upgrades:
+      - name: Agony Whip
+        rules: A1, Blast(3)
+        cost_modifier: Free
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Grapple Claw
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+    - category: Replace one Twin Barb-Pods
+      upgrades:
+      - name: Barb-Pod, Phantom-GL
+        rules: 18", A1, Lacerate, 18", A1, Blast(3)
+        cost_modifier: +10pts
+  - name: Nightmares
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Energy Swords
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 5
+    special_rules:
+    - Harassing
+    - Melee Slayer
+    cost: 155
+    upgrade_categories: []
+  - name: Winged Warriors
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Barb Carbines
+      range: 18"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Ambush
+    - Flying
+    - Harassing
+    cost: 150
+    upgrade_categories:
+    - category: Upgrade all models with
+      upgrades:
+      - name: Expert Raider
+        rules: Piercing Frenzy
+        cost_modifier: +20pts
+    - category: Replace one Barb Carbines
+      upgrades:
+      - name: EMP Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+      - name: Scrapper
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Plas-Blaster
+        rules: 18", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Barb Cannon
+        rules: 30", A3, Lacerate
+        cost_modifier: +15pts
+      - name: Heavy Fusion Gun
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +25pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +40pts
+    - category: Replace one Barb Carbines and CCWs
+      upgrades:
+      - name: Sgt. Barb Pistol, Energy Sword
+        rules: 12", A1, Lacerate, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Barb Pistol
+      upgrades:
+      - name: EMP Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plas-Blaster Pistol
+        rules: 6", A2, AP(4)
+        cost_modifier: +5pts
+  - name: Shadow Warriors
+    size: 5
+    quality: 3+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Dark Blasts
+      range: 18"
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    - name: CCWs
+      attacks: A2
+      special_rules:
+      - Bane
+      count: 5
+    special_rules:
+    - Harassing
+    - Infiltrate
+    - Stealth
+    - Strider
+    cost: 265
+    upgrade_categories: []
+  - name: Gene-Brutes
+    size: 3
+    quality: 3+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Acid Guns
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      - Bane
+      count: 3
+    - name: Scissor Claws
+      attacks: A2
+      ap: AP(4)
+      count: 3
+    special_rules:
+    - Harassing
+    - Regeneration
+    cost: 255
+    upgrade_categories:
+    - category: Replace any Acid Guns and Scissor Claws
+      upgrades:
+      - name: Dual Scissor Claws
+        rules: A4, AP(4)
+        cost_modifier: +5pts
+  - name: Jetbike Riders
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Twin Barb Rifles
+      range: 24"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 3
+    - name: Barb Pistols
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Lacerate
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fast
+    - Harassing
+    - Strider
+    cost: 210
+    upgrade_categories:
+    - category: Replace one Twin Barb Rifles
+      upgrades:
+      - name: Plas-Blaster
+        rules: 18", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Heavy Fusion Gun
+        rules: 18", A1, AP(4), Deadly(3)
+        cost_modifier: +20pts
+    - category: Replace one CCWs
+      upgrades:
+      - name: Spiked Talon
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Razor Caltrops
+        rules: Impact(3)
+        cost_modifier: +10pts
+  - name: Crow Swarms
+    size: 3
+    quality: 5+
+    defense: 6+
+    tough: 3
+    weapons:
+    - name: Swarm Attacks
+      attacks: A3
+      special_rules:
+      - Rending
+      count: 3
+    special_rules:
+    - Flying
+    - Harassing
+    cost: 100
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Pathfinder Beast Handler
+        rules: Vanguard
+        cost_modifier: +10pts
+      - name: Combat Beast Handler
+        rules: Unpredictable Fighter
+        cost_modifier: +15pts
+  - name: Blood Hounds
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Toxin Claws
+      attacks: A2
+      special_rules:
+      - Bane
+      count: 5
+    special_rules:
+    - Fast
+    - Harassing
+    cost: 90
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Pathfinder Beast Handler
+        rules: Vanguard
+        cost_modifier: +10pts
+      - name: Combat Beast Handler
+        rules: Unpredictable Fighter
+        cost_modifier: +20pts
+  - name: Clawed Beast
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Heavy Claws
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Furious
+    - Harassing
+    cost: 115
+    upgrade_categories:
+    - category: Upgrade all models with one
+      upgrades:
+      - name: Pathfinder Beast Handler
+        rules: Vanguard
+        cost_modifier: +15pts
+      - name: Combat Beast Handler
+        rules: Unpredictable Fighter
+        cost_modifier: +20pts
+  - name: Leech Engine
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Soul Syphon
+      range: 12"
+      attacks: A6
+      ap: AP(1)
+      special_rules:
+      - Bane
+      count: 1
+    - name: Stomp
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(1)
+    - Fearless
+    - Harassing
+    - Relentless
+    cost: 165
+    upgrade_categories:
+    - category: Replace Soul Syphon
+      upgrades:
+      - name: Soul Vortex
+        rules: 18", A2, AP(1), Deadly(3), Bane
+        cost_modifier: +10pts
+      - name: Soul Blaster
+        rules: 24", A2, AP(1), Blast(3), Bane
+        cost_modifier: +25pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Widow Maker
+        rules: Precision Fighting Mark
+        cost_modifier: +20pts
+      - name: Soul Conductor
+        rules: Regeneration Buff
+        cost_modifier: +30pts
+  - name: Engine of Suffering
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Acid Spewers
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Bane
+      count: 2
+    - name: Stomp
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(1)
+    - Fearless
+    - Harassing
+    - Regeneration
+    cost: 160
+    upgrade_categories:
+    - category: Replace one Acid Spewers
+      upgrades:
+      - name: Twin EMP Rifle
+        rules: 18", A4, Rending
+        cost_modifier: +25pts
+      - name: Stinger Cannon
+        rules: 24", A2, Blast(3)
+        cost_modifier: +25pts
+      - name: Rapid Barb Cannon
+        rules: 30", A6, Lacerate
+        cost_modifier: +50pts
+      - name: Twin Heavy Fusion Gun
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +65pts
+    - category: Replace one Acid Spewers
+      upgrades:
+      - name: Heavy Claws
+        rules: A3, AP(1)
+        cost_modifier: +5pts
+      - name: Venom Injector
+        rules: A3, Bane
+        cost_modifier: +5pts
+      - name: Shred Flail
+        rules: A3, Rending
+        cost_modifier: +10pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Pain Fueled
+        rules: Regenerative Strength
+        cost_modifier: +10pts
+      - name: Widow Maker
+        rules: Precision Fighting Mark
+        cost_modifier: +20pts
+  - name: Heavy Jetbike
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Barb Cannon
+      range: 30"
+      attacks: A3
+      special_rules:
+      - Lacerate
+      count: 1
+    - name: Twin Barb Rifle
+      range: 24"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 1
+    special_rules:
+    - Fast
+    - Harassing
+    - Impact(3)
+    - Strider
+    cost: 175
+    upgrade_categories:
+    - category: Replace Twin Barb Rifle
+      upgrades:
+      - name: Scythe Launcher
+        rules: 30", A1, AP(3), Unstoppable
+        cost_modifier: +5pts
+      - name: Barb Cannon
+        rules: 30", A3, Lacerate
+        cost_modifier: +10pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Dark-Sails
+        rules: Agile
+        cost_modifier: +10pts
+      - name: Shield of Darkness
+        rules: Stealth
+        cost_modifier: +15pts
+      - name: Open Deck
+        rules: Transport(6)
+        cost_modifier: +20pts
+      - name: Energy Ram
+        rules: Impact(5)
+        cost_modifier: +30pts
+  - name: Light Skimmer
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Barb Rifle
+      range: 24"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 1
+    special_rules:
+    - Fast
+    - Harassing
+    - Impact(3)
+    - Strider
+    - Transport(11)
+    cost: 205
+    upgrade_categories:
+    - category: Replace Twin Barb Rifle
+      upgrades:
+      - name: Barb Cannon
+        rules: 30", A3, Lacerate
+        cost_modifier: +15pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +50pts
+      - name: Destroyer Cannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +50pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Dark-Sails
+        rules: Agile
+        cost_modifier: +10pts
+      - name: Phantom-GL
+        rules: 18", A1, Blast(3)
+        cost_modifier: +20pts
+      - name: Shield of Darkness
+        rules: Stealth
+        cost_modifier: +15pts
+      - name: Energy Ram
+        rules: Impact(5)
+        cost_modifier: +30pts
+  - name: Heavy Skimmer
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Barb Cannons
+      range: 30"
+      attacks: A3
+      special_rules:
+      - Lacerate
+      count: 3
+    special_rules:
+    - Fast
+    - Harassing
+    - Impact(3)
+    - Strider
+    cost: 335
+    upgrade_categories:
+    - category: Replace any Barb Cannons
+      upgrades:
+      - name: Destroyer Cannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +35pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +35pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Dark-Sails
+        rules: Agile
+        cost_modifier: +15pts
+      - name: Phantom-GL
+        rules: 18", A1, Blast(3)
+        cost_modifier: +20pts
+      - name: Shield of Darkness
+        rules: Stealth
+        cost_modifier: +25pts
+      - name: Energy Ram
+        rules: Impact(5)
+        cost_modifier: +30pts
+  - name: Raven Bomber
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Shatter Missiles
+      range: 36"
+      attacks: A1
+      special_rules:
+      - Blast(6)
+      count: 1
+    - name: Void Cannon
+      range: 30"
+      attacks: A1
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Void Bombs
+      attacks: A1
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      - Strafing
+      count: 1
+    special_rules:
+    - Aircraft
+    cost: 320
+    upgrade_categories:
+    - category: Replace Shatter Missiles
+      upgrades:
+      - name: Void Missiles
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +25pts
+  - name: Razor Fighter
+    size: 1
+    quality: 3+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Laser Cannon
+      range: 36"
+      attacks: A1
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    - name: Toxin Missiles
+      range: 36"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Bane
+      count: 1
+    - name: Twin Barb Rifle
+      range: 24"
+      attacks: A2
+      special_rules:
+      - Lacerate
+      count: 1
+    special_rules:
+    - Aircraft
+    cost: 280
+    upgrade_categories:
+    - category: Replace Twin Barb Rifle
+      upgrades:
+      - name: Barb Cannon
+        rules: 30", A3, Lacerate
+        cost_modifier: +15pts
+    - category: Replace Laser Cannon
+      upgrades:
+      - name: Destroyer Cannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +5pts
+    - category: Replace Toxin Missiles
+      upgrades:
+      - name: Shatter Missiles
+        rules: 36", A1, Blast(6)
+        cost_modifier: +10pts
+      - name: Scythe Missiles
+        rules: 36", A2, AP(3), Unstoppable
+        cost_modifier: +25pts

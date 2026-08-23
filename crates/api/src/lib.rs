@@ -5,13 +5,15 @@
 //! # Modules
 //! - [`models`]: [`models::Unit`], [`models::Weapon`], [`models::SpecialRule`]
 //! - [`combat`]: the 8-phase combat resolution engine
-//! - [`armies`]: faction army lists (Alien Hives)
+//! - [`armies`]: faction army lists, all loaded from the committed YAML
+//!   catalogs via the unified loader
 
 pub mod armies;
 pub mod combat;
 pub mod models;
+pub mod yaml_loader;
 
-pub use armies::alien_hives::alien_hives;
+pub use armies::{Army, alien_hives, all_armies, cached_armies, get_army, get_unit, load_errors};
 pub use combat::{AttackResult, AttackType, CombatContext, CombatResult, DieRoll, resolve_attack};
 pub use models::{
     SpecialRule, Unit, UpgradeGroup, UpgradeOption, UpgradeSelection, Weapon, WeaponChange,

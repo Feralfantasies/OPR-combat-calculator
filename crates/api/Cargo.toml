@@ -11,6 +11,11 @@ name = "opr_api"
 [dependencies]
 rand.workspace = true
 serde.workspace = true
+serde_yaml.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
 
 [lints]
 workspace = true

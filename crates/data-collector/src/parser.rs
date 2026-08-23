@@ -47,13 +47,20 @@ pub struct Weapon {
     /// Weapon name
     pub name: String,
     /// Range (e.g., "18\"") or empty for melee
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub range: Option<String>,
     /// Attacks (e.g., "A4")
     pub attacks: String,
     /// Armor piercing value (e.g., "AP(1)") or empty
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub ap: Option<String>,
     /// Special rules for this weapon
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub special_rules: Vec<String>,
+    /// Explicit wielder count from an `Nx Weapon` source row. Absent when
+    /// the row carries no count marker (the loader then uses the unit size).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub count: Option<u8>,
 }
 
 /// Represents an upgrade option for a unit
@@ -97,6 +104,10 @@ pub struct Unit {
     pub cost: u32,
     /// Upgrade categories available for this unit
     pub upgrade_categories: Vec<UpgradeCategory>,
+    /// Weapons parsed from the unit's fixed weapon table; used to remap
+    /// replacement targets onto actual equipment names (not serialized).
+    #[serde(skip_serializing)]
+    pub fixed_weapons: Vec<Weapon>,
 }
 
 /// Parse a preview page to extract unit data
@@ -193,34 +204,64 @@ fn extract_units_from_table(html: &str) -> Result<Vec<Unit>> {
         }
     }
 
-    // Second pass: extract detailed unit data including upgrades
-    let mut current_unit_index = None;
+    // Second pass: extract detailed unit data including upgrades.
+    // A unit's section ends at the next unit header, so upgrade categories
+    // can never bleed across two units.
+    let mut current_unit_index: Option<usize> = None;
     let mut upgrade_categories: Vec<UpgradeCategory> = Vec::new();
+    let mut fixed_weapons: Vec<Weapon> = Vec::new();
+    let mut in_fixed_table = false;
 
     for line in html.lines() {
         let line = line.trim();
 
         // Check if this is a unit detail header: **Unit Name [Size]**- Costpts
         if line.starts_with("**") && line.contains("**-") {
-            // Save previous unit's upgrades if we had one
             if let Some(idx) = current_unit_index
                 && let Some(unit) = basic_units.get_mut(idx)
             {
-                let unit: &mut Unit = unit;
-                let categories: Vec<UpgradeCategory> = std::mem::take(&mut upgrade_categories);
-                unit.upgrade_categories = categories;
+                unit.upgrade_categories = std::mem::take(&mut upgrade_categories);
+                unit.fixed_weapons = std::mem::take(&mut fixed_weapons);
             }
+            in_fixed_table = false;
 
             // Find which unit this is
             if let Some(unit_name) = extract_unit_name_from_header(line) {
                 current_unit_index = basic_units.iter().position(|u| u.name == unit_name);
-                upgrade_categories = Vec::new();
             }
             continue;
         }
 
+        let Some(_) = current_unit_index else {
+            continue;
+        };
+
+        // Fixed weapon table (| Weapon | RNG | ATK | AP | SPE | ...):
+        // its rows carry the unit's base equipment and are kept for target
+        // remapping. Only the weapon *header* table is captured; other
+        // two-column tables (e.g. `| Upgrade | SPE |`) are ignored.
+        if line.starts_with('|') {
+            if line.starts_with("| ---") {
+                continue;
+            }
+            if in_fixed_table {
+                if let Some(weapon) = parse_fixed_weapon_row(line) {
+                    fixed_weapons.push(weapon);
+                }
+                continue;
+            }
+            if line.starts_with("| Weapon |")
+                && line.contains("| RNG |")
+                && line.contains("| ATK |")
+            {
+                in_fixed_table = true;
+            }
+            continue;
+        }
+        in_fixed_table = false;
+
         // Check if this is an upgrade category header
-        if current_unit_index.is_some() && is_upgrade_category(line) {
+        if is_upgrade_category(line) {
             upgrade_categories.push(UpgradeCategory {
                 category: line.to_string(),
                 upgrades: Vec::new(),
@@ -229,8 +270,7 @@ fn extract_units_from_table(html: &str) -> Result<Vec<Unit>> {
         }
 
         // Check if this is an upgrade option
-        if current_unit_index.is_some()
-            && !upgrade_categories.is_empty()
+        if !upgrade_categories.is_empty()
             && let Some(upgrade) = parse_upgrade_option(line)
             && let Some(last_category) = upgrade_categories.last_mut()
         {
@@ -238,11 +278,26 @@ fn extract_units_from_table(html: &str) -> Result<Vec<Unit>> {
         }
     }
 
-    // Save the last unit's upgrades
+    // Save the final unit's upgrades (its section ends at end-of-input, not
+    // at a next header).
     if let Some(idx) = current_unit_index
         && let Some(unit) = basic_units.get_mut(idx)
     {
         unit.upgrade_categories = upgrade_categories;
+        unit.fixed_weapons = fixed_weapons;
+    }
+
+    // Tidy up per unit: remap `Replace ...` target names onto the unit's
+    // actual (fixed) weapon names so replacements resolve against
+    // equipment, then drop exact-duplicate options and categories left
+    // empty. `fixed_weapons` is left in place (serialized-then-skipped) so
+    // callers and tests can inspect the captured table.
+    for unit in &mut basic_units {
+        let weapon_names: Vec<String> = unit.fixed_weapons.iter().map(|w| w.name.clone()).collect();
+        for category in &mut unit.upgrade_categories {
+            category.category = remap_replace_targets(&category.category, &weapon_names);
+        }
+        dedupe_unit_categories(unit);
     }
 
     Ok(basic_units)
@@ -263,16 +318,207 @@ fn extract_unit_name_from_header(line: &str) -> Option<String> {
     }
 }
 
-/// Check if a line is an upgrade category header
+/// Directive prefixes that mark upgrade category headers in source pages.
+const CATEGORY_DIRECTIVES: [&str; 6] = [
+    "replace ",
+    "upgrade ",
+    "add ",
+    "take ",
+    "select ",
+    "any model",
+];
+
+/// Check if a line is an upgrade category header. Source pages mark
+/// categories with a directive prefix ("Replace ...", "Upgrade ...",
+/// "Take ...", "Any model may ..."), so every section gets its own
+/// category instead of merging into the previous one (e.g.
+/// "Any model may replace 2x Suit-Burst" stays separate from
+/// "Replace one Suit-Burst").
 fn is_upgrade_category(line: &str) -> bool {
-    // Upgrade categories are typically short lines that don't start with special characters
-    // and contain keywords like "Upgrade", "Replace", "Add"
-    if line.is_empty() || line.starts_with('|') || line.starts_with("**") {
+    if line.is_empty()
+        || line.starts_with('|')
+        || line.starts_with("**")
+        || line.starts_with("GF")
+        || line.starts_with(char::is_numeric)
+    {
         return false;
     }
+    let lower = line.to_ascii_lowercase();
+    CATEGORY_DIRECTIVES.iter().any(|d| lower.starts_with(d))
+}
 
-    let keywords = ["Upgrade with", "Replace", "Add"];
-    keywords.iter().any(|k| line.contains(k))
+/// Remove options that duplicate an earlier option *within the same*
+/// category (byte-identical name + rules + cost - e.g. the source repeating
+/// a row) and drop categories left with no options.
+///
+/// Repeated *category names* (two genuine "Upgrade with one" sections) are
+/// kept: they are distinct groups the API addresses by index.
+fn dedupe_unit_categories(unit: &mut Unit) {
+    for category in &mut unit.upgrade_categories {
+        let mut seen: std::collections::HashSet<(String, String, String)> =
+            std::collections::HashSet::new();
+        category.upgrades.retain(|upgrade| {
+            seen.insert((
+                upgrade.name.clone(),
+                upgrade.rules.clone().unwrap_or_default(),
+                upgrade.cost_modifier.clone(),
+            ))
+        });
+    }
+    unit.upgrade_categories.retain(|c| !c.upgrades.is_empty());
+}
+
+/// Remap the `Replace ...` category name onto the unit's actual weapon
+/// names, so replacement targets resolve against equipment (e.g.
+/// `Replace any Heavy Hammer` -> `Replace any Heavy Hammers` when the
+/// equipment entry is plural).
+///
+/// Applied per ` and ` part; parts matching no weapon are kept verbatim.
+/// `Nx` count prefixes in the category name are preserved.
+/// Leading quantifier/count tokens in `Replace ...` category names.
+const REPLACE_QUANTIFIERS: [&str; 7] = ["any", "one", "all", "up", "to", "two", "three"];
+
+/// Remap a `Replace ...` category name onto the unit's actual weapon names
+/// (e.g. `Replace one CCW` -> `Replace one CCWs`, `Replace any Heavy Hammer`
+/// -> `Replace any Heavy Hammers`) after stripping the quantifier and any
+/// `Nx` count prefix. Parts that still match no weapon are kept verbatim.
+fn remap_replace_targets(category: &str, weapon_names: &[String]) -> String {
+    let Some(rest) = category.strip_prefix("Replace ") else {
+        return category.to_string();
+    };
+    let mut any_changed = false;
+    let mapped: Vec<String> = rest
+        .split(" and ")
+        .map(|part| {
+            let words: Vec<&str> = part.split_whitespace().collect();
+            let core_start = words
+                .iter()
+                .take_while(|word| {
+                    let lower = word.to_ascii_lowercase();
+                    REPLACE_QUANTIFIERS.contains(&lower.as_str()) || is_count_token(word)
+                })
+                .count();
+            let prefix: Vec<&str> = words.iter().take(core_start).copied().collect();
+            let core: String = words
+                .iter()
+                .skip(core_start)
+                .copied()
+                .collect::<Vec<_>>()
+                .join(" ");
+            if core.is_empty() {
+                return part.to_string();
+            }
+            let mapped_core =
+                find_weapon_name(&core, weapon_names).map_or_else(|| core.clone(), String::from);
+            if mapped_core != core {
+                any_changed = true;
+            }
+            if prefix.is_empty() {
+                mapped_core
+            } else {
+                format!("{} {}", prefix.join(" "), mapped_core)
+            }
+        })
+        .collect();
+    if any_changed {
+        format!("Replace {}", mapped.join(" and "))
+    } else {
+        category.to_string()
+    }
+}
+
+/// Find the weapon name equal to `target` exactly, or differing only by a
+/// single trailing `s` (singular/plural tolerance).
+fn find_weapon_name<'a>(target: &str, weapons: &'a [String]) -> Option<&'a str> {
+    for name in weapons {
+        if name == target {
+            return Some(name);
+        }
+    }
+    let plural = format!("{target}s");
+    let singular = target.strip_suffix('s').unwrap_or(target);
+    weapons
+        .iter()
+        .find(|&name| *name == plural || *name == singular)
+        .map(String::as_str)
+}
+
+/// Parse a row of the unit's fixed weapon table, e.g. `| 9x Suit-Bursts |
+/// 18" | A1 | - | Rending |`. Returns the weapon for target remapping.
+fn parse_fixed_weapon_row(line: &str) -> Option<Weapon> {
+    let cells: Vec<&str> = line
+        .split('|')
+        .map(str::trim)
+        .filter(|s| !s.is_empty())
+        .collect();
+    if cells.len() < 2 {
+        return None;
+    }
+    let name_cell = cells.first().copied()?;
+    // Strip an optional count prefix, e.g. `9x Suit-Bursts` -> `Suit-Bursts`.
+    let name = name_cell
+        .split_once(' ')
+        .and_then(|(head, tail)| is_count_token(head).then_some(tail))
+        .unwrap_or(name_cell)
+        .to_string();
+    if name.is_empty() || name == "Weapon" {
+        return None;
+    }
+    // Recover the count marker (e.g. `9x Suit-Bursts` -> `9`) for the `count`
+    // field; absent when the row has no `Nx` prefix.
+    let parsed_count = name_cell
+        .split_once(' ')
+        .and_then(|(head, _tail)| is_count_token(head).then(|| head.strip_suffix('x')))
+        .flatten()
+        .and_then(|digits| digits.parse().ok());
+
+    // Cells after the name: RNG, ATK, AP, SPE. Reuse the stats parser on a
+    // synthesized `(rng, atk, ap, spe)` string when possible.
+    let mut range: Option<String> = None;
+    let mut attacks: Option<u8> = None;
+    let mut ap: Option<String> = None;
+    let mut special_rules: Vec<String> = Vec::new();
+
+    for cell in cells.iter().skip(1) {
+        let cell = *cell;
+        if cell == "-" || cell.is_empty() {
+            continue;
+        }
+        if cell.contains('"') {
+            range = Some(cell.to_string());
+        } else if let Some(digits) = cell.strip_prefix("AP(").and_then(|d| d.strip_suffix(')'))
+            && let Ok(value) = digits.parse::<u32>()
+        {
+            // `AP(n)` form.
+            ap = Some(format!("AP({value})"));
+        } else if let Some(digits) = cell.strip_prefix('A')
+            && let Ok(value) = digits.parse::<u8>()
+        {
+            attacks = Some(attacks.map_or(value, |c| c.max(value)));
+        } else if cell.chars().all(|c| c.is_ascii_digit())
+            && let Ok(value) = cell.parse::<u32>()
+        {
+            // Bare number in the AP column (the pages emit `1` for `AP(1)`).
+            ap = Some(format!("AP({value})"));
+        } else {
+            special_rules.extend(
+                cell.split(',')
+                    .map(str::trim)
+                    .filter(|s| !s.is_empty())
+                    .map(str::to_string),
+            );
+        }
+    }
+
+    let attacks = attacks.unwrap_or(1);
+    Some(Weapon {
+        name,
+        range,
+        attacks: format!("A{attacks}"),
+        ap,
+        special_rules,
+        count: parsed_count,
+    })
 }
 
 /// Parse an upgrade option line like "Combat Bio-Engineer (Furious)+5pts"
@@ -370,7 +616,16 @@ fn parse_single_weapon(weapon_str: &str, names: &mut Vec<String>, rules: &mut Ve
                 names.push(name.to_string());
             }
             if !rules_str.is_empty() {
-                rules.push(rules_str.to_string());
+                // Parameterized rule written as `RuleName(N)`, e.g.
+                // `Transport(6)+20pts`: the paren holds the rule's value,
+                // not a weapon specification. Without the name the bare
+                // number is uninterpretable, so re-attach it.
+                let rule = if !name.is_empty() && rules_str.bytes().all(|b| b.is_ascii_digit()) {
+                    format!("{name}({rules_str})")
+                } else {
+                    rules_str.to_string()
+                };
+                rules.push(rule);
             }
         } else {
             // No matching closing paren, treat whole thing as name
@@ -420,7 +675,7 @@ fn parse_unit_row(line: &str) -> Result<Option<Unit>> {
     let equipment_str = cells
         .get(3)
         .ok_or_else(|| CollectorError::ParseError("Missing equipment column".to_string()))?;
-    let weapons = parse_equipment(equipment_str)?;
+    let weapons = parse_equipment(equipment_str);
 
     // Parse special rules
     let rules_str = cells
@@ -444,6 +699,7 @@ fn parse_unit_row(line: &str) -> Result<Option<Unit>> {
         special_rules,
         cost,
         upgrade_categories: Vec::new(), // Will be populated later
+        fixed_weapons: Vec::new(),      // Populated from the detail table
     }))
 }
 
@@ -488,137 +744,140 @@ fn parse_name_and_size(text: &str) -> Result<(String, u32)> {
     }
 }
 
-/// Parse equipment string into list of weapons
-fn parse_equipment(text: &str) -> Result<Vec<Weapon>> {
-    let mut weapons = Vec::new();
-
-    // Equipment format: "Nx Weapon Name (stats) Nx Another Weapon (stats)"
-    // Split by looking for patterns like "1x ", "2x ", etc.
-    let mut current = String::new();
-
-    for word in text.split_whitespace() {
-        // Check if this looks like a count (e.g., "1x", "2x", "10x")
-        if word.ends_with('x') && word.get(..word.len().saturating_sub(1)).is_some() {
-            // If we have accumulated text, parse it as a weapon
-            if !current.is_empty()
-                && let Some(weapon) = parse_weapon(&current)?
-            {
-                weapons.push(weapon);
-            }
-            current = word.to_string();
-        } else {
-            if !current.is_empty() {
-                current.push(' ');
-            }
-            current.push_str(word);
-        }
-    }
-
-    // Parse the last weapon
-    if !current.is_empty()
-        && let Some(weapon) = parse_weapon(&current)?
-    {
-        weapons.push(weapon);
-    }
-
-    Ok(weapons)
+/// Whether a whole token is a weapon count prefix like `3x` (digits then a
+/// single trailing `x`). Weapon names that merely end in `x` (`Flux`, `Twin`)
+/// are *not* count tokens, so names such as `Rapid Flux Carbines` are never
+/// split at the interior `x`.
+fn is_count_token(token: &str) -> bool {
+    let Some(digits) = token.strip_suffix('x') else {
+        return false;
+    };
+    !digits.is_empty() && digits.bytes().all(|b| b.is_ascii_digit())
 }
 
-/// Parse a single weapon from text like "1x Shredder Cannon (18\", A4, Rending)"
-fn parse_weapon(text: &str) -> Result<Option<Weapon>> {
-    // Extract count prefix (e.g., "1x")
-    let (count, rest) = if let Some(x_pos) = text.find('x') {
-        let count_str = text.get(..x_pos).ok_or_else(|| {
-            CollectorError::ParseError("Failed to parse weapon count".to_string())
-        })?;
-        if count_str.chars().all(|c| c.is_ascii_digit()) {
-            let rest = text
-                .get(
-                    x_pos.checked_add(1).ok_or_else(|| {
-                        CollectorError::ParseError("Failed to parse weapon".to_string())
-                    })?..,
-                )
-                .ok_or_else(|| {
-                    CollectorError::ParseError("Failed to extract weapon substring".to_string())
-                })?;
-            (count_str.to_string(), rest.trim())
-        } else {
-            ("1".to_string(), text)
+/// Split an equipment cell into `(count, fragment)` entries. A count token
+/// (`2x`) starts a new entry; all other tokens append to the current entry,
+/// so multi-word weapon names are preserved verbatim. An un-counted token
+/// that follows a *completed stats group* (`Name (A2)`) starts a new
+/// un-counted entry instead, so `3x CCWs (A2) Shield (Shielded)` yields two
+/// weapons rather than one merged fragment.
+fn split_equipment(text: &str) -> Vec<(Option<u32>, String)> {
+    let mut entries: Vec<(Option<u32>, Vec<&str>)> = Vec::new();
+
+    // Whether the current entry's parens are balanced with at least one
+    // group open — i.e. a completed stats group `Name (stats ...)`.
+    // An un-counted token arriving after that starts a new entry.
+    let completed_stats_group = |fragments: &[&str]| {
+        let mut opens = 0i32;
+        let mut closes = 0i32;
+        for fragment in fragments {
+            opens = opens.saturating_add(i32::from(fragment.contains('(')));
+            closes = closes.saturating_add(i32::from(fragment.contains(')')));
         }
-    } else {
-        ("1".to_string(), text)
+        opens > 0 && closes >= opens
     };
 
-    // Find stats in parentheses
-    if let Some(paren_start) = rest.find('(') {
-        let name = rest
-            .get(..paren_start)
-            .ok_or_else(|| CollectorError::ParseError("Failed to parse weapon name".to_string()))?
-            .trim()
-            .to_string();
-
-        let stats_part = rest
-            .get(
-                paren_start.checked_add(1).ok_or_else(|| {
-                    CollectorError::ParseError("Failed to parse weapon stats".to_string())
-                })?..,
-            )
-            .ok_or_else(|| {
-                CollectorError::ParseError("Failed to extract weapon stats substring".to_string())
-            })?;
-
-        if let Some(paren_end) = stats_part.rfind(')') {
-            let stats = stats_part.get(..paren_end).ok_or_else(|| {
-                CollectorError::ParseError("Failed to extract weapon stats".to_string())
-            })?;
-
-            // Parse stats: range, attacks, AP, special rules
-            let stat_parts: Vec<&str> = stats.split(',').map(str::trim).collect();
-
-            let mut range = None;
-            let mut attacks = String::new();
-            let mut ap = None;
-            let mut special_rules = Vec::new();
-
-            for stat in stat_parts {
-                if stat.contains('"') {
-                    // Range like "18\""
-                    range = Some(stat.to_string());
-                } else if stat.starts_with("AP") {
-                    // AP like "AP(1)" - check BEFORE attacks to avoid "AP(1)" matching as attacks
-                    ap = Some(stat.to_string());
-                } else if stat.starts_with('A') && stat.get(1..).is_some() {
-                    // Attacks like "A4"
-                    attacks = stat.to_string();
-                } else if !stat.is_empty() {
-                    // Special rule
-                    special_rules.push(stat.to_string());
-                }
+    for token in text.split_whitespace() {
+        if is_count_token(token) {
+            let count = token
+                .strip_suffix('x')
+                .and_then(|digits| digits.parse().ok());
+            entries.push((count, Vec::new()));
+            continue;
+        }
+        if entries.is_empty() {
+            // First token without a count prefix: a single (un-counted) weapon.
+            entries.push((None, vec![token]));
+        } else if let Some(last) = entries.last_mut() {
+            let new_entry = !token.starts_with('(') && completed_stats_group(&last.1);
+            if new_entry {
+                entries.push((None, vec![token]));
+            } else {
+                last.1.push(token);
             }
-
-            // Default attacks if not specified
-            if attacks.is_empty() {
-                attacks = format!("A{count}");
-            }
-
-            return Ok(Some(Weapon {
-                name,
-                range,
-                attacks,
-                ap,
-                special_rules,
-            }));
         }
     }
 
-    // No stats, just weapon name
-    Ok(Some(Weapon {
-        name: rest.trim().to_string(),
-        range: None,
-        attacks: format!("A{count}"),
-        ap: None,
-        special_rules: Vec::new(),
-    }))
+    entries
+        .into_iter()
+        .filter(|(_, fragments)| !fragments.is_empty())
+        .map(|(count, fragments)| (count, fragments.join(" ")))
+        .collect()
+}
+
+/// Parse equipment string into list of weapons
+fn parse_equipment(text: &str) -> Vec<Weapon> {
+    let mut weapons = Vec::new();
+    for (count, fragment) in split_equipment(text) {
+        if let Some(weapon) = parse_weapon(count, &fragment) {
+            weapons.push(weapon);
+        }
+    }
+    weapons
+}
+
+/// Parse a single weapon from a fragment like `Shredder Cannon (18\", A4, Rending)`.
+///
+/// `count` is the fragment's count prefix (from an `Nx` marker). It is used
+/// as the fallback attack total when the stats carry no explicit `A<number>`.
+fn parse_weapon(count: Option<u32>, text: &str) -> Option<Weapon> {
+    let fallback = u8::try_from(count.unwrap_or(1).min(u32::from(u8::MAX))).unwrap_or(u8::MAX);
+
+    let (name, stats_part) = match text.split_once('(') {
+        Some((name, rest)) => (name.trim(), Some(rest)),
+        None => (text.trim(), None),
+    };
+    if name.is_empty() {
+        // Nameless fragment: nothing usable rather than an empty-name weapon.
+        return None;
+    }
+
+    let (range, attacks, ap, special_rules) = if let Some(stats) = stats_part
+        && let Some(inner) = stats.rsplit_once(')').map(|(inner, _)| inner)
+    {
+        let mut range: Option<String> = None;
+        let mut explicit_attacks: Option<u8> = None;
+        let mut ap: Option<String> = None;
+        let mut special_rules: Vec<String> = Vec::new();
+
+        for stat in inner.split(',').map(str::trim) {
+            if stat.is_empty() {
+                continue;
+            }
+            if stat.contains('"') {
+                // Range like `18"`
+                range = Some(stat.to_string());
+            } else if stat.starts_with("AP") {
+                // AP like `AP(1)` - checked before attacks so `AP(1)` is not
+                // mistaken for an attack count.
+                ap = Some(stat.to_string());
+            } else if let Some(digits) = stat.strip_prefix('A')
+                && let Ok(value) = digits.parse::<u8>()
+            {
+                explicit_attacks =
+                    Some(explicit_attacks.map_or(value, |current| current.max(value)));
+            } else {
+                // Special rule
+                special_rules.push(stat.to_string());
+            }
+        }
+
+        let attacks = explicit_attacks.unwrap_or(fallback);
+        (range, attacks, ap, special_rules)
+    } else {
+        (None, fallback, None, Vec::new())
+    };
+
+    // An explicit `Nx` prefix becomes the stored wielder count.
+    let explicit_count = count.and_then(|value| u8::try_from(value).ok());
+    Some(Weapon {
+        name: name.to_string(),
+        range,
+        attacks: format!("A{attacks}"),
+        ap,
+        special_rules,
+        count: explicit_count,
+    })
 }
 
 /// Parse special rules and extract tough value
@@ -653,6 +912,55 @@ fn parse_cost(text: &str) -> Result<u32> {
     cost_str
         .parse::<u32>()
         .map_err(|_| CollectorError::ParseError(format!("Invalid cost: {cost_str}")))
+}
+
+/// Normalize Wolf Brothers transports: the army book grants Wolfborn to
+/// every Wolf Brothers unit, but the source pages omit it on transport
+/// carriers (e.g. Wolf Drop Pod). Any unit that provides capacity via a
+/// Transport capacity rule or the `Open Sides` transport rule carries
+/// Wolfborn, so add it when missing (without duplicating existing rules).
+pub fn normalize_wolf_brothers_transports(army: &mut Army) {
+    let is_wolf_faction = army
+        .name
+        .to_ascii_uppercase()
+        .strip_prefix("WOLF")
+        .is_some_and(|rest| rest.is_empty() || rest.starts_with(' '));
+    if !is_wolf_faction {
+        return;
+    }
+    for unit in &mut army.units {
+        let is_transport = unit
+            .special_rules
+            .iter()
+            .any(|r| r.starts_with("Transport(") || r == "Open Sides");
+        if is_transport && !unit.special_rules.iter().any(|r| r == "Wolfborn") {
+            unit.special_rules.push("Wolfborn".to_string());
+        }
+    }
+}
+
+/// Normalize upgrade category labels for single-model units.
+///
+/// The source spells out the (redundant) "one model" wording on some
+/// single-model vehicles, e.g. `Upgrade one model with Targeting Array` for
+/// a size-1 Knight APC, while every other size-1 vehicle uses `Upgrade with`.
+/// Rewrite the redundant forms to their size-independent equivalents so the
+/// generated catalogs are consistent (and so `determine_selection_mode`
+/// classifies the categories correctly).
+pub fn normalize_single_model_labels(army: &mut Army) {
+    for unit in &mut army.units {
+        if unit.size != 1 {
+            continue;
+        }
+        for category in &mut unit.upgrade_categories {
+            category.category = match category.category.as_str() {
+                "Upgrade one model with" => "Upgrade with".to_string(),
+                "Upgrade one model with one" => "Upgrade with one".to_string(),
+                "Upgrade any model with" => "Upgrade with any".to_string(),
+                other => other.to_string(),
+            };
+        }
+    }
 }
 
 /// Parse the army list from cached HTML
@@ -749,4 +1057,320 @@ pub fn parse_subfactions(_cache: &Cache, _parent_name: &str) -> Vec<Subfaction> 
     // For now, return empty list
     println!("Warning: Subfaction parsing not yet implemented");
     Vec::new()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn army(name: &str, units: Vec<Unit>) -> Army {
+        Army {
+            name: name.to_string(),
+            id: "test".to_string(),
+            version: Some("v3.5.3".to_string()),
+            info_url: String::new(),
+            preview_url: String::new(),
+            has_subfactions: false,
+            units,
+        }
+    }
+
+    fn unit(name: &str, units_rules: Vec<&str>) -> Unit {
+        Unit {
+            name: name.to_string(),
+            size: 1,
+            quality: "4+".to_string(),
+            defense: "3+".to_string(),
+            tough: None,
+            weapons: vec![],
+            special_rules: units_rules.into_iter().map(String::from).collect(),
+            cost: 100,
+            upgrade_categories: Vec::new(),
+            fixed_weapons: Vec::new(),
+        }
+    }
+
+    #[test]
+    fn equipment_count_prefix_is_not_split_mid_name() {
+        // A `3x` marker starts the entry; `Flux` must not be read as a count.
+        let weapons = parse_equipment("3x Rapid Flux Carbines (18\", A4, Surge) 3x CCWs (A2)");
+        assert_eq!(weapons.len(), 2);
+        assert_eq!(weapons[0].name, "Rapid Flux Carbines");
+        assert_eq!(weapons[0].attacks, "A4");
+        assert_eq!(weapons[1].name, "CCWs");
+        assert_eq!(weapons[1].attacks, "A2");
+    }
+
+    #[test]
+    fn equipment_single_weapon_without_count_prefix() {
+        // Detail-style rows list single weapons without an `1x` prefix; the
+        // count prefix still parses off a following entry.
+        let weapons = parse_equipment(
+            "Heavy Burst Carbine (18\", A2) 1x Twin Heavy Pulse-Gun (18\", A4, AP(1))",
+        );
+        assert_eq!(weapons.len(), 2);
+        assert_eq!(weapons[0].name, "Heavy Burst Carbine");
+        assert_eq!(weapons[0].attacks, "A2");
+        assert_eq!(weapons[1].name, "Twin Heavy Pulse-Gun");
+        assert_eq!(weapons[1].attacks, "A4");
+        assert_eq!(weapons[1].ap.as_deref(), Some("AP(1)"));
+    }
+
+    #[test]
+    fn equipment_count_prefix_falls_back_to_attacks() {
+        // No explicit A-number: the count is the attack total.
+        let weapons = parse_equipment("2x Bashes (A2)");
+        assert_eq!(weapons[0].attacks, "A2");
+        let weapons = parse_equipment("3x CCWs (A2)");
+        assert_eq!(weapons[0].name, "CCWs");
+    }
+
+    #[test]
+    fn split_equipment_splits_after_completed_stats_group() {
+        // A count-prefixed weapon followed by an un-counted weapon with its
+        // own stats group must yield two entries (was one merged fragment:
+        // `CCWs` with the malformed rule `A2) Shield (Shielded)`).
+        let entries = split_equipment("3x CCWs (A2) Shield (Shielded)");
+        assert_eq!(
+            entries,
+            vec![
+                (Some(3), "CCWs (A2)".to_string()),
+                (None, "Shield (Shielded)".to_string())
+            ]
+        );
+
+        // Multi-word names still stay inside their own entry.
+        let entries = split_equipment(
+            "3x Rapid Flux Carbines (18\", A4, Surge) Heavy Burst Carbine (18\", A2)",
+        );
+        assert_eq!(
+            entries,
+            vec![
+                (Some(3), "Rapid Flux Carbines (18\", A4, Surge)".to_string()),
+                (None, "Heavy Burst Carbine (18\", A2)".to_string())
+            ]
+        );
+
+        // No split when the prior entry has no stats group yet.
+        let entries = split_equipment("3x CCWs");
+        assert_eq!(entries, vec![(Some(3), "CCWs".to_string())]);
+
+        // End-to-end through the weapon parser: two weapons, no leaked stats.
+        let weapons = parse_equipment("3x CCWs (A2) Shield (Shielded)");
+        assert_eq!(weapons.len(), 2);
+        assert_eq!(weapons[0].name, "CCWs");
+        assert_eq!(weapons[0].attacks, "A2");
+        assert_eq!(weapons[1].name, "Shield");
+        assert_eq!(weapons[1].special_rules, vec!["Shielded"]);
+    }
+
+    #[test]
+    fn equipment_keeps_nameless_fragments_out() {
+        // A dangling count with no name produces no weapon instead of an
+        // empty-name weapon.
+        assert!(parse_equipment("3x").is_empty());
+        assert_eq!(parse_equipment("3x Stomp (A4, AP(1))").len(), 1);
+    }
+
+    #[test]
+    fn category_directives_are_not_merged_into_previous_category() {
+        // Old code only matched "Upgrade with"/"Replace"/"Add" as
+        // substrings, so these sections merged into the previous category.
+        let html = concat!(
+            "| Name [Size] | Qua | Def | Equipment | Special Rules | Cost |\n",
+            "| --- | --- | --- | --- | --- | --- |\n",
+            "| Battle Suits [3] | 4+ | 3+ | 9x Suit-Bursts (18\", A1) 3x Bashes (A2) | Flying | 220pts |\n",
+            "**Battle Suits [3]**- 220pts\n",
+            "Flying, Targeting Visor\n",
+            "| Weapon | RNG | ATK | AP | SPE |\n",
+            "| --- | --- | --- | --- | --- |\n",
+            "| 9x Suit-Bursts | 18\" | A1 | - | Rending |\n",
+            "Replace one Suit-Burst\n",
+            "Suit-Flamer (12\", A1, Blast(3))+10pts\n",
+            "Any model may replace 2x Suit-Burst\n",
+            "Suit-Flamer (12\", A1, Blast(3))+5pts\n",
+            "Upgrade all models with\n",
+            "Drop-Thrusters (Ambush)+25pts\n",
+        );
+        let units = extract_units_from_table(html).expect("units parse");
+        let cats: Vec<&str> = units[0]
+            .upgrade_categories
+            .iter()
+            .map(|c| c.category.as_str())
+            .collect();
+        // `Replace one Suit-Burst` is remapped onto the unit's actual
+        // fixed-weapon name `Suit-Bursts`; the other sections keep their
+        // source wording verbatim.
+        assert_eq!(
+            cats,
+            vec![
+                "Replace one Suit-Bursts",
+                "Any model may replace 2x Suit-Burst",
+                "Upgrade all models with",
+            ]
+        );
+        // Each option lands in its own category.
+        assert_eq!(units[0].upgrade_categories[0].upgrades.len(), 1);
+        assert_eq!(units[0].upgrade_categories[1].upgrades.len(), 1);
+        assert_eq!(units[0].upgrade_categories[2].upgrades.len(), 1);
+    }
+
+    #[test]
+    fn repeated_category_names_are_not_deduped() {
+        // Two genuine "Upgrade with one" sections are distinct groups.
+        let html = concat!(
+            "| Name [Size] | Qua | Def | Equipment | Special Rules | Cost |\n",
+            "| --- | --- | --- | --- | --- | --- |\n",
+            "| Captain [1] | 4+ | 3+ | 1x Flamer Pistol (6\", A1) | Hero | 60pts |\n",
+            "**Captain [1]**- 60pts\n",
+            "Hero, Watchborn\n",
+            "| Weapon | RNG | ATK | AP | SPE |\n",
+            "| --- | --- | --- | --- | --- |\n",
+            "| Flamer Pistol | 6\" | A1 | - | Blast(3) |\n",
+            "Upgrade with one\n",
+            "Artillerist (Re-Position Artillery)+10pts\n",
+            "Upgrade with\n",
+            "Combat Shield (Shielded)+10pts\n",
+            "Upgrade with one\n",
+            "Jetpack (Ambush, Flying)+20pts\n",
+        );
+        let units = extract_units_from_table(html).expect("units parse");
+        let cats: Vec<&str> = units[0]
+            .upgrade_categories
+            .iter()
+            .map(|c| c.category.as_str())
+            .collect();
+        assert_eq!(
+            cats,
+            vec!["Upgrade with one", "Upgrade with", "Upgrade with one"]
+        );
+    }
+
+    #[test]
+    fn exact_duplicate_options_within_a_category_are_removed() {
+        let html = concat!(
+            "| Name [Size] | Qua | Def | Equipment | Special Rules | Cost |\n",
+            "| --- | --- | --- | --- | --- | --- |\n",
+            "| Walker [1] | 4+ | 3+ | 2x Walker Fists (A4, AP(4)) | Fear(2) | 400pts |\n",
+            "**Walker [1]**- 400pts\n",
+            "Fear(2)\n",
+            "Replace one Walker Fist\n",
+            "Energy Fist (A4, AP(3))+25pts\n",
+            "Energy Fist (A4, AP(3))+25pts\n",
+        );
+        let units = extract_units_from_table(html).expect("units parse");
+        let cat = &units[0].upgrade_categories[0];
+        assert_eq!(cat.upgrades.len(), 1);
+        assert_eq!(cat.upgrades[0].name, "Energy Fist");
+    }
+
+    #[test]
+    fn replace_targets_are_remapped_to_fixed_weapon_names() {
+        // `Replace any Heavy Hammer` targets the plural `Heavy Hammers` entry.
+        let html = concat!(
+            "| Name [Size] | Qua | Def | Equipment | Special Rules | Cost |\n",
+            "| --- | --- | --- | --- | --- | --- |\n",
+            "| Knight Titan [1] | 3+ | 2+ | 2x Heavy Hammers (A3, AP(3)) 1x Titan Hammer (A2, AP(4)) | Fortified | 250pts |\n",
+            "**Knight Titan [1]**- 250pts\n",
+            "Fortified\n",
+            "| Weapon | RNG | ATK | AP | SPE |\n",
+            "| --- | --- | --- | --- | --- |\n",
+            "| 2x Heavy Hammers | - | A3 | 3 | - |\n",
+            "| Titan Hammer | - | A2 | 4 | - |\n",
+            "Replace any Heavy Hammer\n",
+            "Heavy Missile Launcher (12\", A1, AP(3))+20pts\n",
+        );
+        let units = extract_units_from_table(html).expect("units parse");
+        let cats: Vec<&str> = units[0]
+            .upgrade_categories
+            .iter()
+            .map(|c| c.category.as_str())
+            .collect();
+        assert_eq!(cats, vec!["Replace any Heavy Hammers"]);
+    }
+
+    #[test]
+    fn bare_numeric_rule_value_keeps_its_rule_name() {
+        // `Transport(6)+20pts` keeps the rule name so the API can parse
+        // `Transport(6)`, not the bare number `6`.
+        let upgrade = parse_upgrade_option("Transport(6)+20pts").expect("option parses");
+        assert_eq!(upgrade.name, "Transport");
+        assert_eq!(upgrade.rules.as_deref(), Some("Transport(6)"));
+        assert_eq!(upgrade.cost_modifier, "+20pts");
+    }
+
+    #[test]
+    fn wolf_brothers_transports_gain_wolfborn() {
+        let mut wolf = army(
+            "Wolf Brothers",
+            vec![
+                unit(
+                    "Wolf Drop Pod",
+                    vec!["Ambush", "Fearless", "Immobile", "Transport(11)"],
+                ),
+                unit(
+                    "Wolf Attack Speeder",
+                    vec![
+                        "Ambush",
+                        "Fast",
+                        "Fearless",
+                        "Impact(3)",
+                        "Strider",
+                        "Wolfborn",
+                    ],
+                ),
+            ],
+        );
+        normalize_wolf_brothers_transports(&mut wolf);
+        let pod = &wolf.units[0];
+        assert!(pod.special_rules.iter().any(|r| r == "Wolfborn"));
+        // Non-transport units and already-listed units are untouched.
+        assert_eq!(wolf.units[1].special_rules.len(), 6);
+        // Non-Wolf armies are untouched.
+        let mut dao = army(
+            "DAO Union",
+            vec![unit(
+                "Hover Transport",
+                vec!["Fast", "Impact(3)", "Strider", "Transport(11)"],
+            )],
+        );
+        normalize_wolf_brothers_transports(&mut dao);
+        assert!(!dao.units[0].special_rules.iter().any(|r| r == "Wolfborn"));
+    }
+
+    #[test]
+    fn fixed_weapon_table_is_captured() {
+        let html = concat!(
+            "| Name [Size] | Qua | Def | Equipment | Special Rules | Cost |\n",
+            "| --- | --- | --- | --- | --- | --- |\n",
+            "| Battle Suits [3] | 4+ | 3+ | 9x Suit-Bursts (18\", A1) | Flying | 220pts |\n",
+            "**Battle Suits [3]**- 220pts\n",
+            "Flying\n",
+            "| Weapon | RNG | ATK | AP | SPE |\n",
+            "| --- | --- | --- | --- | --- |\n",
+            "| 9x Suit-Bursts | 18\" | A1 | - | Rending |\n",
+            "| 3x Bashes | - | A2 | - | - |\n",
+            "Upgrade with one\n",
+            "Storm Leader (Hit & Run Shooter Aura)+20pts\n",
+        );
+        let units = extract_units_from_table(html).expect("units parse");
+        assert_eq!(units[0].fixed_weapons.len(), 2);
+        assert_eq!(units[0].fixed_weapons[0].name, "Suit-Bursts");
+        assert_eq!(units[0].fixed_weapons[1].name, "Bashes");
+        // The two-column `| Upgrade | SPE |` table is not captured.
+        let html = concat!(
+            "| Name [Size] | Qua | Def | Equipment | Special Rules | Cost |\n",
+            "| --- | --- | --- | --- | --- | --- |\n",
+            "| Destroyers [3] | 4+ | 3+ | 3x CCWs (A3) | Ambush | 230pts |\n",
+            "**Destroyers [3]**- 230pts\n",
+            "Ambush\n",
+            "| Upgrade | SPE |\n",
+            "| --- | --- |\n",
+            "| Combat Shield | Shielded |\n",
+            "Upgrade one model with one\n",
+            "Banner (Courage Aura)+5pts\n",
+        );
+        let units = extract_units_from_table(html).expect("units parse");
+        assert!(units[0].fixed_weapons.is_empty());
+    }
 }

@@ -1,0 +1,876 @@
+v3.5.3:
+  name: Soul-Snatcher Cults
+  id: zz3kp5ry7ks6mxcx
+  units:
+  - name: Supreme Leader
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Sharp Claws
+      attacks: A4
+      special_rules:
+      - Disintegrate
+      count: 1
+    special_rules:
+    - Fanatic
+    - Fast
+    - Fear(1)
+    - Hero
+    - Strider
+    cost: 85
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Psy-Warden
+        rules: Grounded Reinforcement Aura
+        cost_modifier: +5pts
+      - name: Psychic Idol
+        rules: Spell Conduit
+        cost_modifier: +10pts
+      - name: Prime
+        rules: Melee Slayer Aura
+        cost_modifier: +25pts
+      - name: Psychic Affinity
+        rules: Caster(2)
+        cost_modifier: +40pts
+      - name: Master Psychic Affinity
+        rules: Caster(3)
+        cost_modifier: +60pts
+      - name: Tactical Master
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Sharp Claws
+      upgrades:
+      - name: Heavy Claws
+        rules: A4, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Upgrade with
+      upgrades:
+      - name: Pet Familiar
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+    - category: Replace Adrenaline Fueled
+      upgrades:
+      - name: Patient Stalker
+        rules: Scout, Strider
+        cost_modifier: +5pts
+      - name: Displacer Glands
+        rules: Ambush, Regeneration
+        cost_modifier: +5pts
+      - name: Spasmic Glands
+        rules: Bounding, Regeneration
+        cost_modifier: +5pts
+  - name: Brute Champion
+    size: 1
+    quality: 3+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Massive Heavy Pick
+      attacks: A2
+      ap: AP(2)
+      special_rules:
+      - Rending
+      count: 1
+    special_rules:
+    - Fanatic
+    - Hero
+    - Regeneration
+    cost: 60
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Psy-Warden
+        rules: Grounded Reinforcement Aura
+        cost_modifier: +5pts
+      - name: Psychic Idol
+        rules: Spell Conduit
+        cost_modifier: +10pts
+      - name: Mad Scientist
+        rules: Regeneration Aura
+        cost_modifier: +30pts
+      - name: Tactical Master
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Massive Heavy Pick
+      upgrades:
+      - name: Massive Heavy Hammer
+        rules: A1, AP(2), Blast(3)
+        cost_modifier: Free
+      - name: Massive Heavy Great Weapon
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+      - name: Massive Pick Hammer
+        rules: A1, AP(3), Deadly(3)
+        cost_modifier: +5pts
+    - category: Upgrade with
+      upgrades:
+      - name: Pet Familiar
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+  - name: Cult Leader
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Dual Sharp Claws
+      attacks: A2
+      special_rules:
+      - Disintegrate
+      count: 1
+    special_rules:
+    - Fanatic
+    - Hero
+    cost: 30
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Psy-Warden
+        rules: Grounded Reinforcement Aura
+        cost_modifier: +5pts
+      - name: Cult Banner
+        rules: Fear(2)
+        cost_modifier: +20pts
+      - name: Mad Scientist
+        rules: Regeneration Aura
+        cost_modifier: +30pts
+      - name: Propagandist
+        rules: Quick Shot Aura
+        cost_modifier: +35pts
+      - name: Mage
+        rules: Caster(2)
+        cost_modifier: +40pts
+      - name: Tactical Master
+        rules: Re-Deployment
+        cost_modifier: +65pts
+    - category: Replace Dual Sharp Claws
+      upgrades:
+      - name: Sabotage Charges
+        rules: A1, AP(1), Blast(3)
+        cost_modifier: +5pts
+      - name: Cult Pistol, CCW
+        rules: 12", A2, A2
+        cost_modifier: +5pts
+      - name: Syringe Goad
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Array of CCWs
+        rules: A3, AP(1), Bane
+        cost_modifier: +10pts
+    - category: Replace Cult Pistol
+      upgrades:
+      - name: Cult Burst Pistol
+        rules: 12", A4
+        cost_modifier: +5pts
+      - name: Cult Rifle
+        rules: 24", A2
+        cost_modifier: +5pts
+      - name: Cult Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +10pts
+      - name: Cult Sniper Rifle
+        rules: 30", A2, AP(1), Reliable, Takedown
+        cost_modifier: +55pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Combat Bike
+        rules: Fast
+        cost_modifier: +10pts
+      - name: Pet Familiar
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+  - name: Cult Hitman
+    size: 1
+    quality: 3+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Cult Pistol
+      range: 12"
+      attacks: A2
+      count: 1
+    - name: CCW
+      attacks: A4
+      count: 1
+    special_rules:
+    - Fanatic
+    - Hero
+    cost: 55
+    upgrade_categories:
+    - category: Replace Cult Pistol
+      upgrades:
+      - name: Cult Burst Pistol
+        rules: 12", A4
+        cost_modifier: +10pts
+      - name: Duelist Pistols
+        rules: 12", A2, AP(1), Reliable, Takedown
+        cost_modifier: +20pts
+    - category: Replace Cult Pistol and CCW
+      upgrades:
+      - name: Toxin Blades
+        rules: A4, AP(1), Bane
+        cost_modifier: +5pts
+      - name: Dual Swords
+        rules: A4, AP(1), Rending
+        cost_modifier: +10pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Pet Familiar
+        rules: Repel Ambushers
+        cost_modifier: +15pts
+      - name: Assassin
+        rules: Takedown Strike
+        cost_modifier: +15pts
+  - name: Minions
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Rifles
+      range: 24"
+      attacks: A1
+      count: 10
+    - name: CCWs
+      attacks: A1
+      count: 10
+    special_rules:
+    - Fanatic
+    cost: 125
+    upgrade_categories:
+    - category: Replace up to two Rifles
+      upgrades:
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+      - name: Grenade Launcher
+        rules: 24", A1, Blast(3)
+        cost_modifier: +10pts
+      - name: Drum Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Cult Standard
+        rules: Grounded Precision Aura
+        cost_modifier: +30pts
+  - name: Minion Weapon Teams
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Mortars
+      range: 30"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Indirect
+      count: 3
+    - name: Crews
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fanatic
+    cost: 125
+    upgrade_categories:
+    - category: Replace any Mortars
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +5pts
+      - name: Missile Launcher
+        rules: 30", A1, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +10pts
+      - name: Autocannon
+        rules: 36", A3, AP(2)
+        cost_modifier: +15pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +20pts
+  - name: Neophytes
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Rifles
+      range: 24"
+      attacks: A1
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Fanatic
+    cost: 85
+    upgrade_categories:
+    - category: Replace any Rifles
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+    - category: Replace one Rifles
+      upgrades:
+      - name: Web Carbine
+        rules: 18", A2, Rending
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Grenade Launcher
+        rules: 24", A1, Blast(3)
+        cost_modifier: +10pts
+      - name: Quake Cannon
+        rules: 24", A1, Blast(3), Rending
+        cost_modifier: +20pts
+      - name: Mining Laser
+        rules: 18", A1, AP(3), Deadly(3)
+        cost_modifier: +25pts
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +30pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Cult Standard
+        rules: Grounded Precision Aura
+        cost_modifier: +15pts
+    - category: Replace one Rifles and CCWs
+      upgrades:
+      - name: Pistol, CCW
+        rules: 12", A1, A2
+        cost_modifier: Free
+      - name: Web Pistol, CCW
+        rules: 12", A2, Rending, A2
+        cost_modifier: +10pts
+    - category: Replace one CCWs
+      upgrades:
+      - name: Sharp Claw
+        rules: A2, Disintegrate
+        cost_modifier: +5pts
+      - name: Heavy Pick
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Heavy Mace
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Acolytes
+    size: 5
+    quality: 4+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      count: 5
+    - name: Mutant Claws
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    special_rules:
+    - Fanatic
+    - Strider
+    cost: 115
+    upgrade_categories:
+    - category: Replace one Pistols
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+    - category: Replace one Pistols and Mutant Claws
+      upgrades:
+      - name: Demo-Charges
+        rules: A1, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Heavy Cutter
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+      - name: Heavy Drill
+        rules: A3, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Heavy Buzz Saw
+        rules: A3, AP(4)
+        cost_modifier: +15pts
+      - name: Whip & Blade
+        rules: A2, AP(1), Reliable, Rending, Bane
+        cost_modifier: +15pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Cult Standard
+        rules: Grounded Precision Aura
+        cost_modifier: +20pts
+    - category: Replace one Pistols and Mutant Claws
+      upgrades:
+      - name: Sgt. Pistol, Sharp Claw
+        rules: 12", A1, A2, Disintegrate
+        cost_modifier: Free
+    - category: Replace Sharp Claw
+      upgrades:
+      - name: Blade Claw
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+      - name: Razor Whip
+        rules: A2, Reliable, Bane
+        cost_modifier: +10pts
+  - name: Mutant Brutes
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Picks
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 5
+    special_rules:
+    - Fanatic
+    - Regeneration
+    cost: 150
+    upgrade_categories:
+    - category: Replace one Heavy Picks
+      upgrades:
+      - name: Heavy Hammer
+        rules: A1, AP(1), Blast(3)
+        cost_modifier: Free
+      - name: Heavy Great Weapon
+        rules: A2, AP(3)
+        cost_modifier: +5pts
+      - name: Pick Hammer
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +5pts
+  - name: Mutant Soul-Snatchers
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Sharp Claws
+      attacks: A2
+      special_rules:
+      - Disintegrate
+      count: 5
+    special_rules:
+    - Ambush
+    - Fanatic
+    - Regeneration
+    cost: 140
+    upgrade_categories:
+    - category: Replace all Displacer Glands
+      upgrades:
+      - name: Spasmic Glands
+        rules: Bounding
+        cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Mind Snatcher
+        rules: Caster(1)
+        cost_modifier: +15pts
+  - name: Soul-Snatchers
+    size: 5
+    quality: 3+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Heavy Claws
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Rending
+      count: 5
+    special_rules:
+    - Fanatic
+    - Fast
+    - Strider
+    cost: 170
+    upgrade_categories:
+    - category: Replace all Adrenaline Fueleds
+      upgrades:
+      - name: Patient Stalker
+        rules: Scout
+        cost_modifier: +5pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Mind Snatcher
+        rules: Caster(1)
+        cost_modifier: +15pts
+  - name: Neophyte Bikers
+    size: 3
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Rifles
+      range: 24"
+      attacks: A1
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fanatic
+    - Fast
+    cost: 135
+    upgrade_categories:
+    - category: Replace any Rifles
+      upgrades:
+      - name: Burst Pistol
+        rules: 12", A3
+        cost_modifier: +5pts
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: +5pts
+      - name: Grenade Launcher
+        rules: 24", A1, Blast(3)
+        cost_modifier: +10pts
+    - category: Replace one CCWs
+      upgrades:
+      - name: Heavy Hammer
+        rules: A1, Blast(3)
+        cost_modifier: +5pts
+      - name: Sharp Claw
+        rules: A2, Disintegrate
+        cost_modifier: +5pts
+      - name: Heavy Pick
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Heavy Axe
+        rules: A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Heavy Mace
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Neophyte Quadbike
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 6
+    weapons:
+    - name: Burst Pistol
+      range: 12"
+      attacks: A3
+      count: 1
+    - name: Heavy Flamer
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Fanatic
+    - Fast
+    cost: 105
+    upgrade_categories:
+    - category: Replace Heavy Flamer
+      upgrades:
+      - name: Mining Laser
+        rules: 18", A1, AP(3), Deadly(3)
+        cost_modifier: +5pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+    - category: Upgrade with
+      upgrades:
+      - name: Propaganda Megaphone
+        rules: Mind Control
+        cost_modifier: +35pts
+  - name: Attack Vehicle
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Machinegun
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    - name: Heavy Mining Laser
+      range: 24"
+      attacks: A1
+      ap: AP(3)
+      special_rules:
+      - Deadly(3)
+      count: 1
+    special_rules:
+    - Fanatic
+    - Fast
+    - Impact(3)
+    cost: 200
+    upgrade_categories:
+    - category: Replace Heavy Mining Laser
+      upgrades:
+      - name: Heavy Mortar
+        rules: 36", A1, AP(1), Blast(3), Indirect
+        cost_modifier: +5pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Flare Gun
+        rules: Speed Buff
+        cost_modifier: +30pts
+      - name: Spotter
+        rules: Increased Shooting Range Buff
+        cost_modifier: +35pts
+      - name: Survey Vehicle
+        rules: Precision Shooting Mark
+        cost_modifier: +35pts
+  - name: Light APC
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Heavy Flamers
+      range: 12"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 2
+    special_rules:
+    - Fanatic
+    - Fast
+    - Impact(3)
+    - Transport(11)
+    cost: 205
+    upgrade_categories:
+    - category: Replace any Heavy Flamers
+      upgrades:
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +10pts
+    - category: Replace one Heavy Flamers
+      upgrades:
+      - name: Laser Machinegun
+        rules: 30", A3, AP(3)
+        cost_modifier: +30pts
+    - category: Upgrade with
+      upgrades:
+      - name: Pintle-Machinegun
+        rules: 30", A2, AP(1)
+        cost_modifier: +25pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +10pts
+      - name: Camouflage Netting
+        rules: Stealth
+        cost_modifier: +15pts
+    - category: Upgrade with
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +15pts
+  - name: Light Walker
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Heavy Flamer
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    - name: Stomp
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fanatic
+    - Fear(1)
+    cost: 160
+    upgrade_categories:
+    - category: Replace Twin Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts
+      - name: Twin Missile Launcher
+        rules: 30", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +30pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +55pts
+      - name: Twin Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +55pts
+      - name: Twin Plasma Cannon
+        rules: 30", A2, AP(4), Blast(3)
+        cost_modifier: +60pts
+      - name: Twin Laser Machinegun
+        rules: 30", A6, AP(3)
+        cost_modifier: +65pts
+  - name: Grinder Truck
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Heavy Machinegun
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    - name: Heavy Quake Cannon
+      range: 24"
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      - Rending
+      count: 1
+    special_rules:
+    - Fanatic
+    - Fast
+    - Impact(3)
+    - Strider
+    - Transport(6)
+    cost: 305
+    upgrade_categories:
+    - category: Replace Heavy Quake Cannon
+      upgrades:
+      - name: Heavy Incinerator
+        rules: 18", A2, AP(1), Blast(3), Reliable
+        cost_modifier: +20pts
+      - name: Rapid Heavy Mining Laser
+        rules: 24", A2, AP(3), Deadly(3)
+        cost_modifier: +30pts
+    - category: Upgrade with
+      upgrades:
+      - name: Great Grinder
+        rules: Impact(5)
+        cost_modifier: +30pts
+  - name: Mining Truck
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 9
+    weapons:
+    - name: Twin Autocannon
+      range: 36"
+      attacks: A6
+      ap: AP(2)
+      count: 1
+    - name: Heavy Machinegun
+      range: 30"
+      attacks: A3
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fanatic
+    - Fast
+    - Impact(3)
+    - Transport(11)
+    cost: 355
+    upgrade_categories:
+    - category: Upgrade with
+      upgrades:
+      - name: Propaganda Megaphone
+        rules: Mind Control
+        cost_modifier: +35pts
+  - name: Battle Tank
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 12
+    weapons:
+    - name: Nova Cannon
+      range: 36"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Blast(6)
+      count: 1
+    - name: Twin Heavy Flamer
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    special_rules:
+    - Fanatic
+    - Fast
+    - Impact(6)
+    cost: 350
+    upgrade_categories:
+    - category: Replace Nova Cannon
+      upgrades:
+      - name: Anti-Tank Cannon
+        rules: 30", A1, AP(3), Deadly(6)
+        cost_modifier: +25pts
+      - name: Punisher Gatling Cannon
+        rules: 24", A6, Rending
+        cost_modifier: +25pts
+      - name: Battle Cannon
+        rules: 30", A2, AP(2), Blast(3)
+        cost_modifier: +30pts
+      - name: Heavy Plasma Cannon
+        rules: 30", A1, AP(4), Blast(6)
+        cost_modifier: +35pts
+      - name: Siege Cannon
+        rules: 24", A2, AP(3), Blast(3), Indirect
+        cost_modifier: +55pts
+      - name: Heavy Autocannon
+        rules: 36", A6, AP(2)
+        cost_modifier: +60pts
+    - category: Replace Twin Heavy Flamer
+      upgrades:
+      - name: Twin Heavy Fusion Rifle
+        rules: 18", A2, AP(4), Deadly(3)
+        cost_modifier: +20pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +20pts
+      - name: Twin Plasma Cannon
+        rules: 30", A2, AP(4), Blast(3)
+        cost_modifier: +60pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Heavy Flamer
+        rules: 12", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +25pts
+      - name: Heavy Machinegun
+        rules: 30", A3, AP(1)
+        cost_modifier: +40pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +55pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Dozer Blade
+        rules: Strider
+        cost_modifier: +20pts
+      - name: Camouflage Netting
+        rules: Stealth
+        cost_modifier: +30pts
+    - category: Upgrade with
+      upgrades:
+      - name: Hunter Missiles
+        rules: 24", A1, AP(2), Deadly(3), Limited, Unstoppable
+        cost_modifier: +15pts

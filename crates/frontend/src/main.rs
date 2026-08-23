@@ -34,12 +34,21 @@ struct SimulateRequest {
     distance: u8,
     #[serde(default)]
     defender_in_cover: bool,
+    /// Versatile Attack pick made at activation: `0` = AP(+1), `1` = +1 to
+    /// hit, `2` = none (default); only meaningful for Versatile Attack
+    /// units over 9".
+    #[serde(default = "default_versatile")]
+    versatile: u8,
     #[serde(default = "default_iterations")]
     iterations: u32,
 }
 
 const fn default_distance() -> u8 {
     12
+}
+
+const fn default_versatile() -> u8 {
+    2
 }
 
 const fn default_iterations() -> u32 {
@@ -112,7 +121,9 @@ async fn run_simulation(Json(req): Json<SimulateRequest>) -> Response {
 
     let context = match req.attack_type.as_str() {
         "ranged" => CombatContext::ranged(req.distance),
-        "melee_charge" => CombatContext::melee_charge(),
+        // `melee_charge` starts at 0; restore the requested charge distance
+        // so range-gated rules (e.g. Versatile Attack over 9") can activate.
+        "melee_charge" => CombatContext::melee_charge().with_distance(req.distance),
         other => {
             return err(
                 StatusCode::UNPROCESSABLE_ENTITY,
@@ -120,7 +131,8 @@ async fn run_simulation(Json(req): Json<SimulateRequest>) -> Response {
             );
         }
     }
-    .with_cover(req.defender_in_cover);
+    .with_cover(req.defender_in_cover)
+    .with_versatile_mode(req.versatile);
 
     match simulate(&attacker, &defender, &context, req.iterations) {
         Ok(result) => match serde_json::to_value(&result) {

@@ -1,0 +1,709 @@
+v3.5.3:
+  name: Rebel Guerrillas
+  id: 5wbcv465hacdwvkb
+  units:
+  - name: Simian Champion
+    size: 1
+    quality: 4+
+    defense: 4+
+    tough: 6
+    weapons:
+    - name: Massive Fist
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Furious
+    - Guerrilla
+    - Hero
+    cost: 95
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Resistance Spirit
+        rules: Shielded Aura
+        cost_modifier: +15pts
+      - name: Pathfinder
+        rules: Strider Aura
+        cost_modifier: +20pts
+      - name: Revolutionary
+        rules: Guerrilla Boost Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Rending in Melee Aura
+        cost_modifier: +40pts
+    - category: Upgrade with any
+      upgrades:
+      - name: Claw Gauntlets
+        rules: Bane in Melee
+        cost_modifier: +10pts
+  - name: Rebel Leader
+    size: 1
+    quality: 4+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Leader Pistol
+      range: 12"
+      attacks: A2
+      count: 1
+    - name: CCW
+      attacks: A2
+      count: 1
+    special_rules:
+    - Guerrilla
+    - Hero
+    cost: 40
+    upgrade_categories:
+    - category: Upgrade with one
+      upgrades:
+      - name: Bounty Hunter
+        rules: Takedown Strike
+        cost_modifier: +15pts
+      - name: Pathfinder
+        rules: Strider Aura
+        cost_modifier: +20pts
+      - name: Revolutionary
+        rules: Guerrilla Boost Aura
+        cost_modifier: +25pts
+      - name: Sergeant
+        rules: Bane when Shooting Aura
+        cost_modifier: +25pts
+      - name: Captain
+        rules: Rending in Melee Aura
+        cost_modifier: +40pts
+      - name: Psy-Monk
+        rules: Caster(2)
+        cost_modifier: +45pts
+    - category: Replace Leader Pistol
+      upgrades:
+      - name: Flamer Pistol
+        rules: 6", A1, Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Leader Shred Pistol
+        rules: 9", A3, Rending
+        cost_modifier: +5pts
+      - name: Fusion Pistol
+        rules: 6", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Leader Carbine
+        rules: 18", A3
+        cost_modifier: +10pts
+      - name: Leader Shotgun
+        rules: 12", A3, AP(1)
+        cost_modifier: +10pts
+      - name: Leader Plasma Pistol
+        rules: 12", A2, AP(4)
+        cost_modifier: +15pts
+      - name: Leader Sniper Rifle
+        rules: 30", A2, AP(1), Reliable, Takedown
+        cost_modifier: +55pts
+    - category: Replace CCW
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +10pts
+      - name: Energy Lance
+        rules: A2, AP(1), Thrust
+        cost_modifier: +10pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Pioneer Leader
+        rules: Ambush, Counter-Attack
+        cost_modifier: +10pts
+      - name: Wings
+        rules: Ambush, Flying
+        cost_modifier: +15pts
+      - name: Elites Leader
+        rules: Fearless, Stealth
+        cost_modifier: +15pts
+      - name: Spotter Leader
+        rules: Scout, Stealth
+        cost_modifier: +15pts
+      - name: Combat Bike
+        rules: Fast, Tough(3)
+        cost_modifier: +40pts
+  - name: Rebels
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Carbines
+      range: 18"
+      attacks: A2
+      count: 10
+    - name: CCWs
+      attacks: A1
+      count: 10
+    special_rules:
+    - Guerrilla
+    cost: 150
+    upgrade_categories:
+    - category: Replace any Carbines
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: Free
+    - category: Replace up to three Carbines
+      upgrades:
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+    - category: Replace one Carbines
+      upgrades:
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Rocket Launcher
+        rules: 18", A1, AP(2), Deadly(3)
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Cluster-GL
+        rules: 24", A1, Blast(3), Lacerate, Precise
+        cost_modifier: +15pts
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +20pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Gun Drone
+        rules: 24", A1, AP(1), Limited
+        cost_modifier: +5pts
+      - name: Spotting Beacon
+        rules: Piercing Tag(1)
+        cost_modifier: +25pts
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +40pts
+    - category: Replace one Carbines and CCWs
+      upgrades:
+      - name: Sgt. Pistol, Energy Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Strikers
+    size: 10
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Pistols
+      range: 12"
+      attacks: A1
+      count: 10
+    - name: CCWs
+      attacks: A2
+      count: 10
+    special_rules:
+    - Guerrilla
+    cost: 125
+    upgrade_categories:
+    - category: Replace any Pistols
+      upgrades:
+      - name: Burst Gun
+        rules: 6", A2
+        cost_modifier: Free
+    - category: Replace up to two Pistols
+      upgrades:
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +15pts
+    - category: Replace up to two CCWs
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Wings
+        rules: Ambush, Flying
+        cost_modifier: +35pts
+    - category: Replace one Pistols and CCWs
+      upgrades:
+      - name: Sgt. Pistol, Energy Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Spotters
+    size: 5
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Carbines
+      range: 18"
+      attacks: A2
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Guerrilla
+    - Scout
+    - Stealth
+    cost: 100
+    upgrade_categories:
+    - category: Replace up to three Carbines
+      upgrades:
+      - name: Sniper Rifle
+        rules: 30", A1, AP(1), Reliable, Takedown
+        cost_modifier: +25pts
+    - category: Replace one Sniper Rifle
+      upgrades:
+      - name: Piercing Rifle
+        rules: 30", A1, AP(4), Deadly(3)
+        cost_modifier: +5pts
+      - name: Cluster Power Rifle
+        rules: 30", A1, AP(4), Blast(3), Lacerate, Precise
+        cost_modifier: +35pts
+    - category: Upgrade one model with
+      upgrades:
+      - name: Spotting Beacon
+        rules: Piercing Tag(1)
+        cost_modifier: +25pts
+  - name: Elites
+    size: 5
+    quality: 4+
+    defense: 4+
+    tough: null
+    weapons:
+    - name: Carbines
+      range: 18"
+      attacks: A2
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Fearless
+    - Guerrilla
+    cost: 120
+    upgrade_categories:
+    - category: Replace any Carbines
+      upgrades:
+      - name: Shotgun
+        rules: 12", A2, AP(1)
+        cost_modifier: Free
+    - category: Replace up to two Carbines
+      upgrades:
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +10pts
+    - category: Replace one Carbines
+      upgrades:
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +15pts
+      - name: Rocket Launcher
+        rules: 18", A1, AP(2), Deadly(3)
+        cost_modifier: +15pts
+      - name: Cluster-GL
+        rules: 24", A1, Blast(3), Lacerate, Precise
+        cost_modifier: +20pts
+      - name: Minigun
+        rules: 24", A4, AP(1)
+        cost_modifier: +35pts
+    - category: Upgrade one model with one
+      upgrades:
+      - name: Medical Training
+        rules: Regeneration Aura
+        cost_modifier: +20pts
+      - name: Spotting Beacon
+        rules: Piercing Tag(1)
+        cost_modifier: +25pts
+    - category: Upgrade all models with
+      upgrades:
+      - name: Camo Cloaks
+        rules: Stealth
+        cost_modifier: +15pts
+    - category: Replace one Carbines and CCWs
+      upgrades:
+      - name: Sgt. Pistol, Energy Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Pioneers
+    size: 5
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Shotguns
+      range: 12"
+      attacks: A2
+      ap: AP(1)
+      count: 5
+    - name: CCWs
+      attacks: A1
+      count: 5
+    special_rules:
+    - Ambush
+    - Counter-Attack
+    - Guerrilla
+    cost: 90
+    upgrade_categories:
+    - category: Replace one Shotguns
+      upgrades:
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+    - category: Replace any CCWs
+      upgrades:
+      - name: Energy Sword
+        rules: A2, AP(1), Rending
+        cost_modifier: +15pts
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +15pts
+  - name: Snipers
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: null
+    weapons:
+    - name: Sniper Rifles
+      range: 30"
+      attacks: A1
+      ap: AP(1)
+      special_rules:
+      - Reliable
+      - Takedown
+      count: 3
+    - name: CCWs
+      attacks: A1
+      count: 3
+    special_rules:
+    - Ambushing Piercing Shot
+    - Guerrilla
+    cost: 130
+    upgrade_categories: []
+  - name: Simians
+    size: 3
+    quality: 4+
+    defense: 4+
+    tough: 3
+    weapons:
+    - name: Heavy Fists
+      attacks: A3
+      ap: AP(1)
+      count: 3
+    special_rules:
+    - Furious
+    - Guerrilla
+    cost: 135
+    upgrade_categories:
+    - category: Upgrade any model with
+      upgrades:
+      - name: Claw Gauntlets
+        rules: Bane in Melee
+        cost_modifier: +5pts
+  - name: Chelonians
+    size: 3
+    quality: 3+
+    defense: 3+
+    tough: 3
+    weapons:
+    - name: Wrist-Flamers
+      range: 12"
+      attacks: A1
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 3
+    - name: Wrist-Blades
+      attacks: A3
+      ap: AP(1)
+      count: 3
+    special_rules:
+    - Guerrilla
+    - Slow
+    cost: 220
+    upgrade_categories:
+    - category: Replace any Wrist-Flamers
+      upgrades:
+      - name: Light Cluster-GL
+        rules: 18", A1, Blast(3), Lacerate, Precise
+        cost_modifier: +15pts
+  - name: Bikers
+    size: 3
+    quality: 5+
+    defense: 5+
+    tough: 3
+    weapons:
+    - name: Burst Pistols
+      range: 12"
+      attacks: A3
+      count: 3
+    - name: CCWs
+      attacks: A2
+      count: 3
+    special_rules:
+    - Fast
+    - Guerrilla
+    cost: 110
+    upgrade_categories:
+    - category: Replace all CCWs
+      upgrades:
+      - name: Energy Lance
+        rules: A2, AP(1), Thrust
+        cost_modifier: +20pts
+    - category: Replace one Burst Pistols
+      upgrades:
+      - name: Plasma Rifle
+        rules: 24", A1, AP(4)
+        cost_modifier: +5pts
+      - name: Shred Rifle
+        rules: 18", A2, Rending
+        cost_modifier: +5pts
+      - name: Fusion Rifle
+        rules: 12", A1, AP(4), Deadly(3)
+        cost_modifier: +10pts
+      - name: Flamer
+        rules: 12", A1, Blast(3), Reliable
+        cost_modifier: +10pts
+      - name: Cluster-GL
+        rules: 24", A1, Blast(3), Lacerate, Precise
+        cost_modifier: +15pts
+    - category: Replace one Burst Pistols and CCWs
+      upgrades:
+      - name: Sgt. Pistol, Energy Sword
+        rules: 12", A1, A2, AP(1), Rending
+        cost_modifier: +5pts
+    - category: Replace Sgt. Pistol
+      upgrades:
+      - name: Shred Pistol
+        rules: 9", A2, Rending
+        cost_modifier: +5pts
+      - name: Plasma Pistol
+        rules: 12", A1, AP(4)
+        cost_modifier: +5pts
+    - category: Replace Energy Sword
+      upgrades:
+      - name: Energy Fist
+        rules: A2, AP(4)
+        cost_modifier: +5pts
+  - name: Jeep
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Flamer
+      range: 12"
+      attacks: A2
+      special_rules:
+      - Blast(3)
+      - Reliable
+      count: 1
+    special_rules:
+    - Fast
+    - Guerrilla
+    - Impact(3)
+    - Strider
+    cost: 165
+    upgrade_categories:
+    - category: Replace Twin Flamer
+      upgrades:
+      - name: Super-Heavy Fusion Rifle
+        rules: 18", A1, AP(4), Deadly(6)
+        cost_modifier: +20pts
+      - name: Twin Heavy Machinegun
+        rules: 30", A6, AP(1)
+        cost_modifier: +40pts
+    - category: Upgrade with one
+      upgrades:
+      - name: Rebel Assault
+        rules: Furious Mark
+        cost_modifier: +5pts
+      - name: Extra Seats
+        rules: Transport(6)
+        cost_modifier: +20pts
+      - name: Spotting Beacon
+        rules: Piercing Tag(1)
+        cost_modifier: +25pts
+    - category: Upgrade with
+      upgrades:
+      - name: Rebel Radio
+        rules: Courage Buff
+        cost_modifier: +5pts
+      - name: Heavy Plating
+        rules: Fortified
+        cost_modifier: +5pts
+  - name: Assault Vehicle
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Pintle-Machinegun
+      range: 30"
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    - name: Gatling Gun
+      range: 18"
+      attacks: A6
+      count: 1
+    special_rules:
+    - Fast
+    - Guerrilla
+    - Impact(3)
+    cost: 175
+    upgrade_categories:
+    - category: Replace Gatling Gun
+      upgrades:
+      - name: Light Cluster Cannon
+        rules: 30", A1, Blast(3), Lacerate, Precise
+        cost_modifier: Free
+      - name: Light Battle Cannon
+        rules: 24", A1, AP(2), Blast(3)
+        cost_modifier: +5pts
+      - name: Flamer Cannon
+        rules: 18", A1, AP(1), Blast(3), Reliable
+        cost_modifier: +5pts
+      - name: Laser Cannon
+        rules: 36", A1, AP(3), Deadly(3)
+        cost_modifier: +20pts
+      - name: Fusion Cannon
+        rules: 24", A1, AP(4), Deadly(6)
+        cost_modifier: +40pts
+    - category: Upgrade with
+      upgrades:
+      - name: Rebel Radio
+        rules: Courage Buff
+        cost_modifier: +5pts
+      - name: Heavy Plating
+        rules: Fortified
+        cost_modifier: +5pts
+  - name: Combat Walker
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Super-Heavy Fusion Rifle
+      range: 18"
+      attacks: A1
+      ap: AP(4)
+      special_rules:
+      - Deadly(6)
+      count: 1
+    - name: Stomp
+      attacks: A2
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Fear(1)
+    - Guerrilla
+    cost: 165
+    upgrade_categories:
+    - category: Replace Super-Heavy Fusion Rifle
+      upgrades:
+      - name: Heavy Flamer, Walker Chainsaw
+        rules: 12", A1, AP(1), Blast(3), Reliable, A6, AP(1)
+        cost_modifier: +5pts
+      - name: Twin Plasma Cannon
+        rules: 30", A2, AP(4), Blast(3)
+        cost_modifier: +55pts
+      - name: Twin Laser Machinegun
+        rules: 30", A6, AP(3)
+        cost_modifier: +60pts
+    - category: Upgrade with
+      upgrades:
+      - name: Rebel Assault
+        rules: Furious Mark
+        cost_modifier: +5pts
+    - category: Upgrade with
+      upgrades:
+      - name: Rebel Radio
+        rules: Courage Buff
+        cost_modifier: +5pts
+      - name: Heavy Plating
+        rules: Fortified
+        cost_modifier: +5pts
+  - name: Light Dropship
+    size: 1
+    quality: 4+
+    defense: 2+
+    tough: 6
+    weapons:
+    - name: Twin Heavy Machinegun
+      range: 30"
+      attacks: A6
+      ap: AP(1)
+      count: 1
+    - name: Minigun
+      range: 24"
+      attacks: A4
+      ap: AP(1)
+      count: 1
+    special_rules:
+    - Aircraft
+    - Transport(11)
+    cost: 320
+    upgrade_categories:
+    - category: Replace Twin Heavy Machinegun
+      upgrades:
+      - name: Twin Missile Launcher
+        rules: 30", A2, AP(2), Deadly(3), Unstoppable
+        cost_modifier: +5pts
+      - name: Twin Laser Cannon
+        rules: 36", A2, AP(3), Deadly(3)
+        cost_modifier: +30pts
