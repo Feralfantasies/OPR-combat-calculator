@@ -5,6 +5,8 @@ const panels = {
   defender: document.getElementById('defender-panel'),
 };
 const rosters = {}; // army id -> unit array
+let presets = []; // loaded from /api/preset-targets
+const selectedPresets = new Set(); // ids of checked presets
 
 function unitLabel(u) {
   return `${u.name} [${u.quantity}] — ${u.points}pts`;
@@ -149,6 +151,48 @@ function refreshCard(panel) {
   renderCard(panel, preview);
 }
 
+// ── Preset targets ──────────────────────────────────────────────────────────
+
+function renderPresets() {
+  const grid = document.getElementById('preset-grid');
+  grid.innerHTML = presets.map((p) => {
+    const checked = selectedPresets.has(p.id) ? 'checked' : '';
+    const selClass = selectedPresets.has(p.id) ? ' selected' : '';
+    return `<label class="preset-card${selClass}" data-preset="${p.id}">
+      <input type="checkbox" ${checked} data-preset-id="${p.id}" />
+      <div class="preset-label">${p.label}</div>
+      <div class="preset-desc">${p.description}</div>
+      <div class="preset-stats">Size ${p.stats.size} · Q${p.stats.quality}+ · D${p.stats.defense}+ · Tough ${p.stats.tough}</div>
+    </label>`;
+  }).join('');
+
+  // Wire checkbox events
+  grid.querySelectorAll('input[data-preset-id]').forEach((cb) => {
+    cb.addEventListener('change', () => {
+      const id = cb.dataset.presetId;
+      if (cb.checked) {
+        selectedPresets.add(id);
+      } else {
+        selectedPresets.delete(id);
+      }
+      // Update card styling
+      const card = cb.closest('.preset-card');
+      if (card) card.classList.toggle('selected', cb.checked);
+    });
+  });
+}
+
+function selectedPresetDefs() {
+  return presets
+    .filter((p) => selectedPresets.has(p.id))
+    .map((p) => ({
+      label: `${p.label} (${p.unit})`,
+      army: p.army,
+      unit: p.unit,
+      upgrades: [],
+    }));
+}
+
 async function loadArmies() {
   const armies = await (await fetch('/api/armies')).json();
   for (const panel of Object.values(panels)) {
@@ -160,6 +204,12 @@ async function loadArmies() {
   if (armies.length > 0) {
     await Promise.all(Object.values(panels).map((p) => onArmyChange(p)));
   }
+
+  // Load preset targets
+  presets = await (await fetch('/api/preset-targets')).json();
+  // Check all presets by default
+  presets.forEach((p) => selectedPresets.add(p.id));
+  renderPresets();
 }
 
 async function onArmyChange(panel) {
@@ -190,11 +240,57 @@ function selectedUnitWithUpgrades(panel) {
 async function runSimulation() {
   const errEl = document.getElementById('error');
   const results = document.getElementById('results');
+  const singleResults = document.getElementById('single-results');
+  const batchResults = document.getElementById('batch-results');
   errEl.textContent = '';
   results.classList.remove('hidden');
   document.getElementById('summary').textContent = 'Simulating…';
   document.getElementById('weapon-rows').innerHTML = '';
+  singleResults.classList.remove('hidden');
+  batchResults.classList.add('hidden');
 
+  const presetDefs = selectedPresetDefs();
+
+  if (presetDefs.length > 0) {
+    // Batch mode: main defender + all selected presets
+    const mainDef = selectedUnitWithUpgrades(panels.defender);
+    const defenders = [
+      { label: `Selected Target (${mainDef.unit})`, ...mainDef },
+      ...presetDefs,
+    ];
+
+    const body = {
+      attacker: selectedUnitWithUpgrades(panels.attacker),
+      defenders,
+      attack_type: document.getElementById('attack-type').value,
+      distance: Number(document.getElementById('distance').value),
+      defender_in_cover: document.getElementById('cover').checked,
+      iterations: Number(document.getElementById('iterations').value),
+    };
+
+    const resp = await fetch('/api/simulate-batch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await resp.json();
+
+    if (!resp.ok) {
+      errEl.textContent = data.error || `HTTP ${resp.status}`;
+      document.getElementById('summary').textContent = '';
+      return;
+    }
+
+    document.getElementById('summary').textContent =
+      `Comparison over ${data[0].iterations} iterations across ${data.length} targets.`;
+    singleResults.classList.add('hidden');
+    batchResults.classList.remove('hidden');
+    renderCharts(data);
+    renderComparisonTable(data);
+    return;
+  }
+
+  // Single mode: just the main defender
   const body = {
     attacker: selectedUnitWithUpgrades(panels.attacker),
     defender: selectedUnitWithUpgrades(panels.defender),
@@ -248,6 +344,124 @@ async function runSimulation() {
     </tr>`);
 
   document.getElementById('weapon-rows').innerHTML = rows.join('');
+}
+
+function renderCharts(batchData) {
+  // Compute totals per target
+  const rows = batchData.map((target, idx) => {
+    const totals = target.weapons.reduce(
+      (acc, w) => {
+        acc.net += w.avg_net_wounds;
+        return acc;
+      },
+      { net: 0 },
+    );
+    return {
+      label: target.label,
+      netWounds: totals.net,
+      modelsRemoved: target.avg_models_removed,
+      isSelected: idx === 0, // first entry is the selected target
+    };
+  });
+
+  const maxNet = Math.max(...rows.map((r) => r.netWounds), 1);
+  const maxModels = Math.max(...rows.map((r) => r.modelsRemoved), 1);
+
+  const woundsChart = document.getElementById('wounds-chart');
+  const modelsChart = document.getElementById('models-chart');
+
+  function buildRow(row, value, maxVal) {
+    const pct = (value / maxVal) * 100;
+    const selClass = row.isSelected ? ' is-selected' : '';
+    return `<div class="chart-row">
+      <div class="chart-label${selClass}" title="${row.label}">${row.label}</div>
+      <div class="chart-bar-track">
+        <div class="chart-bar${selClass}" style="width: ${pct.toFixed(1)}%"></div>
+      </div>
+      <div class="chart-value${selClass}">${value.toFixed(1)}</div>
+    </div>`;
+  }
+
+  woundsChart.innerHTML = rows.map((r) => buildRow(r, r.netWounds, maxNet)).join('');
+  modelsChart.innerHTML = rows.map((r) => buildRow(r, r.modelsRemoved, maxModels)).join('');
+}
+
+function renderComparisonTable(batchData) {
+  const thead = document.getElementById('comparison-head');
+  const tbody = document.getElementById('comparison-body');
+
+  // Collect all unique weapon names across all targets
+  const allWeapons = new Set();
+  for (const target of batchData) {
+    for (const w of target.weapons) {
+      allWeapons.add(w.name);
+    }
+  }
+  const weaponNames = [...allWeapons].sort();
+
+  // Header rows: target labels and sub-columns
+  const headerRow1 = ['<th></th>'];
+  const headerRow2 = ['<th></th>'];
+  for (const target of batchData) {
+    headerRow1.push(`<th class="target-header" colspan="3">${target.label}</th>`);
+    headerRow2.push(
+      '<th class="target-stats">Hits</th>',
+      '<th class="target-stats">Blocked</th>',
+      '<th class="target-stats">Net</th>',
+    );
+  }
+  thead.innerHTML = `<tr>${headerRow1.join('')}</tr><tr>${headerRow2.join('')}</tr>`;
+
+  // Body rows: one per weapon + totals
+  const rows = [];
+  for (const wName of weaponNames) {
+    const cells = [`<td>${wName}</td>`];
+    for (const target of batchData) {
+      const w = target.weapons.find((x) => x.name === wName);
+      if (w) {
+        cells.push(
+          `<td>${w.avg_hits.toFixed(1)}</td>`,
+          `<td>${w.avg_blocked.toFixed(1)}</td>`,
+          `<td>${w.avg_net_wounds.toFixed(1)}</td>`,
+        );
+      } else {
+        cells.push('<td>—</td>', '<td>—</td>', '<td>—</td>');
+      }
+    }
+    rows.push(`<tr>${cells.join('')}</tr>`);
+  }
+
+  // Totals row
+  const totalCells = ['<td>Total</td>'];
+  for (const target of batchData) {
+    const totals = target.weapons.reduce(
+      (acc, w) => {
+        acc.hits += w.avg_hits;
+        acc.blocked += w.avg_blocked;
+        acc.net += w.avg_net_wounds;
+        return acc;
+      },
+      { hits: 0, blocked: 0, net: 0 },
+    );
+    totalCells.push(
+      `<td>${totals.hits.toFixed(1)}</td>`,
+      `<td>${totals.blocked.toFixed(1)}</td>`,
+      `<td>${totals.net.toFixed(1)}</td>`,
+    );
+  }
+  rows.push(`<tr class="total">${totalCells.join('')}</tr>`);
+
+  // Models removed summary row
+  const summaryRow = ['<td>Models removed (avg)</td>'];
+  for (const target of batchData) {
+    summaryRow.push(
+      `<td colspan="3" style="text-align:center;font-weight:600;color:var(--accent-2);">` +
+      `${target.avg_models_removed.toFixed(1)}</td>`,
+    );
+  }
+  rows.push(`<tr class="row-label">${summaryRow.join('')}</tr>`);
+
+  tbody.innerHTML = rows.join('');
 }
 
 // Wiring
