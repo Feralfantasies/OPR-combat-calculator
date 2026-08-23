@@ -31,6 +31,13 @@ impl VersatileMode {
     }
 }
 
+/// Serde default for [`CombatContext::versatile_mode`]: `2`, the
+/// no-effect pick. The implicit `u8::default()` of `0` would grant
+/// AP(+1) to a deserialized context that never made an activation choice.
+const fn default_versatile_mode() -> u8 {
+    2
+}
+
 /// Contextual information about the combat that affects special rules.
 /// This captures the "state" of the attack for rule resolution.
 ///
@@ -50,11 +57,11 @@ pub struct CombatContext {
     pub attacker_moved: bool,
     /// Whether the defender is in cover (+1 Defense vs shooting)
     pub defender_in_cover: bool,
-    /// Whether the attacker is fatigued (only hit on unmodified 6)
+    /// Whether the attacker is fatigued (hitting on unmodified 6s only)
     pub attacker_fatigued: bool,
     /// Versatile Attack effect picked at activation (0 = AP(+1),
     /// 1 = +1 to hit, 2 = none; see [`VersatileMode`]).
-    #[serde(default)]
+    #[serde(default = "default_versatile_mode")]
     pub versatile_mode: u8,
 }
 
@@ -156,5 +163,26 @@ impl CombatContext {
     pub const fn with_versatile_mode(mut self, mode: u8) -> Self {
         self.versatile_mode = mode;
         self
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// An omitted `versatile_mode` must deserialize to the no-effect value
+    /// (`2`). The implicit `u8::default()` of `0` would select AP(+1) for a
+    /// context that never made an activation pick.
+    #[test]
+    fn omitted_versatile_mode_defaults_to_no_effect() {
+        let json = r#"{"attack_type":"Ranged","distance":12,"is_charging":false,"attacker_moved":false,"defender_in_cover":false,"attacker_fatigued":false}"#;
+        let context: CombatContext = serde_json::from_str(json).expect("context deserializes");
+        assert_eq!(context.versatile_mode, 2);
+        assert_eq!(VersatileMode::from_u8(context.versatile_mode), None);
+
+        // An explicit pick round-trips unchanged.
+        let with_pick = serde_json::to_string(&context.with_versatile_mode(0)).expect("serializes");
+        let round: CombatContext = serde_json::from_str(&with_pick).expect("round-trips");
+        assert_eq!(round.versatile_mode, 0);
     }
 }

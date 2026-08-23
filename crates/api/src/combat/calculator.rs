@@ -197,10 +197,12 @@ fn select_weapons(attacker: &Unit, context: &CombatContext) -> Vec<Weapon> {
     }
 
     // The activation effect fires only while shooting, or charging,
-    // against enemies over 9".
-    let effect_active = VersatileMode::from_u8(context.versatile_mode).is_some()
-        && context.is_long_range()
-        && (context.is_ranged() || context.is_charging);
+    // against enemies over 9". Each pick grants exactly one of the two
+    // effects: AP(+1) (mode `Ap1`) or +1 to hit (`HitBonus`, applied in
+    // `compute_hit_modifier`).
+    let mode = VersatileMode::from_u8(context.versatile_mode);
+    let effect_active =
+        mode.is_some() && context.is_long_range() && (context.is_ranged() || context.is_charging);
 
     if !effect_active && context.is_melee() {
         // Melee without the activation effect active: the unit may still
@@ -212,7 +214,7 @@ fn select_weapons(attacker: &Unit, context: &CombatContext) -> Vec<Weapon> {
         .into_iter()
         .cloned()
         .collect();
-    if effect_active {
+    if effect_active && mode == Some(VersatileMode::Ap1) {
         // AP(+1) pick: every context weapon without AP gains AP(1);
         // weapons that already have AP are left unchanged.
         context_weapons
@@ -227,7 +229,7 @@ fn select_weapons(attacker: &Unit, context: &CombatContext) -> Vec<Weapon> {
             .collect()
     } else {
         // +1-to-hit pick (applied in `compute_hit_modifier`): context
-        // weapons only.
+        // weapons only, no AP changes.
         context_weapons
     }
 }
@@ -910,6 +912,45 @@ mod tests {
         let weapons = select_weapons(&plain_unit, &CombatContext::ranged(12));
         assert_eq!(weapons.len(), 1);
         assert_eq!(weapons[0].get_ap(), None);
+    }
+
+    #[test]
+    fn versatile_hit_bonus_pick_grants_no_ap() {
+        // Each pick grants exactly one effect: the +1-to-hit pick must
+        // not also upgrade AP-less weapons with AP(1).
+        let versatile = Unit::new("Vet", 1, 3, 3)
+            .with_rule(SpecialRule::VersatileAttack)
+            .with_weapon(Weapon::melee("Claws", 1, 2))
+            .with_weapon(Weapon::ranged("Pistol", 1, 1, 18));
+
+        // Shooting over 9" with the hit pick: +1 to hit, no AP changes.
+        let hit_context = CombatContext::ranged(12).with_versatile_mode(1);
+        assert_eq!(compute_hit_modifier(&versatile, &hit_context), 1);
+        let weapons = select_weapons(&versatile, &hit_context);
+        assert_eq!(weapons.len(), 1);
+        assert_eq!(
+            weapons[0].get_ap(),
+            None,
+            "hit-bonus pick must not add AP(+1)"
+        );
+
+        // Charging over 9" with the hit pick: same separation.
+        let charge_hit = CombatContext::melee_charge()
+            .with_distance(12)
+            .with_versatile_mode(1);
+        assert_eq!(compute_hit_modifier(&versatile, &charge_hit), 1);
+        let weapons = select_weapons(&versatile, &charge_hit);
+        assert_eq!(
+            weapons[0].get_ap(),
+            None,
+            "hit-bonus pick must not add AP(+1) on a charge"
+        );
+
+        // The AP pick still works (regression guard for the fix above).
+        let ap_context = CombatContext::ranged(12).with_versatile_mode(0);
+        assert_eq!(compute_hit_modifier(&versatile, &ap_context), 0);
+        let weapons = select_weapons(&versatile, &ap_context);
+        assert_eq!(weapons[0].get_ap(), Some(1));
     }
 
     #[test]

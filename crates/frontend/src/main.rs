@@ -121,7 +121,9 @@ async fn run_simulation(Json(req): Json<SimulateRequest>) -> Response {
 
     let context = match req.attack_type.as_str() {
         "ranged" => CombatContext::ranged(req.distance),
-        "melee_charge" => CombatContext::melee_charge(),
+        // `melee_charge` starts at 0; restore the requested charge distance
+        // so range-gated rules (e.g. Versatile Attack over 9") can activate.
+        "melee_charge" => CombatContext::melee_charge().with_distance(req.distance),
         other => {
             return err(
                 StatusCode::UNPROCESSABLE_ENTITY,

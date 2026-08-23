@@ -265,16 +265,24 @@ pub fn convert_upgrade_category(
     })
 }
 
-/// The weapon an attachment category requires its parent to be.
+/// Directive prefixes of attachment categories, longest first so
+/// `Any model may take one ...` cannot be misread as a plain `Take ...` form.
+const ATTACHMENT_PREFIXES: [&str; 2] = ["Any model may take one ", "Take one "];
+
+/// The weapon an attachment category requires its parent to be, parsed
+/// from the category name. Both catalog forms are handled:
 /// `Take one Master Heavy Rifle attachment` -> `Master Heavy Rifle`;
 /// `Any model may take one Heavy Rifle attachment` -> `Heavy Rifle`.
-/// `None` for every other category.
+/// `None` for every other category (the extraction keeps the weapon name
+/// between the directive prefix and the trailing `attachment`).
 fn required_weapon_from_category(category: &str) -> Option<String> {
     let rest = category.strip_suffix(" attachment")?;
-    let rest = rest.strip_suffix(' ')?;
-    let parent = rest.strip_suffix(" one ")?;
-    if parent == "Take" || parent == "Any model may take" {
-        return Some(parent.to_string());
+    for prefix in ATTACHMENT_PREFIXES {
+        if let Some(parent) = rest.strip_prefix(prefix)
+            && !parent.is_empty()
+        {
+            return Some(parent.to_string());
+        }
     }
     None
 }
@@ -282,25 +290,75 @@ fn required_weapon_from_category(category: &str) -> Option<String> {
 /// The weapon a replacement category swaps out, parsed from the category
 /// name. `Replace Twin Heavy Flamer` -> `Twin Heavy Flamer`;
 /// `Replace Combat Shield and CCW` -> `Combat Shield and CCW`;
-/// `Replace all Hunting Hounds` -> `Hunting Hounds`. `None` for
-/// non-replacement categories.
+/// `Replace all Hunting Hounds` -> `Hunting Hounds`;
+/// `Replace up to two CCW` / `Replace 2x Walker Fists` strip the
+/// quantification as well. `None` for non-replacement categories.
 fn target_weapon_from_category(category: &str) -> Option<String> {
-    let rest = category.strip_prefix("Replace ")?;
-    let rest = rest.strip_prefix("all ").unwrap_or(rest);
-    let rest = rest.strip_prefix("any ").unwrap_or(rest);
-    let rest = rest.strip_prefix("one ").unwrap_or(rest);
+    let mut rest = category.strip_prefix("Replace ")?;
+    let stripped_all = rest.strip_prefix("all ").unwrap_or(rest);
+    let stripped_any = stripped_all.strip_prefix("any ").unwrap_or(stripped_all);
+    let stripped_one = stripped_any.strip_prefix("one ").unwrap_or(stripped_any);
+    rest = stripped_one;
+    // Quantified forms: "up to two/three X", "2x X", "3x X".
+    for prefix in ["up to three ", "up to two ", "2x ", "3x ", "4x ", "5x "] {
+        if let Some(next) = rest.strip_prefix(prefix) {
+            rest = next;
+            break;
+        }
+    }
     (!rest.is_empty()).then(|| rest.to_string())
 }
 
-/// How many instances of the target a replacement removes: `Replace any X`
-/// and `Replace one X` remove one instance, every other replacement removes
-/// all.
+/// How many instances of the target a replacement removes. `Replace any X`
+/// and `Replace one X` remove one instance; quantified categories
+/// (`Replace up to two X`, `Replace 2x X`) bound the removal at that count
+/// (carrying at most the bound removes the entry); every other replacement
+/// removes all.
 fn replace_count_from_category(category: &str) -> ReplaceCount {
     if category.starts_with("Replace any") || category.starts_with("Replace one") {
-        ReplaceCount::One
-    } else {
-        ReplaceCount::All
+        return ReplaceCount::One;
     }
+    if let Some(max) = quantified_replace_bound(category) {
+        return ReplaceCount::UpTo { max };
+    }
+    ReplaceCount::All
+}
+
+/// The removal bound for a quantified replacement category, or `None` when
+/// the category is not a replacement with a quantity. Handles the word
+/// forms in the catalogs (`up to two`, `up to three`) and the digit+`x`
+/// forms (``2x``, ``3x``), including the "Any model may replace \u{2026}"
+/// prefix.
+fn quantified_replace_bound(category: &str) -> Option<u8> {
+    // Reduce to the stem after the last `replace` keyword's space, so both
+    // `Replace 2x X` and `Any model may replace 2x X` reduce to the count
+    // prefix. The keyword is capitalized in the plain form and lowercase
+    // after the "Any model may" lead-in; a category carries at most one.
+    // Non-replacement categories (`Upgrade with up to two`) have no such
+    // stem and keep the default bound.
+    let stem = [category.rfind("Replace "), category.rfind("replace ")]
+        .into_iter()
+        .flatten()
+        .max()?;
+    // The keyword plus its trailing space is exactly 8 bytes in both case
+    // variants and `rfind` on an ASCII pattern only lands on character
+    // boundaries; slice through `.get` anyway so nothing can panic.
+    let rest = category.get(stem.checked_add(8)?..)?;
+    if rest.starts_with("up to two ") {
+        return Some(2);
+    }
+    if rest.starts_with("up to three ") {
+        return Some(3);
+    }
+    // Numeric form: a single leading digit followed by the ASCII `x` (the
+    // catalogs write `2x`, `3x` with a regular x). Multi-digit counts do not
+    // occur in the committed data and keep the default bound.
+    let first = rest.as_bytes().first()?;
+    if rest.len() >= 3 && matches!(rest.as_bytes().get(1), Some(b'x')) {
+        let digit = u8::try_from(char::from(*first).to_digit(10)?).ok()?;
+        return Some(digit);
+    }
+    None
 }
 
 /// Convert a YAML upgrade to the internal `UpgradeOption` model.
@@ -939,10 +997,43 @@ v3.5.3:
             target_weapon_from_category("Replace one Heavy Pistol and CCW").as_deref(),
             Some("Heavy Pistol and CCW")
         );
+        // Quantified forms expose the same weapon name as unquantified.
+        assert_eq!(
+            target_weapon_from_category("Replace up to two CCW").as_deref(),
+            Some("CCW")
+        );
+        assert_eq!(
+            target_weapon_from_category("Replace up to three Heavy Rifles").as_deref(),
+            Some("Heavy Rifles")
+        );
+        assert_eq!(
+            target_weapon_from_category("Replace 2x Walker Fists").as_deref(),
+            Some("Walker Fists")
+        );
         assert_eq!(
             target_weapon_from_category("Upgrade with one").as_deref(),
             None
         );
+    }
+
+    #[test]
+    fn test_required_weapon_from_category() {
+        // Both catalog forms return the parent weapon name (not the prefix).
+        assert_eq!(
+            required_weapon_from_category("Take one Master Heavy Rifle attachment").as_deref(),
+            Some("Master Heavy Rifle")
+        );
+        assert_eq!(
+            required_weapon_from_category("Any model may take one Heavy Rifle attachment")
+                .as_deref(),
+            Some("Heavy Rifle")
+        );
+        // Non-attachment categories yield no requirement.
+        assert_eq!(
+            required_weapon_from_category("Replace Combat Shield and CCW"),
+            None
+        );
+        assert_eq!(required_weapon_from_category("Upgrade with one"), None);
     }
 
     #[test]
@@ -965,6 +1056,38 @@ v3.5.3:
         );
         assert_eq!(
             replace_count_from_category("Upgrade with one"),
+            ReplaceCount::All
+        );
+        // Quantified word forms in the committed catalogs.
+        assert_eq!(
+            replace_count_from_category("Replace up to two CCW"),
+            ReplaceCount::UpTo { max: 2 }
+        );
+        assert_eq!(
+            replace_count_from_category("Replace up to three Heavy Rifles"),
+            ReplaceCount::UpTo { max: 3 }
+        );
+        // Quantified numeric forms, with and without the "Any model may"
+        // prefix.
+        assert_eq!(
+            replace_count_from_category("Replace 2x Walker Fists"),
+            ReplaceCount::UpTo { max: 2 }
+        );
+        assert_eq!(
+            replace_count_from_category("Replace 3x Heavy Razor Claws"),
+            ReplaceCount::UpTo { max: 3 }
+        );
+        assert_eq!(
+            replace_count_from_category("Any model may replace 2x Heavy Fist"),
+            ReplaceCount::UpTo { max: 2 }
+        );
+        // Unquantified non-replacement forms keep the all/default bound.
+        assert_eq!(
+            replace_count_from_category("Upgrade with up to two"),
+            ReplaceCount::All
+        );
+        assert_eq!(
+            replace_count_from_category("Any model may upgrade with up to two"),
             ReplaceCount::All
         );
     }
