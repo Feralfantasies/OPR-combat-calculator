@@ -55,6 +55,11 @@ const fn default_iterations() -> u32 {
     1000
 }
 
+/// Maximum number of defenders accepted by `POST /api/simulate-batch`.
+/// Each defender runs a full Monte Carlo simulation, so an unbounded batch
+/// would let a single request consume disproportionate server time.
+const MAX_BATCH_DEFENDERS: usize = 20;
+
 #[derive(Serialize)]
 struct ErrorBody {
     error: String,
@@ -193,6 +198,16 @@ async fn run_batch_simulation(Json(req): Json<BatchSimulateRequest>) -> Response
         return err(
             StatusCode::UNPROCESSABLE_ENTITY,
             "at least one defender is required",
+        );
+    }
+
+    if req.defenders.len() > MAX_BATCH_DEFENDERS {
+        return err(
+            StatusCode::UNPROCESSABLE_ENTITY,
+            &format!(
+                "too many defenders: got {}, maximum is {MAX_BATCH_DEFENDERS}",
+                req.defenders.len()
+            ),
         );
     }
 
