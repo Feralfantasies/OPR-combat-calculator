@@ -58,15 +58,41 @@
       <button id="run">Run Simulation</button>
     </section>
 
+    <section class="presets" id="presets-section">
+      <h2>Compare Against Preset Targets</h2>
+      <p class="presets-hint">Select preset targets to compare your attacker's damage output against different defender archetypes.</p>
+      <div class="preset-grid" id="preset-grid"></div>
+    </section>
+
     <section id="results" class="results hidden">
       <h2>Results</h2>
       <p id="summary"></p>
-      <table>
-        <thead>
-          <tr><th>Weapon</th><th>Avg hits</th><th>Avg blocked</th><th>Avg net wounds</th></tr>
-        </thead>
-        <tbody id="weapon-rows"></tbody>
-      </table>
+      <div id="single-results">
+        <table>
+          <thead>
+            <tr><th>Weapon</th><th>Avg hits</th><th>Avg blocked</th><th>Avg net wounds</th></tr>
+          </thead>
+          <tbody id="weapon-rows"></tbody>
+        </table>
+      </div>
+      <div id="batch-results" class="hidden">
+        <h3>Target Comparison</h3>
+        <div class="chart-container" id="chart-container">
+          <div class="chart-title">Average Net Wounds</div>
+          <div class="chart" id="wounds-chart"></div>
+          <div class="chart-title chart-title-secondary">Average Models Removed</div>
+          <div class="chart" id="models-chart"></div>
+        </div>
+        <details class="chart-details">
+          <summary>Show detailed breakdown</summary>
+          <div class="comparison-scroll">
+            <table id="comparison-table">
+              <thead id="comparison-head"></thead>
+              <tbody id="comparison-body"></tbody>
+            </table>
+          </div>
+        </details>
+      </div>
       <p id="error" class="error"></p>
     </section>
   </main>

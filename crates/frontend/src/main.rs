@@ -55,6 +55,11 @@ const fn default_iterations() -> u32 {
     1000
 }
 
+/// Maximum number of defenders accepted by `POST /api/simulate-batch`.
+/// Each defender runs a full Monte Carlo simulation, so an unbounded batch
+/// would let a single request consume disproportionate server time.
+const MAX_BATCH_DEFENDERS: usize = 20;
+
 #[derive(Serialize)]
 struct ErrorBody {
     error: String,
@@ -143,6 +148,149 @@ async fn run_simulation(Json(req): Json<SimulateRequest>) -> Response {
     }
 }
 
+/// A named defender entry in a batch simulation request.
+#[derive(Debug, Deserialize)]
+struct BatchDefender {
+    /// Display label for this target in the results
+    label: String,
+    #[serde(flatten)]
+    unit_ref: UnitRef,
+}
+
+/// Request body for `POST /api/simulate-batch`.
+#[derive(Debug, Deserialize)]
+struct BatchSimulateRequest {
+    attacker: UnitRef,
+    defenders: Vec<BatchDefender>,
+    /// `ranged` or `melee_charge`
+    attack_type: String,
+    #[serde(default = "default_distance")]
+    distance: u8,
+    #[serde(default)]
+    defender_in_cover: bool,
+    #[serde(default = "default_versatile")]
+    versatile: u8,
+    #[serde(default = "default_iterations")]
+    iterations: u32,
+}
+
+/// One entry in the batch simulation response.
+#[derive(Serialize)]
+struct BatchResultEntry {
+    label: String,
+    #[serde(flatten)]
+    result: opr_api::SimulationResult,
+}
+
+/// POST /api/simulate-batch -> array of `{ label, ...SimulationResult }`
+///
+/// Runs the attacker against each defender under the same combat context
+/// and returns one result per defender.
+async fn run_batch_simulation(Json(req): Json<BatchSimulateRequest>) -> Response {
+    if req.iterations < 1 || req.iterations > MAX_ITERATIONS {
+        return err(
+            StatusCode::UNPROCESSABLE_ENTITY,
+            &format!("iterations must be between 1 and {MAX_ITERATIONS}"),
+        );
+    }
+
+    if req.defenders.is_empty() {
+        return err(
+            StatusCode::UNPROCESSABLE_ENTITY,
+            "at least one defender is required",
+        );
+    }
+
+    if req.defenders.len() > MAX_BATCH_DEFENDERS {
+        return err(
+            StatusCode::UNPROCESSABLE_ENTITY,
+            &format!(
+                "too many defenders: got {}, maximum is {MAX_BATCH_DEFENDERS}",
+                req.defenders.len()
+            ),
+        );
+    }
+
+    let attacker = match resolve_unit(&req.attacker, "attacker") {
+        Ok(u) => u,
+        Err((status, msg)) => return err(status, &msg),
+    };
+
+    let context = match req.attack_type.as_str() {
+        "ranged" => CombatContext::ranged(req.distance),
+        "melee_charge" => CombatContext::melee_charge().with_distance(req.distance),
+        other => {
+            return err(
+                StatusCode::UNPROCESSABLE_ENTITY,
+                &format!("attack_type must be 'ranged' or 'melee_charge', got '{other}'"),
+            );
+        }
+    }
+    .with_cover(req.defender_in_cover)
+    .with_versatile_mode(req.versatile);
+
+    let mut results = Vec::with_capacity(req.defenders.len());
+    for batch_def in &req.defenders {
+        let defender = match resolve_unit(&batch_def.unit_ref, "defender") {
+            Ok(u) => u,
+            Err((status, msg)) => return err(status, &msg),
+        };
+        match simulate(&attacker, &defender, &context, req.iterations) {
+            Ok(sim_result) => {
+                results.push(BatchResultEntry {
+                    label: batch_def.label.clone(),
+                    result: sim_result,
+                });
+            }
+            Err(e) => return err(StatusCode::INTERNAL_SERVER_ERROR, &e),
+        }
+    }
+
+    match serde_json::to_value(&results) {
+        Ok(v) => Json(v).into_response(),
+        Err(e) => err(StatusCode::INTERNAL_SERVER_ERROR, &e.to_string()),
+    }
+}
+
+/// GET /api/preset-targets -> predefined defender archetypes for comparison
+async fn preset_targets() -> Json<Vec<serde_json::Value>> {
+    let presets = vec![
+        serde_json::json!({
+            "id": "tough_boss",
+            "label": "Tough Boss",
+            "description": "Single model, high toughness & strong armor",
+            "army": "alien-hives",
+            "unit": "Hive Lord",
+            "stats": { "size": 1, "quality": 3, "defense": 2, "tough": 12 }
+        }),
+        serde_json::json!({
+            "id": "tough_squad",
+            "label": "Tough Squad",
+            "description": "Small squad with multiple tough models",
+            "army": "alien-hives",
+            "unit": "Ravenous Beasts",
+            "stats": { "size": 3, "quality": 4, "defense": 4, "tough": 3 }
+        }),
+        serde_json::json!({
+            "id": "armored_squad",
+            "label": "Armored Tough Squad",
+            "description": "Squad with toughness 3 and high armor (Shielded)",
+            "army": "blood-brothers",
+            "unit": "Blood Destroyers",
+            "stats": { "size": 3, "quality": 3, "defense": 3, "tough": 3 }
+        }),
+        serde_json::json!({
+            "id": "large_squad",
+            "label": "Large Squad",
+            "description": "Large squad with low armor",
+            "army": "alien-hives",
+            "unit": "Assault Grunts",
+            "stats": { "size": 10, "quality": 5, "defense": 5, "tough": 1 }
+        }),
+    ];
+    Json(presets)
+}
+
 /// Bind address for the HTTP listener. Overridable via `BIND_ADDR`
 /// (e.g. `0.0.0.0:3000` in the container image) so deployments can expose
 /// the port while local development stays on loopback.
@@ -169,6 +317,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .route("/api/armies", get(list_armies))
         .route("/api/armies/{id}/units", get(army_units))
         .route("/api/simulate", post(run_simulation))
+        .route("/api/simulate-batch", post(run_batch_simulation))
+        .route("/api/preset-targets", get(preset_targets))
         .fallback_service(tower_http::services::ServeDir::new(static_dir()));
 
     let addr = bind_addr();
